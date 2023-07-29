@@ -125,7 +125,9 @@
 			factor = 1
 		}
 		completion_reward = {
-			has_guaranteed= CHI
+			CHI = {
+			give_guarantee = MAN #has_guaranteed = CHI it isnť effect but trigger
+			}
 		}
 	}
 	focus = {
@@ -142,7 +144,9 @@
 			factor = 1
 		}
 		completion_reward = {
-			has_guaranteed = WGR
+		WGR = {
+			give_guarantee = MAN #has_guaranteed = WGR it isnť effect but trigger
+			}
 		}
 	}
 	focus = {
