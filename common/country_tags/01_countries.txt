@@ -1,0 +1,30 @@
+KOS = "countries/Kosovo.txt"
+HRZ = "countries/Herzegovina.txt"
+TEX = "countries/Texas.txt"
+LOU = "countries/Louisiana.txt"
+EDO = "countries/Hokkaido.txt" # Sapporo
+TGW = "countries/Tokugawa.txt" # Kyoto
+
+HEJ = "countries/Hejaz.txt"
+LOM = "countries/Lombardy.txt"
+JSH = "countries/Hail.txt"
+DES = "countries/Deseret.txt"
+NWG = "countries/New England.txt"
+CAL = "countries/California.txt"
+HYD = "countries/Hyderabad.txt"
+PNJ = "countries/Punjab.txt"
+KAS = "countries/Kashmir.txt"
+IKH = "countries/Ikhwan.txt"
+ZHI = "countries/Zhili.txt"
+ANH = "countries/Anhui.txt"
+
+OTT = "countries/Konya.txt"
+TRK = "countries/Candar.txt" 
+
+#### Temp tags ####
+
+SPA = "countries/Fal Spain.txt" ### Asturia
+SPC = "countries/Com Spain.txt" ### Aragon
+
+AFR = "countries/Sahara.txt" ### Eastern Algeria
+RUS = "countries/Russia.txt" ### Novgorod

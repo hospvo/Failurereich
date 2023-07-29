@@ -1,0 +1,481 @@
+﻿
+add_namespace = rus
+
+country_event = {
+	id = rus.1
+	title = "Second russian civil war"
+	desc = "A second civil war comme in Russia. We are now alone and we can't count on European powers which are under dictatorship."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Don't leave these countries alone"
+
+			release = LAT
+			release = LIT
+			release = EST
+			release = BLR
+
+			release = VLA
+
+			release = KKP
+
+			release = KAR
+
+			release = DAG
+			release = CIN
+			release = KBK
+			release = NOA
+
+			release = TAT
+			release = KOM
+			release = KAL
+
+			release = CRI
+			release = UKR
+
+			UKR = { 
+				set_politics = {
+					ruling_party = anarchist
+				}
+				set_popularities = {
+					anarchist = 100
+				}
+			}
+			KAR = { 
+				set_politics = {
+					ruling_party = fascism
+				}	
+				set_popularities = {
+					fascism = 100
+				}
+			}
+			LIT = { 
+				set_politics = {
+					ruling_party = reactionary
+				}	
+				set_popularities = {
+					reactionary = 100
+				}	
+			}
+			BLR = { 
+				set_politics = {
+					ruling_party = reactionary
+				}	
+				set_popularities = {
+					reactionary = 100
+				}		
+			}
+			LAT = { 
+				set_politics = {
+					ruling_party = communism
+				}	
+				set_popularities = {
+					communism = 100
+				}	
+			}
+			EST = { 
+				set_politics = {
+					ruling_party = fascism
+				}	
+				set_popularities = {
+					fascism = 100
+				}	
+			}
+
+			transfer_units_fraction = {
+				target = UKR
+				size = 0.15
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = BLR
+				size = 0.11
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = EST
+				size = 0.05
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = LAT
+				size = 0.03
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = LIT
+				size = 0.09
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = DAG
+				size = 0.02
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = CIN
+				size = 0.01
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = KAR
+				size = 0.01
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = NOA
+				size = 0.01
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = KOM
+				size = 0.01
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			SOV = { set_state_owner = 225 }
+			SOV = { set_state_owner = 228 }
+			SOV = { set_state_owner = 213 }
+			SOV = { set_state_owner = 241 }
+			CRI = { set_state_owner = 196 }
+			RUS = { set_state_owner = 810 }
+
+			KOM = { set_state_owner = 825 }
+
+			TAT = { set_state_owner = 256 }
+			TAT = { set_state_owner = 250 }
+			TAT = { set_state_owner = 251 }
+
+			KAL = { set_state_owner = 234 }
+			KAL = { set_state_owner = 235 }
+			KAL = { set_state_owner = 238 }
+			KAL = { set_state_owner = 237 }
+			KAL = { set_state_owner = 233 }
+
+			SOV = { country_event = { id = rus.2 days = 2 } }
+	}
+}
+
+#### Second Russian Civil War ####
+
+country_event = {
+	id = rus.2
+	title = "Second russian civil war"
+	desc = "The Second Civil War comme in Russia. We are now alone and we can't count on European powers which are under dictatorship."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		SOV_setup_civil_war = yes
+
+		every_owned_state = {
+			add_core_of = RUS
+			add_claim_by = RUS
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		SOV = {
+			transfer_technology = yes
+		}
+		set_cosmetic_tag = SOV_right_opposition 
+		set_politics = {
+			ruling_party = communism
+		}
+	}
+
+	option = {
+		name = "Bukharine will help us."
+		
+
+			add_country_leader_role = {
+  				Character = SOV_nikolay_bukharin 
+  				Promote_leader = yes
+  				Country_leader = {
+					ideology = leninism
+    					expire = “1965.1.1.1”
+    						traits = {
+      						  	war_industrialist
+   					 	}
+      					}
+				}
+
+		RUS = {
+
+		add_country_leader_role = {
+  			Character = SOV_provisional_government 
+  			Promote_leader = yes
+  			Country_leader = {
+				ideology = socialism
+    				expire = “1965.1.1.1”
+    					traits = {
+      						  war_industrialist
+   					 }
+      				}
+			}
+
+		}
+
+	        declare_war_on = {
+		                target = RUS
+		                type = annex_everything
+	        }
+		SOV = {
+			every_owned_state = {
+				add_claim_by = RUS
+			}
+		}
+
+		BLR = { country_event = { id = rus.3 days = 14 } }
+		POL = { country_event = { id = rus.4 days = 45 } }
+		GEO = { country_event = { id = rus.5 days = 25 } }
+		JAP = { country_event = { id = rus.6 days = 29 } }
+		FIN = { country_event = { id = rus.7 days = 20 } }
+	}
+}
+
+country_event = {
+	id = rus.3
+	title = "Conquer Ostland"
+	desc = "We have our cake part! Poland will never renew the land of Copernic."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall fight them!"
+		
+	        declare_war_on = {
+		                target = LIT
+		                type = annex_everything
+	        }
+		LIT = {
+			every_owned_state = {
+				add_claim_by = BLR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rus.4
+	title = "Ruthenian wars"
+	desc = "Poland have opportunity to retake old lands from 1796 and recreate a second empire."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall fight them!"
+		
+	        declare_war_on = {
+		                target = BLR
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = LIT
+		                type = annex_everything
+	        }
+
+		LIT = {
+			every_owned_state = {
+				add_claim_by = POL
+			}
+		}
+
+		BLR = {
+			every_owned_state = {
+				add_claim_by = POL
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rus.5
+	title = "Northen Caucasus belong to us!"
+	desc = "We have our cake part!"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Follow Stalin"
+		
+		827 = { add_claim_by = GEO }
+		821 = { add_claim_by = GEO }
+		828 = { add_claim_by = GEO }
+		232 = { add_claim_by = GEO }
+
+	        declare_war_on = {
+		                target = NOA
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = CIN
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = KBK
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = DAG
+		                type = annex_everything
+	        }
+
+		NOA = {
+
+	        declare_war_on = {
+		                target = CIN
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = KBK
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = DAG
+		                type = annex_everything
+	        }
+
+		}
+
+		CIN = {
+
+	        declare_war_on = {
+		                target = KBK
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = DAG
+		                type = annex_everything
+	        }
+
+		}
+
+		KBK = {
+
+	        declare_war_on = {
+		                target = DAG
+		                type = annex_everything
+	        }
+
+		}
+	}
+}
+
+country_event = {
+	id = rus.6
+	title = "Vladivostok"
+	desc = "With Russian civil war, Japan will include a new colony for the Co prosperity sphere."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall fight them!"
+	        puppet = VLA
+	}
+}
+
+country_event = {
+	id = rus.7
+	title = "Karelia"
+	desc = "With Russian civil war, Finland will include a new colony for the Co prosperity sphere."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall fight them!"
+		
+		215 = { add_claim_by = FIN }
+		216 = { add_claim_by = FIN }
+
+	        declare_war_on = {
+		                target = KAR
+		                type = annex_everything
+	        }
+	}
+}
+
+country_event = {
+	id = rus.8
+	title = "Release Lithuania and Belarus"
+	desc = "With Russian civil war, Finland will include a new colony for the Co prosperity sphere."
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POL
+		country_exists = RUS
+		NOT = { 	
+			country_exists = BLR
+			country_exists = LIT 
+		}
+		country_exists = UKR
+		has_capitulated = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "puppet the 2 nations"
+
+			release_puppet = BLR
+			release_puppet = LIT
+			POL = { set_state_owner = 784 }
+			POL = { set_state_owner = 814 }
+			POL = { set_state_owner = 95 }
+			POL = { set_state_owner = 95 }
+
+	}
+
+	option = {
+		name = "release a big ally"
+
+			release = BLR
+			release = LIT
+			LIT = {
+			annex_country = {
+			    target = BLR
+			    transfer_troops = yes
+			}
+			set_cosmetic_tag = LIT_belarus 
+			}
+	}
+}

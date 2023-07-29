@@ -1,0 +1,416 @@
+﻿
+add_namespace = poland
+
+country_event = {
+	id = poland.1
+	title = "Hungarish civil war"
+	desc = "A coup was organized in our regions, especially Slovakia, where upprising come."
+	picture = GFX_report_event_greater_hungary2
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Damn Polish!"
+
+			release = SLO
+			release = TRA
+
+			SLO = { 
+				set_politics = {
+					ruling_party = fascism
+				}	
+			}
+
+			TRA = { 
+				set_politics = {
+					ruling_party = left
+				}	
+			}
+
+			transfer_units_fraction = {
+				target = SLO
+				size = 0.32
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			transfer_units_fraction = {
+				target = TRA
+				size = 0.32
+				navy_ratio = 0
+				keep_unit_leaders_trigger = { always = yes }
+			}
+
+			SOV = { country_event = { id = poland.2 days = 2 } }
+	}
+}
+
+country_event = {
+	id = poland.2
+	title = "War begin"
+	desc = "A second civil war comme in Hungary."
+	picture = GFX_report_event_greater_hungary
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_state = {
+			add_core_of = HUN
+			add_claim_by = HUN
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		SLO = {
+			transfer_technology = yes
+		}
+	}
+
+	option = {
+		name = "We shall fight them!"
+		
+	        HUN = { declare_war_on = {
+		                target = SLO
+		                type = annex_everything
+	        } 
+	        declare_war_on = {
+		                target = TRA
+		                type = annex_everything
+	        } }
+
+		SLO = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+		TRA = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+	}
+}
+
+country_event = {
+	id = poland.3
+	title = "Alliance with Poland"
+	desc = "Poland ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		POL = {
+			country_event = { days = 1 id = poland.4 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			POL = {
+				country_event = { days = 1 id = poland.5 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = poland.4
+	title = "They agree our request"
+	desc = "They agree with our proposition, Romania will help us to form a great empire."
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		POL = { create_faction = "Intermarium" }
+		POL = { add_to_faction = ROM }
+	}
+}
+
+country_event = {
+	id = poland.5
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "That sad"	
+	}
+}
+
+country_event = {
+	id = poland.6
+	title = "Integrate Czech"
+	desc = "Poland ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		POL = {
+			country_event = { days = 1 id = poland.7 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			POL = {
+				country_event = { days = 1 id = poland.8 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = poland.7
+	title = "They agree our request"
+	desc = "they agree with our proposition, Czech will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = CZE
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = poland.8
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = CZE 
+		                type = annex_everything
+	        }
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = POL
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = poland.9
+	title = "Hungary collapse"
+	desc = "Without Hungary, we can now unite an Empire."
+	picture = GFX_report_event_vienna_award_hungary
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POL
+		HUN = { country_exists = no }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Poland-Hungary"
+		annex_country = {
+	   		 target = SLO
+	   		 transfer_troops = yes
+		}
+		annex_country = {
+	   		 target = TRA
+	   		 transfer_troops = yes
+		}
+		set_cosmetic_tag = POL_HUN_UNION 
+	}
+}
+
+country_event = {
+	id = poland.10
+	title = "Poland ask Slovakia"
+	desc = "Slovakia asked"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		POL = {
+			country_event = { days = 1 id = poland.11 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			POL = {
+				country_event = { days = 1 id = poland.12 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = poland.11
+	title = "They agree our request"
+	desc = "they agree with our proposition, Slovakia will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		HUN = { release = SLO }
+		annex_country = {
+	   		 target = SLO
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = poland.12
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = HUN
+		                type = annex_everything
+	        }	
+	}
+}
+
+country_event = {
+	id = poland.13
+	title = "Poland ask Silesia"
+	desc = "Silesia asked"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		POL = {
+			country_event = { days = 1 id = poland.14 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			POL = {
+				country_event = { days = 1 id = poland.15 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = poland.14
+	title = "They agree our request"
+	desc = "they agree with our proposition, Silesia will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		GER = { release = SIL }
+		annex_country = {
+	   		 target = SIL
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = poland.15
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = GER
+		                type = annex_everything
+	        }	
+	}
+}
+
+country_event = {
+	id = poland.16
+	title = "Poland ask Lithuania"
+	desc = "Lithuania asked"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		POL = {
+			country_event = { days = 1 id = poland.17 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			POL = {
+				country_event = { days = 1 id = poland.18 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = poland.17
+	title = "They agree our request"
+	desc = "they agree with our proposition, Lithuania will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		SOV = { release = LIT }
+		annex_country = {
+	   		 target = LIT
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = poland.18
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = SOV
+		                type = annex_everything
+	        }	
+	}
+}

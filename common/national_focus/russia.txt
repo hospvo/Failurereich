@@ -1,0 +1,1108 @@
+﻿focus_tree = {
+	id = russia_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = RUS_Kolchak
+		icon = GFX_focus_SOV_approach_semyonov
+		text = "Denekin keep power"
+		mutually_exclusive = { 	
+			focus = RUS_democracy
+		}
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000	
+		}
+	}
+
+	focus = {
+		id = RUS_protect_mongolia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		text = "Protect Mongolia"
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = RUS_Kolchak
+		}
+		mutually_exclusive = { 	
+			focus = RUS_empire
+		}
+		mutually_exclusive = { 	
+			focus = RUS_fascist_doctrine
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			MON = { give_guarantee = SOV }
+		}
+	}
+
+	focus = {
+		id = RUS_french_state
+		icon = GFX_focus_focus_fra_revolution_utmost
+		text = "French Protection"
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = RUS_protect_mongolia
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { give_guarantee = SOV }
+		}
+	}
+
+	focus = {
+		id = RUS_german_approach
+		icon = GFX_focus_ger_revive_kaiserreich
+		text = "Kaiser Protection"
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = RUS_french_state
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = { give_guarantee = SOV }
+		}
+	}
+
+	focus = {
+		id = RUS_guarantee_turkestan
+		icon = GFX_focus_generic_fascist_troops
+		text = "Emirate"
+		x = 7
+		y = 3
+		prerequisite = {
+			focus = RUS_french_state
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			SOV = { give_guarantee = BUK }
+
+		}
+	}
+
+	focus = {
+		id = RUS_Invade_sinkiang
+		icon = GFX_focus_generic_fascist_troops
+		text = "Invade Sinkiang"
+		x = 7
+		y = 4
+		prerequisite = {
+			focus = RUS_guarantee_turkestan
+			focus = RUS_german_approach
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_state_claim = 617
+			add_state_claim = 618
+			add_state_claim = 619
+
+			create_wargoal = {
+			    type = annex_everything
+			    target = SIK
+			}
+
+		}
+	}
+
+	focus = {
+		id = RUS_support_qing
+		icon = GFX_focus_generic_fascist_troops
+		text = "Qing Protection"
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = RUS_guarantee_turkestan
+			focus = RUS_german_approach
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			MAN = { give_guarantee = SOV }
+
+		}
+	}
+
+##### Fascist #####
+
+	focus = {
+		id = RUS_fascist_doctrine
+		icon = GFX_focus_SOV_panslavic_nationalism
+		text = "Facism influence"
+		x = 12
+		y = 1
+
+		prerequisite = {
+			focus = RUS_Kolchak
+		}
+		mutually_exclusive = { 	
+			focus = RUS_empire
+		}
+		mutually_exclusive = { 	
+			focus = RUS_protect_mongolia
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_rule = {
+			    can_create_factions = yes
+			}
+			set_country_leader_ideology = fascism_ideology
+			set_politics = {
+				ruling_party = fascism
+			}
+			
+			set_party_name = { 
+				    ideology = fascism
+				    long_name = "Military Juntla"
+				    name = "White Army"
+			}
+
+			promote_character = SOV_konstantin_rodzayevsky
+
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.50
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = democracy
+				popularity = -0.01
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_empire
+		icon = GFX_focus_SOV_my_brothers_keeper
+		text = "Return of the Tsar"
+
+		prerequisite = {
+			focus = RUS_Kolchak
+		}
+
+		mutually_exclusive = { 	
+			focus = RUS_fascist_doctrine
+		}
+		mutually_exclusive = { 	
+			focus = RUS_protect_mongolia
+		}
+
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = {
+			    can_create_factions = yes
+			}
+			add_manpower = 100000
+			retire_country_leader = yes
+			set_cosmetic_tag = russian_empire
+			promote_character = SOV_tsar_vladimir_kirillovich	
+		}
+	}
+
+	focus = {
+		id = RUS_retake_bukhara
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		text = "Bukhara"
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = RUS_empire
+			focus = RUS_fascist_doctrine
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = BUK
+				type = annex_everything
+				expire = 1
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_crush_georgia
+		icon = GFX_goal_generic_focus_GRE_an_orthodox_state
+		text = "Stalin failure"
+		x = 16
+		y = 2
+		prerequisite = {
+			focus = RUS_empire
+			focus = RUS_fascist_doctrine
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = GEO
+				type = annex_everything
+				expire = 1
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_reinforce_navy
+		icon = GFX_goal_generic_coastal_fort
+		text = "Reinforce navy"
+		x = 12
+		y = 3
+		prerequisite = {
+			focus = RUS_retake_bukhara
+			focus = RUS_crush_georgia
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_syndicates_no
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		text = "Abolish peasant syndicates"
+		x = 16
+		y = 3
+		prerequisite = {
+			focus = RUS_retake_bukhara
+			focus = RUS_crush_georgia
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = RUS_democracy
+		icon = GFX_focus_SOV_restore_cossack_units
+		text = "Social democracy"
+
+		mutually_exclusive = { 	
+			focus = RUS_Kolchak
+		}
+
+		x = 26
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+
+			set_politics = {
+				ruling_party = left
+			}
+
+			add_manpower = 100000
+
+			add_popularity = {
+			    ideology = fascism
+			    popularity = -0.2
+			}
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = -0.2
+			}
+			add_popularity = {
+				ideology = left
+				popularity = 0.50
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_overthrown_denekin
+		icon = GFX_focus_SOV_bukharinists
+		text = "Elections"
+		prerequisite = { 	
+			focus = RUS_democracy
+		}
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_country_leader_role = {
+  				Character = SOV_provisional_government 
+				Promote_leader = yes
+  				Country_leader = {
+					ideology = left
+				    	expire = “1965.1.1.1”
+   					traits = {
+        					war_industrialist
+    					}
+				}
+     			}
+			add_popularity = {
+				ideology = left
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.49
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_civil_war
+		icon = GFX_focus_attack_soviet
+		text = "Leninism come back"
+		prerequisite = { 	
+			focus = RUS_overthrown_denekin
+		}
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {   
+			NOT = { country_exists = RUS }
+		}
+			
+		completion_reward = {
+			country_event = { id = rus.1 days = 1 }
+		}
+	}
+
+	focus = {
+		id = RUS_turk_soviet
+		icon = GFX_focus_attack_turkey
+		text = "Invade Tatar lands"
+		prerequisite = { 	
+			focus = RUS_civil_war
+		}
+
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { country_exists = RUS }
+		} 
+
+		completion_reward = {
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = TAT
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = KOM
+			}
+		}
+	}
+
+
+	focus = {
+		id = RUS_geo_soviet
+		icon = GFX_focus_attack_georgia
+		text = "Fall of the South"
+		prerequisite = { 	
+			focus = RUS_civil_war
+		}
+
+		available = {
+			NOT = { country_exists = RUS }
+		} 
+
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = KAL
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = GEO
+			}
+		}
+	}
+
+
+	focus = {
+		id = RUS_mongolia
+		icon = GFX_focus_attack_mongolia
+		text = "Mongol fall"
+		prerequisite = { 	
+			focus = RUS_turk_soviet
+			focus = RUS_geo_soviet
+		}
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = MON
+			}
+		}
+	}
+
+
+	focus = {
+		id = RUS_baltic
+		icon = GFX_focus_attack_estonia
+		text = "Attack Baltics"
+		prerequisite = { 	
+			focus = RUS_turk_soviet
+			focus = RUS_geo_soviet
+		}
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = EST
+			}
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = LAT
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_ukraine
+		icon = GFX_focus_attack_estonia
+		text = "Destroy anarchists"
+		prerequisite = { 	
+			focus = RUS_baltic
+			focus = RUS_mongolia
+		}
+		x = 26
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = UKR
+			}
+			
+			create_wargoal = {
+			    type = annex_everything
+			    target = CRI
+			}
+		}
+	}
+
+### monarchists and fascists ###
+
+	focus = {
+		id = RUS_panslavic_nationalism
+		icon = GFX_focus_SOV_free_Rutenia
+		text = "Slavic Empire"
+		mutually_exclusive = { 	
+			focus = RUS_orthodoxy
+		}
+		prerequisite = { 	
+			focus = RUS_syndicates_no
+			focus = RUS_reinforce_navy
+		}
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = SOV_panslavic_nationalism 
+		}
+	}
+
+	focus = {
+		id = RUS_orthodoxy
+		icon = GFX_focus_SOV_patriarch_of_all_russia
+		text = "Orthodox Empire"
+		mutually_exclusive = { 	
+			focus = RUS_panslavic_nationalism
+		}
+		prerequisite = { 	
+			focus = RUS_syndicates_no
+			focus = RUS_reinforce_navy
+		}
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SOV_legacy_of_rome
+   			set_cosmetic_tag = SOV_ROME
+
+   			custom_effect_tooltip = SOV_the_third_rome_tt
+   			promote_character = SOV_metropolitan_meletius
+
+   			set_country_leader_name = {
+			  ideology = reactionary
+			  name = SOV_patriarch_meletius
+			}
+
+			custom_effect_tooltip = SOV_the_third_rome_tt_2
+		}
+	}
+
+	focus = {
+		id = RUS_Fifth_Partition
+		icon = GFX_focus_POL_common_organization_of_society
+		text = "Fifth Partition"
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = RUS_panslavic_nationalism
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_Czech_division
+		icon = GFX_focus_cze_german_puppet
+		text = "Czech invasion"
+		x = 10
+		y = 6
+		prerequisite = {
+			focus = RUS_Fifth_Partition
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = CZE
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_bulgarian_integration
+		icon = GFX_focus_BUL_destroy_the_zveno
+		text = "Integrate Bulgaria"
+		x = 14
+		y = 5
+		prerequisite = {
+			focus = RUS_panslavic_nationalism
+			focus = RUS_orthodoxy
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_yugoslavian_integration
+		icon = GFX_focus_invite_yugoslavia
+		text = "Divide Yugoslavia"
+		x = 14
+		y = 6
+		prerequisite = {
+			focus = RUS_bulgarian_integration
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_second_crimea
+		icon = GFX_focus_generic_attack_romania
+		text = "Second Crimean Crisis"
+		x = 18
+		y = 5
+		prerequisite = {
+			focus = RUS_orthodoxy
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_battle_constantinople
+		icon = GFX_focus_generic_attack_greece
+		text = "Constantinople II"
+		x = 18
+		y = 6
+		prerequisite = {
+			focus = RUS_second_crimea
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = GRE
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_takle_turkey
+		icon = GFX_focus_generic_attack_turkey
+		text = "Take Constantinople"
+		x = 16	
+		y = 7
+		prerequisite = {
+			focus = RUS_yugoslavian_integration
+			focus = RUS_battle_constantinople
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = TUR
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_takle_slovakia
+		icon = GFX_focus_generic_attack_hungary
+		text = "Take Slovakia"
+		x = 12
+		y = 7
+		prerequisite = {
+			focus = RUS_yugoslavian_integration
+			focus = RUS_Czech_division
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+		}
+	}
+}

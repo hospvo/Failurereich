@@ -1,0 +1,41 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
+form_poland_hungary_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_poland_hungary
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_goguryeo_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_goguryeo
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_roman_federation_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_latin
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}

@@ -1,0 +1,201 @@
+﻿
+add_namespace = ger_civil_war 
+
+country_event = {
+	id = ger_civil_war.1 
+	title = "German civil war"
+	desc = "Strasser didn't convince people and now we are facing a civil war with many problematics. With all these problematics, Strasser kept the power despite the revolution."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		GER_setup_civil_war = yes
+
+		every_owned_state = {
+			add_core_of = PRE
+			add_claim_by = PRE
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		every_owned_state = {
+			add_core_of = HAN
+			add_claim_by = HAN
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		every_owned_state = {
+			add_core_of = BAY
+			add_claim_by = BAY
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		every_owned_state = {
+			add_core_of = WUR
+			add_claim_by = WUR
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		GER = { set_politics = { ruling_party = communism } }
+		GER = {
+			set_popularities = {
+				communism = 100
+			}
+		}
+
+		BAY = { set_cosmetic_tag = Ultranat_GER }
+		BAY = { set_politics = { ruling_party = fascism } }
+		BAY = {
+			set_popularities = {
+				fascism = 100
+			}
+		}
+
+		WUR = { set_cosmetic_tag = Democrat_GER } 
+		WUR = { set_politics = { ruling_party = democratic } }
+		WUR = {
+			set_popularities = {
+				democratic = 100
+			}
+		}
+
+		HAN = { set_cosmetic_tag = NazBol_GER }
+		HAN = { set_politics = { ruling_party = vanguardism } }
+		HAN = {
+			set_popularities = {
+				vanguardism = 100
+			}
+		}
+
+		PRE = { set_cosmetic_tag = Strato_GER }
+		PRE = { set_politics = { ruling_party = reactionary } }
+		PRE = {
+			set_popularities = {
+				reactionary = 100
+			}
+		}
+
+		GER = {
+			transfer_technology = yes
+		}
+	}
+	
+	option = { 
+		name = "Schiesse !"
+
+	        declare_war_on = {
+		                target = HAN
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = PRE
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = BAY
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = WUR
+		                type = annex_everything
+	        }	
+		BAY = {
+	        declare_war_on = {
+		                target = HAN
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = PRE
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = WUR
+		                type = annex_everything
+	        }		
+		}
+		PRE = {
+	        declare_war_on = {
+		                target = HAN
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = WUR
+		                type = annex_everything
+	        }		
+		}
+		HAN= {	
+	        declare_war_on = {
+		                target = WUR
+		                type = annex_everything
+	        }		
+		}
+		
+		PRE = { create_faction = "Mittel Europa" }
+		HAN = { create_faction = "Nazbol Faction" }
+		BAY = { create_faction = "Anti Comintern" }
+		WUR = { create_faction = "European Union" }
+
+		dismantle_faction = yes
+		
+	}
+}
+
+country_event = {
+	id = ger_civil_war.2 
+	title = "German party"
+	desc = "Germany is now divided. You can take one of the rebel groups."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = GER
+		}
+		country_exists = GER
+		country_exists = PRE
+		country_exists = WUR
+		country_exists = BAY
+		country_exists = HAN
+        }
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "Das OrdenStaat (Fascists)"
+	        BAY = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "VolksReich (Spartacists)"
+	        GER = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Worker State (Nazbols)"
+	        HAN = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Democratic regime is preferable"
+	        WUR = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Militarists can protect us"
+	        PRE = { change_tag_from = ROOT }
+	}
+		hidden_effect = {
+			news_event = { hours = 6 id = fr_news.2 }
+		}
+}

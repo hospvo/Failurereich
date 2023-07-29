@@ -1,0 +1,192 @@
+﻿division_template = {
+	name = "Brigade Coloniale"	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Division Coloniale"	
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	##### Troupes d'Indochine (CO: Catroux) #####
+	division= {	# "Division de Tonkin"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 91
+		}
+		location = 1248
+		division_template = "Division Coloniale" 			# Reserve Division (low experience, reserve equip)
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+
+	}
+	division= {	# "Division de Cochinchine-Cambodge"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 92
+		}
+		location = 1248
+		division_template = "Division Coloniale" 			
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Division Coloniale" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Division Coloniale" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Division Coloniale" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Brigade Coloniale"				
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 1248
+		division_template = "Division Coloniale" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+
+	}
+}
+
+	######## No notable air force ########
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "VIN"
+		}
+		requested_factories = 1
+		progress = 0.38
+		efficiency = 100
+	}
+}

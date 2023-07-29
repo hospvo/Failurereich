@@ -1,0 +1,453 @@
+﻿focus_tree = {
+	id = RSI_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = ITA_fascism
+		icon = GFX_focus_generic_italy_first
+		text = "Blackshirt regime"
+		mutually_exclusive = { focus = ITA_empire }
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = medium_tank_chassis_1
+			    amount = 100
+			    variant_name = "Liga"
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_empire
+		icon = GFX_focus_generic_italy_first
+		text = "Legion regime"
+		mutually_exclusive = { focus = ITA_fascism }
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader = yes
+		}
+	}
+
+	focus = {
+		id = ITA_support_papal_integrate
+		icon = GFX_focus_generic_vatican_state
+		text = "Reform Vatican"
+		prerequisite = { 
+				focus = ITA_fascism
+				focus = ITA_empire
+		}
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = PAP
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ITA = {
+				country_event = { days = 1 id = italy.0 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_albania
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		text = "Annex Albania"
+		prerequisite = { 
+				focus = ITA_support_papal_integrate
+		}
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = ALB
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ITA = {
+				country_event = { days = 1 id = italy.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_albania_exp
+		icon = GFX_focus_ITA_albanian_irredentism
+		text = "Albania Irredentism"
+		prerequisite = { 
+				focus = ITA_albania
+		}
+		prerequisite = { 
+				focus = ITA_empire
+		}
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = YUG
+			NOT = { country_exists = ALB }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ITA = {
+				country_event = { days = 1 id = italy.8 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_invade_padania
+		icon = GFX_focus_ITA_italian_hegemony
+		text = "Rebuilt Italy"
+		prerequisite = { 
+				focus = ITA_albania
+		}
+		prerequisite = { 
+				focus = ITA_rom_treaty
+				focus = ITA_empire
+		}
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = LOM
+			FRA = { has_war_with = GER }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = LOM
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_divide_greece
+		icon = GFX_focus_GRE_a_land_of_mountains
+		text = "Invade Greece"
+		prerequisite = { 
+				focus = ITA_albania_exp
+		}
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = GRE
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = GRE
+			}
+			GRE = {
+				every_owned_state = {
+				    add_claim_by = ITA
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_BUL_war
+		icon = GFX_focus_BUL_plot_against_boris
+		text = "Crush Bulgaria"
+		prerequisite = { 
+				focus = ITA_albania_exp
+		}
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = BUL
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = BUL
+			}
+			BUL = {
+				every_owned_state = {
+				    add_claim_by = ITA
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_Thracia
+		icon = GFX_focus_ITA_imperial_recognition
+		text = "Create Thracian State"
+		prerequisite = { 
+				focus = ITA_divide_greece
+				focus = ITA_BUL_war
+		}
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			not = { country_exists = BUL }
+			not = { country_exists = GRE }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			106 = { transfer_state_to = GRE }
+			187 = { transfer_state_to = GRE }
+			186 = { transfer_state_to = GRE }
+			185 = { transfer_state_to = GRE }
+			931 = { transfer_state_to = GRE }
+			47 = { transfer_state_to = GRE }
+			184 = { transfer_state_to = GRE }
+			731 = { transfer_state_to = GRE }
+			48 = { transfer_state_to = GRE }
+			801 = { transfer_state_to = GRE }
+			803 = { transfer_state_to = GRE }
+			211 = { transfer_state_to = GRE }
+			212 = { transfer_state_to = GRE }
+			puppet = GRE
+			GRE = { set_cosmetic_tag = GRE_Thracia }
+		}
+	}
+
+##### Mussolini focus tree #####
+
+	focus = {
+		id = ITA_yugoslavia_treaty
+		icon = GFX_focus_invite_yugoslavia
+		text = "Ally Yugoslavia"
+		prerequisite = { 
+				focus = ITA_fascism
+		}
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = YUG
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_relation_rule = {
+			    target = YUG
+			    desc = "Belgrade Non aggression treaty"
+			    can_not_declare_war = yes
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_rom_treaty
+		icon = GFX_focus_invite_romania
+		text = "Ally Romania"
+		prerequisite = { 
+				focus = ITA_yugoslavia_treaty
+		}
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = ROM
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_relation_rule = {
+			    target = ROM
+			    desc = "Bucarest Non aggression treaty"
+			    can_not_declare_war = yes
+			}
+			ITA = {
+				give_guarantee = ROM
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_SPA_TT
+		icon = GFX_focus_intervention_spain_nationalists
+		text = "Support Spanish State"
+		prerequisite = { 
+				focus = ITA_rom_treaty
+		}
+		prerequisite = { 
+				focus = ITA_albania
+		}
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = SPA
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SPA = {
+				give_military_access = ITA
+			}
+			send_equipment_fraction = {
+ 			    value = 0.2
+			    target = SPA
+			}
+		}
+	}
+
+###### Industrial and army ########
+
+	focus = {
+		id = ITA_industry_force
+		icon = GFX_focus_generic_railroad
+		text = "Industrial progress"
+		prerequisite = { 
+				focus = ITA_industry
+		}
+
+		x = 24
+		y = 0
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_fuel = 40
+		}
+	}
+	focus = {
+		id = ITA_industry_two
+		icon = GFX_focus_generic_armored_air_support
+		text = "Build factories"
+		prerequisite = { 
+				focus = ITA_industry_force
+		}
+
+		x = 22
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 0.5
+			    uses = 1
+			    category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = ITA_industry_tree
+		icon = GFX_focus_generic_air_defense
+		text = "Rebuild the army"
+		prerequisite = { 
+				focus = ITA_industry_force
+		}
+
+		x = 26
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 50
+			    producer = TUR
+			}
+		}
+	}
+}

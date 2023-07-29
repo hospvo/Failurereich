@@ -1,0 +1,50 @@
+﻿
+#### Confederate Civil War ####
+
+add_namespace = confederate
+
+country_event = {
+	id = confederate.1
+	title = "South Eastern civil war"
+	desc = "We are now divided between Fascists, Reactionaries and Centrists. We can't handle anymore."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		CSA_setup_civil_war = yes
+
+		CSA = {
+			transfer_technology = yes
+		}
+	}
+
+	option = {
+		name = "We shall fight them!"
+		
+	        declare_war_on = {
+		                target = LOU 
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = TEX
+		                type = annex_everything
+	        }
+		LOU = {
+	        	declare_war_on = {
+		    	            target = TEX
+		    	            type = annex_everything
+	        	}
+		}
+		CSA = {
+			every_owned_state = {
+				add_claim_by = LOU
+			}
+		}
+		CSA = {
+			every_owned_state = {
+				add_claim_by = TEX
+			}
+		}
+	}
+}

@@ -1,0 +1,561 @@
+﻿focus_tree = {
+	id = japan_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = JAP
+				tag = TGW
+				tag = EDO
+			}
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = JAP_unstability_war
+		icon = GFX_focus_generic_japanese_imperial_glory
+		text = "A failed monarchy"
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+				country_event = { days = 1 id = japan.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_civil_war
+		icon = GFX_focus_AST_war_japan
+		text = "Japan collapse"
+		prerequisite = { 
+				focus = JAP_unstability_war
+		}
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+				country_event = { days = 9 id = japan.3 } 
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_showa
+		icon = GFX_focus_jap_showa_restoration
+		text = "Japanese Empire"
+		prerequisite = { 
+				focus = JAP_civil_war
+		}
+		mutually_exclusive = { 
+			focus = JAP_republic 
+			focus = JAP_red
+		}
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			tag = JAP
+			NOT = {
+				    country_exists = TGW
+				    country_exists = EDO
+			}
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = { 		
+				
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_korea2
+		icon = GFX_focus_jap_zaibatsu
+		text = "Invade Korea"
+		prerequisite = { 
+				focus = JAP_showa
+		}
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = KOR
+			}
+			KOR = {
+				every_owned_state = {
+				    add_claim_by = JAP
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_vin2
+		icon = GFX_focus_jap_zaibatsu
+		text = "Invade Indochina"
+		prerequisite = { 
+				focus = JAP_showa
+		}
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = VIN
+			}
+			VIN = {
+				every_owned_state = {
+				    add_claim_by = JAP
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_thailand
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Burma"
+		prerequisite = { 
+				focus = JAP_korea2
+				focus = JAP_vin2
+		}
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = SIA
+			    value = 0.3
+			}
+			add_to_faction = SIA
+		}
+	}
+
+	focus = {
+		id = JAP_sinkiang
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Sinkiang"
+		prerequisite = { 
+				focus = JAP_korea2
+				focus = JAP_vin2
+		}
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = SIK
+			    value = 0.3
+			}
+			add_to_faction = SIK
+		}
+	}
+
+########### Juntla JAPAN ##############
+
+	focus = {
+		id = JAP_republic
+		icon = GFX_focus_jap_pacific_guardian
+		text = "Japanese juntla"
+		prerequisite = { 
+				focus = JAP_civil_war
+		}
+		mutually_exclusive = { 
+			focus = JAP_red
+			focus = JAP_showa
+		}
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			tag = TGW
+			NOT = {
+				    country_exists = JAP
+				    country_exists = EDO
+			}
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TGW = { 
+				set_politics = {
+					ruling_party = reactionary
+    					elections_allowed = no
+    					long_name = "Republican Liberal party"
+    					name = "Republican party"
+				}
+			}
+			create_faction = "Defense sphere"
+		}
+	}
+
+	focus = {
+		id = JAP_korea3
+		icon = GFX_focus_jap_zaibatsu
+		text = "Invade Korea"
+		prerequisite = { 
+				focus = JAP_republic
+		}
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = KOR
+			}
+			KOR = {
+				every_owned_state = {
+				    add_claim_by = TGW
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_vin3
+		icon = GFX_focus_jap_zaibatsu
+		text = "Invade Indochina"
+		prerequisite = { 
+				focus = JAP_republic
+		}
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = VIN
+			}
+			VIN = {
+				every_owned_state = {
+				    add_claim_by = TGW
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_thailand2
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Burma"
+		prerequisite = { 
+				focus = JAP_korea3
+				focus = JAP_vin3
+		}
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = SIA
+			    value = 0.3
+			}
+			add_to_faction = SIA
+		}
+	}
+
+	focus = {
+		id = JAP_mongolia
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Bengal"
+		prerequisite = { 
+				focus = JAP_korea3
+				focus = JAP_vin3
+		}
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = MON
+			    value = 0.3
+			}
+			add_to_faction = MON
+		}
+	}
+
+########### RED JAPAN ##############
+
+	focus = {
+		id = JAP_red
+		icon = GFX_focus_jap_zaibatsu
+		text = "People's Nation"
+		prerequisite = { 
+				focus = JAP_civil_war
+		}
+		mutually_exclusive = { 
+			focus = JAP_republic 
+			focus = JAP_showa
+		}
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			tag = EDO
+			NOT = {
+				    country_exists = TGW
+				    country_exists = JAP
+			}
+			
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction = "Asian Union"
+		}
+	}
+
+	focus = {
+		id = JAP_korea
+		icon = GFX_focus_jap_zaibatsu
+		text = "Collaborate with Korea"
+		prerequisite = { 
+				focus = JAP_red
+		}
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = KOR
+			    value = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_vin
+		icon = GFX_focus_jap_zaibatsu
+		text = "Collaborate with Indochina"
+		prerequisite = { 
+				focus = JAP_red
+		}
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = VIN
+			    value = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_burma
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Burma"
+		prerequisite = { 
+				focus = JAP_korea
+				focus = JAP_vin
+		}
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = BRM
+			    value = 0.3
+			}
+			add_to_faction = BRM
+		}
+	}
+
+	focus = {
+		id = JAP_bengal
+		icon = GFX_focus_jap_zaibatsu
+		text = "Ally Bengal"
+		prerequisite = { 
+				focus = JAP_korea
+				focus = JAP_vin
+		}
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = BAN
+			    value = 0.3
+			}
+			add_to_faction = BAN
+		}
+	}
+
+	focus = {
+		id = JAP_war_china
+		icon = GFX_focus_jap_zaibatsu
+		text = "Invade China"
+		prerequisite = { 
+				focus = JAP_bengal
+				focus = JAP_burma
+				focus = JAP_mongolia
+				focus = JAP_thailand
+				focus = JAP_thailand2
+				focus = JAP_sinkiang
+		}
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { days = 1 id = japan.1 }
+		}
+	}
+}

@@ -1,0 +1,61 @@
+﻿division_template = {
+	name = "Infantry Corps"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "People's Army  I"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army I"
+		location = 6922
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army  I"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+
+	division = {
+		name = "People's Army  II"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army II"
+		location = 6922
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army  II"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+
+	division = {
+		name = "People's Army  III"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army III"
+		location = 6922
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "People's Army  III"
+		location = 4052
+		division_template = "Infantry Corps"
+	}
+}

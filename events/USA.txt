@@ -1,0 +1,796 @@
+
+add_namespace = usa
+
+country_event = {
+	id = usa.0
+	title = "Military threat"
+	desc = "Murder of Roosevelt cause multiple rebellions in few regions, we need to militarize the south"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Fu !"
+
+		816 = { set_demilitarized_zone = yes }
+		362 = { set_demilitarized_zone = yes }
+		360 = { set_demilitarized_zone = yes }
+		373 = { set_demilitarized_zone = yes }
+		372 = { set_demilitarized_zone = yes }
+		379 = { set_demilitarized_zone = yes }
+		377 = { set_demilitarized_zone = yes }
+		921 = { set_demilitarized_zone = yes }
+		939 = { set_demilitarized_zone = yes }
+		389 = { set_demilitarized_zone = yes }
+		388 = { set_demilitarized_zone = yes }
+
+		hidden_effect = {
+			USA = {
+				country_event = { days = 11 id = usa.1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = usa.1
+	title = "Syndicate's Revolt"
+	desc = "Syndicates refuse to collaborate with the USA. They want revendications and we are no more able to handle them. Reed lead the revolution against us. With the help of Browder, syndicalists take Michigan and Illinois to ensure industrial armament."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "No communists please"
+
+		create_country_leader = {
+			name = "Dwight D. Eisenhower"
+			desc = "Interim president of the United States of America."
+			picture = "gfx/leaders/USA/Portrait_USA_Dwight_D_Eisenhower.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				dictator
+			}
+		}
+
+		end_puppet = PHI
+		
+		USB = { transfer_state = 392 }
+		USB = { transfer_state = 393 }
+		USB = { transfer_state = 394 }
+		USB = { transfer_state = 395 }
+		USB = { transfer_state = 396 }
+
+		USB = {	
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.7
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+
+
+		USA = {
+			every_owned_state = {
+			    add_claim_by = USB
+			}
+		}
+
+		USA = {
+			every_owned_state = {
+			    add_claim_by = CSA
+			}
+		}
+
+		diplomatic_relation = {
+    				country = GER
+    				relation = non_aggression_pact
+    				active = yes
+		}
+
+		diplomatic_relation = {
+    				country = FRA
+    				relation = non_aggression_pact
+   				active = yes
+		}
+		country_event = { days = 26 id = usa.2 }
+	}
+}
+
+country_event = {
+	id = usa.2
+	title = "War between syndicates and unionists"
+	desc = "Syndicates declare war against CSA and lead a conquest to Atlanta."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "God hate the king"
+
+		USB = { 
+			load_oob = "USB_defense_force"
+		}
+
+		CSA = { 
+			load_oob = "CSA_fascist_uprising"
+		}
+
+		USB = {
+			  create_wargoal  = {
+		            	target = USA
+		                type = civil_war
+	      		  }
+		}
+
+		USB = {
+			  create_wargoal  = {
+		            	target = CSA
+		                type = civil_war
+	      		  }
+
+			diplomatic_relation = {
+    				country = GER
+    				relation = non_aggression_pact
+    				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = FRA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+		}
+
+		CSA = {
+			  create_wargoal  = {
+		            	target = USA
+		                type = civil_war
+	      		  }
+
+			diplomatic_relation = {
+    				country = GER
+    				relation = non_aggression_pact
+    				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = FRA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+		}
+
+		hidden_effect = {
+			news_event = { hours = 6 id = fr_news.1 }
+
+			country_event = { days = 36 id = usa.3 }
+			country_event = { days = 17 id = usa.5 }
+			country_event = { days = 29 id = usa.8 }
+		}
+	}
+}
+
+country_event = {
+	id = usa.3
+	title = "Mexico interve"
+	desc = "Mexico is attacking us. They will certainly invade lost lands of 1848."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Dos mios!"
+
+		set_global_flag = mexico_war
+
+		MEX = {
+			  create_wargoal  = {
+		            	target = USA
+		                type = civil_war
+	      		  }	
+
+			diplomatic_relation = {
+    				country = GER
+    				relation = non_aggression_pact
+    				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = FRA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+		}
+
+		USB = {
+			  create_wargoal  = {
+		            	target = MEX 
+		                type = civil_war
+	      		  }
+		}
+
+		MEX = {
+			  create_wargoal  = {
+		            	target = CSA
+		                type = civil_war
+	      		  }
+		}
+	}
+}
+
+country_event = {
+	id = usa.4
+	title = "White peace Mexico"
+	desc = "We propose to do a truce with taking few territories."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = MEX
+		MEX = { controls_state = 480 }
+		MEX = { controls_state = 482 }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Well, that good"
+
+	        white_peace = CSA
+	        white_peace = USA
+	        white_peace = MEX
+		MEX = { set_state_owner = 482 }
+		MEX = { set_state_owner = 480 }
+		MEX = { set_state_owner = 483 }
+		MEX = { set_state_owner = 484 }
+		MEX = { set_state_owner = 917 }
+		MEX = { set_state_owner = 936 }
+	}
+}
+
+country_event = {
+	id = usa.5
+	title = "Mormons revolt"
+	desc = "Mormons refuse to fight with the USA. Theocrats and Scientologists are betraying us."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes	
+	
+	option = {
+
+		name = "No mormons please"
+
+		set_global_flag = deseret_war
+
+		DES = { transfer_state = 380 }
+
+		DES = {	
+
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.7
+			}
+		}
+		country_event = { days = 5 id = usa.6 }
+	}
+}
+
+country_event = {
+	id = usa.6
+	title = "Mormons join the Civil War"
+	desc = "Mormons want to take their lands in Deseret."
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "God hate secularism"
+
+		DES = { 
+			load_oob = "DES_1936"
+		}
+
+		CSA = {
+			  create_wargoal  = {
+		            	target = DES
+		                type = civil_war
+	      		  }
+		}
+
+		USB = {
+			  create_wargoal  = {
+		            	target = DES
+		                type = civil_war
+	      		  }
+		}
+
+		USA = {
+			  create_wargoal  = {
+		            	target = DES
+		                type = civil_war
+	      		  }
+		}
+	}
+}
+
+country_event = {
+	id = usa.7
+	title = "White peace with Mormons"
+	desc = "We propose to do a truce with giving some territories."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = DES
+		DES = { owns_state = 377 }
+        }
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = "Well, that good."
+	        white_peace = USA
+	        white_peace = CSA
+	        white_peace = USB
+		DES = { set_state_owner = 377 }
+		DES = { set_state_owner = 379 }
+		DES = { set_state_owner = 921 }
+		
+			diplomatic_relation = {
+    				country = USA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+			diplomatic_relation = {
+    				country = CSA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+			diplomatic_relation = {
+    				country = USB
+    				relation = non_aggression_pact
+   				active = yes
+			}
+	}
+}
+
+
+
+country_event = {
+	id = usa.8
+	title = "Washington revolt"
+	desc = "Monarchists in New England refuse to work with the USA."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "No a Washington king please!"
+
+		set_global_flag = NE_war
+
+		NWG  = { transfer_state = 358 }
+		NWG  = { transfer_state = 357 }
+		NWG  = { transfer_state = 924 }
+
+		NWG  = {	
+
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.7
+			}
+		}
+
+		USA = { country_event = { days = 15 id = usa.9 } }
+
+	}
+}
+
+country_event = {
+	id = usa.9
+	title = "Souverainist revolt"
+	desc = "New England under Monarchist delcare war to USA"
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "God save the president!"
+
+		NWG  = { 
+			load_oob = "NWG_1936"
+		}
+
+		USA = {
+			  create_wargoal  = {
+		            	target = NWG 
+		                type = civil_war
+	      		  }
+		}
+
+		CSA = {
+			  create_wargoal  = {
+		            	target = NWG 
+		                type = civil_war
+	      		  }
+		}
+
+		USB = {
+			  create_wargoal  = {
+		            	target = NWG 
+		                type = civil_war
+	      		  }
+		}
+	}
+}
+
+country_event = {
+	id = usa.10
+	title = "North USA join Canada"
+	desc = "Canada can take access to our lands and we are now lose."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = USA
+		NOT = { controls_state = 360 }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Seriously ?"
+
+		CAN = { set_state_owner = 463 }
+		CAN = { set_state_owner = 388 }
+		CAN = { set_state_owner = 389 }
+		CAN = { set_state_owner = 387 }
+		CAN = { set_state_owner = 381 }
+		CAN = { set_state_owner = 390 }
+
+		361 = { set_demilitarized_zone = yes }
+
+	}
+}
+
+country_event = {
+	id = usa.11
+	title = "Second American Civil War end."
+	desc = "Conference of Ottawa forced us to let our country divided between every factions. President Roosevelt give his dismiss."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = USA
+		NOT = { owns_state = 463 }
+		USA = { surrender_progress > 0.3 }
+        } 
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Well, We failed ..."
+
+		retire_country_leader = yes
+
+	        white_peace = CSA
+	        white_peace = NWG 
+	        white_peace = USB
+
+	        CSA = { white_peace = USB }
+	        CSA = { white_peace = NWG }
+	        NWG = { white_peace = USB }
+
+		CSA = { set_state_owner = 374 }
+		CSA = { set_state_owner = 376 }
+		CSA = { set_state_owner = 918 }
+
+		CAN = { set_state_owner = 686 }
+
+		USB = { set_state_owner = 369 }
+		USB = { set_state_owner = 373 }
+		USB = { set_state_owner = 391 }
+		USB = { set_state_owner = 261 }
+
+		NWG  = { set_state_owner = 362 }
+		NWG  = { set_state_owner = 361 }
+		NWG  = { set_state_owner = 360 }
+		NWG  = { set_state_owner = 359 }
+		NWG  = { set_state_owner = 816 }
+		NWG  = { set_state_owner = 923 }
+
+		NWG  = { set_cosmetic_tag = NWG_USA }
+
+		
+			diplomatic_relation = {
+    				country = CSA
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = USB
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = MEX
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = NWG 
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+		CSA = {
+
+			diplomatic_relation = {
+    				country = USB
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = MEX
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = NWG 
+    				relation = non_aggression_pact
+   				active = yes
+			}
+		}
+
+		MEX = {
+
+			diplomatic_relation = {
+    				country = USB
+    				relation = non_aggression_pact
+   				active = yes
+			}
+
+			diplomatic_relation = {
+    				country = NWG 
+    				relation = non_aggression_pact
+   				active = yes
+			}
+		}
+
+		USB = {
+
+			diplomatic_relation = {
+    				country = NWG 
+    				relation = non_aggression_pact
+   				active = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = usa.15
+	title = "Californian Secession"
+	desc = "Californian democrat forces did secessions."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = USA
+		date > 1937.1.9
+		NOT = { date > 1937.3.10 }
+		USA = { controls_state = 361 }
+		has_capitulated = no
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	
+	option = {
+
+		name = "Liberal revolt"
+
+		CAL = { transfer_state = 378 }
+		CAL = { transfer_state = 922 }
+
+		CAL = {	
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.7
+			}
+		}
+		USA = {
+			country_event = { days = 59 id = usa.16 }
+		}
+	}
+}
+
+
+country_event = {
+	id = usa.16
+	title = "California War"
+	desc = "Californian government declare war to USA to take coasts"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Nuke California"
+
+		CAL = { 
+			load_oob = "CAL_1936"
+		}
+
+		USA = { set_capital = { state = 382 } }
+
+		USA = {
+			  create_wargoal  = {
+		            	target = CAL
+		                type = civil_war
+	      		  }
+		}
+		CSA = {
+			  create_wargoal  = {
+		            	target = CAL
+		                type = civil_war
+	      		  }
+		}
+		USB = {
+			  create_wargoal  = {
+		            	target = CAL
+		                type = civil_war
+	      		  }
+		}
+	}
+}
+
+country_event = {
+	id = usa.17
+	title = "White peace with California"
+	desc = "California propose a truce."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = USA
+		USA = { surrender_progress > 0.2 }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Well, that good."
+	        white_peace = CAL
+	        USB = { white_peace = CAL }
+	        CSA = { white_peace = CAL }
+		CAL = { set_state_owner = 385 }
+		CAL = { set_state_owner = 386 }
+		CAL = { set_cosmetic_tag = CAL_Pacific }
+
+		USA = {
+			country_event = { days = 25 id = usa.19 }
+		}
+	}
+}
+
+country_event = {
+	id = usa.18
+	title = "Choose camp"
+	desc = "Take one of the camps."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = USA
+			tag = CSA
+		}
+		country_exists = CAL
+		country_exists = USB
+		country_exists = DES
+		country_exists = CSA
+		country_exists = USA
+		country_exists = NWG 
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "California"
+	        CAL = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "New England"
+	        NWG  = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Mormons"
+	        DES = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Confederates"
+	        CSA = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Syndicates"
+	        USB = { change_tag_from = ROOT }
+	}
+	
+	option = {
+		name = "Keep USA"
+	        USA = { change_tag_from = ROOT }
+	}
+}

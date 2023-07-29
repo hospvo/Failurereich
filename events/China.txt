@@ -1,0 +1,288 @@
+﻿
+add_namespace = china
+add_namespace = qing
+
+country_event = {
+	id = china.1
+	title = "Syndacte revolt"
+	desc = "Syndicates refuse to work with Kuomindang."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "No communists please"
+
+		PRC = { transfer_state = 602 }
+		PRC = { transfer_state = 600 }
+		PRC = { transfer_state = 595 }
+		PRC = { transfer_state = 613 }
+		PRC = { transfer_state = 596 }
+		PRC = { transfer_state = 749 }
+
+		PRC = {	
+
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.7
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+	
+		hidden_effect = {
+			CHI = {
+				country_event = { days = 14 id = china.2 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = china.2
+	title = "Revolutionaries civil war"
+	desc = "Syndicates are under a strong pressure and decide to rebel against us and ask more freedom"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "God hate the king"
+
+		PRC = { 
+			load_oob = "PRC_civil_war"
+		}
+
+		PRC = {
+			  declare_war_on = {
+		            	target = CHI
+		                type = civil_war
+	      		  }
+		}
+	}
+}
+
+country_event = {
+	id = china.3
+	title = "Revolutionaries victory"
+	desc = "Mao Zedong succed to cut our country into 2."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = CHI
+		PRC = { controls_state = 592 }
+		PRC = { controls_state = 613 }
+        }
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+
+		name = "We fail"
+	        white_peace = PRC
+		PRC = { set_state_owner = 591 }
+		PRC = { set_state_owner = 593 }
+		PRC = { set_state_owner = 595 }
+		PRC = { set_state_owner = 600 }
+		PRC = { set_state_owner = 594 }
+		PRC = { set_state_owner = 602 }
+		PRC = { set_state_owner = 594 }
+		PRC = { set_state_owner = 592 }
+		PRC = { set_state_owner = 599 }
+		PRC = { set_state_owner = 603 }
+		PRC = { set_state_owner = 748 }
+		PRC = { set_state_owner = 750 }
+
+		set_political_party = {
+    			ideology = fascism
+  			popularity = 75
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+		}
+
+		unlock_national_focus = CHI_civil_lost
+
+	}
+}
+
+### Qing ###
+
+country_event = {
+	id = qing.1
+	title = "The Empire weakened"
+	desc = "Chine obtain ressources and new reforms but it seem the stability don't run."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Serious problems"
+
+		597 = { set_demilitarized_zone = yes }
+		598 = { set_demilitarized_zone = yes }
+		606 = { set_demilitarized_zone = yes }
+		607 = { set_demilitarized_zone = yes }
+		608 = { set_demilitarized_zone = yes }
+		609 = { set_demilitarized_zone = yes }
+
+		hidden_effect = {
+			MAN = {
+				country_event = { days = 11 id = qing.2 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = qing.2
+	title = "Our empire is divided."
+	desc = "Puyi has been assasinated. and we don't know how many time we can handle our country"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "No ..."
+
+		605 = { set_demilitarized_zone = yes }
+		744 = { set_demilitarized_zone = yes }
+		753 = { set_demilitarized_zone = yes }
+		606 = { set_demilitarized_zone = yes }
+		607 = { set_demilitarized_zone = yes }
+		620 = { set_demilitarized_zone = yes }
+		598 = { set_demilitarized_zone = yes }
+		597 = { set_demilitarized_zone = yes }
+
+		ANH = { transfer_state = 612 }
+		ANH = { transfer_state = 611 }
+		ANH = { transfer_state = 621 }
+		ANH = { transfer_state = 746 }
+		ANH = { transfer_state = 715 }
+		ANH = { transfer_state = 610 }
+		ANH = { transfer_state = 598 }
+		ANH = { transfer_state = 597 }
+		ANH = { transfer_state = 819 }
+		ZHI = { transfer_state = 609 }
+		ZHI = { transfer_state = 608 }
+		ZHI = { transfer_state = 614 }
+		ZHI = { transfer_state = 597 }
+		ZHI = { transfer_state = 607 }
+		ZHI = { transfer_state = 744 }
+		ANH = { transfer_state = 622 }
+		ANH = { transfer_state = 615 }
+		ZHI = { transfer_state = 620 }
+		ZHI = { transfer_state = 753 }
+		ZHI = { transfer_state = 283 }
+		ZHI = { transfer_state = 605 }
+		ZHI = { transfer_state = 606 }
+
+		hidden_effect = {
+			MAN = {
+				country_event = { days = 24 id = qing.3 }
+			}
+		}
+
+		set_cosmetic_tag = MAN_fengtian
+	}
+}
+
+country_event = {
+	id = qing.3
+	title = "Beiyang civil war"
+	desc = "Most of our allies declare independance"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Our King is dead"
+
+		retire_country_leader = yes
+
+		ZHI = { 
+			load_oob = "ZHI_1936"
+		}
+
+		ANH = { 
+			load_oob = "ANH_1936"
+		}
+
+		ZHI = {
+			  declare_war_on = {
+		            	target = MAN
+		                type = civil_war
+	      		  }
+		}
+
+		ANH = {
+			  declare_war_on = {
+		            	target = MAN
+		                type = civil_war
+	      		  }
+		}
+
+
+		ANH = {
+			  declare_war_on = {
+		            	target = ZHI
+		                type = civil_war
+	      		  }
+		}
+
+		MAN = {
+			every_owned_state = {
+			    add_claim_by = ZHI 
+			}
+		}
+
+		MAN = {
+			every_owned_state = {
+			    add_claim_by = ANH 
+			}
+		}
+
+		ZHI = {
+			every_owned_state = {
+			    add_claim_by = MAN
+			}
+		}
+
+		ZHI = {
+			every_owned_state = {
+			    add_claim_by = ANH 
+			}
+		}
+
+		ANH = {
+			every_owned_state = {
+			    add_claim_by = MAN
+			}
+		}
+
+		ANH = {
+			every_owned_state = {
+			    add_claim_by = ZHI
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = fr_news.4 }
+		}
+	}
+}

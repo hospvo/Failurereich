@@ -1,0 +1,203 @@
+focus_tree = {
+	id = saudi_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SAU
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = SAU_crush_terrorist
+		text="Invade Ikhwan"
+		icon = GFX_goal_generic_military_sphere
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = IKH }
+		}
+		
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = IKH
+		                type = annex_everything
+	        	}	
+			IKH = {
+				every_owned_state = {
+				    add_claim_by = SAU
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SAU_invade_rashid
+		text="Invade Rashidi"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_crush_terrorist }
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = JSH }
+		}
+		
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = JSH
+		                type = annex_everything
+	        	}
+
+			JSH = {
+				every_owned_state = {
+				    add_claim_by = SAU
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = SAU_invade_hejaz
+		text="Invade Holy earth"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_crush_terrorist }
+		x = 3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = HEJ }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = HEJ
+		                type = annex_everything
+	        	}
+
+			HEJ = {
+				every_owned_state = {
+				    add_claim_by = SAU
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = SAU_invade_oman
+		text="Invade Oman"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_rashid }
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = OMA }
+		}
+
+		completion_reward = {
+
+	        	create_wargoal = {
+		                target = OMA
+		                type = annex_everything
+	        	}
+
+			OMA = {
+				every_owned_state = {
+				    add_claim_by = OMA 
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = SAU_invade_yemen
+		text="Invade Yemen"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_rashid }
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = YEM }
+		}
+
+		completion_reward = {
+
+	        	create_wargoal = {
+		                target = YEM
+		                type = annex_everything
+	        	}
+
+			SAU = {
+				every_owned_state = {
+				    add_claim_by = YEM
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = SAU_arabia
+		text="Create Arabia"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_invade_yemen }
+		prerequisite = { focus = SAU_invade_oman }
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			owns_state = 679
+			owns_state = 857
+			owns_state = 859
+			owns_state = 292
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        	set_cosmetic_tag = SAU_arabia
+		}
+	}
+ }

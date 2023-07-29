@@ -1,0 +1,44 @@
+spriteTypes = {
+
+spriteType = {
+		name = "GFX_ideology_vanguardism_group"
+		texturefile = "gfx//interface//ideologies//vanguardism_group.dds"
+	}
+spriteType = {
+		name = "GFX_ideology_anarchist_group"
+		texturefile = "gfx//interface//ideologies//anarchist_group.dds"
+	}
+spriteType = {
+		name = "GFX_ideology_reactionary_group"
+		texturefile = "gfx//interface//ideologies//reactionary_group.dds"
+	}
+spriteType = {
+		name = "GFX_ideology_left_group"
+		texturefile = "gfx//interface//ideologies//left_group.dds"
+	}
+
+spriteType = {
+		name = "GFX_report_event_greater_hungary"
+		texturefile = "gfx/event_pictures/greater_hungary_fragmented.dds"
+	}
+
+spriteType = {
+		name = "GFX_report_event_greater_hungary_2"
+		texturefile = "gfx/event_pictures/greater_hungary.dds"
+	}
+
+spriteType = {
+		name = "GFX_decision_cat_generic_poland_hungary"
+		texturefile = "gfx/interface/decisions/poland_hungary.dds"
+	}
+
+spriteType = {
+		name = "GFX_decision_cat_generic_goguryeo"
+		texturefile = "gfx/interface/decisions/goguryeo.dds"
+	}
+
+spriteType = {
+		name = "GFX_decision_cat_generic_latin"
+		texturefile = "gfx/interface/decisions/latin.dds"
+	}
+}

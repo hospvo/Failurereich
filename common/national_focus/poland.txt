@@ -1,0 +1,614 @@
+﻿
+focus_tree = {
+	id = poland_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+	
+	default = no
+
+
+	focus = {
+		id = POL_falangism
+		icon = GFX_goal_generic_military_sphere
+		text = "Regency"
+		mutually_exclusive = { focus = POL_reactionary }
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+			add_political_power = 200
+			add_popularity = { ideology = fascism popularity = -0.2 }
+			add_popularity = { ideology = reactionary popularity = 0.2 }
+		}
+	}
+
+	focus = {
+		id = POL_hohenzollern
+		icon = GFX_focus_invite_romania
+		text = "A fleeing King"
+		prerequisite = { focus = POL_falangism }
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_claiming_lithuania }
+
+		x = 6
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_politics = { ruling_party = reactionary }
+			retire_country_leader = yes
+			set_party_name = { 
+				    ideology = reactionary
+				    long_name = "Constitutional Party"
+				    name = "Constitutional Party"
+			}
+			effect_tooltip = {
+				create_country_leader = {
+					name = "Michał II"
+					desc = "POLITICS_MICHAEL_I_DESC"
+					picture = "gfx/leaders/ROM/Portrait_romania_michael_i.dds"			
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POL_claiming_lithuania
+		icon = GFX_focus_generic_monarchy_1
+		text = "Neutral king"
+		prerequisite = { focus = POL_falangism }
+
+		mutually_exclusive = { focus = POL_habsburg focus = POL_hohenzollern }
+
+		x = 10
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = reactionary }
+			retire_country_leader = yes
+			effect_tooltip = {
+				promote_character = POL_friedrich_christian
+			}
+		}
+	}
+
+	focus = {
+		id = POL_habsburg
+		icon = GFX_focus_POL_habsburg
+		text = "A Hasbourg monarchy"
+		prerequisite = { focus = POL_falangism }
+
+		mutually_exclusive = { focus = POL_hohenzollern focus = POL_claiming_lithuania }
+
+		x = 14
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = reactionary }
+			retire_country_leader = yes
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_character = POL_karl_albrecht
+					}
+					promote_character = POL_karl_albrecht
+				}
+			}
+			set_party_name = { 
+				    ideology = reactionary
+				    long_name = "Free Party"
+				    name = "Free Party"
+			}
+		}
+	}
+
+	focus = {
+		id = POL_reactionary
+		icon = GFX_focus_generic_polish_deal
+		text = "Traditional Falangism"
+		mutually_exclusive = { focus = POL_falangism }
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = reactionary
+		}
+		completion_reward = {
+			retire_country_leader = yes
+
+			set_politics = {
+				ruling_party = reactionary
+			}
+			
+			set_party_name = { 
+				    ideology = reactionary
+				    long_name = "Military Juntla"
+				    name = "Military Juntla"
+			}
+
+			add_manpower = 100000
+			add_popularity = { ideology = fascism popularity = 0.2}
+			add_popularity = { ideology = reactionary popularity = -0.2}
+			add_political_power = 200
+			
+		}
+	}
+
+	focus = {
+		id = POL_cossack_king
+		icon = GFX_focus_POL_cossack_king
+		text = "Cossack Poland"
+		prerequisite = { focus = POL_reactionary }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_republic }
+
+		x = 4
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_politics = { ruling_party = fascism }
+			retire_country_leader = yes
+			effect_tooltip = {
+				add_ruling_to_fas = yes
+
+				set_party_name = { 
+					ideology = fascism 
+					long_name = "Bermontian House"
+					name = "Bermontian House"
+				}
+
+				promote_character = POL_pavel_bermondt_avalov
+				set_cosmetic_tag = POL_KINGDOM_RUS_fascism
+			}
+		}
+	}
+
+	focus = {
+		id = POL_republic
+		icon = GFX_focus_POL_cossack_king
+		text = "Republican Poland"
+		prerequisite = { focus = POL_reactionary }
+		relative_position_id = POL_fulfil_fifth_of_november
+
+		mutually_exclusive = { focus = POL_cossack_king }
+
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			effect_tooltip = {
+				set_party_name = { 
+					ideology = fascism 
+					long_name = "Republican Renewal"
+					name = "Republican Renewal"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POL_romanian_relations
+		icon = GFX_focus_invite_romania
+		text = "approach Romania"
+
+
+		prerequisite = { 
+				focus = POL_cossack_king
+				focus = POL_republic
+		}
+
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ROM
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = POL_french_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach Francists"
+
+		prerequisite = { 
+				focus = POL_romanian_relations
+		}
+
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = FRA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = POL_indepedence
+		icon = GFX_goal_SOV_free_Rutenia
+		text = "Polish Indepedence"
+
+		prerequisite = { 
+				focus = POL_hohenzollern 
+		}
+
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			set_rule = {
+    				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = POL_ROM_alliance
+		icon = GFX_focus_POL_romania_bridgehead_strategy
+		text = "Alliance with Legionaries"
+
+		prerequisite = { 
+				focus = POL_indepedence
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			ROM = { country_event = poland.3 }
+			
+		}
+	}
+
+	focus = {
+		id = POL_unstable_HUN
+		icon = GFX_goal_GRE_reevaluating_the_drachma
+		text = "Destabilize Hungary"
+
+		prerequisite = { 
+				focus = POL_ROM_alliance
+		}
+
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			HUN = { country_event = poland.1 }
+		}
+	}
+
+	focus = {
+		id = POL_unstable_CZE 
+		icon = GFX_goal_GRE_reevaluating_the_drachma
+		text = "Czech invasion"
+
+		prerequisite = { 
+				focus = POL_habsburg
+		}
+
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+    				type = puppet_wargoal_focus
+    				target = CZE
+			}
+		}
+	}
+
+	focus = {
+		id = POL_alliance_cezch
+		icon = GFX_goal_GRE_reevaluating_the_drachma
+		text = "Proposition to Czech"
+
+		prerequisite = { 
+				focus = POL_habsburg
+		}
+
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			CZE = { country_event = poland.6 }
+		}
+	}
+
+	focus = {
+		id = POL_ask_slovakia
+		icon = GFX_focus_POL_prepare_for_the_inevitable
+		text = "Claim Slovakia"
+
+		prerequisite = { 
+				focus = POL_unstable_CZE 
+				focus = POL_alliance_cezch
+		}
+
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			HUN = { country_event = poland.10 }
+		}
+	}
+
+	focus = {
+		id = POL_ask_silesia
+		icon = GFX_focus_POL_reassert_silesian_claims
+		text = "Claim Silesia"
+
+		prerequisite = { 
+				focus = POL_ask_slovakia
+		}
+
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+			
+		bypass = {
+			GER = { country_exists = no }
+		}
+
+		completion_reward = {
+			GER = { country_event = poland.13 }
+		}
+	}
+
+	focus = {
+		id = POL_ask_lithuania
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		text = "Claim Lithuania"
+
+		prerequisite = { 
+				focus = POL_claiming_lithuania
+		}
+
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+			
+		bypass = {
+			LIT = { country_exists = no }
+		}
+
+		completion_reward = {
+			SOV = { country_event = poland.16 }
+		}
+	}
+
+#### formable ####
+
+	focus = {
+		id = POL_WS
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		text = "Form Zapadoslavia"
+
+		prerequisite = { 
+				focus = POL_ask_silesia
+		}
+
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				set_cosmetic_tag = POL_WS
+				add_manpower = 100000
+		}
+	}
+
+	focus = {
+		id = POL_HUN
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		text = "Form Poland-Hungary"
+
+		prerequisite = { 
+				focus = POL_unstable_HUN
+		}
+
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				create_wargoal= { 
+					type = annex_everything 
+					target = SLO
+				}
+				create_wargoal= { 
+					type = annex_everything 
+					target = HUN
+				}
+		}
+	}
+}

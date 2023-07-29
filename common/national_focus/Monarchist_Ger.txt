@@ -1,0 +1,405 @@
+﻿
+focus_tree = {
+	id = QR_germany_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PRE
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = KRG_Speidel
+		icon = GFX_goal_generic_military_sphere
+		text = "Deutcher Neue Reich"
+		x = 8
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 100000 }
+			controls_state = 64
+			controls_state = 763
+			controls_state = 42
+			controls_state = 52
+			controls_state = 59
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = KRG_cezch
+		icon = GFX_focus_generic_attack_cezchoslovakia
+		text = "Divide Czech"
+
+		prerequisite = { 
+				focus = KRG_Speidel
+		}
+
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_austria
+		icon = GFX_focus_generic_attack_austria
+		text = "Annex Austria"
+
+		prerequisite = { 
+				focus = KRG_Speidel
+		}
+
+		bypass = {
+			NOT = { country_exists = AUS }
+		}
+
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_poland
+		icon = GFX_focus_generic_attack_poland
+		text = "Invade Poland"
+
+		prerequisite = { 
+				focus = KRG_austria
+		}
+		prerequisite = { 
+				focus = KRG_cezch
+		}
+
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_holland
+		icon = GFX_focus_generic_attack_holland
+		text = "Invade Benelux"
+
+		prerequisite = { 
+				focus = KRG_austria
+		}
+		prerequisite = { 
+				focus = KRG_cezch
+		}
+
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.4 }
+			}
+		}
+	}
+
+####
+
+	focus = {
+		id = KRG_scandinavia
+		icon = GFX_focus_generic_attack_finland
+		text = "Invade Scandinavia"
+
+		prerequisite = { 
+				focus = KRG_holland
+		}
+		prerequisite = { 
+				focus = KRG_poland
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.5 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_Balkan
+		icon = GFX_focus_generic_attack_romania
+		text = "Divide Western Balkans"
+
+		prerequisite = { 
+				focus = KRG_holland
+		}
+		prerequisite = { 
+				focus = KRG_poland
+		}
+
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.6 }
+			}
+		}
+	}
+
+####
+
+	focus = {
+		id = KRG_Bulgaria_Greece
+		icon = GFX_focus_generic_attack_bulgaria
+		text = "Invade Thrace"
+
+		prerequisite = { 
+				focus = KRG_Balkan
+		}
+		prerequisite = { 
+				focus = KRG_scandinavia
+		}
+
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.7 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_swiss_conf
+		icon = GFX_focus_generic_attack_switzerland
+		text = "Divide Switzerland"
+
+		prerequisite = { 
+				focus = KRG_Balkan
+		}
+		prerequisite = { 
+				focus = KRG_scandinavia
+		}
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.9 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_Italy
+		icon = GFX_focus_generic_attack_italy
+		text = "Invade Italy"
+
+		prerequisite = { 
+				focus = KRG_swiss_conf
+		}
+		prerequisite = { 
+				focus = KRG_Bulgaria_Greece
+		}
+
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.10 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_FRA
+		icon = GFX_focus_generic_attack_france
+		text = "Invade France"
+
+		prerequisite = { 
+				focus = KRG_swiss_conf
+		}
+		prerequisite = { 
+				focus = KRG_Bulgaria_Greece
+		}
+
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			PRE = {
+				country_event = { days = 1 id = kg.11 }
+			}
+		}
+	}
+
+	focus = {
+		id = KRG_rus
+		icon = GFX_focus_generic_attack_soviet_union
+		text = "Invade Russia"
+
+		prerequisite = { 
+				focus = KRG_Italy
+		}
+		prerequisite = { 
+				focus = KRG_FRA
+		}
+
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			### later ###
+		}
+	}
+}

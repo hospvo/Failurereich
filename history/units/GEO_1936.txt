@@ -1,0 +1,113 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry"		
+	division_names_group = DES_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "Red Caucas troops"	
+		location = 1599
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 1599
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 1599
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 1599
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 12320
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 12320
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 12320
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 7661
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 7661
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 7661
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "Red Caucas troops"	
+		location = 9626
+		division_template = "Infantry" 
+		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
+		start_equipment_factor = 0.15
+
+	}
+}
+

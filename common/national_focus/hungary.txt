@@ -1,0 +1,592 @@
+focus_tree = {
+	id = hungary_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HUN
+		}
+	}
+
+	default = no
+
+	#Focus for The Soviet Republic
+	focus = {
+		id = HUN_the_soviet_republic
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { 	
+			focus = HUN_support_syncretics
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Greater Hungary
+	focus = {
+		id = HUN_greater_hungary
+		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_the_soviet_republic }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05 
+			add_popularity = { 
+				ideology = communism 
+				popularity = 0.10 
+			}
+				add_state_core = 664 
+				add_state_core = 73 
+				add_state_core = 71 
+				add_state_core = 70
+		}
+	}
+
+	#Focus for Demand Vovodjina
+	focus = {
+		id = HUN_demand_vovodjina
+		icon = GFX_goal_generic_military_deal
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_deal_with_the_enemies }
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			YUG = { country_event= { days = 1 id = yugoslavia.1 } }
+		}
+	}
+
+	#Focus for Deal with the enemies
+	focus = {
+		id = HUN_deal_with_the_enemies
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_greater_hungary }
+
+		available = { 
+			POL = { is_subject = yes }	
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			add_relation_modifier = {
+			    target = GER
+			    modifier = HUN_dynastic_ties_license
+			}
+
+		}
+	}
+
+	#Focus for Subjugate Romania
+	focus = {
+		id = HUN_subjugate_romania
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_deal_with_the_enemies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ROM = { country_event= { days = 1 id = romania.1 } }
+		}
+	}
+
+	#Focus for Proclaim Greater Soviet Hungary
+	focus = {
+		id = HUN_proclaim_greater_soviet_hungary
+		icon = GFX_goal_generic_war_with_comintern
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_subjugate_romania 
+		}
+		prerequisite = { 
+			focus = HUN_subjugate_yugoslavia 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			owns_state = 45 
+			owns_state = 109 
+			owns_state = 764 
+			owns_state = 82
+			owns_state = 103
+		}
+		completion_reward = {
+			add_manpower = 100000 
+
+			set_cosmetic_tag = greater_HUN
+ 
+			add_state_core = 82 
+			add_state_core = 764 
+			add_state_core = 45 
+			add_state_core = 109
+			add_state_core = 103
+		}
+	}
+
+	#Focus for Subjugate Yugoslavia
+	focus = {
+		id = HUN_subjugate_yugoslavia
+		icon = GFX_goal_support_communism
+		x = 4
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_demand_vovodjina }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			owns_state = 82 
+			owns_state = 764 
+			owns_state = 45
+		}
+		available = {
+			NOT = { 107 = { is_controlled_by = YUG } }
+			BUL = { has_war_with = YUG }
+			YUG = { surrender_progress > 0.8 }
+		}
+		completion_reward = {
+			BUL = { set_state_owner = 106 }
+			BUL = { puppet = YUG }
+			set_state_owner = 45 
+			set_state_owner = 109 
+			set_state_owner = 764 
+			set_state_owner = 82
+			set_state_owner = 103
+		}
+	}
+
+#### Danubian Social Monarchy ####
+
+	focus = {
+		id = HUN_support_syncretics
+		text = "New future"
+		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
+		x = 14
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { 	
+			focus = HUN_the_soviet_republic
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = HUN_support_monarchists
+		text = "Executive power"
+		icon = GFX_focus_hun_elect_a_king
+
+		mutually_exclusive = { 	
+			focus = HUN_support_communists
+		}
+
+		x = 10
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_support_syncretics }
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name = { 
+			    ideology = reactionary
+			    long_name = "People's Party"
+			    name = "PP"
+			}
+			set_politics = {
+				ruling_party = reactionary
+				elections_allowed = no
+			}
+			add_popularity = {
+			    ideology = reactionary
+			    popularity = 0.50
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_support_communists
+		text = "Legilsative power"
+		icon = GFX_focus_hun_assassinate_horthy
+
+		x = 18
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { 	
+			focus = HUN_support_monarchists
+		}
+
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_support_syncretics }
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name = { 
+			    ideology = vanguardism 
+			    long_name = "People's Party"
+			    name = "PP"
+			}
+			set_politics = {
+				ruling_party = vanguardism 
+				elections_allowed = no
+			}
+			add_popularity = {
+			    ideology = vanguardism 
+			    popularity = 0.50
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_expansionism
+		text = "Expansionist country"
+		icon = GFX_focus_ger_revive_kaiserreich
+
+		x = 16
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_support_communists 
+			focus = HUN_support_monarchists
+
+		}
+
+		mutually_exclusive = { 	
+			focus = HUN_neutrality
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+
+	focus = {
+		id = HUN_neutrality
+		text = "Compromise"
+		icon = GFX_focus_generic_provoke_border_clashes
+
+		x = 12
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_support_communists 
+			focus = HUN_support_monarchists
+
+		}
+
+		mutually_exclusive = { 	
+			focus = HUN_expansionism
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.10
+			}
+			add_popularity = {
+			    ideology = left
+			    popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_Austria
+		text = "Danubian Federation"
+		icon = GFX_focus_generic_royal_wedding
+
+		x = 18
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_expansionism
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = { country_event= { days = 1 id = hungary.5 } }
+		}
+	}
+
+	focus = {
+		id = HUN_Czech
+		text = "Take Pragues"
+		icon = GFX_focus_cze_german_puppet
+
+		x = 18
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_Austria
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CZE = { country_event= { days = 1 id = hungary.9 } }
+		}
+	}
+
+	focus = {
+		id = HUN_YUG
+		text = "Invade Yugoslavia"
+		icon = GFX_focus_cze_german_puppet
+
+		x = 18
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_Czech
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+				expire = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_alliance
+		text = "Danubian Alliance"
+		icon = GFX_goal_continuous_increase_nu
+
+		x = 10
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_neutrality
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction = "Danubian Communes"
+		}
+	}
+
+	focus = {
+		id = HUN_federation
+		text = "Create a federation"
+		icon = GFX_goal_generic_territory_or_war
+
+		x = 10
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_alliance
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet = SLO
+			release_puppet = TRA
+		}
+	}
+
+	focus = {
+		id = HUN_Austria_czech
+		text = "Add allies"
+		icon = GFX_focus_generic_strike_at_democracy1
+
+		x = 10
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_federation
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			give_guarantee = AUS
+			give_guarantee = CZE
+			add_opinion_modifier = {
+			    target = CZE
+			    modifier = faction_traitor
+			}
+			add_opinion_modifier = {
+			    target = AUS
+			    modifier = faction_traitor
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_FRA_diplomacy
+		text = "French approchement"
+		icon = GFX_focus_generic_strike_at_democracy1
+
+		x = 14
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_expansionism
+			focus = HUN_neutrality
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			give_guarantee = FRA
+		}
+	}
+
+	focus = {
+		id = HUN_RUS_diplomacy
+		text = "Soviet relations"
+		icon = GFX_focus_generic_strike_at_democracy1
+
+		x = 14
+		y = 4
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_FRA_diplomacy
+
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			give_guarantee = SOV
+		}
+	}
+
+	focus = {
+		id = HUN_Austria_Hungary
+		text = "Austria Hungary"
+		icon = GFX_focus_generic_strike_at_democracy1
+
+		x = 16
+		y = 6
+		cost = 5
+
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = HUN_RUS_diplomacy
+		}
+		prerequisite = { 
+			focus = HUN_YUG
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = HUN_EMPIRE
+			hidden_effect = { AUS = { set_cosmetic_tag = AUS_NOT_WHITE } }
+			hidden_effect = {
+				news_event = { id = news.295 }
+			}
+			set_global_flag = form_austria_hungary_flag
+			set_global_flag = GER_reformed_austro_hungarian_empire
+		}
+	}
+
+ }

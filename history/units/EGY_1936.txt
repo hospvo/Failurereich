@@ -1,0 +1,43 @@
+﻿division_template = {
+	name = "Colonial Garrison"
+	division_names_group = EGY_COL_01
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+
+units = {
+	#Egypt
+	division= {	
+		name = "Cairo Force"
+		location = 7011
+		division_template = "Colonial Garrison"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Canal Brigade"
+		location = 1155
+		division_template = "Colonial Garrison"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {	
+		name = "The Cavalry Brigade (Egypt)"
+		location = 4076
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}

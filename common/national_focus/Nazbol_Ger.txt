@@ -1,0 +1,347 @@
+﻿
+focus_tree = {
+	id = BF_germany_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HAN
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = NZC_Goebbel
+		icon = GFX_goal_generic_military_sphere
+		text = "VolkReich"
+		x = 2
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 100000 }
+			controls_state = 64
+			controls_state = 763
+			controls_state = 42
+			controls_state = 52
+			controls_state = 59
+		}
+		completion_reward = {
+			add_manpower = 300000
+		}
+	}
+
+	focus = {
+		id = NZC_holland
+		icon = GFX_focus_generic_attack_holland
+		text = "Invade Benelux"
+
+		prerequisite = { 
+				focus = NZC_Goebbel
+		}
+
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_austria
+		icon = GFX_focus_generic_attack_cezch
+		text = "Annex Austria"
+
+		prerequisite = { 
+				focus = NZC_Goebbel
+		}
+
+		x = 3
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_cezch
+		icon = GFX_focus_generic_attack_cezch
+		text = "Divide Czech"
+
+		prerequisite = { 
+				focus = NZC_austria
+		}
+
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 400000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_scandinavia
+		icon = GFX_focus_generic_attack_sweden
+		text = "Invade Scandinavia"
+
+		prerequisite = { 
+				focus = NZC_holland
+		}
+
+		x = 1
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 400000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_Balkan
+		icon = GFX_focus_generic_balkan_diplomacy
+		text = "Invade Western Balkans"
+
+		prerequisite = { 
+				focus = NZC_czech
+		}
+
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 500000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.5 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_Poland
+		icon = GFX_focus_generic_attack_poland
+		text = "Invade Poland"
+
+		prerequisite = { 
+				focus = NZC_Balkan
+		}
+
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 500000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.6 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_swiss_conf
+		icon = GFX_focus_generic_attack_switzerland
+		text = "Invade Switzerland"
+
+		prerequisite = { 
+				focus = NZC_scandinavia
+		}
+
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 600000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.8 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZC_france
+		icon = GFX_focus_generic_attack_france
+		text = "Invade French State"
+
+		prerequisite = { 
+				focus = NZC_swiss_conf
+		}
+
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 600000 }
+		}
+
+		completion_reward = {
+			HAN = {
+				country_event = { days = 1 id = bg.9 }
+			}
+		}
+	}
+
+### Alliances ###
+
+	focus = {
+		id = NZC_SRI_relations
+		icon = GFX_focus_ITA_italo_balbo
+		text = "Approach Italy"
+
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			ITA = { has_completed_focus = ITA_empire }
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ITA
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+
+	focus = {
+		id = NZC_TUR_relations
+		icon = GFX_focus_ITA_italo_balbo
+		text = "Support Turanism"
+
+		prerequisite = { 
+				focus = NZC_SRI_relations
+		}
+
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			TRK = { has_completed_focus = TUR_oppose_syndicalism }
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = TUR
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+}

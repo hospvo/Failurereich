@@ -1,0 +1,305 @@
+﻿
+focus_tree = {
+	id = UG_germany_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BAY
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = UTG_Lammers
+		icon = GFX_goal_generic_military_sphere
+		text = "Ordensstaat of The Greater Reich"
+		x = 8
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 100000 }
+			controls_state = 64
+			controls_state = 763
+			controls_state = 42
+			controls_state = 52
+			controls_state = 59
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = UTG_cezch
+		icon = GFX_focus_generic_attack_cezch
+		text = "Divide Czech"
+
+		prerequisite = { 
+				focus = UTG_Lammers
+		}
+
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_austria
+		icon = GFX_focus_generic_attack_cezch
+		text = "Annex Austria"
+
+		prerequisite = { 
+				focus = UTG_Lammers
+		}
+
+		bypass = {
+			NOT = { country_exists = AUS }
+		}
+
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_holland
+		icon = GFX_focus_generic_attack_holland
+		text = "Invade Benelux"
+
+		prerequisite = { 
+				focus = UTG_austria
+		}
+		prerequisite = { 
+				focus = UTG_cezch
+		}
+
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_scandinavia
+		icon = GFX_focus_generic_attack_sweden
+		text = "Invade Scandinavia"
+
+		prerequisite = { 
+				focus = UTG_austria
+		}
+		prerequisite = { 
+				focus = UTG_cezch
+		}
+
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_Balkan
+		icon = GFX_focus_generic_attack_hungary
+		text = "Divide Western Balkans"
+
+		prerequisite = { 
+				focus = UTG_holland
+		}
+		prerequisite = { 
+				focus = UTG_scandinavia
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.5 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_Bulgaria_Greece
+		icon = GFX_focus_generic_attack_bulgaria
+		text = "Invade Thrace"
+
+		prerequisite = { 
+				focus = UTG_holland
+		}
+		prerequisite = { 
+				focus = UTG_scandinavia
+		}
+
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.6 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_swiss_conf
+		icon = GFX_focus_generic_attack_switzerland
+		text = "Divide Switzerland"
+
+		prerequisite = { 
+				focus = UTG_Balkan
+		}
+		prerequisite = { 
+				focus = UTG_Bulgaria_Greece
+		}
+
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.8 }
+			}
+		}
+	}
+
+	focus = {
+		id = UTG_SRI
+		icon = GFX_focus_generic_attack_italy
+		text = "Invade SRI"
+
+		prerequisite = { 
+				focus = UTG_Balkan
+		}
+		prerequisite = { 
+				focus = UTG_Bulgaria_Greece
+		}
+
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 300000 }
+		}
+
+		completion_reward = {
+			BAY = {
+				country_event = { days = 1 id = ug.9 }
+			}
+		}
+	}
+}

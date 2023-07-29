@@ -1,0 +1,170 @@
+bookmarks = {
+	bookmark = {
+		name = "Rotër Reich"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"FRA"={
+			history = "FPetain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism."
+			ideology = fascism
+			ideas = {
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_republic
+			}
+		}
+		"GER"={
+			history = "Following revolutions and disgrace in the Great War, Spartacist succeed to instaure a communist dictatorship, stronger after 1930's. Despite the new reforms, no any elections are held."
+			ideology = communism
+			ideas = {
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_thalmann
+			}
+		}
+		"ITA"={
+			history = "Italy failed to keep the monarchy stable and the fascists take over the King in the south. The Napolis Regime is leaded by Mussolini since 1920s."
+			ideology = fascism
+			ideas = {
+				ITA_iri_fake_ns
+				ITA_re_fake_ns
+			}	
+			focuses = {
+				ITA_fascism
+				ITA_empire
+			}		
+		}
+		"AFR"={
+			history = "Napoleon Revive under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa"
+			ideology = fascism
+			ideas = {
+				FRA_disjointed_government
+			}	
+			focuses = {
+				AFR_constitutional_monarchy
+				AFR_absolute_monarchy
+			}		
+		}
+		"WGR"={
+			history = "Germany last it's fatherland after spartacists get access to Berlin. The Kaiser have to deal with African peasant to survive and reconquer German lands."
+			ideology = reactionarism
+			ideas = {
+				sour_loser
+			}	
+			focuses = {
+				GEX_wilhelm
+				GEX_new
+			}		
+		}
+		"SOV"={
+			history = "Following a long civil war and multiple divisions, Denekin take all of the Russian lands but have to deal with multiple factions. Russia keep united only in 1932 and a fascist gouvernement has been put in place for interim."
+			ideology = reactionarism
+			ideas = {
+				SOV_second_five_year_plan_fake_1936_ns
+				SOV_politicized_military
+			}
+			focuses = {
+				RUS_Kolchak
+			}	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+			}
+			focuses = {
+				CAN_strong
+			}
+		}
+
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				HUN_treaty_of_triannon
+			}
+			focuses = {
+				HUN_the_soviet_republic
+			}
+		}
+
+		"CHI"={
+			minor = yes
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = reactionary
+			ideas = {
+				CHI_army_corruption_1
+				CHI_hyper_inflation_1
+				CHI_nine_power_treaty
+			}
+			focuses = {
+				CHI_Chang_kai_chek_assassination
+			}
+		}
+
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = reactionary
+			ideas = {
+				MAN_banditry
+				MAN_low_legitimacy_5
+			}
+			focuses = {
+				MAN_constitutional_monarchy
+			}
+		}
+
+		"TUR"={
+			minor = yes
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				TUR_sectarian_woes
+				TUR_disorganised_armed_forces
+				TUR_debt_council
+			}
+			focuses = {
+				TUR_kars_republic_legacy
+			}
+		}
+
+		"POL"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				uncontrolled_exports
+				POL_april_constitution_1
+				POL_looming_peasants_strike
+			}
+			focuses = {
+				POL_hohenzollern
+				POL_falangism
+				POL_habsburg
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

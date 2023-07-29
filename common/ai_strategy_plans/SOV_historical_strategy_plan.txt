@@ -1,0 +1,58 @@
+SOV_historical_plan = {
+	name = "Russia historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
+			has_game_rule = {
+				rule = SOV_ai_behavior
+				option = DENEKIN
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		RUS_Kolchak
+		RUS_protect_mongolia
+		RUS_french_state
+		RUS_fascist_doctrine
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		iron_lazar = 10
+		pc_for_foreign_affairs_molotov = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

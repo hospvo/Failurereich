@@ -1,0 +1,174 @@
+﻿
+add_namespace = turkey
+
+#### Monarchy ####
+
+country_event = {
+	id = turkey.1
+	title = "Turkish Alliance"
+	desc = "With the help of the German, we will be able to concede not any lands."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Alliance with Germany"
+		GER = { give_guarantee = PER }
+	}
+}
+
+country_event = {
+	id = turkey.2
+	title = "Turkish civil war"
+	desc = "Enver Pasha regime never said it's over, communists are now out of the game"
+	picture = GFX_report_event_north_germany
+
+	is_triggered_only = yes
+
+	immediate = {
+		TUR_start_civil_war = yes
+
+		every_owned_state = {
+			add_core_of = TRK
+			add_claim_by = TRK
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+		every_owned_state = {
+			add_core_of = OTT 
+			add_claim_by = OTT 
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		TRK = { set_politics = { ruling_party = fascism } }
+		TRK = {
+			set_popularities = {
+				fascism = 100
+			}
+		}
+
+		OTT = { set_politics = { ruling_party = reactionary } }
+		OTT = {
+			set_popularities = {
+				reactionary = 100
+			}
+		}			
+	}
+	
+	option = { 
+		name = "No again !"
+
+		declare_war_on = {
+		                target = OTT
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = TRK
+		                type = annex_everything
+	        }	
+		OTT = {
+	        declare_war_on = {
+		                target = TRK
+		                type = annex_everything
+	        	}			
+		}
+		hidden_effect = {
+			OTT = {
+				country_event = { days = 1 id = turkey.90 }
+			}
+		}
+		hidden_effect = {
+			TRK = {
+				country_event = { days = 1 id = turkey.91 }
+			}
+		}
+		OTT = { load_focus_tree = { tree = turkey_focus keep_completed = yes } }
+		TRK = { load_focus_tree = { tree = turkey_focus keep_completed = yes } }
+	}
+}
+
+country_event = {
+	id = turkey.3
+	title = "Propose deal with Kurdistan"
+	desc = "We never got any good relations with Kurdistan, but now we can  deal with our old enemy to fight Germany."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Accept Kurdistan"
+		GER = { add_to_faction = KUR }
+	}
+}
+	
+
+country_event = {
+	id = turkey.90
+	title = "Invite the Sultan"
+	desc = "We need a figurehead for reconquer Turkey via Turkestan tribes"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Join Turkish wars"
+		
+		OTT = {
+			set_cosmetic_tag = OTT_SULTANATE
+			create_country_leader = {
+				name = TUR_abdulmejid_ii 
+				desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+				picture = GFX_TUR_abdulmejid_ii
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+				}
+			}
+		}
+		load_focus_tree = { tree = turkey_focus keep_completed = yes }
+
+	}
+}
+
+country_event = {
+	id = turkey.91
+	title = "Invite the Pashas"
+	desc = "We need a figurehead for reconquer Turkey via Turkestan tribes"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Join Turkish wars"
+		
+		TRK = {
+			set_cosmetic_tag = TURAN_STATE
+			create_country_leader = {
+				name = TUR_ahmet_fevzi_pasha 
+				desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+				picture = GFX_TUR_ahmet_fevzi_pasha
+				expire = "1965.1.1"
+				ideology = rexism
+				traits = {
+				}
+			}
+		}
+		load_focus_tree = { tree = turkey_focus keep_completed = yes }
+
+	}
+}

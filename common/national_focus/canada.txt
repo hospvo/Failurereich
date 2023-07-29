@@ -1,0 +1,343 @@
+﻿
+focus_tree = {
+	id = canada_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CAN
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = CAN_strong
+		icon = GFX_focus_eng_global_defense
+		text = "Integrate colonies"
+		mutually_exclusive = { focus = CAN_weak }
+
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			set_cosmetic_tag = CAN_federation
+
+			annex_country = {
+				   target = NGA
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = KEN
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = MAL
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = SUD
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = COG
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = CAR
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = CMR
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = GAB
+ 				   transfer_troops = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_saudi_alliance
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = CAN_king
+		}
+		mutually_exclusive = { focus = CAN_Hashemite_alliance focus = CAN_rashid_alliance }
+
+		text = "Invite Saudi Arabia"
+		x = 6
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			SAU = { owns_state = 292 }
+			SAU = { owns_state = 679 }
+			SAU = { owns_state = 857 }
+		}
+		completion_reward = {
+			add_to_faction = SAU
+		}
+	}
+
+	focus = {
+		id = CAN_rashid_alliance
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = CAN_king
+		}
+		mutually_exclusive = { focus = CAN_Hashemite_alliance focus = CAN_saudi_alliance }
+
+		text = "Invite Rashid"
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			JSH = { owns_state = 292 }
+			JSH = { owns_state = 679 }
+			JSH = { owns_state = 857 }
+		}
+		completion_reward = {
+			add_to_faction = JSH 
+		}
+	}
+
+	focus = {
+		id = CAN_Hashemite_alliance
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = {
+			focus = CAN_king
+		}
+		mutually_exclusive = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance }
+
+		text = "Invite Hashemite"
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			HEJ = { owns_state = 292 }
+			HEJ = { owns_state = 679 }
+			HEJ = { owns_state = 857 }
+		}
+		completion_reward = {
+			add_to_faction = HEJ
+		}
+	}
+
+	focus = {
+		id = CAN_king
+		icon = GFX_focus_eng_the_kings_party
+		prerequisite = {
+			focus = CAN_strong focus = CAN_weak
+		}
+		text = "King Edward"
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ENG_king_edward
+		}
+	}
+
+	focus = {
+		id = CAN_egypt
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
+
+		text = "Secure Egypt"
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = { has_war_with = GER }
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = EGY
+				type = annex_everything
+				expire = 0
+			}
+			EGY = {
+				every_owned_state = {
+				    add_claim_by = CAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_oman
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
+		text = "Secure Oman"
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = { has_war_with = GER }
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = OMA
+				type = annex_everything
+				expire = 0
+			}
+			OMA = {
+				every_owned_state = {
+				    add_claim_by = CAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_somalia
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
+		text = "Secure Somalia"
+		x = 8
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = { has_war_with = GER }
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = SOM
+				type = annex_everything
+				expire = 0
+			}
+			SOM = {
+				every_owned_state = {
+				    add_claim_by = CAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_take_UK
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_egypt }
+		prerequisite = { focus = CAN_somalia }
+		prerequisite = { focus = CAN_oman }
+		text = "Secure United Kingdom"
+		x = 6
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			FRA = { is_puppet_of = GER }
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+				expire = 0
+			}
+			ENG = {
+				every_owned_state = {
+				    add_claim_by = CAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_weak
+		icon = GFX_focus_generic_the_giant_wakes
+		text = "Reorganize colonies"
+		mutually_exclusive = { focus = CAN_strong }
+
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			annex_country = {
+				   target = MAL
+ 				   transfer_troops = yes
+			}
+			
+			KEN = {
+			
+			annex_country = {
+				   target = NGA
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = SUD
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = COG
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = CAR
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = CMR
+ 				   transfer_troops = yes
+			}
+			annex_country = {
+				   target = GAB
+ 				   transfer_troops = yes
+			}
+				set_cosmetic_tag = British_africa
+			}
+		}
+	}
+ }

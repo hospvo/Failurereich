@@ -1,0 +1,200 @@
+﻿focus_tree = {
+	id = qing_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAN
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = MAN_constitutional_monarchy
+		tesxt = "Power to the Council"
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_capital= 608
+		}
+	}
+
+	focus = {
+		id = MAN_invade_ganxi
+		text = "Ma clique under us"
+		icon = GFX_focus_jap_manchurian_project
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reject_kuomindang }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = XSM
+			}
+		}
+	}
+	#Focus for Invade Sinkiang
+	focus = {
+		id = MAN_invade_sinkiang
+		text = "Xinjiang conquest"
+		icon = GFX_focus_jap_manchurian_project
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = SIK
+			}
+		}
+	}
+	#Focus for Retake Mongolia
+	focus = {
+		id = MAN_retake_mongolia
+		text = "Mongolia under us"
+		icon = GFX_focus_NZL_bob_semple_tank
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = MON
+			}
+		}
+	}
+	#Focus for Reject Kuomindang
+	focus = {
+		id = MAN_reject_kuomindang
+		text = "Kuomindang out"
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_constitutional_monarchy }
+		mutually_exclusive = { focus = MAN_compromise_with_kuomindang }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation= { 
+				country = CHI 
+				relation = non_aggression_pact 
+			}
+		}
+	}
+	#Focus for Compromise with Kuomindang
+	focus = {
+		id = MAN_compromise_with_kuomindang
+		text = "Compromise with Kuomindang"
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_constitutional_monarchy }
+		mutually_exclusive = { focus = MAN_reject_kuomindang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			has_guaranteed= CHI
+		}
+	}
+	focus = {
+		id = MAN_guarantee_from_german_empire
+		text = "German approchement"
+		icon = Focus_ger_revive_kaiserreich
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_compromise_with_kuomindang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			has_guaranteed = WGR
+		}
+	}
+	focus = {
+		id = MAN_guarantee_austria
+		text = "Austrian help"
+		icon = GFX_focus_generic_monarchy
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_compromise_with_kuomindang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_stability = 0.5
+		}
+	}
+	focus = {
+		id = MAN_reorganize_government
+		icon = GFX_focus_generic_monarchy
+		text = "Qing reforms"
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_guarantee_from_german_empire }
+		prerequisite = { focus = MAN_guarantee_austria }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_stability = -0.2
+		}
+	}
+	focus = {
+		id = MAN_collapse
+		icon = GFX_focus_chi_army_reform
+		text = "Qing civil war"
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reorganize_government }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				country_event = { days = 1 id = qing.1 }
+		}
+	}
+ }

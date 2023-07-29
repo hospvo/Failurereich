@@ -1,0 +1,131 @@
+German_alternate_luxemburg = {
+	name = "Syndicalist Germany"
+	desc = "Germany come with Luxemburg, with a better strategy and using coups as revolution."
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_LUXEMBURG
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = LUXEMBURG
+			}
+			AND = {
+				has_game_rule = { 
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+				has_completed_focus = GER_luxemburg #historical mode off, Germany picked oppose Hitler
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		GER_luxemburg
+		GER_rhineland
+		GER_austria
+		GER_bohemia
+		GER_invade_poland
+		GER_invade_scandinavia
+		GER_help_georgia
+		GER_invade_russia
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+		heinrich_himmler = 0
+		martin_bormann = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+German_worker_republic = {
+	name = "Strasser Strategy"
+	desc = "Das Roter reich"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_country_flag = GER_AI_RANDOM_STRASSER
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = STRASSER
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		GER_strasser
+		GER_neutrality
+		GER_civil_war
+		GER_reconstruction
+		GER_austria2
+		GER_switzerland2
+		GER_HRE
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		hjalmar_schacht = 10
+		heinrich_himmler = 0
+		martin_bormann = 0
+	}
+
+	traits = {
+		captain_of_industry = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

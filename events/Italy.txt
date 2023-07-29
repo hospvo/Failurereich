@@ -1,0 +1,231 @@
+﻿
+add_namespace = italy
+
+country_event = {
+	id = italy.0
+	title = "Referundum about Papal states"
+	desc = "Italian parlement try to find if they can integrate Papal states."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		end_puppet = PAP
+		PAP = {
+			country_event = { days = 1 id = italy.1 }
+		}
+	}
+}
+
+country_event = {
+	id = italy.1
+	title = "Integrate Papal states"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.2 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.3 }
+		}		
+	}
+}
+
+country_event = {
+	id = italy.2
+	title = "They agree our request"
+	desc = "they agree with our proposition, Papal states will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = PAP
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = italy.3
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will not tolerate this"
+		remove_from_faction = PAP
+		end_puppet = PAP
+		create_wargoal  = {
+		                target = PAP
+		                type = annex_everything
+	        }	
+		add_state_claim  = 2
+		add_state_claim  = 805
+		add_state_claim  = 161	
+	}
+}
+
+######
+
+country_event = {
+	id = italy.4
+	title = "Referundum about Albania"
+	desc = "After integration of Greece, we need to focus on the East to integrate Albania."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		end_puppet = ALB
+		ALB = {
+			country_event = { days = 1 id = italy.5 }
+		}
+	}
+}
+
+country_event = {
+	id = italy.5
+	title = "Integrate Albania"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.6 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.7 }
+		}		
+	}
+}
+
+country_event = {
+	id = italy.6
+	title = "They agree our request"
+	desc = "they agree with our proposition, they will be under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = ALB
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = italy.7
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = ALB
+		                type = annex_everything
+	        }
+	}
+}
+
+###### YUG
+
+country_event = {
+	id = italy.8
+	title = "Referundum about Irrendent lands"
+	desc = "We may ask to Yugoslavia to gives us few lands since they stole few of our lands."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		end_puppet = YUG
+		YUG = {
+			country_event = { days = 1 id = italy.9 }
+		}
+	}
+}
+
+country_event = {
+	id = italy.9
+	title = "Integrate Adriatic"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.10 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		ITA = {
+			country_event = { days = 1 id = italy.11 }
+		}		
+	}
+}
+
+country_event = {
+	id = italy.10
+	title = "They agree our request"
+	desc = "they agree with our proposition, They will be under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		802 = { transfer_state_to = ITA }
+		803 = { transfer_state_to = ITA }
+		105 = { transfer_state_to = ITA }
+		106 = { transfer_state_to = ITA }
+		163 = { transfer_state_to = ITA }
+	}
+}
+
+country_event = {
+	id = italy.11
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = YUG
+		                type = annex_everything
+	        }
+	}
+}

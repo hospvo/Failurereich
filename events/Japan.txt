@@ -1,0 +1,196 @@
+﻿
+add_namespace = japan
+
+country_event = {
+	id = japan.1
+	title = "Conquest China"
+	desc = "Japanese army ask for an invasion of Chinese empire and Kuomindang."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Kuomindang will harshly get pain with Qing"
+	        declare_war_on = {
+		                target = MAN
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = CHI
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = ZHI
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = ANH
+		                type = annex_everything
+	        }
+		add_state_claim = 714
+		add_state_claim = 761
+		add_state_claim = 610
+		add_state_claim = 328
+		add_state_claim = 715	
+		add_state_claim = 716
+		add_state_claim = 717	
+	}
+}
+
+country_event = {
+	id = japan.2
+	title = "Japan make peace with Vietnamand Korea"
+	desc = "Vietnam is now beyond us as for Korea. We will let Ho Chi Minh alone."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Make peace with Vietnam and Korea"
+		white_peace = VIN
+		white_peace = KOR
+	}
+}
+
+country_event = {
+	id = japan.3
+	title = "Japanese's Coup"
+	desc = "The shocks of the global Financial Crisis have reached all across the world, it seems. Recent unemployment protests have turned into riots, with 200+ police officers dead, It is unknown how this will end. There have been 56 nations sending aid, including China, which commented 'We cannot let another Major Power fall into civil war, lest another World War were to occur."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		JAP1_setup_civil_war  = yes
+
+		every_owned_state = {
+			add_core_of = EDO
+			add_claim_by = EDO
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		JAP = {
+			transfer_technology = yes
+		}
+	}
+
+	option = {
+		name = "Erase communists"
+		EDO = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
+
+		JAP = { country_event= { days = 9 id = japan.4 } }
+	}
+}
+
+country_event = {
+	id = japan.4
+	title = "Militarists agains the Emperor"
+	desc = "Tokugawa and Military fanatics seem to take advantages against the falling empire. They want to instaure a republic"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		JAP2_setup_civil_war  = yes
+
+		every_owned_state = {
+			add_core_of = TGW
+			add_claim_by = TGW
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		JAP = {
+			transfer_technology = yes
+		}
+	}
+
+	option = {
+		name = "Failed Emperor ..."
+
+	        declare_war_on = {
+		                target = EDO
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = TGW
+		                type = annex_everything
+	        }
+	        EDO = { declare_war_on = {
+		                target = TGW
+		                type = annex_everything
+	        } }
+
+		JAP = { country_event= { days = 1 id = japan.5 } }
+		hidden_effect = {
+			news_event = { hours = 6 id = fr_news.3 }
+		}
+		TGW = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
+	}
+}
+
+country_event = {
+	id = japan.5
+	title = "Japanese's Coup"
+	desc = "Japan is unstable and need to have a new government."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Japan new friends"
+		EDO = { puppet = VIN }
+		EDO = { puppet = KOR }
+		VIN= { transfer_state = 671 }
+		VIN= { transfer_state = 670 }
+		VIN= { transfer_state = 741 }
+		VIN= { transfer_state = 286 }
+		KOR= { transfer_state = 525 }
+	}
+}
+
+country_event = {
+	id = japan.6
+	title = "Conquest China"
+	desc = "Japanese army ask for an invasion of Chinese Khan and Kuomindang. "
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = EDO
+		country_exists = CHI
+		country_exists = ANH
+		NOT = { country_exists = TGW }
+		NOT = { country_exists = JAP }
+		has_government = communism
+		date > 1937.9.1		
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = "Kuomindang will harshly get pain with Qing"
+	        declare_war_on = {
+		                target = ANH
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = CHI
+		                type = annex_everything
+	        }
+		add_state_claim = 714
+		add_state_claim = 761
+		add_state_claim = 610
+		add_state_claim = 328
+		add_state_claim = 715	
+		add_state_claim = 716
+		add_state_claim = 717	
+	}
+}

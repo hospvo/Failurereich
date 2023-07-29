@@ -1,0 +1,269 @@
+﻿
+add_namespace = hungary
+
+country_event = {
+	id = hungary.1
+	title = "Romania refuses!"
+	desc = "Romania has refused the Ultimatum!"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Then war is it."
+		
+	        HUN = { declare_war_on = {
+		                target = ROM
+		                type = annex_everything }
+	        }		
+	}
+}
+country_event = {
+	id = hungary.2
+	title = "Romania submits!"
+	desc = "Romania has accepted the demands of our ultimatum."
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		HUN = { set_state_owner = 80 }
+	}
+}
+
+country_event = {
+	id = hungary.3
+	title = "Yugoslavia refuses!"
+	desc = "Yugoslavia has refused the Ultimatum!"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Then war is it."
+		
+	        HUN = { 
+			declare_war_on = {
+		                target = YUG
+		                type = annex_everything 
+			}
+	        }	
+	
+	}
+}
+country_event = {
+	id = hungary.4
+	title = "Yugoslavia accepts our demands!"
+	desc = "Yugoslavia has accepted the demands of our ultimatum."
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		HUN = { set_state_owner = 82 }
+		HUN = { set_state_owner = 764 }
+		HUN = { set_state_owner = 45 }
+		HUN = { set_state_owner = 109 }
+		HUN = { set_state_owner = 103 }
+		HUN = { set_state_owner = 163 }
+	}
+}
+
+#### Monarchy and parlementarian ####
+
+country_event = {
+	id = hungary.5
+	title = "Referundum about Austria"
+	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		AUS = {
+			country_event = { days = 1 id = hungary.6 }
+		}
+	}
+	option = { 
+		name = "Invade Austria"
+		
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }	
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = HUN
+				}
+			}
+
+	}
+}
+
+country_event = {
+	id = hungary.6
+	title = "Integrate Austria"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		HUN = {
+			country_event = { days = 1 id = hungary.7 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			HUN = {
+				country_event = { days = 1 id = hungary.8 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = hungary.7
+	title = "They agree our request"
+	desc = "they agree with our proposition, Austria will under us"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = AUS
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = hungary.8
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_north_germany
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = HUN
+				}
+			}	
+	}
+}
+
+
+####
+
+
+country_event = {
+	id = hungary.9
+	title = "Referundum about Austria"
+	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		AUS = {
+			country_event = { days = 1 id = hungary.10 }
+		}
+	}
+	option = { 
+		name = "Invade Austria"
+		
+	        declare_war_on = {
+		                target = CZE
+		                type = annex_everything
+	        }	
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = HUN
+				}
+			}
+
+	}
+}
+
+country_event = {
+	id = hungary.10
+	title = "Integrate Austria"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		HUN = {
+			country_event = { days = 1 id = hungary.11 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			HUN = {
+				country_event = { days = 1 id = hungary.12 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = hungary.11
+	title = "They agree our request"
+	desc = "they agree with our proposition, Austria will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = CZE
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = hungary.12
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = CZE
+		                type = annex_everything
+	        }
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = HUN
+				}
+			}	
+	}
+}
+

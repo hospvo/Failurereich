@@ -1,0 +1,452 @@
+﻿
+add_namespace = tt
+
+country_event = {
+	id = tt.1
+	title = "Paris taken"
+	desc = "France is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = AFR
+		has_war_with = GER 
+		CAN = { has_war_with = GER }
+		FRA = { is_puppet_of = GER }
+		OR = {
+			CAN = { controls_state = 21 }
+			AFR = { controls_state = 21 }
+			POR = { controls_state = 21 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure France"
+
+		set_capital = 21
+
+		AFR = {
+			annex_country = {
+	   			 target = FRA
+	   			 transfer_troops = yes
+		      }
+		}
+
+	}
+}
+
+country_event = {
+	id = tt.2
+	title = "London taken"
+	desc = "British Union is now under our control, we will instaure a new kingdom"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = CAN
+		has_war_with = GER 
+		AFR = { has_war_with = GER }
+		OR = {
+			CAN = { controls_state = 126 }
+			AFR = { controls_state = 126 }
+			POR = { controls_state = 126 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure United Kingdom"
+
+		set_capital = 126
+
+		CAN = {
+			annex_country = {
+	   			 target = ENG
+	   			 transfer_troops = yes
+		      }
+		}
+
+	}
+}
+
+country_event = {
+	id = tt.3
+	title = "Milan taken"
+	desc = "SRI is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = AFR
+		has_war_with = GER 
+		CAN = { has_war_with = GER }
+		OR = {
+			CAN = { controls_state = 159 }
+			AFR = { controls_state = 159 }
+			POR = { controls_state = 159 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure Italy"
+
+		CAN = { puppet = ITA }
+		AFR = { set_state_owner = 735 }
+
+		ITA = {
+			annex_country = {
+	   			 target = PAP
+	   			 transfer_troops = yes
+		      }
+		}
+
+		ITA = {
+			annex_country = {
+	   			 target = LOM
+	   			 transfer_troops = yes
+		      }
+		}
+
+	}
+}
+
+country_event = {
+	id = tt.4
+	title = "Warsaw taken"
+	desc = "Poland is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = GER 
+		OR = {
+			SOV = { controls_state = 10 }
+		}
+		POL = { is_puppet_of = GER }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure Poland"
+
+		SOV = { puppet = POL }
+		SOV = { set_state_owner = 89 }
+		SOV = { set_state_owner = 91 }
+
+	}
+}
+
+country_event = {
+	id = tt.5
+	title = "Bucarest taken"
+	desc = "Romania is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = HUN
+		has_war_with = GER
+		OR = {
+			SOV = { controls_state = 46 }
+		}
+		ROM = { is_puppet_of = HUN }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure Romania"
+
+		SOV = { set_state_owner = 78 }
+		SOV = { set_state_owner = 80 }
+		SOV = { set_state_owner = 766 }
+		SOV = { puppet = ROM }
+
+	}
+}
+
+country_event = {
+	id = tt.6
+	title = "Ankara is taken"
+	desc = "Turkey is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = TUR
+		has_war_with = GER
+		OR = {
+			SOV = { controls_state = 49 }
+			SOV = { controls_state = 231 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure Turkish Youth"
+
+		SOV = { puppet = TUR }
+		SOV = { puppet = GEO }
+		SOV = { set_state_owner = 797 }
+
+	}
+
+	option = { 
+		name = "Restaure Ottoman Empire"
+
+		TUR = { release = KUR }
+		SOV = { puppet = TUR }
+		SOV = { puppet = GEO }
+		GEO = { set_state_owner = 354 }
+		SOV = { set_state_owner = 797 }
+
+	}
+}
+
+country_event = {
+	id = tt.7
+	title = "Finland collapse"
+	desc = "Finland is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = FIN 
+		has_war_with = GER
+		NOT = {
+			FIN = { controls_state = 111 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Puppet Finland"
+
+		SOV = { puppet = FIN }
+
+	}
+}
+
+country_event = {
+	id = tt.8
+	title = "Bulgaria collapse"
+	desc = "Bulgaria is now under our control, we will instaure a new republic"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = BUL
+		has_war_with = GER
+		NOT = {
+			FIN = { controls_state = 111 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Zveno"
+
+		SOV = { puppet = BUL }
+
+	}
+}
+
+country_event = {
+	id = tt.9
+	title = "Spartacist Reich collapsed"
+	desc = "The General Secretary committed suicide. We can now divide Germany with accord of Entente powers."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = GER
+		CAN = { has_war_with = GER }
+		AFR = { has_war_with = GER }
+		NOT = { country_exists = HAN }
+		NOT = { country_exists = BAY }
+		NOT = { country_exists = WUR }
+		NOT = { country_exists = PRE }
+
+		OR = {
+			SOV = { controls_state = 43 }
+			SOV = { controls_state = 64 }
+		}
+		date > 1940.1.1
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Restaure German Empire"
+
+		white_peace = GER
+		white_peace = HUN
+		white_peace = HOL
+		white_peace = BUL
+		white_peace = POL
+		white_peace = FIN
+		white_peace = TUR
+
+		CAN = {
+
+		white_peace = GER
+		white_peace = HUN
+		white_peace = HOL
+		white_peace = BUL
+		white_peace = POL
+		white_peace = FIN
+		white_peace = TUR
+
+		}
+
+		WGR = {
+
+		white_peace = GER
+		white_peace = HUN
+		white_peace = HOL
+		white_peace = BUL
+		white_peace = POL
+		white_peace = FIN
+		white_peace = TUR
+
+		}
+
+		AFR = {
+
+		white_peace = GER
+		white_peace = HUN
+		white_peace = HOL
+		white_peace = BUL
+		white_peace = POL
+		white_peace = FIN
+		white_peace = TUR
+
+		}
+
+		SOV = { puppet = HUN }
+		SOV = { puppet = BUL }
+		SOV = { puppet = SLO }
+		SOV = { puppet = POL }
+		HUN = { release = ROM }
+		GER = { release = CZE }
+		GER = { release = AUS }
+		GER = { release = LUX }
+		GER = { release = FRA }
+		GER = { release = POL }
+		GER = { release = YUG }
+		HUN = { release = SLO }
+		HOL = { release = BEL }
+		HOL = { release = FRA }
+		AFR = { set_state_owner = 42 }
+		AFR = { set_state_owner = 51 }
+		DEN = { set_state_owner = 58 }
+		CAN = { set_state_owner = 57 }
+		CAN = { set_state_owner = 56 }
+		CAN = { set_state_owner = 915 }
+		SOV = { set_state_owner = 722 }
+		SOV = { set_state_owner = 146 }
+		YUG = { set_state_owner = 45 }
+		YUG = { set_state_owner = 82 }
+		YUG = { set_state_owner = 764 }
+		YUG = { set_state_owner = 102 }
+		YUG = { set_state_owner = 103 }
+		YUG = { set_state_owner = 163 }
+		YUG = { set_state_owner = 109 }
+
+		BEL = { set_state_owner = 944 }
+		BEL = { set_state_owner = 945 }
+
+
+		WGR = {
+			annex_country = {
+	   			 target = GER 
+	   			 transfer_troops = yes
+		      }
+		}
+
+		AFR= {
+			annex_country = {
+	   			 target = FRA
+	   			 transfer_troops = yes
+		      }
+		}
+
+		SOV = {
+			annex_country = {
+	   			 target = GEO
+	   			 transfer_troops = yes
+		      }
+		}
+
+		CAN = {
+			annex_country = {
+	   			 target = EGY
+	   			 transfer_troops = yes
+		      }
+		}
+
+		if = {
+   		 	limit = {
+			
+				LOM = { has_war_with = ITA }
+
+			}
+			ITA = {
+
+				annex_country = {
+	   			 target = LOM
+	   			 transfer_troops = yes
+		      		}
+
+				annex_country = {
+	   			 target = PAP
+	   			 transfer_troops = yes
+		      		}
+
+			}		
+		}
+
+	}
+}

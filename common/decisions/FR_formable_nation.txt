@@ -1,0 +1,371 @@
+form_poland_hungary_category = {
+	form_poland_hungary = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = POL
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 947
+			controls_state = 948
+			controls_state = 154
+			controls_state = 155
+			controls_state = 43
+
+			controls_state = 88
+			controls_state = 89
+			controls_state = 91
+			controls_state = 92
+			controls_state = 90
+			controls_state = 10
+			controls_state = 98
+			controls_state = 97
+
+			controls_state = 73
+		}
+
+		visible = {
+			original_tag = POL
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = POL_HUN_UNION
+			947 = { add_core_of = ROOT }
+			948 = { add_core_of = ROOT }
+			154 = { add_core_of = ROOT }
+			155 = { add_core_of = ROOT }
+			43 = { add_core_of = ROOT }
+			73 = { add_core_of = ROOT }
+			88 = { add_core_of = ROOT }
+			89 = { add_core_of = ROOT }
+			91 = { add_core_of = ROOT }
+			92 = { add_core_of = ROOT }
+			90 = { add_core_of = ROOT }
+			98 = { add_core_of = ROOT }
+			97 = { add_core_of = ROOT }
+			10 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				set_global_flag = form_scandinavia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+
+form_goguryeo_category = {
+
+	form_goguryeo = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = KOR
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 525
+			controls_state = 527
+			controls_state = 716
+			controls_state = 717
+			controls_state = 328
+		}
+
+		visible = {
+			OR = {
+				original_tag = KOR
+			}
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GOGURYEO_EMPIRE
+			525 = { add_core_of = ROOT }
+			527 = { add_core_of = ROOT }
+			716 = { add_core_of = ROOT }
+			328 = { add_core_of = ROOT }
+			717 = { add_core_of = ROOT }
+			408 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				news_event = { id = f_news.2 hours = 6 }
+				set_global_flag = form_scandinavia_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+form_roman_federation_category = {
+
+	form_roman_federation = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ITA
+			original_tag = FRA
+			original_tag = ROM
+			original_tag = POR
+			original_tag = SPR
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+
+			# Some Romanian states
+			controls_state = 82
+			controls_state = 83
+			controls_state = 76
+			controls_state = 84
+			controls_state = 81
+			controls_state = 46
+			controls_state = 77
+
+			# Portugal
+			custom_trigger_tooltip = {
+				tooltip = form_eu_portugal_required_states_tt
+				controls_state = 180
+				controls_state = 181
+				controls_state = 112
+				controls_state = 179
+				controls_state = 795
+			}
+			# Belgium
+			custom_trigger_tooltip = {
+				tooltip = form_eu_belgium_required_states_tt
+				controls_state = 34
+			}
+			# Italy
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_italy_required_states_tt
+				controls_state = 158
+				controls_state = 159
+				controls_state = 39
+				controls_state = 160
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 114
+				controls_state = 736
+				controls_state = 163
+				controls_state = 164
+			}
+			# Spain
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_spain_required_states_tt
+				controls_state = 165
+				controls_state = 166
+				controls_state = 167
+				controls_state = 177
+				controls_state = 171
+				controls_state = 174
+				controls_state = 172
+				controls_state = 176
+				controls_state = 170
+				controls_state = 41
+				controls_state = 175
+				controls_state = 169
+				controls_state = 173
+				controls_state = 168
+				controls_state = 788
+				controls_state = 789
+				controls_state = 790
+				controls_state = 791
+				controls_state = 792
+				controls_state = 793
+				controls_state = 794
+				# North Africa
+				controls_state = 290
+			}
+			# France
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_france_required_states_tt
+				controls_state = 29
+				controls_state = 18
+				controls_state = 17
+				controls_state = 28
+				controls_state = 15
+				controls_state = 16
+				controls_state = 27
+				controls_state = 14
+				controls_state = 30
+				controls_state = 24
+				controls_state = 23
+				controls_state = 33
+				controls_state = 26
+				controls_state = 20
+				controls_state = 32
+				controls_state = 735
+				controls_state = 25
+				controls_state = 22
+				controls_state = 21
+				controls_state = 19
+				controls_state = 20
+				controls_state = 1
+				controls_state = 785
+				controls_state = 31
+				# North Africa
+				controls_state = 458
+				controls_state = 665
+				controls_state = 460
+				controls_state = 513
+				controls_state = 459
+				controls_state = 461
+				# Syria
+				controls_state = 677
+				controls_state = 680
+				controls_state = 553
+				controls_state = 554
+			}
+		}
+
+		visible = {
+			original_tag = ITA
+			original_tag = FRA
+			original_tag = SPR
+			original_tag = ROM
+			original_tag = POR
+			NOT = { has_global_flag = form_roman_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = LATIN_EMPIRE
+
+			# Some Romanian states
+			82 = { add_core_of = ROOT }
+			83 = { add_core_of = ROOT }
+			76 = { add_core_of = ROOT }
+			84 = { add_core_of = ROOT }
+			81 = { add_core_of = ROOT }
+			46 = { add_core_of = ROOT }
+			77 = { add_core_of = ROOT }
+
+			# Switzerland
+			custom_effect_tooltip = form_country_switzerland_coring_states_tt
+			hidden_effect = {
+				3 = { add_core_of = ROOT }
+				151 = { add_core_of = ROOT }
+			}
+			# Portugal
+			custom_effect_tooltip = form_eu_portugal_coring_states_tt
+			hidden_effect = {
+				180 = { add_core_of = ROOT }
+				181 = { add_core_of = ROOT }
+				112 = { add_core_of = ROOT }
+				179 = { add_core_of = ROOT }
+				795 = { add_core_of = ROOT }
+			}
+			# Belgium
+			custom_effect_tooltip = form_eu_belgium_coring_states_tt
+			hidden_effect = {
+				6 = { add_core_of = ROOT }
+				34 = { add_core_of = ROOT }
+			}
+			# Spain
+			custom_effect_tooltip = form_spqr_spain_coring_states_tt
+			hidden_effect = {
+				165 = { add_core_of = ROOT }
+				166 = { add_core_of = ROOT }
+				167 = { add_core_of = ROOT }
+				177 = { add_core_of = ROOT }
+				171 = { add_core_of = ROOT }
+				174 = { add_core_of = ROOT }
+				172 = { add_core_of = ROOT }
+				176 = { add_core_of = ROOT }
+				170 = { add_core_of = ROOT }
+				41 = { add_core_of = ROOT }
+				175 = { add_core_of = ROOT }
+				169 = { add_core_of = ROOT }
+				173 = { add_core_of = ROOT }
+				168 = { add_core_of = ROOT }
+				290 = { add_core_of = ROOT }
+				788 = { add_core_of = ROOT }
+				789 = { add_core_of = ROOT }
+				790 = { add_core_of = ROOT }
+				791 = { add_core_of = ROOT }
+				792 = { add_core_of = ROOT }
+				793 = { add_core_of = ROOT }
+				794 = { add_core_of = ROOT }
+			}
+			# France
+			custom_effect_tooltip = form_spqr_france_coring_states_tt
+			hidden_effect = {
+				29 = { add_core_of = ROOT }
+				18 = { add_core_of = ROOT }
+				17 = { add_core_of = ROOT }
+				28 = { add_core_of = ROOT }
+				15 = { add_core_of = ROOT }
+				16 = { add_core_of = ROOT }
+				27 = { add_core_of = ROOT }
+				14 = { add_core_of = ROOT }
+				30 = { add_core_of = ROOT }
+				24 = { add_core_of = ROOT }
+				23 = { add_core_of = ROOT }
+				33 = { add_core_of = ROOT }
+				26 = { add_core_of = ROOT }
+				20 = { add_core_of = ROOT }
+				32 = { add_core_of = ROOT }
+				735 = { add_core_of = ROOT }
+				25 = { add_core_of = ROOT }
+				22 = { add_core_of = ROOT }
+				21 = { add_core_of = ROOT }
+				19 = { add_core_of = ROOT }
+				20 = { add_core_of = ROOT }
+				1 = { add_core_of = ROOT }
+				785 = { add_core_of = ROOT }
+				31 = { add_core_of = ROOT }
+				458 = { add_core_of = ROOT }
+				665 = { add_core_of = ROOT }
+				460 = { add_core_of = ROOT }
+				513 = { add_core_of = ROOT }
+				459 = { add_core_of = ROOT }
+				461 = { add_core_of = ROOT }
+				677 = { add_core_of = ROOT }
+				680 = { add_core_of = ROOT }
+				553 = { add_core_of = ROOT }
+				554 = { add_core_of = ROOT }
+			}
+
+			hidden_effect = {
+				news_event = { id = f_news.3 hours = 6 }
+				set_global_flag = form_roman_empire_flag 
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

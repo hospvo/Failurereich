@@ -1,0 +1,519 @@
+﻿
+add_namespace = france
+
+country_event = {
+	id = france.0
+	title = "Referundum about Luxemburg"
+	desc = "Prussian parlement try to find if they can integrate Luxemburg, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		LUX = {
+			country_event = { days = 1 id = france.1 }
+		}
+	}
+	option = { 
+		name = "Invade Luxemburg"
+		
+	        declare_war_on = {
+		                target = LUX
+		                type = annex_everything
+	        }	
+		add_state_claim = 8
+
+	}
+}
+
+country_event = {
+	id = france.1
+	title = "Integrate Luxemburg"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		FRA = {
+			country_event = { days = 1 id = france.2 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			FRA = {
+				country_event = { days = 1 id = france.3 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = france.2
+	title = "They agree our request"
+	desc = "they agree with our proposition, Luxemburg will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = LUX
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = france.3
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = LUX
+		                type = annex_everything
+	        }
+		add_state_claim = 8	
+	}
+}
+
+country_event = {
+	id = france.4
+	title = "Referundum about Belgium"
+	desc = "Prussian parlement try to find if they can integrate Belgium, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		BEL = {
+			country_event = { days = 1 id = france.5 }
+		}
+	}
+	option = { 
+		name = "Invade Belgium"
+		
+	        declare_war_on = {
+		                target = BEL
+		                type = annex_everything
+	        }	
+		add_state_claim = 34
+		HOL = { add_state_claim = 6 }
+
+	}
+}
+
+country_event = {
+	id = france.5
+	title = "Integrate Belgium"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		FRA = {
+			country_event = { days = 1 id = france.6 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			FRA = {
+				country_event = { days = 1 id = france.7 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = france.6
+	title = "They agree our request"
+	desc = "they agree with our proposition, Belgium will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = BEL
+	   		 transfer_troops = yes
+		}
+		HOL = { transfer_state = 6 }
+	}
+}
+
+country_event = {
+	id = france.7
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = BEL
+		                type = annex_everything
+	        }
+		add_state_claim = 34
+		HOL = { add_state_claim = 6 }
+	}
+}
+
+### fall ###
+
+country_event = {
+	id = france.8
+	title = "France surrender"
+	desc = "We are forced to surrender."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = FRA
+		OR = {
+			GER = { controls_state = 16 }
+			HOL = { controls_state = 16 }
+		}        
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "We will surrenders"
+	        white_peace = GER
+		GER = { set_state_owner = 28 }
+		GER = { set_state_owner = 8 }
+		HOL = { set_state_owner = 34 }
+		HOL = { set_state_owner = 6 }
+		HOL = { set_state_owner = 29 }
+		LOM = { set_state_owner = 735 }
+		GER = { set_state_owner = 914 }
+		GER = { set_state_owner = 944 }
+		GER = { set_state_owner = 945 }
+		AFR = { set_state_owner = 1 }
+		GER = { puppet = FRA }
+
+			ENG = {
+				country_event = { days = 4 id = france.11 }
+			}
+	}
+}
+
+### victory ###
+
+country_event = {
+	id = france.9
+	title = "Budapest fall"
+	desc = "Bela Kun committed suicide in his bunker, we can now liberate Hungary"
+	picture = GFX_report_event_greater_hungary
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = POL
+		date > 1939.9.1
+		has_war = yes
+		OR = { 
+			POL = { controls_state = 43 }
+			ROM = { controls_state = 43 }
+		}
+		NOT = { country_exists = HAN }
+		NOT = { country_exists = BAY }
+		NOT = { country_exists = WUR }
+		NOT = { country_exists = PRE }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Divide Hungary"
+		
+	        white_peace = HUN
+		HUN = { release = YUG }
+	        POL = { puppet = HUN }
+		POL = { set_state_owner = 71 }
+		POL = { set_state_owner = 70 }
+		POL = { set_state_owner = 73 }
+		POL = { set_state_owner = 664 }
+
+		ROM = { set_state_owner = 83 }
+		ROM = { set_state_owner = 76 }
+		ROM = { set_state_owner = 84 }
+	}
+}
+
+country_event = {
+	id = france.10
+	title = "Berlin fall"
+	desc = "The leader committed suicide and we can now occupied Germany"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = FRA
+		date > 1938.9.1
+		has_war = yes
+		OR = {
+			FRA = { controls_state = 43 }
+			POL = { controls_state = 43 }
+			FRA = { owns_state = 43 }
+			POL = { owns_state = 43 }
+		}
+		NOT = { country_exists = HAN }
+		NOT = { country_exists = BAY }
+		NOT = { country_exists = WUR }
+		NOT = { country_exists = PRE }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Divide Germany"
+		
+	        white_peace = GER
+	        POL = { puppet = HUN }
+		POL = { set_state_owner = 873 }
+		POL = { set_state_owner = 66 }
+		POL = { set_state_owner = 72 }
+
+		POL = { set_state_owner = 868 }
+		GER = { release = POL }
+		PRE = { release = POL }
+
+		if = {
+   		 	limit = {
+			
+				country_exists = CZE
+
+			}
+
+			GER = { release = CZE }
+			PRE = { release = CZE }
+
+			POL = {
+				annex_country = {
+	   			 	target = CZE
+	   			 	transfer_troops = yes
+		      		}
+			}
+    			else = { 
+
+    			}	
+		}
+
+		FRA = { set_state_owner = 42 }
+		FRA = { set_state_owner = 51 }
+
+		BAY = { set_state_owner = 52 } 
+		BAY = { set_state_owner = 53 } 
+		BAY = { set_state_owner = 54 } 
+		WUR = { set_state_owner = 50 } 
+		HAN = { set_state_owner = 56 } 
+		HAN = { set_state_owner = 57 } 
+		HAN = { set_state_owner = 59 } 
+		DEN = { set_state_owner = 58 } 
+		MEK = { set_state_owner = 61 } 
+		SAX = { set_state_owner = 65 } 
+		PRE = { set_state_owner = 64 } 
+		
+		BAY = { drop_cosmetic_tag = yes } 
+		WUR = { drop_cosmetic_tag = yes } 
+		HAN = { drop_cosmetic_tag = yes } 
+		PRE = { drop_cosmetic_tag = yes } 
+
+	        puppet = BAY
+	        puppet = WUR
+	        puppet = HAN
+	        puppet = MEK
+	        puppet = SAX
+
+		GER = { release_puppet = AUS }
+
+		PRE = {
+			annex_country = {
+	   			 target = GER 
+	   			 transfer_troops = yes
+		      }
+		}
+		if = {
+   		 	limit = {
+			
+				LOM = { has_war_with = ITA }
+
+			}
+			ITA = {
+
+				annex_country = {
+	   			 target = LOM
+	   			 transfer_troops = yes
+		      		}
+
+				annex_country = {
+	   			 target = PAP
+	   			 transfer_troops = yes
+		      		}
+
+			}
+    			else = { 
+
+    			}		
+		}
+
+		puppet = AUS
+		puppet = PRE
+
+	}
+}
+
+country_event = {
+	id = france.11
+	title = "War to Germany"
+	desc = "Germany need to be destroyed"
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Declare war to Germany"
+	        declare_war_on = {
+		                target = GER
+		                type = annex_everything
+	        }
+	}
+}
+
+### civil war ###
+
+country_event = {
+	id = france.12
+	title = "War to the nationalist clerical"
+	desc = "Jacques Doriot make a coup against the old regime and instaure a fith republic."
+	picture = GFX_report_event_french_2nd_civilwar
+	
+	is_triggered_only = yes
+
+	immediate = {
+		FRA_setup_civil_war = yes
+
+		every_owned_state = {
+			add_core_of = OCC
+			add_claim_by = OCC
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+		}
+
+		OCC = { set_cosmetic_tag = FRA_ORLEANS }
+		FRA = { set_politics = { ruling_party = anarchist } }
+		FRA = { set_cosmetic_tag = FRA_FARLEFT }
+
+		FRA = {
+			transfer_technology = yes
+		}
+
+		FRA = { set_state_owner = 20 } 
+		FRA = { set_state_owner = 32 } 
+		FRA = { set_state_owner = 735 } 
+		914 = { set_demilitarized_zone = yes }
+		28 = { set_demilitarized_zone = yes }
+		BEL = { set_state_owner = 29 } 
+	}
+	
+	option = { 
+		name = "Shit"
+		
+		785 = { set_demilitarized_zone = yes }
+		17 = { set_demilitarized_zone = yes }
+  		18 = { set_demilitarized_zone = yes }
+
+	        declare_war_on = {
+		                target = OCC
+		                type = annex_everything
+	        }	
+		
+		FRA = { create_faction = "Black Internationale" }
+		OCC = { create_faction = "Legitimist alliance" }
+		
+	}
+}
+
+country_event = {
+	id = france.13
+	title = "Spanish Concord"
+	desc = "CNT need help from us"
+	picture = GFX_report_event_cnt
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		FRA = { add_to_faction = SPC }
+	}
+}
+
+
+country_event = {
+	id = france.14
+	title = "Free Territories"
+	desc = "Ukraine need help from us"
+	picture = GFX_report_event_free_ukraine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		FRA = { add_to_faction = UKR }
+	}
+}
+
+
+
+country_event = {
+	id = france.15
+	title = "German takes Elsass"
+	desc = "With the civil war, we got a serious problem to maintain the east."
+	picture = GFX_report_event_french_2nd_civilwar
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = FRA
+		country_exists = GER
+		country_exists = OCC
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "Damn ..."
+		
+		GER = { set_state_owner = 914 } 
+		GER = { set_state_owner = 28 } 
+		
+	}
+}

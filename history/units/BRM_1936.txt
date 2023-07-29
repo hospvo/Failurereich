@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Burmese cav"				# Represents: German-trained divisions (better equipment than rest),
+	division_names_group = BRM_INF_01
+									# 	as well as two-division infantry corps (generally poorly-equipped militias),
+	regiments = {					#	and local militia groups.
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0 # garrison
+}
+division_template = {
+	name = "Burmese effective"			# Represents three-division infantry corps (generally poorly-equipped militias)
+	division_names_group = BRM_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Burmese tanks" 				# Represents two-division cavalry corps (generally poorly-equipped)
+	division_names_group = BRM_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	division = {
+		name = "Burmese D01"
+		location = 4140
+		division_template = "Burmese effective"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Burmese D02"
+		location = 4140
+		division_template = "Burmese effective"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Burmese D03"
+		location = 4140
+		division_template = "Burmese effective"
+		start_experience_factor = 0.2
+	}
+}
+
+
+### Air Forces ###
+air_wings = {
+	288 = { 
+		fighter_equipment_0 = { owner = "BRM" amount = 30 }	
+	}
+}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BRM"
+		}
+		requested_factories = 2
+		progress = 0.55
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "BRM"
+		}
+		requested_factories = 1
+		progress = 0.55
+		efficiency = 100
+	}	
+}

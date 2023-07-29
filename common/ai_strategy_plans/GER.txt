@@ -1,0 +1,98 @@
+German_historical = {
+	name = "Spartacist Germany"
+	desc = "Essentially historical behaviour for Germany"
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		or = {
+			AND = {
+				is_historical_focus_on = yes
+				OR = {
+					not = { has_dlc = "Waking the Tiger" }
+					has_game_rule = {
+						rule = GER_ai_behavior
+						option = DEFAULT
+					}
+				}	
+			}
+			has_country_flag = GER_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = COMMUNISM
+			}
+		}
+	}
+	abort = {
+		OR = {
+			FRA = {
+				has_government = anarchist
+			}
+			SOV = {
+				NOT = {
+					has_government = reactionnary
+				}
+			}
+			ENG = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			any_country_with_original_tag = {
+				original_tag_to_check = HUN
+				has_completed_focus = HUN_support_syncretics
+			}
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				OR = {
+					has_completed_focus = FRA_bourbons
+					has_completed_focus = FRA_ref
+					has_completed_focus = FRA_con
+				}
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		GER_thalmann
+		GER_rhineland
+		GER_austria
+		GER_bohemia
+		GER_invade_poland
+		GER_invade_scandinavia
+		GER_help_georgia
+		GER_invade_russia
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	traits = {
+		captain_of_industry = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+
+	focus_factors = {
+		GER_rhineland = 1.0
+	}
+
+}

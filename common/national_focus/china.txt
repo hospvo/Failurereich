@@ -1,0 +1,236 @@
+﻿focus_tree = {
+	id = kuomindang_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = CHI_Chang_kai_chek_assassination
+		icon = GFX_focus_china
+		text = "Chang Destitued"
+		mutually_exclusive = { focus = CHI_invade_zhili }
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader = yes
+		}
+	}
+
+	focus = {
+		id = CHI_civil_war
+		icon = GFX_focus_united_china
+		text = "Chinese civil war"
+		prerequisite = { 
+				focus = CHI_Chang_kai_chek_assassination
+		}
+
+		x = 6
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+				country_event = { days = 1 id = china.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_civil_lost
+		icon = GFX_focus_united_china
+		text = "Fleed in Yunnan"
+		prerequisite = { 
+				focus = CHI_civil_war
+		}
+		mutually_exclusive = { focus = CHI_civil_won }
+
+		x = 4
+		y = 2
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = { 
+			always = no
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = CHI_civil_won
+		icon = GFX_focus_united_china
+		text = "South China"
+		prerequisite = { 
+				focus = CHI_civil_war
+		}
+		mutually_exclusive = { focus = CHI_civil_lost }
+
+		x = 8
+		y = 2
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = { 
+			NOT = { country_exists = PRC }
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+### stable ###
+
+	focus = {
+		id = CHI_invade_zhili
+		icon = GFX_focus_united_china
+		text = "Reunite China"
+		mutually_exclusive = { focus = CHI_Chang_kai_chek_assassination }
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		completion_reward = {
+				
+	        	create_wargoal = {
+		                target = ZHI
+		                type = annex_everything
+	        	}
+	        	create_wargoal = {
+		                target = MAN
+		                type = annex_everything
+	        	}
+	        	create_wargoal = {
+		                target = ANH
+		                type = annex_everything
+	        	}
+
+			ZHI = {
+				every_owned_state = {
+				    add_claim_by = CHI
+				}
+			}
+
+			MAN = {
+				every_owned_state = {
+				    add_claim_by = CHI
+				}
+			}
+
+			ANH = {
+				every_owned_state = {
+				    add_claim_by = CHI
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_ma_clique
+		icon = GFX_focus_china
+		text = "Ma Clique"
+		prerequisite = { 
+				focus = CHI_invade_zhili
+		}
+
+		x = 12
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				
+	        	create_wargoal = {
+		                target = XSM
+		                type = annex_everything
+	        	}
+
+			XSM = {
+				every_owned_state = {
+				    add_claim_by = CHI
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_tibet
+		icon = GFX_focus_china
+		text = "Tibet invasion"
+		prerequisite = { 
+				focus = CHI_ma_clique
+		}
+
+		x = 12
+		y = 2
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				
+	        	create_wargoal = {
+		                target = TIB
+		                type = annex_everything
+	        	}
+
+			TIB = {
+				every_owned_state = {
+				    add_claim_by = CHI
+				}
+			}
+		}
+	}
+}

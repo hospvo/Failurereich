@@ -1,0 +1,142 @@
+﻿
+add_namespace = exiled
+
+country_event = {
+	id = exiled.1
+	title = "Colonies rebels"
+	desc = "After including absolute monarchy, most of Tuareg and tribes want to overthrown the emperor."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "No rebels here !"
+
+		NGR = { transfer_state = 781 }
+		NGR = { transfer_state = 515 }
+		CHA = { transfer_state = 774 }
+		CHA = { transfer_state = 775 }
+
+		CHA = {	
+
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.7
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+		}
+
+		NGR = {	
+
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.7
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+		}
+	
+		hidden_effect = {
+			AFR = {
+				country_event = { days = 11 id = exiled.2 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = exiled.2
+	title = "French civil war"
+	desc = "After including absolute monarchy, most of Tuareg and tribes want to overthrown the emperor."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "God hate Bonaparte"
+
+		CHA = { 
+			load_oob = "CHA_defense_force"
+		}
+
+		NGR = { 
+			load_oob = "NGR_defense_force"
+		}
+
+		NGR = {
+			  declare_war_on = {
+		            	target = AFR
+		                type = civil_war
+	      		  }
+		}
+
+		NGR = {
+			  declare_war_on = {
+		            	target = CHA
+		                type = civil_war
+	      		  }
+		}
+
+		AFR = {
+			  declare_war_on = {
+		            	target = CHA
+		                type = civil_war
+	      		  }
+		}
+			NGR = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+			CHA = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+	}
+}
+
+country_event = {
+	id = exiled.3
+	title = "Transfert Tobruk"
+	desc = "Division of Libya"
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = AFR
+		NOT = { country_exists = LBA }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+
+		name = "Cold relations"
+
+		CAN = { transfer_state = 449 }
+		CAN = { transfer_state = 450 }
+		CAN = { transfer_state = 451 }
+		CAN = { transfer_state = 662 }
+		CAN = { transfer_state = 663 }
+		CAN = { transfer_state = 273 }
+	}
+}

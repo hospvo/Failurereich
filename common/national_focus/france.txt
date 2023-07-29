@@ -1,0 +1,889 @@
+﻿focus_tree = {
+	id = francist_france_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = FRA_republic
+		icon = GFX_focus_focus_fra_revolution_utmost
+		text = "The Republic"
+		mutually_exclusive = { focus = FRA_bourbons }
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = FRA_bourbons
+		icon = GFX_focus_focus_fra_fascist_threat
+		text = "The Bourbons"
+		mutually_exclusive = { focus = FRA_republic }
+		x = 19
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = FRA_con
+		icon = GFX_focus_generic_monarchy_1
+		text = "The Conservatives"
+		prerequisite = { 
+				focus = FRA_bourbons
+		}
+		mutually_exclusive = { focus = FRA_ref }
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			create_country_leader = {
+				name = "Henry VI"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_infante_jaime
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+						
+				}
+			}
+
+			set_party_name = {
+				ideology = reactionary
+				long_name = FRA_legitimist_party_long
+				name = FRA_legitimist_party
+			}
+
+			set_politics = { ruling_party = reactionary }
+			set_cosmetic_tag = FRA_BOURBONS
+		}
+	}
+
+	focus = {
+		id = FRA_ref
+		icon = GFX_focus_focus_fra_orleans_restoration
+		text = "The Reformists"
+		prerequisite = { 
+				focus = FRA_bourbons
+		}
+		mutually_exclusive = { focus = FRA_con }
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+				create_country_leader = {
+					name = "Jean III"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_fra_jean_duke_of_guise
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						duke_of_orleans
+					}
+				}
+
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_orleanist_party_long
+				name = FRA_orleanist_party
+			}
+			set_politics = { ruling_party = neutrality }
+			set_cosmetic_tag = FRA_ORLEANS
+		}
+	}
+
+	focus = {
+		id = FRA_petain
+		icon = GFX_goal_generic_territory_or_war
+		text = "Military coalition"
+		mutually_exclusive = { focus = FRA_doriot focus = FRA_rocque }
+
+		prerequisite = { 
+				focus = FRA_republic
+		}
+
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+			set_party_name = { 
+    				ideology = reactionary
+    				long_name = "Military Juntla"
+    				name = "Military Juntla"
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_doriot
+		icon = GFX_focus_fra_milice
+		text = "National syndicalism"
+		desc = "Doriot-Déat coalition"
+
+		prerequisite = { 
+				focus = FRA_republic
+		}
+
+		mutually_exclusive = { focus = FRA_petain  focus = FRA_rocque }
+		x = 10
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			add_stability = -0.05
+
+			set_politics = {
+				ruling_party = fascism
+			}
+
+			create_country_leader = {
+				name = "Jacques Doriot"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_jacques_doriot
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					eager_collaborator
+				}
+			}
+
+			set_party_name = { 
+    				ideology = fascism
+    				long_name = "RNPF"
+    				name = "Rassemblement National Populaire Français"
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_rocque
+		icon = GFX_focus_up_joan_of_arc
+		text = "Pan-Celtism and Francism"
+		desc = "Bucard-De la Rocque Coalition"
+
+		prerequisite = { 
+				focus = FRA_republic
+		}
+
+		mutually_exclusive = { focus = FRA_doriot focus = FRA_petain }
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			add_stability = -0.05
+
+			set_politics = {
+				ruling_party = fascism
+			}
+
+			create_country_leader = {
+				name = "François de la Rocque"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_francois_de_la_rocque
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					retired_officer
+				}
+			}
+			set_party_name = { 
+    				ideology = fascism
+    				long_name = "PSFTF"
+    				name = "Parti Social Franciste des travailleurs Français"
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ardennes
+		icon = GFX_goal_generic_military_sphere
+		text = "Militarize France"
+
+		prerequisite = { 
+				focus = FRA_petain
+				focus = FRA_rocque
+		}
+
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+			28 = { is_demilitarized_zone = no }
+			842 = { is_demilitarized_zone = no }
+		}
+
+		completion_reward = {
+			842 = { set_demilitarized_zone = no }
+			28 = { set_demilitarized_zone = no }
+			add_political_power = 190
+			army_experience = 5
+		}
+	}
+
+	focus = {
+		id = FRA_luxemburg
+		icon = GFX_goal_support_fascism
+		text = "Annex Luxemburg"
+
+		prerequisite = { 
+				focus = FRA_ardennes
+		}
+
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 400000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.0 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_belgium
+		icon = GFX_goal_support_fascism
+		text = "Divide Belgium"
+
+		prerequisite = { 
+				focus = FRA_ardennes
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+			has_army_manpower = { size > 600000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invade_holland
+		icon = GFX_goal_support_fascism
+		text = "Take Holland"
+
+
+		prerequisite = { 
+				focus = FRA_luxemburg
+		}
+		prerequisite = { 
+				focus = FRA_belgium
+		}
+
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = HOL
+		      		type = annex_everything
+	        	}
+			FRA = {
+				add_state_claim = 35
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invade_germany
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Invade Germany"
+
+		prerequisite = { 
+				focus = FRA_invade_holland
+		}
+
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+	focus = {
+		id = FRA_help_romania
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Allie Romania"
+
+		prerequisite = { 
+				focus = FRA_invade_holland
+		}
+
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			ROM = {
+				give_guarantee = FRA
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_romanian_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach Romania"
+
+		x = 26
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ROM
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_british_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach BUF"
+
+		prerequisite = { 
+				focus = FRA_romanian_relations
+		}
+
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ENG
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_SRI_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach NFP"
+
+		prerequisite = { 
+				focus = FRA_british_relations
+		}
+
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ITA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_luxemburg_belgium
+		icon = GFX_goal_support_fascism
+		text = "Belgium"
+
+		prerequisite = { 
+				focus = FRA_con
+				focus = FRA_ref
+		}
+
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_switzerland
+		icon = GFX_goal_support_fascism
+		text = "Geneve"
+
+		prerequisite = { 
+				focus = FRA_con
+				focus = FRA_ref
+		}
+
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_turin
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "130 departements"
+
+		prerequisite = { 
+				focus = FRA_luxemburg_belgium
+				focus = FRA_switzerland
+		}
+
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_spanish_crown
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Help Spanish monarchists"
+
+		prerequisite = { 
+				focus = FRA_turin
+		}
+
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	FRA = { add_to_faction = SPR }
+		}
+	}
+
+	focus = {
+		id = FRA_divided_ger
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Germany into piece"
+
+		prerequisite = { 
+				focus = FRA_spanish_crown
+		}
+
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+	#################
+	### anarchist ###
+	#################
+
+	focus = {
+		id = FRA_ana
+		icon = GFX_focus_focus_fra_maquis
+		text = "Encourage Social reforms"
+		prerequisite = { 
+				focus = FRA_doriot
+		}
+		mutually_exclusive = { focus = FRA_ref }
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			add_command_power = 100
+			add_stability = -0.1
+			add_popularity = {
+			    ideology = anarchist
+			    popularity = 0.4
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ana2
+		icon = GFX_focus_fra_french_union
+		text = "The Black Internationale"
+		prerequisite = { 
+				focus = FRA_ana
+		}
+		mutually_exclusive = { focus = FRA_ref }
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.12 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_CNT
+		icon = GFX_focus_fra_french_union
+		text = "CNT alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		mutually_exclusive = { focus = FRA_ref }
+		x = 9
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = SPC
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.13 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_free_ukraine
+		icon = GFX_focus_fra_french_union
+		text = "Ukraine Alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		mutually_exclusive = { focus = FRA_ref }
+		x = 11
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = UKR
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.14 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_german_ana
+		icon = GFX_focus_fra_french_union
+		text = "A free Germany"
+		prerequisite = { 
+				focus = FRA_free_ukraine
+		}
+		x = 10
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = GER
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+### Industrial focus ###
+
+	focus = {
+		id = FRA_industry_A
+		icon = GFX_focus_industrial
+		text = "Take military industry"
+
+		x = 24
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_manpower = 100000
+			army_experience = 10
+		}
+	}  
+
+	focus = {
+		id = FRA_industry_B
+		icon = GFX_focus_industrial
+		text = "Reinforce Alsace"
+
+		prerequisite = { 
+				focus = FRA_industry_A
+		}
+
+		x = 24
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_building_construction = {
+			    type = bunker
+			    level = 2
+			    instant_build = yes
+			    province = 3560
+			}
+			add_building_construction = {
+			    type = bunker
+			    level = 2
+			    instant_build = yes
+			    province = 5291
+			}
+			add_building_construction = {
+			    type = bunker
+			    level = 2
+			    instant_build = yes
+			    province = 9472
+			}
+		}
+	}
+}                       

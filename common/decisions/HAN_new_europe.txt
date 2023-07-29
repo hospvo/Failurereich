@@ -1,0 +1,245 @@
+HAN_kommissariat = {
+
+	HAN_kommissariat_belgien_nordfrankreich = {
+		allowed = {
+			tag = HAN
+		}
+
+		visible = {
+			tag = HAN
+		}
+
+		available = {
+			owns_state = 6
+			owns_state = 34
+			owns_state = 29
+		}
+
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+				}
+		complete_effect = {
+			BEL = {
+				set_cosmetic_tag = BEL_volkskommissariat 
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 29
+			}
+			HAN = {
+				puppet = BEL
+			}
+		}	
+	}
+
+	HAN_kommissariat_niederlande = {
+		allowed = {
+			tag = HAN
+		}
+
+		visible = {
+			tag = HAN
+		}
+
+		available = {
+				owns_state = 7
+				owns_state = 35
+				owns_state = 36
+		}
+
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+				}
+		complete_effect = {
+			HOL = {
+				set_cosmetic_tag = HOL_volkskommissariat 
+				transfer_state = 35
+				transfer_state = 7
+				transfer_state = 36
+			}
+			HAN = {
+				puppet = HOL
+			}
+		}	
+	}
+
+	HAN_kommissariat_scandinaven = {
+		allowed = {
+			tag = HAN
+		}
+
+		visible = {
+			tag = HAN
+		}
+
+		available = {
+				owns_state = 37
+				owns_state = 110
+				owns_state = 142
+				owns_state = 143
+				owns_state = 144
+				owns_state = 666
+				owns_state = 38
+				owns_state = 141
+				owns_state = 140
+				owns_state = 139
+				owns_state = 99
+				owns_state = 138
+				owns_state = 124
+			}
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+				}
+		complete_effect = {
+			NOR = {
+				set_cosmetic_tag = SCA_volkskommissariat 
+				transfer_state = 37
+				transfer_state = 110
+				transfer_state = 142
+				transfer_state = 143
+				transfer_state = 144
+				transfer_state = 666
+				transfer_state = 38
+				transfer_state = 141
+				transfer_state = 140
+				transfer_state = 139
+				transfer_state = 99
+				transfer_state = 138
+				transfer_state = 124
+			}
+			HAN = {
+				puppet = NOR
+			}
+		}	
+	}
+
+	HAN_kommissariat_ukraine = {
+		allowed = {
+			tag = HAN
+		}
+
+		visible = {
+			tag = HAN
+		}
+
+		available = {
+				controls_state = 93
+				controls_state = 196
+				controls_state = 197
+				controls_state = 198
+				controls_state = 199
+				controls_state = 200
+				controls_state = 201
+				controls_state = 202
+				controls_state = 203
+				controls_state = 834
+				controls_state = 192
+				controls_state = 137
+				controls_state = 259
+				controls_state = 221
+				controls_state = 226
+				controls_state = 227
+				controls_state = 193
+			}
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+				}
+		complete_effect = {
+			UKR = {
+				set_cosmetic_tag = UKR_volkskommissariat 
+				transfer_state = 93
+				transfer_state = 196
+				transfer_state = 197
+				transfer_state = 198
+				transfer_state = 199
+				transfer_state = 200
+				transfer_state = 201
+				transfer_state = 202
+				transfer_state = 203
+				transfer_state = 834
+				transfer_state = 192
+				transfer_state = 137
+				transfer_state = 259
+				transfer_state = 221
+				transfer_state = 226
+				transfer_state = 227
+				transfer_state = 193
+			}
+			HAN = {
+				puppet = UKR
+			}
+		}	
+	}
+
+	HAN_kommissariat_ostland = {
+		allowed = {
+			tag = HAN
+		}
+
+		visible = {
+			tag = HAN
+		}
+
+		available = {
+				controls_state = 809
+				controls_state = 810
+				controls_state = 811
+				controls_state = 808
+				controls_state = 812
+				controls_state = 813
+				controls_state = 809
+				controls_state = 814
+				controls_state = 815
+				controls_state = 11
+				controls_state = 12
+				controls_state = 13
+				controls_state = 190
+				controls_state = 189
+				controls_state = 191
+				controls_state = 206
+				controls_state = 784
+				controls_state = 204
+				controls_state = 94
+				controls_state = 95
+				controls_state = 96
+				controls_state = 194
+			}
+		fire_only_once = yes
+		ai_will_do = {
+				factor = 100
+				}
+		complete_effect = {
+			BLR = {
+				set_cosmetic_tag = BLR_volkskommissariat 
+				transfer_state = 809
+				transfer_state = 810
+				transfer_state = 811
+				transfer_state = 808
+				transfer_state = 812
+				transfer_state = 813
+				transfer_state = 809
+				transfer_state = 814
+				transfer_state = 815
+				transfer_state = 11
+				transfer_state = 12
+				transfer_state = 13
+				transfer_state = 190
+				transfer_state = 189
+				transfer_state = 191
+				transfer_state = 206
+				transfer_state = 784
+				transfer_state = 204
+				transfer_state = 94
+				transfer_state = 95
+				transfer_state = 96
+				transfer_state = 194
+			}
+			HAN = {
+				puppet = BLR
+			}
+		}	
+	}
+}

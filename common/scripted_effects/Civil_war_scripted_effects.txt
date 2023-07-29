@@ -1,0 +1,487 @@
+SOV_setup_civil_war = {
+	hidden_effect = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 209 state = 210 state = 263 state = 208 state = 2016 state = 215 state = 214 
+					state = 397 state = 262 state = 400 state = 262 state = 256 state = 399 state = 249 state = 251 
+					state = 250 state = 217 state = 236 state = 237 state = 242 state = 241 state = 228 
+					state = 235 state = 233 state = 234 state = 238 state = 245 state = 218 state = 240 
+					state = 220 state = 222 state = 224 state = 579 state = 562 state = 565 
+					state = 566 state = 567 state = 568 state = 569 state = 570 state = 571 state = 572 state = 573 
+					state = 574 state = 575 state = 577 state = 403 state = 637 state = 644 state = 576 state = 578
+					state = 581 state = 580 state = 582 state = 516 state = 398 state = 651 state = 652 state = 251 
+					state = 249 state = 256 state = 400 state = 242 state = 205 state = 683 state = 632
+					state = 225 state = 243 state = 137 state = 40 state = 653 state = 654 state = 822 state = 824 
+					state = 589 state = 588 state = 590
+				}
+			}
+			RUS = { add_state_core = PREV }
+		}
+		release = RUS
+
+		transfer_units_fraction = {
+			target = RUS
+			size = 0.4
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		SOV = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			transfer_navy = { target = RUS }
+			country_lock_all_division_template = yes
+		}
+		219 = { #Moscow
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.34 start_equipment_factor = 0.96"
+				owner = SOV
+				prioritize_location = 6380
+			}
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.32 start_equipment_factor = 0.98"
+				owner = SOV
+				prioritize_location = 6380
+			}
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.32 start_equipment_factor = 0.99"
+				owner = SOV
+				prioritize_location = 6380
+			}
+		}
+		for_each_scope_loop = {
+			remove_core_of = SOV
+			add_claim_by = SOV
+			teleport_armies = {
+				limit = { tag = SOV }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = RUS
+		}
+		set_major = yes
+	}
+}
+
+RUS_add_stability = {
+	if = {
+		limit = {
+			has_stability > 0.1
+		}
+		add_stability = 0.05
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.1
+		}
+		add_stability = 0.1
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.3
+		}
+		add_stability = 0.15
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.5
+		}
+		add_stability = 0.2
+	}
+	else = {
+		add_stability = 0.25
+	}
+}
+
+CSA_setup_civil_war = {
+	hidden_effect = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 370 state = 371 state = 372 state = 366  
+				}
+			}
+			LOU = { add_state_core = PREV }
+		}
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 375 state = 376 state = 374 state = 918
+				}
+			}
+			TEX = { add_state_core = PREV }
+		}
+		release = LOU 
+		release = TEX
+
+		transfer_units_fraction = {
+			target = LOU
+			size = 0.3
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		transfer_units_fraction = {
+			target = TEX
+			size = 0.3
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		CSA = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = CSA
+			add_claim_by = CSA
+			teleport_armies = {
+				limit = { tag = CSA }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = TEX
+			add_core_of = LOU
+		}
+		set_major = yes
+	}
+}
+
+SPR_setup_civil_war = {
+	hidden_effect = {
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 171 state = 791 state = 790 state = 792 state = 174 state = 176 state = 290
+				}
+			}
+			SPA = { add_state_core = PREV }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 165 state = 166 state = 167 state = 172 state = 794 state = 177 state = 699 state = 783
+				}
+			}
+			SPC = { add_state_core = PREV }
+		}
+		release = SPC
+		release = SPA
+
+		transfer_units_fraction = {
+			target = SPC
+			size = 0.36
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction = {
+			target = SPA
+			size = 0.33
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		SPR = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = SPR
+			add_claim_by = SPR
+			teleport_armies = {
+				limit = { tag = SPR }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = SPC
+			add_core_of = SPA
+		}
+		set_major = yes
+	}
+}
+
+JAP1_setup_civil_war = {
+	hidden_effect = {
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 533 state = 536 state = 537 state = 555
+				}
+			}
+			EDO = { add_state_core = PREV }
+		}
+
+		release = EDO
+
+		transfer_units_fraction = {
+			target = EDO
+			size = 0.4
+			navy_ratio = 0.1
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		JAP = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = JAP 
+			add_claim_by = JAP 
+			teleport_armies = {
+				limit = { tag = JAP }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = EDO
+		}
+		set_major = yes
+	}
+}
+
+JAP2_setup_civil_war = {
+	hidden_effect = {
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 526 state = 528 state = 529 state = 530
+				}
+			}
+			TGW = { add_state_core = PREV }
+		}
+
+		release = TGW
+
+		transfer_units_fraction = {
+			target = TGW
+			size = 0.45
+			navy_ratio = 0.1
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		JAP = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = JAP 
+			add_claim_by = JAP 
+			teleport_armies = {
+				limit = { tag = JAP }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = TGW
+		}
+		set_major = yes
+	}
+}
+
+GER_setup_civil_war = {
+	hidden_effect = {
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 63 state = 85 state = 763 state = 188 state = 5 state = 62  state = 807
+				}
+			}
+			PRE = { add_state_core = PREV }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 65 state = 60 state = 54 state = 53 state = 52
+				}
+			}
+			BAY = { add_state_core = PREV }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 55 state = 56 state = 57 state = 59 state = 843  state = 915
+				}
+			}
+			HAN = { add_state_core = PREV }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 42 state = 51 state = 50
+				}
+			}
+			WUR = { add_state_core = PREV }
+		}
+		release = PRE
+		release = BAY
+		release = HAN
+		release = WUR
+
+		transfer_units_fraction = {
+			target = PRE
+			size = 0.23
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction = {
+			target = HAN
+			size = 0.23
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction = {
+			target = BAY
+			size = 0.23
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction = {
+			target = WUR
+			size = 0.23
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		GER = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = GER
+			add_claim_by = GER
+			teleport_armies = {
+				limit = { tag = GER }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = WUR
+			add_core_of = BAY
+			add_core_of = PRE
+			add_core_of = HAN
+		}
+		set_major = yes
+	}
+}
+
+
+######
+
+FRA_setup_civil_war = {
+	hidden_effect = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 23 state = 33 state = 25 state = 19 state = 806 state = 31 state = 22 state = 26 state = 21 state = 14
+				}
+			}
+			OCC = { add_state_core = PREV }
+		}
+		release = OCC
+
+		transfer_units_fraction = {
+			target = OCC
+			size = 0.45
+			navy_ratio = 0.2
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		FRA = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			transfer_navy = { target = OCC }
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = FRA
+			add_claim_by = FRA
+			teleport_armies = {
+				limit = { tag = FRA }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = OCC
+		}
+		set_major = yes
+	}
+}
+
+#######
+
+TUR_start_civil_war = {
+	hidden_effect = {
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 344 state = 345	state = 346 state = 348	state = 799
+				}
+			}
+			OTT = { add_state_core = PREV }
+		}
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 341 state = 797 state = 340 state = 347 state = 356
+				}
+			}
+			TRK = { add_state_core = PREV }
+		}
+
+		release = OTT
+		release = TRK
+
+		transfer_units_fraction = {
+			target = OTT
+			size = 0.35
+			navy_ratio = 0.1
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		transfer_units_fraction = {
+			target = TRK
+			size = 0.35
+			navy_ratio = 0.1
+			keep_unit_leaders_trigger = { always = yes }
+		}
+
+		TUR = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			country_lock_all_division_template = yes
+		}
+
+		for_each_scope_loop = {
+			remove_core_of = TUR 
+			add_claim_by = TUR 
+			teleport_armies = {
+				limit = { tag = TUR }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			add_core_of = OTT
+			add_core_of = TRK
+		}
+		set_major = yes
+	}
+}

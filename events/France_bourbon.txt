@@ -1,0 +1,64 @@
+﻿
+add_namespace = bourbon_france
+
+
+
+country_event = {
+	id = bourbon_france.1
+	title = "Invade Luxemburg and Belgium"
+	desc = "As new pretendor of the monarchy, we will have to do better than in our dark ages. Benelux will fall under us."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Luxemburg and Belgium"
+	        declare_war_on = {
+		                target = LUX
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = BEL
+		                type = annex_everything
+	        }
+		add_state_claim = 6
+		add_state_claim = 8
+		add_state_claim = 14
+		add_state_claim = 944
+		add_state_claim = 945
+	}
+}
+country_event = {
+	id = bourbon_france.2
+	title = "Take Valois"
+	desc = "As new pretendor of the monarchy, we will have to do better than in our dark ages. Benelux will fall under us."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Switzerland"
+	        declare_war_on = {
+		                target = SWI
+		                type = annex_everything
+	        }
+		add_state_claim = 845
+	}
+}
+country_event = {
+	id = bourbon_france.3
+	title = "Take Turin"
+	desc = "As new pretendor of the monarchy, we will have to do better than in our dark ages. Benelux will fall under us."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Vincere ?"
+	        declare_war_on = {
+		                target = LOM
+		                type = annex_everything
+	        }
+		add_state_claim = 158
+	}
+}

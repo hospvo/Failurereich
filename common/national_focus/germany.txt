@@ -1,0 +1,758 @@
+﻿
+focus_tree = {
+	id = spartakist_germany_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = GER_thalmann
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		text = "Aggressive Germany"
+		mutually_exclusive = { focus = GER_luxemburg }
+		mutually_exclusive = { focus = GER_Strasser }
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+
+	focus = {
+		id = GER_luxemburg
+		icon = GFX_focus_ger_great_red_menace
+		text = "Pacifist Germany"
+		mutually_exclusive = { focus = GER_thalmann }
+		mutually_exclusive = { focus = GER_Strasser }
+		x = 6
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			
+			set_party_name = { 
+				    ideology = communism
+				    long_name = "Syndicalist Party of Germany"
+				    name = "SDP"
+			}
+		}
+	}
+
+	focus = {
+		id = GER_rhineland
+		icon = GFX_focus_ger_reichskommisariats
+		text = "Militarize Germany"
+
+		prerequisite = { 
+				focus = GER_thalmann 
+				focus = GER_luxemburg 
+		}
+
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+		bypass = {
+			42 = { is_demilitarized_zone = no }
+			51 = { is_demilitarized_zone = no }
+		}
+
+		completion_reward = {
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			custom_effect_tooltip = GER_rhineland_ultimatum
+			add_political_power = 190
+			army_experience = 5
+			add_named_threat = { threat = 5 name = GER_rhineland }
+		}
+	}
+
+	focus = {
+		id = GER_austria
+		icon = GFX_focus_generic_attack_austria
+		text = "Annex Austria"
+
+		
+		bypass = {
+			
+			    NOT = { country_exists = AUS }
+			
+		}
+
+		prerequisite = { 
+				focus = GER_rhineland
+				focus = GER_neutrality
+		}
+
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 500000 }
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.0 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_bohemia
+		icon = GFX_focus_generic_attack_czech
+		text = "Annex Bohemia"
+
+		prerequisite = { 
+				focus = GER_rhineland
+				focus = GER_neutrality
+		}
+		
+		bypass = {
+			
+			    NOT = { country_exists = CZE }
+			
+		}
+
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 650000 }	
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_invade_poland
+		icon = GFX_focus_generic_attack_poland
+		text = "Invade Poland"
+
+		prerequisite = { 
+				focus = GER_bohemia
+				focus = GER_austria
+				focus = GER_attack_belgium
+		}
+		
+		bypass = {
+			    NOT = { country_exists = POL }
+			    OR = { country_exists = RUS }
+		}
+
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 800000 }	
+		}
+
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.8 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_invade_scandinavia
+		icon = GFX_focus_generic_attack_denmark
+		text = "Invade Scandinavia"
+
+		prerequisite = { 
+				focus = GER_invade_poland
+		}
+
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.11 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_help_georgia
+		icon = GFX_goal_support_communism
+		text = "Invite Stalin"
+
+		prerequisite = { 
+				focus = GER_invade_poland
+		}
+
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			GEO = {
+				give_guarantee = GER
+			}
+		}
+	}
+
+	focus = {
+		id = GER_invade_russia
+		icon = GFX_focus_ger_oppose_hitler
+		text = "Invade Russia"
+
+		prerequisite = { 
+				focus = GER_invade_scandinavia
+		}
+		prerequisite = { 
+				focus = GER_help_georgia
+		}
+
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			FRA = { is_subject = yes }
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.10 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_non_aggression
+		icon = GFX_goal_continuous_armor_production
+		text = "Guarantee non-intervention"
+
+		x = 20
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			country_exists = USB
+		}
+
+		completion_reward = {
+			set_truce = {
+   				target = USB
+			    	days = 600
+			}
+			set_truce = {
+   				target = MEX
+			    	days = 600
+			}
+		}
+	}
+
+	focus = {
+		id = GER_alliance_with_lombardia
+		icon = GFX_goal_generic_attack_allies
+		text = "Propose alliance with Lombardia"
+
+		prerequisite = { 
+				focus = GER_non_aggression
+		}
+
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			date > 1937.6.1		
+		}
+
+		completion_reward = {
+			GER = {
+				add_to_faction = LOM
+			}
+		}
+	}
+
+	focus = {
+		id = GER_alliance_with_l
+		icon = GFX_focus_generic_befriend_communist_spain
+		text = "Propose alliance with spain"
+
+		prerequisite = { 
+				focus = GER_alliance_with_lombardia
+		}
+
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			date > 1937.6.1		
+		}
+
+		completion_reward = {
+			GER = {
+				add_to_faction = SPC
+			}
+		}
+	}
+
+	focus = {
+		id = GER_Strasser
+		icon = GFX_goal_generic_military_sphere
+		text = "National-Communist leader"
+		mutually_exclusive = { focus = GER_thalmann }
+		mutually_exclusive = { focus = GER_luxemburg }
+		x = 12
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			set_politics = {
+				ruling_party = vanguardism
+			}
+
+			create_country_leader = {
+				name = "Otto Strasser"
+				desc = "POLITICS_ADOLF_HITLER_DESC"
+				picture = "gfx/leaders/ger/Portrait_GER_Otto_Strasser.dds"
+				expire = "1965.1.1"
+				ideology = nazbol
+				traits = {
+			
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_neutrality
+		icon = GFX_goal_generic_military_sphere
+		text = "Purge leftist"
+		prerequisite = { 
+				focus = GER_Strasser
+		}
+		x = 12
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name = { 
+    				ideology = vanguardism
+				name = "Black Front"
+				long_name = "Revolutionärer Nationalsozialisten"
+			}
+			add_country_leader_trait = nationalist_symbol
+		}
+	}
+
+	focus = {
+		id = GER_attack_belgium
+		icon = GFX_focus_attack_switzerland
+		text = "Violate neutrality"
+		mutually_exclusive = { focus = GER_civil_war }
+		prerequisite = { 
+				focus = GER_neutrality
+		}
+
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+			has_stability > 0.7
+			communism > 0.75
+
+		}
+
+		completion_reward = {
+				country_event = { days = 1 id = germany.12 }
+		}
+	}
+
+	focus = {
+		id = GER_civil_war
+		icon = GFX_goal_generic_war_with_comintern
+		text = "Failed Syndicate"
+		mutually_exclusive = { focus = GER_attack_switzerland }
+		prerequisite = { 
+				focus = GER_neutrality
+		}
+
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				country_event = { days = 1 id = ger_civil_war.1 }
+		}
+	}
+
+	focus = {
+		id = GER_hungary_relations
+		icon = GFX_focus_generic_befriend_hungary
+		text = "approach Hungary"
+
+		x = 24
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = HUN
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_finland_relations
+		icon = GFX_focus_invite_finland
+		text = "approach Finland"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = FIN
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_dutch_relations
+		icon = GFX_focus_generic_befriend_holland
+		text = "approach Holland"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 24
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = HOL
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_bulgaria_relations
+		icon = GFX_focus_generic_befriend_bulgaria
+		text = "approach Bulgaria"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = BUL
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+##### Civil war ######
+
+	focus = {
+		id = GER_reconstruction
+		icon = GFX_goal_tripartite_pact
+		text = "Rebuilt Germany"
+		prerequisite = { 
+				focus = GER_civil_war
+				focus = GER_attack_belgium
+		}
+
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 100000 }
+			controls_state = 64
+			controls_state = 763
+			controls_state = 42
+			controls_state = 52
+			controls_state = 59
+		}
+
+		completion_reward = {
+				add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = GER_Austria2
+		icon = GFX_goal_rhineland
+		text = "German Austria"
+		prerequisite = { 
+				focus = GER_reconstruction
+		}
+
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				add_manpower = 25000
+				create_wargoal= { 
+					type = annex_everything 
+					target = AUS
+				}
+		}
+	}
+
+	focus = {
+		id = GER_Switzerland2
+		icon = GFX_goal_rhineland
+		text = "Take Switzerland"
+		prerequisite = { 
+				focus = GER_reconstruction
+		}
+
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				add_manpower = 25000
+				create_wargoal= { 
+					type = annex_everything 
+					target = SWI
+				}
+		}
+	}
+
+	focus = {
+		id = GER_HRE
+		icon = GFX_focus_ger_revive_kaiserreich
+		text = "Rebuilt Germany"
+		prerequisite = { 
+				focus = GER_Switzerland2
+		}
+		prerequisite = { 
+				focus = GER_Austria2
+		}
+
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+				set_cosmetic_tag = HRE_UNIFIED
+		}
+	}
+}

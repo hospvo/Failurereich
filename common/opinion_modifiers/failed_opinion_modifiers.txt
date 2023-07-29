@@ -1,0 +1,29 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	francist_collaborator = {
+		value = 15
+	}
+
+	entente_collaborator = {
+		value = 10
+	}
+
+	sparcatists_collaborator = {
+		value = 20
+	}
+
+	alliance_collaborator = {
+		value = 20
+	}
+
+}

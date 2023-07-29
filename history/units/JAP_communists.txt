@@ -1,0 +1,77 @@
+﻿division_template = {
+	name = "Infantry Corps"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "New Meiji I"
+		location = 7087
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Edo I"
+		location = 10125
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Shogun I"
+		location = 10444
+		division_template = "Infantry Corps"
+	}
+
+	division = {
+		name = "New Meiji II"
+		location = 7087
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Edo II"
+		location = 10125
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Shogun II"
+		location = 10444
+		division_template = "Infantry Corps"
+	}
+
+	division = {
+		name = "New Meiji III"
+		location = 7087
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Edo III"
+		location = 10125
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Shogun III"
+		location = 10444
+		division_template = "Infantry Corps"
+	}
+
+	division = {
+		name = "New Meiji IV"
+		location = 7087
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Edo IV"
+		location = 10125
+		division_template = "Infantry Corps"
+	}
+	division = {
+		name = "New Shogun IV"
+		location = 10444
+		division_template = "Infantry Corps"
+	}
+}

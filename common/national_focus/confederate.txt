@@ -1,0 +1,373 @@
+﻿focus_tree = {
+	id = confederate_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CSA
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = CSA_assassination
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		text = "Assassinate US president"
+
+		x = 27
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1937.1.5
+		}
+			
+		completion_reward = {
+			add_manpower = 10000
+			country_event = { id = usa.0 days = 25 }
+		}
+	}
+
+	focus = {
+		id = CSA_politics_elections
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		text = "Entente protection"
+		mutually_exclusive = { focus = CSA_politics_elections_fascist }
+
+		x = 6
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = CSA_politics_CAN
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		text = "Collaborating with Canada"
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_elections
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = CAN
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_AFR
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		text = "Collaborating with French Empire"
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_elections
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = AFR
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_cuba
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		text = "Guarantee Cuba"
+		prerequisite = { 	
+			focus = CSA_politics_FRA
+			focus = CSA_politics_ENG
+			focus = CSA_politics_CAN
+			focus = CSA_politics_AFR
+		}
+		x = 11
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			diplomatic_relation = {
+			    country = CUB
+			    relation = guarantee
+			    active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_haiti
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		text = "Protect Haiti"
+		prerequisite = { 	
+			focus = CSA_politics_cuba
+		}
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			diplomatic_relation = {
+			    country = HAI
+			    relation = guarantee
+			    active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_elections_fascist
+		icon = GFX_goal_generic_air_naval_bomber
+		text = "Axis protection"
+		mutually_exclusive = { focus = CSA_politics_elections }
+
+		x = 16
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = CSA_politics_ENG
+		icon = GFX_goal_generic_positive_trade_relations
+		text = "Join British Empire coalition"
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_elections_fascist
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = ENG
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_FRA
+		icon = GFX_goal_generic_positive_trade_relations
+		text = "French entente"
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_elections_fascist
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = FRA
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_civil_war
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		text = "Southern Civil war"
+		prerequisite = { 	
+			focus = CSA_politics_haiti
+		}
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1937.1.1
+			owns_state = 376
+			owns_state = 374
+			owns_state = 918
+		}
+
+		completion_reward = {
+			country_event = { id = confederate.1 days = 1 }
+		}
+	}
+
+#### Support Entente  ####
+
+
+	focus = {
+		id = CSA_politics_DES
+		icon = GFX_goal_generic_alliance
+		text = "Negociate Deseret"
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_CAN
+			focus = CSA_politics_AFR
+		}
+
+		available = {
+			date > 1937.1.1
+			owns_state = 376
+			owns_state = 374
+			owns_state = 918
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = DES
+			    modifier = entente_collaborator 
+			}
+			create_faction = "American corridor"
+			add_to_faction = DES
+		}
+	}
+
+	focus = {
+		id = CSA_politics_NWG
+		icon = GFX_goal_generic_alliance
+		text = "Negociate New England"
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_DES
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation = {
+			    country = NWG
+			    relation = non_aggression_pact
+			    active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_CAL
+		icon = GFX_goal_generic_alliance
+		text = "Negociate California"
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_NWG
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation = {
+			    country = CAL
+			    relation = non_aggression_pact
+			    active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CSA_politics_USB
+		icon = GFX_goal_generic_alliance
+		text = "Negociate FCSA"
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { 	
+			focus = CSA_politics_NWG
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation = {
+			    country = USB
+			    relation = non_aggression_pact
+			    active = yes
+			}
+		}
+	}
+}

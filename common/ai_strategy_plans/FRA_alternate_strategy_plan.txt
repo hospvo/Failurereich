@@ -1,0 +1,191 @@
+FRA_alternate_francism = {
+	name = "France come with De la Rocque and the Francist coalition"
+	desc = "Behavior for France with a dictator"
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = FRANCISM
+			}
+		}
+	}
+	abort = {
+		OR = {
+			GER = { exists = no }
+			GER = { is_subject = yes }
+		}
+	}
+
+	ai_national_focuses = {
+		FRA_republic
+		FRA_rocque
+		FRA_ardennes
+		FRA_luxemburg
+		FRA_belgium
+		FRA_invade_holland
+		FRA_invade_germany
+		FRA_help_romania
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FRA_alternate_doriot = {
+	name = "France alternate plan: France is going national syndicalism"
+	desc = "Doriot"
+
+	allowed = {
+		original_tag = FRA
+		NOT = { has_dlc = "La Resistance" }
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = NATSYN
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		FRA_republic
+		FRA_doriot
+		FRA_ana
+		FRA_ana2
+		FRA_belgium
+		FRA_CNT
+		FRA_free_ukraine
+		FRA_german_ana
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FRA_alternate_bourbon = {
+	name = "France alternate plan: France is going conservative"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+		has_dlc = "La Resistance"
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = BOURBON
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		FRA_bourbons
+		FRA_con
+		FRA_switzerland
+		FRA_luxemburg_belgium
+		FRA_turin
+		FRA_spanish_crown
+		FRA_divided_ger
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FRA_alternate_orleans = {
+	name = "France alternate plan: France is going reformist"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+		NOT = { has_dlc = "La Resistance" }
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = ORLEANS
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		FRA_bourbons
+		FRA_ref
+		FRA_switzerland
+		FRA_luxemburg_belgium
+		FRA_turin
+		FRA_spanish_crown
+		FRA_divided_ger
+	}			
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

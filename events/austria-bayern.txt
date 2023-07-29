@@ -1,0 +1,106 @@
+﻿
+add_namespace = sgf
+
+country_event = {
+	id = sgf.1
+	title = "Referundum about Austria"
+	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = BAY
+		country_exists = AUS
+		country_exists = GER
+		AUS = { has_government = fascism }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "Propose referundum"
+		AUS = {
+			country_event = { days = 1 id = sgf.2 }
+		}
+	}
+	option = { 
+		name = "Invade Austria"
+		
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }	
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = BAY 
+				}
+			}
+
+	}
+}
+
+country_event = {
+	id = sgf.2
+	title = "Integrate Austria"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		BAY = {
+			country_event = { days = 1 id = sgf.3 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			BAY = {
+				country_event = { days = 1 id = sgf.4 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = sgf.3
+	title = "They agree our request"
+	desc = "they agree with our proposition, Austria will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = AUS
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = sgf.4
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = BAY 
+				}
+			}
+	}
+}

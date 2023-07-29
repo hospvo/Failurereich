@@ -1,0 +1,362 @@
+﻿
+add_namespace = kg
+
+### P1 ###
+
+country_event = {
+	id = kg.1
+	title = "Operation Ansluch"
+	desc = "Invade Austria"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Austria"
+	        declare_war_on = {
+		                target = AUS 
+		                type = annex_everything
+	        }
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = kg.2
+	title = "Operation Zapadoslvia"
+	desc = "Invasion of Czech."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Czech"
+	        declare_war_on = {
+		                target = CZE
+		                type = annex_everything
+	        }
+			CZE = {
+				873 = {
+				    add_claim_by = PRE
+				}
+				69 = {
+				    add_claim_by = PRE
+				}
+				74 = {
+				    add_claim_by = PRE
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = kg.3
+	title = "Operation Copernic"
+	desc = "Invade Poland"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Poland will be divided"
+	        declare_war_on = {
+		                target = POL
+		                type = annex_everything
+	        }
+			POL = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}
+	}
+}
+
+### P2 ###
+
+country_event = {
+	id = kg.4
+	title = "Operation William"
+	desc = "Invasion of The Benelux"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Benelux"
+	        declare_war_on = {
+		                target = HOL
+		                type = annex_everything
+	        }
+			HOL = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}
+	        declare_war_on = {
+		                target = LUX
+		                type = annex_everything
+	        }
+			LUX = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}
+	        declare_war_on = {
+		                target = BEL
+		                type = annex_everything
+	        }
+			BEL = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = kg.5
+	title = "Operation Harald"
+	desc = "Hyperborealis belong to the Volks."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Scandinavia"
+	        declare_war_on = {
+		                target = DEN
+		                type = annex_everything
+	        }
+			DEN = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}	
+	        declare_war_on = {
+		                target = SWE
+		                type = annex_everything
+	        }
+			SWE = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}	
+	        declare_war_on = {
+		                target = NOR
+		                type = annex_everything
+	        }
+			NOR = {
+				every_owned_state = {
+				    add_claim_by = PRE
+				}
+			}	
+	}
+}
+
+### P3 ###
+
+country_event = {
+	id = kg.6
+	title = "Operation Margherite"
+	desc = "Invade Western Balkans"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Destroy Yugoslavia and Greece"
+	        declare_war_on = {
+		                target = YUG
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = GRE
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = ALB
+		                type = annex_everything
+	        }
+	}
+}
+
+country_event = {
+	id = ug.7
+	title = "Operation Pericles"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Thracia"
+	        declare_war_on = {
+		                target = GRE
+		                type = annex_everything
+	        }
+	        declare_war_on = {
+		                target = BUL
+		                type = annex_everything
+	        }
+	}
+}
+
+country_event = {
+	id = kg.8
+	title = "Divide Balkans"
+	desc = "Balkan can now be redistributed."
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = PRE
+		NOT = { 
+			country_exists = YUG 
+			country_exists = ALB
+			country_exists = HUN 
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		name = "Hungary, Croatia, Albania and Serbia."
+
+		release_puppet = SER
+		release_puppet = CRO
+		release_puppet = ALB
+		release_puppet = SLO
+		release_puppet = HUN
+		release_puppet = MNT
+
+		PRE = { set_state_owner = 883 }
+		PRE = { set_state_owner = 884 }
+		PRE = { set_state_owner = 45 }
+		PRE = { set_state_owner = 82 }
+		PRE = { set_state_owner = 764 }
+
+
+		CRO = { set_state_owner = 104 }
+		CRO = { set_state_owner = 804 }
+		CRO = { set_state_owner = 163 }
+
+		BUL = { set_state_owner = 106 }
+		BUL = { set_state_owner = 803 }
+
+		ALB = { set_state_owner = 802 }
+
+		ROM = { set_state_owner = 83 }
+		ROM = { set_state_owner = 84 }
+
+		HUN = { set_state_owner = 76 }
+
+	}
+}
+
+### P4 ###
+
+country_event = {
+	id = kg.9
+	title = "Operation Alpine"
+	desc = "Invade Switzerland"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Switzerland"
+	        declare_war_on = {
+		                target = SWI
+		                type = puppet
+	        }
+			SWI = {
+				3 = {
+				    add_claim_by = PRE
+				}
+				151 = {
+				    add_claim_by = PRE
+				}
+				847 = {
+				    add_claim_by = PRE
+				}
+				845 = {
+				    add_claim_by = FRA
+				}
+				846 = {
+				    add_claim_by = PAD
+				}
+			}
+		}	
+}
+
+
+country_event = {
+	id = kg.10
+	title = "Operation Da Vinci"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade Italy"
+	        declare_war_on = {
+		                target = LOM
+		                type = annex_everything
+	        }
+
+	        declare_war_on = {
+		                target = ITA
+		                type = annex_everything
+	        }
+			ITA = {
+				736 = {
+				    add_claim_by = PRE
+				}
+				39 = {
+				    add_claim_by = PRE
+				}
+			}
+			LOM = {
+				every_owned_state = {
+				    add_claim_by = ITA
+				}
+			}	
+		}
+	}	
+}
+
+country_event = {
+	id = kg.11
+	title = "Operation Bonaparte"
+	desc = ""
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Invade France"
+	        declare_war_on = {
+		                target = FRA
+		                type = puppet
+	        }
+			FRA = {
+				17 = {
+				    add_claim_by = PRE
+				}
+				28 = {
+				    add_claim_by = PRE
+				}
+				842 = {
+				    add_claim_by = PRE
+				}
+			}	
+		}
+}

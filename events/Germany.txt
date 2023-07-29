@@ -1,0 +1,327 @@
+﻿
+add_namespace = germany
+
+country_event = {
+	id = germany.0
+	title = "Referundum about Austria"
+	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		AUS = {
+			country_event = { days = 1 id = germany.1 }
+		}
+	}
+	option = { 
+		name = "Invade Austria"
+		
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }	
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}
+
+	}
+}
+
+country_event = {
+	id = germany.1
+	title = "Integrate Austria"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		GER = {
+			country_event = { days = 1 id = germany.2 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			GER = {
+				country_event = { days = 1 id = germany.3 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = germany.2
+	title = "They agree our request"
+	desc = "they agree with our proposition, Austria will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = AUS
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = germany.3
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = AUS
+		                type = annex_everything
+	        }
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = germany.4
+	title = "Referundum about czech"
+	desc = "Prussian parlement try to find if they can integrate czech, this referundum will be made becCZEe Petrograd alliance collapsed."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Propose referundum"
+		CZE = {
+			country_event = { days = 1 id = germany.5 }
+		}
+	}
+	option = { 
+		name = "Invade czech"
+		
+	        declare_war_on = {
+		                target = CZE
+		                type = annex_everything
+	        }	
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}
+
+	}
+}
+
+country_event = {
+	id = germany.5
+	title = "Integrate czech"
+	desc = "Prussia ask if we can join their nation."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = "Agree with proposition"
+		GER = {
+			country_event = { days = 1 id = germany.6 }
+		}
+	}
+	option = { # Refuse
+		name = "Refuse proposition"
+		hidden_effect = {
+			GER = {
+				country_event = { days = 1 id = germany.7 }
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = germany.6
+	title = "They agree our request"
+	desc = "they agree with our proposition, czech will under us"
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That well"
+		annex_country = {
+	   		 target = CZE
+	   		 transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = germany.7
+	title = "They rejects our request"
+	desc = "They refused due to political differences between us"
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not tolerate this"
+	        declare_war_on = {
+		                target = CZE
+		                type = annex_everything
+	        }
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}	
+	}
+}
+
+country_event = {
+	id = germany.8
+	title = "Invade Poland"
+	desc = ""
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Invade Poland"
+		
+	        declare_war_on = {
+		                target = POL
+		                type = annex_everything
+	        }	
+
+		add_state_claim  = 67
+		add_state_claim  = 800
+		add_state_claim  = 762
+		add_state_claim  = 86
+		add_state_claim  = 87
+		add_state_claim  = 98
+		add_state_claim  = 799
+	}
+}
+
+country_event = {
+	id = germany.9
+	title = "Brest treaty"
+	desc = ""
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = GER
+		controls_state = 10
+		country_exists = SOV	
+		NOT = { country_exists = RUS }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Divide Poland"
+		
+	        white_peace = POL
+	        puppet = POL
+		GER = { set_state_owner = 67 }
+		GER = { set_state_owner = 935 }
+		GER = { set_state_owner = 762 }
+		GER = { set_state_owner = 86 }
+		GER = { set_state_owner = 87 }
+		GER = { set_state_owner = 98 }
+		GER = { set_state_owner = 940 }
+		SOV = { set_state_owner = 97 }
+		SOV = { set_state_owner = 91 }
+		SOV = { set_state_owner = 89 }
+	}
+}
+
+country_event = {
+	id = germany.10
+	title = "Invade Russia"
+	desc = ""
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Invade Russia"
+		
+	        declare_war_on = {
+		                target = SOV
+		                type = annex_everything
+	        }	
+	}
+}
+
+country_event = {
+	id = germany.11
+	title = "Secure Scandinavia"
+	desc = "Through Scandinavia, we will get more land."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Invade Scandinavia"
+		
+	        declare_war_on = {
+		                target = DEN
+		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = NOR
+		                type = annex_everything
+	        }
+
+		DEN = {
+			every_owned_state = {
+			    add_claim_by = GER
+			}
+		}
+
+		NOR = {
+			every_owned_state = {
+			    add_claim_by = GER
+			}
+		}	
+	}
+}
+
+country_event = {
+	id = germany.12
+	title = "Secure Switzerland"
+	desc = "Switzerland will be under our sphere, we will invade it."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Invade Switzerland"
+		
+	        declare_war_on = {
+		                target = SWI
+		                type = annex_everything
+	        }	
+
+		SWI = {
+			every_owned_state = {
+			    add_claim_by = GER
+			}
+		}	
+	}
+}

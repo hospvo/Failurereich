@@ -1,0 +1,169 @@
+SOV_left_opposition_plan = {
+	name = "Orthodxy and Tsardom"
+	desc = ""
+
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = SOV_ai_behavior
+				option = TSAR
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+
+		RUS_Kolchak
+		RUS_empire
+		RUS_retake_bukhara
+		RUS_crush_georgia
+		RUS_reinforce_navy
+		RUS_syndicates_no
+		RUS_orthodoxy
+		RUS_second_crimea
+		RUS_battle_constantinople
+		RUS_takle_turkey
+		RUS_takle_slovakia
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+SOV_left_opposition_cooperative_plan = {
+	name = "Pan Slavism"
+	desc = ""
+
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = SOV_ai_behavior
+				option = SLAVISM
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		RUS_Kolchak
+		RUS_fascist_doctrine
+		RUS_retake_bukhara
+		RUS_crush_georgia
+		RUS_reinforce_navy
+		RUS_syndicates_no
+		RUS_panslavic_nationalism
+		RUS_Fifth_Partition
+		RUS_Czech_division
+		RUS_bulgarian_integration
+		RUS_yugoslavian_integration
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+
+SOV_right_opposition_plan = {
+	name = "Left Revolution"
+	desc = ""
+
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = SOV_ai_behavior
+				option = COMINTERN
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		RUS_democracy
+		RUS_overthrown_denekin
+		RUS_civil_war
+		RUS_turk_soviet
+		RUS_geo_soviet
+		RUS_mongolia
+		RUS_baltic
+		RUS_ukraine
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

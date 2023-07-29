@@ -1,0 +1,29 @@
+add_namespace = romania
+
+country_event = {
+	id = romania.1
+	title = "Ultimatum from Hungary!"
+	desc = "Hungary sent an ultimatum to us. They demand our subjugation."
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Accept it"
+		ai_chance = { factor = 0.1 }
+		HUN = { country_event= {
+				days = 1 
+				id = hungary.2 } }
+			}
+	}
+	option = {
+		name = "Refuse it"
+		ai_chance = { factor = 0.9 }
+		HUN = { country_event= {
+				days = 1 
+				id = hungary.1 } }
+		} 
+		diplomatic_relation = { country = FRA relation = guarantee active = no } 
+		diplomatic_relation = { country = CZE relation = guarantee active = no }
+	}
+}

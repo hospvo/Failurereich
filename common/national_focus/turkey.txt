@@ -1,0 +1,540 @@
+﻿focus_tree = {
+	id = turkey_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = TUR
+				tag = TRK
+				tag = OTT
+			}
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = TUR_kars_republic_legacy
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Kars legacy"
+		mutually_exclusive = { focus = TUR_oppose_syndicalism }
+		x = 4
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_support_bulgaria
+		icon = GFX_focus_generic_befriend_bulgaria
+		text = "Focus on the West"
+		prerequisite = { 
+				focus = TUR_kars_republic_legacy
+		}
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = BUL
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				give_guarantee = BUL
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_support_persia
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Focus on the East"
+		prerequisite = { 
+				focus = TUR_kars_republic_legacy
+		}
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = BUL
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				give_guarantee = PER
+			}
+		}
+	}
+	focus = {
+		id = TUR_german_alliance
+		icon = GFX_focus_TUR_the_montreux_convention
+		text = "German Turkey"
+		prerequisite = { 
+				focus = TUR_support_bulgaria
+				focus = TUR_support_persia
+		}
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			GER = { has_war = yes }
+			date > 1940.1.1
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				country_event = { days = 1 id = turkey.1 }
+			}
+		}
+	}
+	focus = {
+		id = TUR_crescent
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "German Turkey"
+		prerequisite = { 
+				focus = TUR_german_alliance
+		}
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			GER = { has_war = yes }
+			date > 1940.1.1
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				country_event = { days = 1 id = other.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_oppose_syndicalism
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "Oppose communism"
+		mutually_exclusive = { focus = TUR_kars_republic_legacy }
+
+		x = 12
+		y = 0
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				country_event = { days = 1 id = turkey.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_collaborate_KUR
+		icon = GFX_focus_generic_befriend_kurdistan
+		text = "Befriend with Kurdistan"
+		prerequisite = { 
+				focus = TUR_oppose_syndicalism
+		}
+		mutually_exclusive = { focus = TUR_war_KUR }
+
+		x = 11
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			owns_state = 346
+			owns_state = 356
+		} 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				country_event = { days = 1 id = turkey.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_war_KUR
+		icon = GFX_focus_TUR_misak_i_milli
+		text = "War to Kurdistan"
+		prerequisite = { 
+				focus = TUR_oppose_syndicalism
+		}
+		mutually_exclusive = { focus = TUR_collaborate_KUR }
+
+		x = 13
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			owns_state = 346
+			owns_state = 356
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = KUR
+			}
+		}
+	}
+
+###### Turanist ########
+
+	focus = {
+		id = TRK_war_GEO
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Liberate Azeri state"
+		prerequisite = { 
+				focus = TUR_collaborate_KUR 
+				focus = TUR_war_KUR
+		}
+		mutually_exclusive = { focus = OTT_war_SYR }
+
+		x = 10
+		y = 2
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			tag = TRK
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = GEO
+			}
+			add_state_claim = 229
+			add_state_claim = 230
+		}
+	}
+
+	focus = {
+		id = TRK_war_PER
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Threat Iran"
+		prerequisite = { 
+				focus = TRK_war_GEO
+		}
+
+		x = 10
+		y = 3
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			tag = TRK
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = PER
+			}
+			add_state_claim = 419
+			add_state_claim = 420
+		}
+	}
+
+###### Ottoman ########
+
+	focus = {
+		id = OTT_war_SYR 
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Syria"
+		prerequisite = { 
+				focus = TUR_collaborate_KUR 
+				focus = TUR_war_KUR
+		}
+		mutually_exclusive = { focus = TRK_war_GEO }
+
+		x = 14
+		y = 2
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			tag = OTT
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SYR
+			}
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OTT_war_IRQ 
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Iraq"
+		prerequisite = { 
+				focus = OTT_war_SYR 
+		}
+
+		x = 16
+		y = 3
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = IRQ
+			}
+			IRQ = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OTT_war_EGY
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Egypt"
+		prerequisite = { 
+				focus = OTT_war_IRQ 
+		}
+
+		x = 16
+		y = 4
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = EGY
+			}
+			EGY = {
+				every_owned_state = {
+				    add_claim_by = OTT 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OTT_war_GRE
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Greece"
+		prerequisite = { 
+				focus = OTT_war_SYR 
+		}
+
+		x = 14
+		y = 3
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = GRE
+			}
+			add_state_claim = 187
+			add_state_claim = 931
+		}
+	}
+
+	focus = {
+		id = OTT_war_BUL
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Bulgaria"
+		prerequisite = { 
+				focus = OTT_war_GRE
+		}
+
+		x = 14
+		y = 4
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = BUL
+			}
+			add_state_claim = 184
+			add_state_claim = 211
+			add_state_claim = 212
+		}
+	}
+
+###### Industrial and army ########
+
+	focus = {
+		id = TUR_industry_force
+		icon = GFX_focus_generic_railroad
+		text = "Industrial progress"
+		prerequisite = { 
+				focus = TUR_industry
+		}
+
+		x = 24
+		y = 0
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_fuel = 40
+		}
+	}
+	focus = {
+		id = TUR_industry_two
+		icon = GFX_focus_generic_armored_air_support
+		text = "Build factories"
+		prerequisite = { 
+				focus = TUR_industry_force
+		}
+
+		x = 22
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 0.5
+			    uses = 1
+			    category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = TUR_industry_tree
+		icon = GFX_focus_generic_air_defense
+		text = "Rebuild the army"
+		prerequisite = { 
+				focus = TUR_industry_force
+		}
+
+		x = 26
+		y = 1
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 50
+			    producer = TUR
+			}
+		}
+	}
+}

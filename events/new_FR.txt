@@ -1,0 +1,123 @@
+﻿add_namespace = fr_news
+
+news_event = {
+	id = fr_news.1
+	title = "Third American civil war"
+	desc = "United States of America collapsed after a severe and painful war against Southern states, they didn't handle the regime and democracy fall. We don't know where the country will go but we are sure the new nation will be completely different."
+	picture = GFX_news_event_us_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That not our problem ..."
+		trigger = {
+			OR = {
+				original_tag = USA
+				original_tag = CSA
+				original_tag = USB
+			}
+		}
+	}
+	option = {
+		name = "Dixie land will live"
+		trigger = { 
+			NOT = { original_tag = CSA }
+		}
+	}
+	option = {
+		name = "Save our democracy !"
+		trigger = { 
+			NOT = { original_tag = USA }
+		}
+	}
+	option = {
+		name = "That it's bad ..."
+		trigger = { 
+			NOT = { original_tag = USA }
+			or = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+}
+
+news_event = {
+	id = fr_news.2
+	title = "German civil war"
+	desc = "The succession failed in Germany. Strasser wasn't able to perform new reform. The Spartacists decided to remplace him while new gouvernements was created. Germany is divided into 4 regions."
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mein gott ..."
+		trigger = {
+			OR = {
+				original_tag = GER
+			}
+		}
+	}
+	option = {
+		name = "That sad"
+		trigger = { 
+			NOT = { original_tag = GER }
+		}
+	}
+}
+
+news_event = {
+	id = fr_news.3
+	title = "Japanese civil war"
+	desc = "The Riots in Japan couldn't be quelled, as more and more causalities have stacked up, it seems as though civil war has begun, Nearly all of this was caused by the Economic Crisis of 1927, which forced Japan into austerity, cutting budgets for many programs, widespread privatization, and the laying off of hundreds of thousands of state employees. It seems as though reality has finally caught up to Japan, and as thousands die, it is expected for millions more to meet the same fate."
+	picture = GFX_news_event_japan_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Emperor need protection"
+		trigger = {
+			OR = {
+				original_tag = JAP
+			}
+		}
+	}
+	option = {
+		name = "That sad"
+		trigger = { 
+			NOT = { original_tag = JAP }
+		}
+	}
+}
+
+news_event = {
+	id = fr_news.4
+	title = "Northen Chinese civil war"
+	desc = "Qing dynasty tried to keep up a constitutional monarchy without success."
+	picture = GFX_news_event_chinese_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Emperor need protection"
+		trigger = {
+			OR = {
+				original_tag = MAN
+			}
+		}
+	}
+	option = {
+		name = "That sad"
+		trigger = { 
+			NOT = { original_tag = MAN }
+		}
+	}
+}

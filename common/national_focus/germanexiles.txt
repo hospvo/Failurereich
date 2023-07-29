@@ -1,0 +1,544 @@
+focus_tree = {
+	id = GEX_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = WGR
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = GEX_wilhelm
+		icon = GFX_focus_ger_revive_kaiserreich
+		text = "Long live Kaiser Wilhelm!"
+		x = 12
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		mutually_exclusive = {
+		focus = GEX_goering_first
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+  
+	focus = {
+		id = GEX_new
+		icon = GFX_goal_generic_demand_territory
+		text = "Long live Germany!"
+		x = 12
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_wilhelm
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+	
+	focus = {
+		id = GEX_death
+		icon = GFX_goal_generic_occupy_start_war
+		text = "Death to the occupiers!"
+		x = 12
+		y = 2
+		cost = 5
+		
+		prerequisite = {
+			focus = GEX_new
+			focus = GEX_alliance_somalia
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+	
+	focus = {
+		id = GEX_kenya
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Buy lost lands"
+		x = 12
+		y = 3
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_death
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			transfer_state = 768
+			transfer_state = 769
+		}
+	}
+	
+	focus = {
+		id = GEX_integrate
+		icon = GFX_goal_generic_forceful_treaty
+		text = "Deutsch Rwanda-Urundi"
+		x = 9
+		y = 4
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_kenya
+		}
+		mutually_exclusive = {
+		focus = GEX_puppet
+		}	
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_core = 768
+			add_state_core = 769
+		}
+	}
+	
+	focus = {
+		id = GEX_puppet
+		icon = GFX_focus_ger_oppose_hitler
+		text = "Reichskolonie Rwanda-Urundi"
+		x = 15
+		y = 4
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_kenya
+		}
+		
+		mutually_exclusive = {
+		focus = GEX_integrate
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet = RWA
+			RWA = { set_state_owner = 768 }
+			RWA = { set_state_owner = 769 }
+			RWA = {
+				set_cosmetic_tag = GER_RWA	
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_entente
+		icon = GFX_focus_chi_british_cooperation
+		text = "Join Entente"
+		x = 10
+		y = 5
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_puppet
+		focus = GEX_integrate
+		}
+		
+		mutually_exclusive = {
+		focus = GEX_ownpath
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CAN = {
+				add_to_faction = WGR
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_ownpath
+		icon = GFX_goal_anschluss
+		text = "New Central power"
+		x = 14
+		y = 5
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_puppet
+		focus = GEX_integrate
+		}
+		
+		mutually_exclusive = {
+		focus = GEX_entente
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_faction = "Homeland Reclamation Front"
+			}
+		}
+	
+### Aggressive German Empire ###
+	
+	focus = {
+		id = GEX_italia
+		icon = GFX_focus_attack_italy
+		text = "Coup in Italy"
+		x = 11
+		y = 6
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_entente
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ITA = {	
+				start_civil_war = {
+					ruling_party = reactionary
+					ideology = fascist
+					size = 0.8
+					only_own_territory = no
+					capital = 155
+					states = {
+						115
+					}
+				}
+				create_country_leader = {
+					name = "Victor Emmanuel III"
+					desc = "POLITICS_VICTOR_EMMANUEL_III_DESC"
+					picture = "GFX_portrait_italy_victor_emmanuel_iii"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						dictator
+						}
+					}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_hungary
+		icon = GFX_goal_generic_production
+		text = "Coup Hungary"
+		x = 11
+		y = 7
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_italia
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			HUN = {
+				release = SLO
+				release = TRA
+				start_civil_war = {
+					ruling_party = reactionary
+					ideology = communism
+					size = 0.4
+					only_own_territory = no
+					capital = 155
+					states = {
+						155 884
+					}
+				}
+				create_wargoal= { 
+					type = annex_everything 
+					target = TRA
+				}
+				create_wargoal= { 
+					type = annex_everything 
+					target = SLO
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_natlib
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		text = "War of National Liberation"
+		x = 9
+		y = 6
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_entente
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_sweeppol
+		icon = GFX_goal_poland_goal
+		text = "Sweep into Poland"
+		x = 9
+		y = 7
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_natlib
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+		}
+	}
+
+#### diplomacy ####
+	
+### Passive German Empire ###
+	
+	focus = {
+		id = GEX_austria
+		icon = GFX_goal_anschluss
+		text = "Help Franz"
+		x = 15
+		y = 6
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_ownpath
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				add_to_faction = AUS
+		}
+	}
+	
+	focus = {
+		id = GEX_Bukhara
+		icon = GFX_goal_anschluss
+		text = "Cooperate with Turkestan"
+		x = 15
+		y = 7
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_austria
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				add_to_faction = BUK
+		}
+	}
+	
+	focus = {
+		id = GEX_yugoslavia
+		icon = GFX_goal_generic_production
+		text = "Coup Yugoslavia"
+		x = 13
+		y = 6
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_ownpath
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			YUG = {
+				release = MAC
+
+				declare_war_on = {
+   					target = MAC
+   				 	type = annex_everything
+				}
+			}
+
+			YUG = {
+				start_civil_war = {
+					ruling_party = reactionary
+					ideology = fascism
+					size = 0.4
+					only_own_territory = no
+					capital = 103
+					states = {
+						103 104 109 163 804
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEX_greece
+		icon = GFX_goal_generic_production
+		text = "Coup Greece"
+		x = 13
+		y = 7
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_yugoslavia
+		}
+		
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GRE = {
+				start_civil_war = {
+					ruling_party = reactionary
+					ideology = fascism
+					size = 0.4
+					only_own_territory = no
+					capital = 731
+					states = {
+						731 862
+					}
+				}
+			
+			}
+		}
+	}
+
+#### Herman Voring ####
+
+	focus = {
+		id = GEX_goering_first
+		icon = GFX_goal_generic_demand_territory
+		text = "Goering on"
+		x = 6
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		mutually_exclusive = {
+		focus = GEX_wilhelm
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = GEX_alliance_somalia
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Somalia allie"
+		x = 6
+		y = 1
+		cost = 5
+
+		
+		prerequisite = {
+		focus = GEX_goering_first
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_to_faction = SOM
+		}
+	}
+
+}
