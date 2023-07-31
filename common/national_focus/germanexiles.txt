@@ -563,7 +563,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GEX_alliance_somalia
+		id = GEX_alliance_senussi
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Rally Senussi"
 		x = 8
