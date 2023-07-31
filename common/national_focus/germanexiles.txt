@@ -15,7 +15,7 @@ focus_tree = {
 	focus = {
 		id = GEX_wilhelm
 		icon = GFX_focus_ger_revive_kaiserreich
-		text = "Long live Kaiser Wilhelm!"
+		text = "Hand to the Kaiser"
 		x = 12
 		y = 0
 		cost = 5
@@ -30,7 +30,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 200000
+			add_manpower = 150000
+			add_stability = 0.1
 		}
 	}
   
@@ -222,7 +223,7 @@ focus_tree = {
 			}
 		}
 	
-### Aggressive German Empire ###
+### Entente German Empire ###
 	
 	focus = {
 		id = GEX_italia
@@ -363,10 +364,8 @@ focus_tree = {
 			}
 		}
 	}
-
-#### diplomacy ####
 	
-### Passive German Empire ###
+### Alliance German Empire ###
 	
 	focus = {
 		id = GEX_austria
@@ -497,7 +496,7 @@ focus_tree = {
 	focus = {
 		id = GEX_goering_first
 		icon = GFX_goal_generic_demand_territory
-		text = "Goering on"
+		text = "Constitional Monarchy"
 		x = 6
 		y = 0
 		cost = 5
@@ -517,13 +516,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GEX_alliance_somalia
-		icon = GFX_focus_generic_diplomatic_treaty
-		text = "Somalia allie"
+		id = GEX_goering_second
+		icon = GFX_goal_generic_demand_territory
+		text = "Goering as Chancellor"
 		x = 6
-		y = 1
+		y = 0
 		cost = 5
-
 		
 		prerequisite = {
 		focus = GEX_goering_first
@@ -536,8 +534,57 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = GEX_alliance_somalia
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Rally Somalia"
+		x = 6
+		y = 1
+		cost = 5
+
+		
+		prerequisite = {
+		focus = GEX_goering_second
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
 			add_manpower = 100000
 			add_to_faction = SOM
+		}
+	}
+
+	focus = {
+		id = GEX_alliance_somalia
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Rally Senussi"
+		x = 6
+		y = 1
+		cost = 5
+
+		
+		prerequisite = {
+		focus = GEX_goering_second
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_to_faction = LBA
 		}
 	}
 
