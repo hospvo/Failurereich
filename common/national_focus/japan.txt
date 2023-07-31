@@ -63,6 +63,8 @@
 		}
 	}
 
+###### Showa #######
+
 	focus = {
 		id = JAP_showa
 		icon = GFX_focus_jap_showa_restoration
