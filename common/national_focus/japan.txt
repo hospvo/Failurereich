@@ -655,7 +655,7 @@
 				focus = JAP_war_india
 				focus = JAP_war_indonesia
 		}
-		x = 10
+		x = 6
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
