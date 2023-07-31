@@ -476,7 +476,7 @@
 
 	focus = {
 		id = JAP_burma
-		icon = GFX_focus_jap_zaibatsu
+		icon = GFX_goal_generic_major_war
 		text = "Ally Burma"
 		prerequisite = { 
 				focus = JAP_korea
@@ -505,7 +505,7 @@
 
 	focus = {
 		id = JAP_bengal
-		icon = GFX_focus_jap_zaibatsu
+		icon = GFX_goal_generic_major_war
 		text = "Ally Bengal"
 		prerequisite = { 
 				focus = JAP_korea
@@ -534,7 +534,7 @@
 
 	focus = {
 		id = JAP_war_china
-		icon = GFX_focus_jap_zaibatsu
+		icon = GFX_Goal_tfv_smiling_buddha
 		text = "Invade China"
 		prerequisite = { 
 				focus = JAP_bengal
