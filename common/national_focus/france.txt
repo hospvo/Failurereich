@@ -93,7 +93,14 @@
 		prerequisite = { 
 				focus = FRA_bourbons
 		}
-		mutually_exclusive = { focus = FRA_con }
+		mutually_exclusive = { 
+			focus = FRA_con
+			focus = FRA_ana 
+			focus = FRA_ana2
+			focus = FRA_CNT
+			focus = FRA_free_ukraine
+		}
+		
 		x = 22
 		y = 1
 		cost = 10

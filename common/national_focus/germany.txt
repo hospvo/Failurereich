@@ -485,7 +485,10 @@ focus_tree = {
 		id = GER_civil_war
 		icon = GFX_goal_generic_war_with_comintern
 		text = "Failed Syndicate"
-		mutually_exclusive = { focus = GER_attack_switzerland }
+		mutually_exclusive = {
+		focus = GER_attack_switzerland 
+		focus = GER_attack_belgium 		
+		}
 		prerequisite = { 
 				focus = GER_neutrality
 		}
