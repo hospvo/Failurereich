@@ -101,7 +101,7 @@
 
 	focus = {
 		id = JAP_korea2
-		icon = GFX_focus_jap_zaibatsu
+		icon = Goal_generic_major_war
 		text = "Invade Korea"
 		prerequisite = { 
 				focus = JAP_showa
@@ -133,7 +133,7 @@
 
 	focus = {
 		id = JAP_vin2
-		icon = GFX_focus_jap_zaibatsu
+		icon = Goal_generic_major_war
 		text = "Invade Indochina"
 		prerequisite = { 
 				focus = JAP_showa
@@ -389,7 +389,7 @@
 
 	focus = {
 		id = JAP_red
-		icon = GFX_focus_jap_zaibatsu
+		icon = GFX_goal_tfv_burn_the_royal_portraits
 		text = "People's Nation"
 		prerequisite = { 
 				focus = JAP_civil_war
