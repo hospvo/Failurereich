@@ -12,7 +12,7 @@
 
 	focus = {
 		id = MAN_constitutional_monarchy
-		tesxt = "Power to the Council"
+		tesxt = "Rebuilt Beiyang China"
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		x = 8
 		y = 0
@@ -24,6 +24,30 @@
 		}
 		completion_reward = {
 			set_capital= 608
+		}
+	}
+
+
+#### Focus for Reject Kuomindang ####
+
+	focus = {
+		id = MAN_reject_kuomindang
+		text = "Kuomindang out"
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_constitutional_monarchy }
+		mutually_exclusive = { focus = MAN_compromise_with_kuomindang }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation= { 
+				country = CHI 
+				relation = non_aggression_pact 
+			}
 		}
 	}
 
@@ -88,28 +112,9 @@
 			}
 		}
 	}
-	#Focus for Reject Kuomindang
-	focus = {
-		id = MAN_reject_kuomindang
-		text = "Kuomindang out"
-		icon = GFX_goal_generic_demand_territory
-		x = 12
-		y = 1
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = MAN_constitutional_monarchy }
-		mutually_exclusive = { focus = MAN_compromise_with_kuomindang }
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			diplomatic_relation= { 
-				country = CHI 
-				relation = non_aggression_pact 
-			}
-		}
-	}
-	#Focus for Compromise with Kuomindang
+
+#### Focus for Compromise with Kuomindang ####
+
 	focus = {
 		id = MAN_compromise_with_kuomindang
 		text = "Compromise with Kuomindang"
