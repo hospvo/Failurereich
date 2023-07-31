@@ -330,7 +330,7 @@
 	focus = {
 		id = JAP_thailand2
 		icon = GFX_focus_jap_zaibatsu
-		text = "Ally Burma"
+		text = "Ask help from Siam"
 		prerequisite = { 
 				focus = JAP_korea3
 				focus = JAP_vin3
@@ -359,7 +359,7 @@
 	focus = {
 		id = JAP_mongolia
 		icon = GFX_focus_jap_zaibatsu
-		text = "Ally Bengal"
+		text = "Rally Chandra Bose"
 		prerequisite = { 
 				focus = JAP_korea3
 				focus = JAP_vin3
@@ -558,6 +558,120 @@
 		}
 		completion_reward = {
 			country_event = { days = 1 id = japan.1 }
+		}
+	}
+
+	focus = {
+		id = JAP_war_indonesia
+		icon = GFX_focus_jap_strike_south
+		text = "Control Indonesia"
+		prerequisite = { 
+				focus = JAP_war_china
+		}
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = INS
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_war_india
+		icon = GFX_focus_attack_britain
+		text = "Invade the Raj"
+		prerequisite = { 
+				focus = JAP_war_china
+		}
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = RAJ
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MAL
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_war_Russia
+		icon = GFX_focus_attack_soviet
+		text = "Take the Bear"
+		prerequisite = { 
+				focus = JAP_war_india
+				focus = JAP_war_indonesia
+		}
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_war_USA
+		icon = GFX_focus_usa_recruit_the_free_corps
+		text = "Take the Eagle"
+		prerequisite = { 
+				focus = JAP_war_india
+				focus = JAP_war_indonesia
+		}
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = USA
+			}
 		}
 	}
 }
