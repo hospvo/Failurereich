@@ -2,28 +2,176 @@ add_namespace = romania
 
 country_event = {
 	id = romania.1
-	title = "Ultimatum from Hungary!"
-	desc = "Hungary sent an ultimatum to us. They demand our subjugation."
+	title = romania.1.t
+	desc = romania.1.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 
 	option = {
-		name = "Accept it"
+		name = romania.1.a
 		ai_chance = { factor = 0.1 }
-		HUN = { country_event= {
-				days = 1 
-				id = hungary.2 } }
+		HUN = { country_event= { days = 1 id = hungary.2 } }
 			}
-	}
+			
 	option = {
-		name = "Refuse it"
+		name = romania.1.b
 		ai_chance = { factor = 0.9 }
-		HUN = { country_event= {
-				days = 1 
-				id = hungary.1 } }
+		HUN = { country_event= { days = 1 id = hungary.1 } }
 		} 
-		diplomatic_relation = { country = FRA relation = guarantee active = no } 
-		diplomatic_relation = { country = CZE relation = guarantee active = no }
+		#diplomatic_relation = { country = FRA relation = guarantee active = no } 
+		#diplomatic_relation = { country = CZE relation = guarantee active = no }
 	}
-}
+	
+#succes army reform
+country_event = {
+	id = romania.2
+	title = romania.2.t
+	desc = romania.2.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = romania.2.a
+		ai_chance = { factor = 0 }
+			}
+			
+	option = {
+		name = romania.2.b
+		ai_chance = { factor = 0 }
+		} 
+	}
+	
+#defeat army reform
+country_event = {
+	id = romania.3
+	title = romania.3.t
+	desc = romania.3.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = romania.3.a
+		ai_chance = { factor = 0 }
+			}
+			
+	option = {
+		name = romania.3.b
+		ai_chance = { factor = 0 }
+		} 
+	}
+	
+country_event = {the goals of your reform army first stepp
+	id = romania.4
+	title = romania.4.t
+	desc = romania.4.d
+	picture = GFX_event_test
+	fire_only_once = yes
+	
+	trigger = {
+	focus_progress = {
+    focus = ROM_army_reforms
+    progress > 0.5
+		}
+	}
+
+	option = {#defensive army
+		name = romania.4.a
+		ai_chance = { factor = 0 }
+		country_event= { days = 10 id = romania.5 }
+		set_country_flag = defensive_army_reform
+			}
+			
+	option = {#ofensive army
+		name = romania.4.b
+		ai_chance = { factor = 0 }
+		country_event= { days = 10 id = romania.5 }
+		set_country_flag = ofensive_army_reform
+		} 
+	}
+
+country_event = {#the goals of your reform army second step
+	id = romania.5
+	title = romania.5.t
+	desc = romania.5.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#small and mobile , armor 
+		name = romania.5.a
+		ai_chance = { factor = 0 }
+		set_country_flag = mobile_army_reform
+		if = {
+			limit = {
+		has_country_flag = defensive_army_reform
+				}
+		country_event= { days = 10 id = romania.6 }
+			}
+		}
+	
+	option = {#compromise
+		name = romania.5.b
+		ai_chance = { factor = 0 }
+		country_event= { days = 10 id = romania.6 }
+		}
+		
+	option = {#large and static
+		name = romania.5.c
+		ai_chance = { factor = 0 }
+		set_country_flag = static_army_reform
+		if = {
+			limit = {
+		has_country_flag = defensive_army_reform
+				}
+			country_event= { days = 10 id = romania.7 }
+			}
+		} 
+	}
+	
+country_event = {#question of airplanes
+	id = romania.6
+	title = romania.6.t
+	desc = romania.6.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#small fighters
+		name = romania.6.a
+		ai_chance = { factor = 0 }
+		set_country_flag = small_fighters_reform
+			}
+	
+	option = {#large bombers
+		name = romania.6.b
+		ai_chance = { factor = 0 }
+		set_country_flag = large_bombers_reform
+		}
+	}
+country_event = {#fortification
+	id = romania.7
+	title = romania.7.t
+	desc = romania.7.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#build largest fortification
+		name = romania.7.a
+		ai_chance = { factor = 0 }
+		set_country_flag = build_fortification_reform
+		
+			}
+	
+	option = {#compenze this with very big army
+		name = romania.7.b
+		ai_chance = { factor = 0 }
+		set_country_flag = build_big_army
+		}
+	}

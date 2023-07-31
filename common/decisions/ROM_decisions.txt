@@ -1,0 +1,43 @@
+	ROM_army_reforms_decisions_category = {
+	
+	ROM_mission_army_reforms = {
+		
+		icon = generic_military
+		
+		allowed = { tag = ROM }
+		
+		available = {
+			has_completed_focus = ROM_revive_our_economy
+			has_tech = support_weapons
+			has_tech = tech_recon
+			has_tech = interwar_artillery
+			selected_mobile_army = yes
+			selected_large_and_static_army = yes
+			selected_small_fighters_reform = yes
+			selected_large_bombers_reform = yes
+			build_big_army_reform = yes
+		}
+		
+		activation = { always = no }
+		
+		fire_only_once = yes
+		
+		is_good = no
+		
+		days_mission_timeout = 365
+		
+		cancel_trigger = {
+
+		}
+		
+		timeout_effect = {
+		country_event = romania.3 
+			add_stability = -0.02
+		}
+		
+		complete_effect = {
+			country_event = romania.2 
+			add_stability = 0.02
+		}
+	}
+}

@@ -10,15 +10,14 @@ if = {
 }
 
 set_research_slots = 3
-set_stability = 0.6
-set_war_support = 0.6
+set_stability = 0.38
+set_war_support = 0.45
 
 # Starting tech
 set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
-	motorised_infantry = 1
 	gwtank = 1
 	basic_light_tank = 1
 	infantry_weapons = 1
@@ -49,14 +48,6 @@ if = {
 }
 
 #Ideas
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		ROM_king_carol_ii_hedonist
-	}
-}
 add_ideas = neutrality_idea
 
 #Kick off kings crazy life

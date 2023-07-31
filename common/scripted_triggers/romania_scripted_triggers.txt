@@ -1,0 +1,70 @@
+
+	selected_mobile_army = {
+	if = {
+	limit = {
+	has_country_flag = mobile_army_reform
+			}
+	has_tech = improved_light_tank
+	has_tech = motorised_infantry
+	has_tech = mobile_warfare
+			
+		}
+	}
+	
+	selected_large_and_static_army = {
+	if = {
+	limit = {
+	has_country_flag = static_army_reform
+			}
+	has_tech = tech_logistics_company
+	has_tech = radio
+	OR = {
+	has_tech = superior_firepower
+	has_tech = trench_warfare
+	has_tech = mass_assault
+			}
+		}
+	}
+	
+	selected_small_fighters_reform = {
+	if = {
+	limit = {
+	has_country_flag = small_fighters_reform
+			}
+	has_tech = fighter1
+	has_tech = CAS1
+	has_equipment = {
+    fighter1 > 80
+	}
+	has_equipment = {
+    CAS_equipment_1 > 80
+			}
+		}
+	}
+	
+	selected_large_bombers_reform = {
+	if = {
+	limit = {
+	has_country_flag = large_bomber_reform
+			}
+	has_tech = heavy_fighter1
+	has_tech = tactical_bomber1
+	has_equipment = {
+    heavy_fighter_equipment_1 > 40
+	}
+	has_equipment = {
+    tac_bomber_equipment_1 > 40
+			}
+		}
+	}
+	
+	build_big_army_reform = {
+	if = {
+	limit = {
+	has_country_flag = large_bomber_reform
+			}
+		has_army_size = {
+		size > 30
+			}
+		}
+	}

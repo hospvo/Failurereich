@@ -1,0 +1,349 @@
+
+focus_tree = {
+	id = romania_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ROM
+		}
+	}
+default = no
+	
+	focus = {
+		id = ROM_we_need_recover_our_country
+		icon = GFX_goal_generic_military_sphere
+		x = 10
+		y = 0
+		cost = 6
+		search_filters = {  } 
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 55
+			add_popularity = { ideology = fascism popularity = 0.025 }
+		}
+	}
+	
+##################
+##### economy ####
+##################
+	
+	focus = {
+		id = ROM_revive_our_economy
+		icon = GFX_goal_generic_military_sphere		
+		relative_position_id = ROM_we_need_recover_our_country
+		x = -2
+		y = 2
+		cost = 5
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		search_filters = {  } 
+		prerequisite = { focus = ROM_we_need_recover_our_country }
+		
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+         
+		}
+	}
+	
+		focus = {
+		id = ROM_lets_start_industrializing
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_revive_our_economy
+		x = 0
+		y = 1
+		cost = 6
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_revive_our_economy }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_develop_rural_regions
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_lets_start_industrializing
+		mutually_exclusive = { focus = ROM_extendt_urbanization }
+		x = 1
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_lets_start_industrializing }
+
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_mechanise_agriculture
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_develop_rural_regions
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_develop_rural_regions }
+
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_evenly_developed_country
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_mechanise_agriculture
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_mechanise_agriculture }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_extendt_urbanization
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_lets_start_industrializing
+		mutually_exclusive = { focus = ROM_develop_rural_regions }
+		x = -1
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_lets_start_industrializing }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_expand_oil_fields
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_extendt_urbanization
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_extendt_urbanization }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_expand_resita_works
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_expand_oil_fields
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_expand_oil_fields }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_find_new_trades
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_revive_our_economy
+		x = -5
+		y = 1
+		cost = 5
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_revive_our_economy }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_improve_trans_country_railway
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_find_new_trades
+		x = 0
+		y = 1
+		cost = 9
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_find_new_trades }
+
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_state_invesments_in_MALAXA
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_improve_trans_country_railway
+		x = 0
+		y = 2
+		cost = 5
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_improve_trans_country_railway }
+
+		completion_reward = {
+		}
+	}
+	
+################
+##### army #####
+################
+
+		focus = {
+		id = ROM_army_reforms
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_we_need_recover_our_country
+		x = 2
+		y = 2
+		cost = 8
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_we_need_recover_our_country }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_politize_army
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_army_reforms
+		x = 0
+		y = 1
+		cost = 7
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_army_reforms }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_local_units
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_politize_army
+		mutually_exclusive = { focus = ROM_mixed_units }
+		x = -1
+		y = 1
+		cost = 7
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_politize_army }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_mixed_units
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_politize_army
+		mutually_exclusive = { focus = ROM_local_units }
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_politize_army }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_new_army_reaserch
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_army_reforms
+		x = 3
+		y = 1
+		cost = 5
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_army_reforms }
+
+		completion_reward = {
+		}
+	}
+	
+		focus = {
+		id = ROM_new_army_airplanes_from_IAR
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = ROM_new_army_reaserch
+		x = 1
+		y = 1
+		cost = 9
+		search_filters = { 
+			FOCUS_FILTER_INDUSTRY
+		}
+		available_if_capitulated = no
+		ai_will_do = { base = 80 }
+		prerequisite = { focus = ROM_new_army_reaserch }
+
+		completion_reward = {
+		}
+	}
+}
+
