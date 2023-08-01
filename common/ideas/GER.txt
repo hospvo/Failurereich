@@ -1610,6 +1610,26 @@ ideas = {
 				local_resources_factor = 0.10
 			}
 		}
+
+		GER_volk_influence = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = ger_the_great_red_menace
+
+			modifier = {
+				communism_drift = 0.02
+				left_drift = 0.02
+				fascism_drift = -0.02
+			}
+		}
 	}
 
 	# TECHNOLOGY

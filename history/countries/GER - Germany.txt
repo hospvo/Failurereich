@@ -343,13 +343,25 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Rosa Luxemburg"
-	desc = "POLITICS_ERNST_THALMANN_DESC"
+	desc = "POLITICS_LUX_DESC"
 	picture = "gfx/leaders/ger/Portrait_Germany_Rosa_Luxemburg.dds"
 	expire = "1956.1.1"
 	ideology = leninism
 	traits = {
 		assassination_survivor
 		stalins_puppet
+		political_prisoner
+	}
+}
+
+create_country_leader = {
+	name = "Rosa Luxemburg"
+	desc = "POLITICS_LUX_DESC"
+	picture = "gfx/leaders/ger/Portrait_Germany_Rosa_Luxemburg.dds"
+	expire = "1956.1.1"
+	ideology = socialism
+	traits = {
+		assassination_survivor
 		political_prisoner
 	}
 }
