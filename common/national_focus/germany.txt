@@ -132,6 +132,7 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_army_manpower = { size > 650000 }	
+			year > 1938
 		}
 
 		completion_reward = {
@@ -159,6 +160,7 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_army_manpower = { size > 800000 }	
+			year > 1939
 		}
 
 		x = 2
@@ -905,6 +907,7 @@ focus_tree = {
 
 		available = {
 			is_puppet = no
+			year > 1938
 		}
 
 		completion_reward = {
@@ -936,6 +939,7 @@ focus_tree = {
 
 		available = {
 			is_puppet = no
+			year > 1938
 		}
 
 		completion_reward = {
@@ -976,4 +980,9 @@ focus_tree = {
 				set_cosmetic_tag = HRE_UNIFIED
 		}
 	}
+
+#############################
+###### INDUSTRY AND ARMY ####
+#############################
+
 }
