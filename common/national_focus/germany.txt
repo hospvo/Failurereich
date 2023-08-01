@@ -110,7 +110,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_bohemia
-		icon = GFX_focus_generic_attack_czech
+		icon = GFX_focus_cze_german_puppet
 		text = "Annex Bohemia"
 
 		prerequisite = { 
@@ -359,7 +359,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_break_czech
-		icon = GFX_focus_generic_attack_austria
+		icon = GFX_focus_cze_german_puppet
 		text = "Red Czech"
 
 		bypass = {
@@ -391,7 +391,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_polish_cw
-		icon = GFX_focus_generic_attack_poland
+		icon = GFX_focus_POL_polish_revanchism
 		text = "Divide Poland"
 
 		bypass = {
@@ -424,7 +424,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_norse
-		icon = GFX_focus_generic_attack_austria
+		icon = GFX_focus_generic_attack_norway
 		text = "Vassal Norway"
 
 		prerequisite = { 
