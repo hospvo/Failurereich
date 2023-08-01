@@ -13,6 +13,8 @@ focus_tree = {
 	
 	default = no
 
+#### Aggressive Germany ####
+
 	focus = {
 		id = GER_thalmann
 		icon = GFX_focus_ger_bulwark_against_bolshevism
@@ -33,41 +35,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_luxemburg
-		icon = GFX_focus_ger_great_red_menace
-		text = "Pacifist Germany"
-		mutually_exclusive = { focus = GER_thalmann }
-		mutually_exclusive = { focus = GER_Strasser }
-		x = 6
-		y = 0
-		cost = 5
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			retire_country_leader = yes
-			
-			set_party_name = { 
-				    ideology = communism
-				    long_name = "Syndicalist Party of Germany"
-				    name = "SDP"
-			}
-		}
-	}
-
-	focus = {
 		id = GER_rhineland
 		icon = GFX_focus_ger_reichskommisariats
 		text = "Militarize Germany"
 
 		prerequisite = { 
 				focus = GER_thalmann 
-				focus = GER_luxemburg 
 		}
 
-		x = 4
+		x = 2
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -111,7 +87,7 @@ focus_tree = {
 				focus = GER_neutrality
 		}
 
-		x = 2
+		x = 1
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -143,12 +119,10 @@ focus_tree = {
 		}
 		
 		bypass = {
-			
 			    NOT = { country_exists = CZE }
-			
 		}
 
-		x = 6
+		x = 3
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -190,7 +164,7 @@ focus_tree = {
 			has_army_manpower = { size > 800000 }	
 		}
 
-		x = 4
+		x = 2
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -219,7 +193,7 @@ focus_tree = {
 				focus = GER_invade_poland
 		}
 
-		x = 2
+		x = 1
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -248,7 +222,7 @@ focus_tree = {
 				focus = GER_invade_poland
 		}
 
-		x = 6
+		x = 3
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -280,7 +254,7 @@ focus_tree = {
 				focus = GER_help_georgia
 		}
 
-		x = 4
+		x = 2
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -300,6 +274,212 @@ focus_tree = {
 			}
 		}
 	}
+
+
+#### Passive Germany ####
+
+	focus = {
+		id = GER_luxemburg
+		icon = GFX_focus_ger_great_red_menace
+		text = "Pacifist Germany"
+		mutually_exclusive = { focus = GER_thalmann }
+		mutually_exclusive = { focus = GER_Strasser }
+		x = 6
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			
+			set_party_name = { 
+				    ideology = communism
+				    long_name = "Syndicalist Party of Germany"
+				    name = "SDP"
+			}
+		}
+	}
+	focus = {
+		id = GER_luxemburg_idea
+		icon = GFX_focus_ger_great_red_menace
+		text = "Pacifist Germany"
+		mutually_exclusive = { focus = GER_thalmann }
+		mutually_exclusive = { focus = GER_Strasser }
+		prerequisite = { 
+				focus = GER_luxemburg
+		}
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_idea = volk_influence
+		}
+	}
+
+	focus = {
+		id = GER_coup_austria
+		icon = GFX_focus_generic_attack_austria
+		text = "Red Austria"
+
+		bypass = {
+			    NOT = { country_exists = AUS }
+		}
+
+		prerequisite = { 
+				focus = GER_luxemburg_idea
+		}
+
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			AUS = {
+				country_event = { days = 1 id = germany.20 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_break_czech
+		icon = GFX_focus_generic_attack_austria
+		text = "Red Czech"
+
+		bypass = {
+			    NOT = { country_exists = CZE }
+		}
+
+		prerequisite = { 
+				focus = GER_luxemburg_idea
+		}
+
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			CZE = {
+				country_event = { days = 1 id = germany.21 }
+			}
+		}
+	}
+	focus = {
+		id = GER_polish_cw
+		icon = GFX_focus_generic_attack_poland
+		text = "Divide Poland"
+
+		bypass = {
+			    NOT = { country_exists = POL }
+		}
+
+		prerequisite = { 
+				focus = GER_coup_austria
+				focus = GER_break_czech
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			POL  = {
+				country_event = { days = 1 id = germany.22 }
+			}
+		}
+	}
+	focus = {
+		id = GER_norse
+		icon = GFX_focus_generic_attack_austria
+		text = "Vassal Norway"
+
+		prerequisite = { 
+				focus = GER_polish_cw
+		}
+
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			NOR = {
+				country_event = { days = 1 id = germany.23 }
+			}
+		}
+	}
+	focus = {
+		id = GER_danes
+		icon = GFX_focus_generic_attack_denmark
+		text = "Invade Denmark"
+
+		prerequisite = { 
+				focus = GER_polish_cw
+		}
+
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { days = 1 id = germany.24 }
+			}
+		}
+	}
+
+#### Other focuses ####
 
 	focus = {
 		id = GER_non_aggression
