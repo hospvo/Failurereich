@@ -134,8 +134,8 @@ add_ideas = {
 
 create_country_leader = {
 	name = "Joseph Goebbels"
-	desc = ""
-	picture = "gfx/leaders/ger/Portrait_Germany_Goebbels.dds"
+	desc = "Between Communism and Fascism, he follow Strasser ideals."
+	picture = "gfx/leaders/GER/Portrait_Germany_Goebbels.dds"
 	expire = "1965.1.1"
 	ideology = nazbol
 	traits = {
