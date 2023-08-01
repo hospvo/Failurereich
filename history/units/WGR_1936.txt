@@ -16,7 +16,7 @@
 
 units = {
 	division= {	  
-		name = "Tanzania"
+		name = "Colonial army"
 		location = 2196
 		division_template = "Colonial Garrison"
 		start_experience_factor = 0.2
