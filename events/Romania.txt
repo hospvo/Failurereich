@@ -1,21 +1,21 @@
-add_namespace = romania
+add_namespace = romania_f
 
 country_event = {
-	id = romania.1
-	title = romania.1.t
-	desc = romania.1.d
+	id = romania_f.1
+	title = romania_f.1.t
+	desc = romania_f.1.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 
 	option = {
-		name = romania.1.a
+		name = romania_f.1.a
 		ai_chance = { factor = 0.1 }
 		HUN = { country_event= { days = 1 id = hungary.2 } }
 			}
 			
 	option = {
-		name = romania.1.b
+		name = romania_f.1.b
 		ai_chance = { factor = 0.9 }
 		HUN = { country_event= { days = 1 id = hungary.1 } }
 		} 
@@ -25,48 +25,48 @@ country_event = {
 	
 #succes army reform
 country_event = {
-	id = romania.2
-	title = romania.2.t
-	desc = romania.2.d
+	id = romania_f.2
+	title = romania_f.2.t
+	desc = romania_f.2.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 
 	option = {
-		name = romania.2.a
+		name = romania_f.2.a
 		ai_chance = { factor = 0 }
 			}
 			
 	option = {
-		name = romania.2.b
+		name = romania_f.2.b
 		ai_chance = { factor = 0 }
 		} 
 	}
 	
 #defeat army reform
 country_event = {
-	id = romania.3
-	title = romania.3.t
-	desc = romania.3.d
+	id = romania_f.3
+	title = romania_f.3.t
+	desc = romania_f.3.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 
 	option = {
-		name = romania.3.a
+		name = romania_f.3.a
 		ai_chance = { factor = 0 }
 			}
 			
 	option = {
-		name = romania.3.b
+		name = romania_f.3.b
 		ai_chance = { factor = 0 }
 		} 
 	}
 	
 country_event = {the goals of your reform army first stepp
-	id = romania.4
-	title = romania.4.t
-	desc = romania.4.d
+	id = romania_f.4
+	title = romania_f.4.t
+	desc = romania_f.4.d
 	picture = GFX_event_test
 	fire_only_once = yes
 	
@@ -78,100 +78,180 @@ country_event = {the goals of your reform army first stepp
 	}
 
 	option = {#defensive army
-		name = romania.4.a
+		name = romania_f.4.a
 		ai_chance = { factor = 0 }
-		country_event= { days = 10 id = romania.5 }
+		country_event = { days = 10 id = romania_f.5 }
 		set_country_flag = defensive_army_reform
 			}
 			
 	option = {#ofensive army
-		name = romania.4.b
+		name = romania_f.4.b
 		ai_chance = { factor = 0 }
-		country_event= { days = 10 id = romania.5 }
+		country_event = { days = 10 id = romania_f.5 }
 		set_country_flag = ofensive_army_reform
 		} 
 	}
 
 country_event = {#the goals of your reform army second step
-	id = romania.5
-	title = romania.5.t
-	desc = romania.5.d
+	id = romania_f.5
+	title = romania_f.5.t
+	desc = romania_f.5.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 	
 
 	option = {#small and mobile , armor 
-		name = romania.5.a
+		name = romania_f.5.a
 		ai_chance = { factor = 0 }
 		set_country_flag = mobile_army_reform
 		if = {
 			limit = {
+		has_country_flag = ofensive_army_reform
+				}
+		country_event = { days = 10 id = romania_f.6 }
+			}
+			if = {
+			limit = {
 		has_country_flag = defensive_army_reform
 				}
-		country_event= { days = 10 id = romania.6 }
+			country_event = { days = 10 id = romania_f.7 }
 			}
 		}
 	
 	option = {#compromise
-		name = romania.5.b
+		name = romania_f.5.b
 		ai_chance = { factor = 0 }
-		country_event= { days = 10 id = romania.6 }
+		country_event= { days = 10 id = romania_f.8 }
+		set_country_flag = compromise_army_reform
 		}
 		
 	option = {#large and static
-		name = romania.5.c
+		name = romania_f.5.c
 		ai_chance = { factor = 0 }
 		set_country_flag = static_army_reform
 		if = {
 			limit = {
 		has_country_flag = defensive_army_reform
 				}
-			country_event= { days = 10 id = romania.7 }
+			country_event = { days = 10 id = romania_f.7 }
+			}
+			if = {
+			limit = {
+		has_country_flag = ofensive_army_reform
+				}
+		country_event = { days = 10 id = romania_f.6 }
 			}
 		} 
 	}
 	
 country_event = {#question of airplanes
-	id = romania.6
-	title = romania.6.t
-	desc = romania.6.d
+	id = romania_f.6
+	title = romania_f.6.t
+	desc = romania_f.6.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 	
 
 	option = {#small fighters
-		name = romania.6.a
+		name = romania_f.6.a
 		ai_chance = { factor = 0 }
 		set_country_flag = small_fighters_reform
 			}
 	
 	option = {#large bombers
-		name = romania.6.b
+		name = romania_f.6.b
 		ai_chance = { factor = 0 }
 		set_country_flag = large_bombers_reform
 		}
 	}
 country_event = {#fortification
-	id = romania.7
-	title = romania.7.t
-	desc = romania.7.d
+	id = romania_f.7
+	title = romania_f.7.t
+	desc = romania_f.7.d
 	picture = GFX_event_test
 
 	is_triggered_only = yes
 	
 
 	option = {#build largest fortification
-		name = romania.7.a
+		name = romania_f.7.a
 		ai_chance = { factor = 0 }
 		set_country_flag = build_fortification_reform
 		
 			}
 	
 	option = {#compenze this with very big army
-		name = romania.7.b
+		name = romania_f.7.b
 		ai_chance = { factor = 0 }
 		set_country_flag = build_big_army
 		}
+	}
+	
+	country_event = {#compromise fortification or question of airplanes
+	id = romania_f.8
+	title = romania_f.8.t
+	desc = romania_f.8.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#solve airplanes
+		name = romania_f.8.a
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.6 }
+			}
+	
+	option = {#fortification
+		name = romania_f.8.b
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.7 }
+		}
+	}
+	
+	country_event = {#new tanks
+	id = romania_f.9
+	title = romania_f.9.t
+	desc = romania_f.9.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#buy france FCM 36
+		name = romania_f.9.a
+		ai_chance = { factor = 0 }
+		FRA = {
+		country_event = { days = 10 id = romania_f.10 }
+		}
+		set_country_flag = FCM_36_import
+			}
+	
+	option = {#buy czech LT. vz. 35
+		name = romania_f.9.b
+		ai_chance = { factor = 0 }
+		set_country_flag = LT_vz_35_import
+		CZE = {
+		country_event = { days = 10 id = romania_f.10 }
+			}
+		}
+	}
+	
+		country_event = {#
+	id = romania_f.10
+	title = romania_f.10.t
+	desc = romania_f.10.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = romania_f.10.a
+		ai_chance = { factor = 0 }
+
+			}
+
 	}

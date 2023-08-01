@@ -31,13 +31,123 @@
 		}
 		
 		timeout_effect = {
-		country_event = romania.3 
+		country_event = romania_f.3 
 			add_stability = -0.02
 		}
 		
 		complete_effect = {
-			country_event = romania.2 
+			country_event = romania_f.2 
 			add_stability = 0.02
+		}
+	}
+	
+		ROM_import_new_tanks_concepts = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 50
+
+
+		allowed = { TAG = ROM }
+
+		complete_effect = {
+		country_event = romania_f.9
+		}
+
+		days_remove = 60
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+		set_technology = {
+		improved_light_tank = 1
+			}
+		if = { 
+			limit = {
+			has_country_flag = FCM_36_import
+			}
+			create_equipment_variant = {
+			name = "FCM 36"
+			type = improved_light_tank
+			obsolete = yes
+			upgrades = {
+	        tank_armor_upgrade = 3
+            tank_reliability_upgrade = 2
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = improved_light_tank
+			amount = 35
+			variant_name = "FCM 36"
+			}
+		}
+			else_if = { 
+			limit = {
+			has_country_flag = LT_vz_35_import
+			}
+			create_equipment_variant = {
+			name = "LT. vz. 35"
+			type = improved_light_tank
+			obsolete = yes
+			upgrades = {
+			tank_reliability_upgrade = 1
+            tank_engine_upgrade = 3
+	        tank_armor_upgrade = 1
+	        tank_gun_upgrade = 3
+				}
+			}
+			add_equipment_to_stockpile = {
+			type = improved_light_tank
+			amount = 30
+			variant_name = "LT. vz. 35"
+			}
+		}
+	}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+		ROM_new_IAR_facilities_in_moldova = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 50
+		
+		available = {
+		has_completed_focus = ROM_new_army_airplanes_from_IAR
+		}
+
+		allowed = { TAG = ROM }
+
+		complete_effect = {
+		add_resource = {
+		type = aluminium
+		amount = 4
+		state = 79
+			}	
+		}
+
+		days_remove = 60
+
+		modifier = {
+			consumer_goods_factor = 0.01
+		}
+
+		remove_effect = {
+		79 = {
+		add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+		}
+		add_extra_state_shared_building_slots = 1
+		}
+	}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

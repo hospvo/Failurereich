@@ -2,9 +2,61 @@
  
  
  ### events ###
+ romania_f.2.t: ""
+ romania_f.2.d: ""
+ romania_f.2.a: ""
+ romania_f.2.b: ""
  
- romania.4.t: ""
- romania.4.d: ""
- romania.4.a: ""
- romania.4.b: ""
+ romania_f.3.t: ""
+ romania_f.3.d: ""
+ romania_f.3.a: ""
+ romania_f.3.b: ""
+ 
+ romania_f.4.t: "the goals of your  army reform"
+ romania_f.4.d: "we must set clear goals for our military reform to strengthen our military and thus secure our country's sovereignty"
+ romania_f.4.a: "we need defensive army"
+ romania_f.4.b: "the best defense is offense"
+ 
+ romania_f.5.t: "army building"
+ romania_f.5.d: "let's decide on the structure of our military and the direction it should take"
+ romania_f.5.a: "small and mobile , armor "
+ romania_f.5.b: "compromise"
+ romania_f.5.c: "large and static"
+ 
+ romania_f.6.t: "question of airplanes"
+ romania_f.6.d: "let's decide on the structure of our air force , our domestic company IAR can produce sufficient quantities"
+ romania_f.6.a: "small fighters"
+ romania_f.6.b: "large bombers"
+ 
+ romania_f.7.t: "fortification"
+ romania_f.7.d: "let us build fortifications around our country to prevent loss of life and strengthen our defenses against our neighbors who wait for every opportunity to attack us"
+ romania_f.7.a: "build largest fortification"
+ romania_f.7.b: "compenze this with very big army"
+ 
+ romania_f.8.t: "fosrtification or question of airplanes"
+ romania_f.8.d: "let's choose between strengthening the air force or building fortifications along the border"
+ romania_f.8.a: "solve airplanes"
+ romania_f.8.b: "fortification"
+ 
+ romania_f.9.t: "buy new tanks"
+ romania_f.9.d: "our army needs tanks , our research would be more expensive than buying a proven foreign machine , therefore it is much better to negotiate abroad on the purchase , two options are offered , the first is politically more advantageous , given that we have ties to france but the tank is not as high quality , but the manufacturer wants to compensate for this by supplying 35 tanks the second option is much higher quality , the Czech Republic produces some of the best tanks in the world but we must take into account that it is the biggest competitor of france in terms of arms exports"
+ romania_f.9.a: "france FCM 36 ( Nouvelle des Forges et Chantiers de la Méditerranée ) "
+ romania_f.9.b: "Czech LT. vz. 35 (Škoda and ČKD)"
+ 
+ 
+ ###national focus###
+ 
+ #army
+ 
+ ROM_we_need_recover_our_country: "we need recover our country"
+ ROM_army_reforms: "start army reform"
+ ROM_politize_army: "politize army"
+ ROM_local_units: "local units"
+ ROM_mixed_units: "mixed units"
+ ROM_new_army_reaserch: "support new army reaserch"
+ ROM_new_army_airplanes_from_IAR: "new army airplanes from IAR " 
+ 
+ ###ideas###
+ ROM_army_regime: "army regime"
+ ROM_divided_land: "divided land"
  

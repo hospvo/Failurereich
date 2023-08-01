@@ -251,6 +251,7 @@ default = no
 		prerequisite = { focus = ROM_we_need_recover_our_country }
 
 		completion_reward = {
+		activate_mission = ROM_mission_army_reforms
 		}
 	}
 	
@@ -269,6 +270,10 @@ default = no
 		prerequisite = { focus = ROM_army_reforms }
 
 		completion_reward = {
+			add_manpower = 15000
+			army_experience = 15
+			add_stability = 0.05
+			add_popularity = { ideology = fascism popularity = 0.025 }
 		}
 	}
 	
@@ -325,6 +330,21 @@ default = no
 		prerequisite = { focus = ROM_army_reforms }
 
 		completion_reward = {
+		add_doctrine_cost_reduction = {
+		cost_reduction = 0.5
+		uses = 1
+		category = land_doctrine
+		}
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 1
+		category = infantry_weapons
+		}
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 1
+		category = artillery
+			}
 		}
 	}
 	
@@ -343,6 +363,16 @@ default = no
 		prerequisite = { focus = ROM_new_army_reaserch }
 
 		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.4
+		uses = 1
+		category = light_air
+			}
+		add_tech_bonus = {
+		bonus = 0.4
+		uses = 1
+		category = medium_air
+			}
 		}
 	}
 }
