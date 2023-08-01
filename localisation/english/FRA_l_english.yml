@@ -1,11 +1,23 @@
 ﻿l_english: 
 
+  ### IDEAS ###
+  FRA_military_junta: "Military Junta"
 
   ### FOCUS ###
+  FRA_monarchist_coup: "Monarchists Coup"
+  FRA_old_marechal_speech: "Old Marechal Speech"
   FRA_rocquist_coalition: "De la Rocque's Coalition"
-  FRA_christian_social_values: "Christian Social Values"
-  FRA_renforce_corporatism: "Renforce Corporatism"
   FRA_renforce_premier_power: "Renforce Premier Power"
+  FRA_renforce_paramilitaries: "Renforce Paramilitaries"
+  FRA_christian_social_values: "Christian Social Values"
+  FRA_promote_solidarity: "Promote Solidarity"
+  FRA_patriotic_peasantry: "Patriotic Peasantry"
+  FRA_renforce_corporatism: "Renforce Corporatism"
   FRA_petain: "Military Self-Coup"
+  FRA_cult_of_personnality: "Continue the Cult of Personnality"
+  FRA_renforce_the_army: "Renforce the Army"
+  FRA_work_family_fatherland: "Work, Family, Fatherland"
+  FRA_doriot: "National Syndicalism"
+  FRA_social_reforms: "Social Reforms"
 
 
