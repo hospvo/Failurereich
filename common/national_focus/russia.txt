@@ -353,7 +353,7 @@
 
 	focus = {
 		id = RUS_retake_bukhara
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SOV_bukharan_republic
 		text = "Bukhara"
 		x = 12
 		y = 2
@@ -390,7 +390,7 @@
 
 	focus = {
 		id = RUS_crush_georgia
-		icon = GFX_goal_generic_focus_GRE_an_orthodox_state
+		icon = GFX_focus_SOV_transcaucasian_republic
 		text = "Stalin failure"
 		x = 16
 		y = 2
