@@ -2,9 +2,18 @@
 
   ### IDEAS ###
   FRA_military_junta: "Military Junta"
-
+  FRA_sns: "National Statistics Service" 
+  FRA_sncf: "French National Railway Company"
+  
   ### FOCUS ###
-  FRA_monarchist_coup: "Monarchists Coup"
+  FRA_create_the_national_statistics_service: "Create the National Statistics Service"
+  FRA_cnrs: "Scientific Research National Center"  
+  FRA_national_railway: "National Railway"
+  FRA_major_works_in_paris: "Major Works in Paris"
+  FRA_revitalize_the_shipbuilding: "Revitalize the Shipbuilding Industry"
+  FRA_develop_our_refineries: "Develop our Refineries"
+  FRA_sainte_etienne_state_arsenals: "Saint-Étienne State Arsenals"
+  FRA_modernize_arms_industries: "Modernize the Arms Industry"
   FRA_old_marechal_speech: "Old Marechal Speech"
   FRA_rocquist_coalition: "De la Rocque's Coalition"
   FRA_renforce_premier_power: "Renforce Premier Power"
@@ -19,5 +28,6 @@
   FRA_work_family_fatherland: "Work, Family, Fatherland"
   FRA_doriot: "National Syndicalism"
   FRA_social_reforms: "Social Reforms"
-
+  FRA_monarchist_coup: "Monarchists Coup"
+  
 
