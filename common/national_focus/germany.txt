@@ -293,7 +293,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			retire_country_leader = yes
-			
 			set_party_name = { 
 				    ideology = communism
 				    long_name = "Syndicalist Party of Germany"
@@ -304,7 +303,7 @@ focus_tree = {
 	focus = {
 		id = GER_luxemburg_idea
 		icon = GFX_focus_generic_occupy_start_war
-		text = "Pacifist Germany"
+		text = "Social-Democrat Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
 		prerequisite = { 
@@ -320,6 +319,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = GER_volk_influence
+			set_political_party = {
+			    ideology = left
+			    popularity = 30
+			}
 		}
 	}
 
