@@ -153,50 +153,49 @@ set_politics = {
 
 }
 set_popularities = {
-	democratic = 30
-	fascism = 10
-	communism = 60
+	democratic = 60
+	left = 20
+	communism = 20
 }
 
 add_ideas = {
 }
 
 
+create_country_leader = {
+	name = "Hans Speidel"
+	desc = "This leader was under Military influence and give access to a good relation with the Kaiser."
+	picture = "gfx/leaders/GER/Portrait_Germany_Speidel.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
 
-#create_country_leader = {
-#	name = "Dennis Fredauer"
-#	desc = ""
-#	picture = "Portrait_Germany_Konrad_Adenauer.dds"
-#	expire = "1965.1.1"
-#	ideology = conservatism
-#	traits = {
-#	}
-#}
-#
 
-#create_country_leader = {
-#	name = "Otto Wels"
-#	desc = "POLITICS_OTTO_WELS_DESC"
-#	picture = "Portrait_Germany_Adolf_Hitler.dds"
-#	expire = "1939.1.16"
-#	ideology = socialism
-#	traits = {
-#		exiled
-#		union_man
-#	}
-#}
-#
-#create_country_leader = {
-#	name = "Ernst Thälmann"
-#	desc = "POLITICS_ERNST_THALMANN_DESC"
-#	picture = "Portrait_Germany_Adolf_Hitler.dds"
-#	expire = "1956.1.1"
-#	ideology = stalinism
-#	traits = {
-#		assassination_survivor
-#		stalins_puppet
-#		political_prisoner
-#	}
-#}
+create_country_leader = {
+	name = "Otto Wels"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	expire = "1939.1.16"
+	ideology = socialism
+	traits = {
+	exiled
+		union_man
+	}
+}
+
+create_country_leader = {
+	name = "Ernst Thälmann"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	expire = "1956.1.1"
+	ideology = stalinism
+	traits = {
+		assassination_survivor
+		stalins_puppet
+		political_prisoner
+	}
+}
 
 
