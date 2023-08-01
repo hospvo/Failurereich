@@ -27,13 +27,13 @@ German_alternate_luxemburg = {
 
 	ai_national_focuses = {
 		GER_luxemburg
-		GER_rhineland
-		GER_austria
-		GER_bohemia
-		GER_invade_poland
-		GER_invade_scandinavia
-		GER_help_georgia
-		GER_invade_russia
+		GER_luxemburg_idea
+		GER_coup_austria
+		GER_break_czech
+		GER_polish_cw
+		GER_norse
+		GER_danes
+		GER_red_viking
 	}
 
 	research = {
