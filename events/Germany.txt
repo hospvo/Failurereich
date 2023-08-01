@@ -286,6 +286,10 @@ country_event = {
 	        declare_war_on = {
 		                target = NOR
 		                type = annex_everything
+	        }	
+	        declare_war_on = {
+		                target = SWE
+		                type = annex_everything
 	        }
 
 		DEN = {
@@ -295,6 +299,12 @@ country_event = {
 		}
 
 		NOR = {
+			every_owned_state = {
+			    add_claim_by = GER
+			}
+		}
+
+		SWE = {
 			every_owned_state = {
 			    add_claim_by = GER
 			}
