@@ -25,7 +25,7 @@ bookmarks = {
 			ideas = {
 				GER_clamp_down_on_fascism 
 				GER_communist_refugees 
-				GER_safeguard_the_baltic 
+				GER_soviet_military_exercises 
 			}
 			focuses = {
 				GER_thalmann
