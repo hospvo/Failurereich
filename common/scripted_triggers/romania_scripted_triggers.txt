@@ -50,10 +50,10 @@
 	has_tech = fighter1
 	has_tech = CAS1
 	has_equipment = {
-    fighter1 > 80
+    fighter_equipment_1 > 15
 			}
 	has_equipment = {
-    CAS_equipment_1 > 80
+    CAS_equipment_1 > 10
 			}
 		}
 	}
@@ -66,10 +66,10 @@
 	has_tech = heavy_fighter1
 	has_tech = tactical_bomber1
 	has_equipment = {
-    heavy_fighter_equipment_1 > 40
+    heavy_fighter_equipment_1 > 6
 	}
 	has_equipment = {
-    tac_bomber_equipment_1 > 40
+    tac_bomber_equipment_1 > 4
 			}
 		}
 	}

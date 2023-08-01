@@ -1,5 +1,9 @@
 ideas = {
 
+
+	country = {
+	
+	
 			ROM_army_regime = {
 
 			picture = generic_volunteer_expedition_bonus
