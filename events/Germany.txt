@@ -325,3 +325,118 @@ country_event = {
 		}	
 	}
 }
+
+#### Luxemburg influence ####
+
+country_event = {
+	id = germany.20
+	title = "Red Austrian coup"
+	desc = "Spartacist crush our leader, we have now free from Habsburg."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Scheiss"
+		AUS = { set_politics = { ruling_party = communism } }
+		AUS = {
+			set_popularities = {
+				communism = 90
+				left = 10
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = germany.21
+	title = "Red Czech coup"
+	desc = "Spartacist crush our leader, we have now leaving our neutrality and Austrian influence."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Oh No ..."
+		CZE = { set_politics = { ruling_party = communism } }
+		CZE = {
+			set_popularities = {
+				communism = 90
+				left = 10
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = germany.22
+	title = "Peasant Civil war"
+	desc = "Spartacist stage a coup in Poland, we now must face to a communist civil war."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Kurwa !"
+		POL = {	
+			start_civil_war = {
+				ruling_party = communism
+				ideology = reactionary
+				size = 0.6
+				only_own_territory = no
+				capital = 86 
+				states = {
+					86 98 87 97
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = germany.23
+	title = "Norse under Red"
+	desc = "Spartacist stage a coup in Norway, we now must face to a communist civil war. We faced a civil war in 1920's but now we have to fight again."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "No again ..."
+		NOR = {	
+			start_civil_war = {
+				ruling_party = communism
+				ideology = neutrality
+				size = 0.6
+				only_own_territory = no
+				capital = 142 
+				states = {
+					142
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = germany.24
+	title = "Invade Denmark"
+	desc = "Spartacist now have to Invade Norway to complete the Northen Volkreich."
+	picture = GFX_report_event_north_germany
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = "Divide Danes"
+	        declare_war_on = {
+		                target = DEN
+		                type = annex_everything
+	        }	
+
+		DEN = {
+			every_owned_state = {
+			    add_claim_by = NOR
+			}
+		}
+	}
+}
