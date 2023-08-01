@@ -136,8 +136,8 @@ add_ideas = {
 
 create_country_leader = {
 	name = "Wilhelm Frick"
-	desc = ""
-	picture = "gfx/leaders/ger/Portrait_Germany_Frik.dds"
+	desc = "An harsh dictator, followed by the SS and NSDAP, he lead a tyranic regime under Munich warlords."
+	picture = "gfx/leaders/GER/Portrait_Germany_Frik.dds"
 	expire = "1965.1.1"
 	ideology = rexism
 	traits = {
