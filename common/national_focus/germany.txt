@@ -212,7 +212,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_help_georgia
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_SOV_transcaucasian_republic
 		text = "Invite Stalin"
 
 		prerequisite = { 
