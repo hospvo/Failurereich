@@ -472,7 +472,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			NOR = { has_ideology = stalinism }
+			country_exists = DEN
 			is_puppet = no
 		}
 
