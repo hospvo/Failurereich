@@ -49,6 +49,69 @@ ideas = {
 			}
 		}
 
+		FRA_sns = {
+
+			picture = generic_research_bonus
+			
+			allowed = {
+				original_tag = FRA 
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			research_bonus = { 
+				electronics = 0.10
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05 
+			}
+		}
+
+		FRA_sncf = {
+
+			picture = generic_build_infrastructure
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rail_way_factor = 0.10
+				production_speed_supply_node_factor = 0.05
+			}
+		}	
+
+		FRA_global_investments = {
+			picture = generic_exploit_mines
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
 		FRA_agricultural_protectionism = {
 
 			picture = generic_agrarian_reform
@@ -126,24 +189,6 @@ ideas = {
 			modifier = {
 				stability_factor = 0.10
 				industrial_capacity_factory = 0.1
-			}
-		}
-
-		FRA_global_investments = {
-			picture = generic_exploit_mines
-			allowed = {
-				original_tag = FRA
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				local_resources_factor = 0.1
 			}
 		}
 
