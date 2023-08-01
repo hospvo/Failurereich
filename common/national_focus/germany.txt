@@ -84,7 +84,6 @@ focus_tree = {
 
 		prerequisite = { 
 				focus = GER_rhineland
-				focus = GER_neutrality
 		}
 
 		x = 1
@@ -115,7 +114,6 @@ focus_tree = {
 
 		prerequisite = { 
 				focus = GER_rhineland
-				focus = GER_neutrality
 		}
 		
 		bypass = {
@@ -151,7 +149,6 @@ focus_tree = {
 		prerequisite = { 
 				focus = GER_bohemia
 				focus = GER_austria
-				focus = GER_attack_belgium
 		}
 		
 		bypass = {
