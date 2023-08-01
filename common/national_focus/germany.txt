@@ -186,7 +186,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_invade_scandinavia
-		icon = GFX_focus_generic_attack_denmark
+		icon = GFX_focus_generic_attack_sweden
 		text = "Invade Scandinavia"
 
 		prerequisite = { 
@@ -459,7 +459,7 @@ focus_tree = {
 				focus = GER_polish_cw
 		}
 
-		x = 5
+		x = 7
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
