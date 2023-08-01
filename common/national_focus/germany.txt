@@ -301,7 +301,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_luxemburg_idea
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_focus_generic_occupy_start_war
 		text = "Pacifist Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
@@ -447,6 +447,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = GER_danes
 		icon = GFX_focus_generic_attack_denmark
@@ -466,12 +467,52 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			NOR = { has_ideology_group = communism }
 			is_puppet = no
 		}
 
 		completion_reward = {
 			GER = {
 				country_event = { days = 1 id = germany.24 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_red_viking
+		icon = GFX_focus_generic_scandinavia_flags
+		text = "Invade Denmark"
+
+		prerequisite = { 
+				focus = GER_danes
+				focus = GER_norse
+		}
+
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { country_exists = DEN }
+			is_puppet = no
+		}
+
+		completion_reward = {
+			
+	        	declare_war_on = {
+			                target = SWE
+			                type = annex_everything
+	   	    	 }	
+	
+			SWE = {
+				every_owned_state = {
+				    		add_claim_by = NOR
+				}
 			}
 		}
 	}
