@@ -481,7 +481,7 @@ focus_tree = {
 	focus = {
 		id = GER_red_viking
 		icon = GFX_focus_generic_scandinavia_flags
-		text = "Invade Denmark"
+		text = "Invade Sweden"
 
 		prerequisite = { 
 				focus = GER_danes
