@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Colonial Garrison"
+	name = "Colonial army"
 	division_names_group = WGR_COL_01
 	
 	regiments = {
@@ -16,15 +16,34 @@
 
 units = {
 	division= {	  
-		name = "Colonial army"
+		name = "Infantery 1"
 		location = 2196
-		division_template = "Colonial Garrison"
+		division_template = "Colonial army"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 
 	}
 }
+units = {
+	division= {	  
+		name = "Infantery 2"
+		location = 2196
+		division_template = "Colonial army"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
 
+	}
+}
+units = {
+	division= {	  
+		name = "Infantery 3"
+		location = 2196
+		division_template = "Colonial army"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}
 	#########################
 	## STARTING PRODUCTION ##
 	#########################
