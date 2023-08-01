@@ -1626,6 +1626,7 @@ ideas = {
 
 			modifier = {
 				communism_drift = 0.02
+				left_drift = 0.02
 				fascism_drift = -0.02
 			}
 		}
