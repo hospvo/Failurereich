@@ -636,7 +636,7 @@ focus_tree = {
 		id = GEX_navy
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Develop navy"
-		x = 12
+		x = 16
 		y = 0
 		cost = 10
 
@@ -655,13 +655,12 @@ focus_tree = {
 		id = GEX_navy2
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Promote commanders"
-		x = 11
+		x = 15
 		y = 1
 		cost = 10
 
 		prerequisite = {
-		focus = GEX_alliance_somalia
-		focus = GEX_alliance_senussi
+		focus = GEX_navy
 		}
 
 		available_if_capitulated = yes
@@ -685,13 +684,12 @@ focus_tree = {
 		id = GEX_navy3
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Promote marshals"
-		x = 13
+		x = 17
 		y = 1
 		cost = 10
 
 		prerequisite = {
-		focus = GEX_alliance_somalia
-		focus = GEX_alliance_senussi
+		focus = GEX_navy
 		}
 
 		available_if_capitulated = yes
@@ -715,7 +713,7 @@ focus_tree = {
 		id = GEX_lutwaffe
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Develop air force"
-		x = 16
+		x = 20
 		y = 0
 		cost = 10
 
@@ -734,9 +732,13 @@ focus_tree = {
 		id = GEX_improve_air
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Air improvement"
-		x = 15
+		x = 19
 		y = 1
 		cost = 10
+
+		prerequisite = {
+		focus = GEX_lutwaffe
+		} 
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -757,9 +759,13 @@ focus_tree = {
 		id = GEX_improve_air2
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Hire generals"
-		x = 17
+		x = 21
 		y = 1
 		cost = 10
+
+		prerequisite = {
+		focus = GEX_lutwaffe
+		} 
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -776,7 +782,7 @@ focus_tree = {
 		id = GEX_wermartch
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Develop land army"
-		x = 20
+		x = 24
 		y = 0
 		cost = 10
 
@@ -795,9 +801,13 @@ focus_tree = {
 		id = GEX_wermartch2
 		icon = GFX_focus_generic_diplomatic_treaty
 		text = "Reform army"
-		x = 20
+		x = 24
 		y = 1
 		cost = 10
+
+		prerequisite = {
+		focus = GEX_wermartch
+		}  
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
