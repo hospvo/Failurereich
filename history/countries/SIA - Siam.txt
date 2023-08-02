@@ -84,7 +84,8 @@ set_convoys = 15
 			set_naval_oob = "SIA_1939_naval_mtg"
 		else = {
 			set_naval_oob = "SIA_1939_naval_legacy"
-		}
+	add_ideas = {
+		young_king
 	}
 
 	set_technology = {
