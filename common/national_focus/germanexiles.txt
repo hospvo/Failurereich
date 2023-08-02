@@ -572,7 +572,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 100000
+			add_manpower = 10000
 			add_to_faction = SOM
 		}
 	}
@@ -597,8 +597,220 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 100000
+			add_manpower = 10000
 			add_to_faction = LBA
+		}
+	}
+
+	focus = {
+		id = GEX_reinforce_army
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Develop military"
+		x = 6
+		y = 3
+		cost = 5
+
+		prerequisite = {
+		focus = GEX_alliance_somalia
+		focus = GEX_alliance_senussi
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_building_construction = {
+			    type = arms_factory
+			    level = 5
+			    instant_build = yes	
+			}
+		}
+	}
+
+#### Army ####
+
+	focus = {
+		id = GEX_navy
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Develop navy"
+		x = 12
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 5
+		}
+	}
+
+	focus = {
+		id = GEX_navy2
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Promote commanders"
+		x = 11
+		y = 1
+		cost = 10
+
+		prerequisite = {
+		focus = GEX_alliance_somalia
+		focus = GEX_alliance_senussi
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_naval_commander_role = {
+  				skill = 4
+  				attack_skill = 2
+  				defense_skill = 3
+  				planning_skill = 3
+  				logistics_skill = 5
+			}
+		}
+	}
+
+	focus = {
+		id = GEX_navy3
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Promote marshals"
+		x = 13
+		y = 1
+		cost = 10
+
+		prerequisite = {
+		focus = GEX_alliance_somalia
+		focus = GEX_alliance_senussi
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_field_marshal_role = {
+			  skill = 4
+			  attack_skill = 2
+			  defense_skill = 3
+			  planning_skill = 3
+			  logistics_skill = 5
+			}
+		}
+	}
+
+	focus = {
+		id = GEX_lutwaffe
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Develop air force"
+		x = 16
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 5
+		}
+	}
+
+	focus = {
+		id = GEX_improve_air
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Air improvement"
+		x = 15
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.4
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GEX_improve_air2
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Hire generals"
+		x = 17
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			activate_advisor = GER_character_token_air_chief
+		}
+	}
+
+	focus = {
+		id = GEX_wermartch
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Develop land army"
+		x = 20
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = GEX_wermartch2
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "Reform army"
+		x = 20
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+		cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
