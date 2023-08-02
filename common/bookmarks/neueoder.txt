@@ -162,6 +162,21 @@ bookmarks = {
 			}
 		}
 
+		"SIA"={
+			minor = yes
+			history = "SIA_GATHERING_STORM_DESC"
+			ideology = reactionary
+			ideas = {
+				young_king
+			}
+			focuses = {
+				SIA_Political_Effort
+				SIA_Industrial_Effort
+				SIA_Naval_Effort
+				SIA_Aviation_Effort
+			}	
+		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
