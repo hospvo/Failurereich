@@ -295,11 +295,8 @@ country_event = {
 		
 	        white_peace = GER
 	        POL = { puppet = HUN }
-		POL = { set_state_owner = 873 }
 		POL = { set_state_owner = 66 }
 		POL = { set_state_owner = 72 }
-
-		POL = { set_state_owner = 868 }
 		GER = { release = POL }
 		PRE = { release = POL }
 
