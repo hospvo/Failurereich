@@ -1509,7 +1509,7 @@ ideas = {
 			picture = generic_tank_manufacturer_2
 
 			available = {
-				has_completed_focus = FRA_army_reform
+				#TODO has_completed_focus = FRA_army_reform
 			}
 						
 			allowed = {
@@ -1528,7 +1528,7 @@ ideas = {
 			picture = generic_tank_manufacturer_3
 
 			available = {
-				has_completed_focus = FRA_infantry_tanks
+				#TODO has_completed_focus = FRA_infantry_tanks
 			}
 						
 			allowed = {

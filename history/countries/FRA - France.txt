@@ -208,68 +208,39 @@ if = {
 set_convoys = 300
 
 create_faction = "Axe"
-add_to_faction = ENG
 add_to_faction = FRA
+add_to_faction = ENG
 add_to_faction = ITA
 
 give_guarantee = POL
 
 set_politics = {
-	ruling_party = fascism 
+	ruling_party = reactionary 
 	last_election = "1932.5.1"
 	elections_allowed = no
 }
+
 set_popularities = {
-	fascism = 79
-	reactionary = 21
-	neutrality = 0
-	communism = 0
+	democratic = 26
+	reactionary = 41
+	fascism = 33
 }
 
 give_guarantee = ROM
 
 add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
+	FRA_military_junta_1
+
+	#laws
+	limited_exports
 	limited_conscription
-	FRA_full_employment
-	FRA_political_violence
-	FRA_inefficient_economy_2
-}
-
-#Order matters here Daladier will start as leaders because added last
-create_country_leader = {
-	name = "Édouard Daladier"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Portrait_France_Edouard_Daladier.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		stout_defender
-	}
 }
 
 create_country_leader = {
-	name = "Pierre Laval"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = GFX_portrait_fra_pierre_laval
+	name = "François de la Rocque"
+	picture = GFX_portrait_fra_francois_de_la_rocque
 	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		stout_defender
-	}
-}
-
-create_country_leader = {
-	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "GFX_portrait_fra_maurice_thorez"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		
-	}
+	ideology = conservatism
 }
 
 create_country_leader = {
@@ -277,10 +248,14 @@ create_country_leader = {
 	desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
 	picture = "Portrait_France_Philippe_Petain.dds"
 	expire = "1965.1.1"
+	ideology = oligarchism
+}
+
+create_country_leader = {
+	name = "Jacques Doriot"
+	picture = GFX_portrait_fra_jacques_doriot
+	expire = "1965.1.1"
 	ideology = fascism_ideology
-	traits = {
-		
-	}
 }
 
 create_corps_commander = {

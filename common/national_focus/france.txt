@@ -528,16 +528,9 @@ focus_tree = {
 			set_politics = {
 				ruling_party = democratic
 			}
-			create_country_leader = {
-				name = "François de la Rocque"
-				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = GFX_portrait_fra_francois_de_la_rocque
-				expire = "1965.1.1"
-				ideology = conservatism
-			}
 			set_party_name = { 
     			ideology = democratic
-    			long_name = "PSFTF"
+    			long_name = "PSF"
     			name = "Parti Social Français"
 			}
 		}
@@ -616,8 +609,8 @@ focus_tree = {
 			}
 			set_party_name = { 
 				ideology = reactionary
-				long_name = "Military Juntla"
-				name = "Military Juntla"
+				long_name = "Military Junta"
+				name = "Military Junta"
 			}
 		}
 	}
@@ -839,9 +832,9 @@ focus_tree = {
 		}
 	}
 
-	#################
-	### anarchist ###
-	#################
+	##############
+	### DORIOT ###
+	##############
 
 	focus = {
 		id = FRA_doriot
@@ -858,28 +851,13 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-
-			add_stability = -0.05
-
 			set_politics = {
 				ruling_party = fascism
 			}
-
-			create_country_leader = {
-				name = "Jacques Doriot"
-				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = GFX_portrait_fra_jacques_doriot
-				expire = "1965.1.1"
-				ideology = nazism
-				traits = {
-					eager_collaborator
-				}
-			}
-
 			set_party_name = { 
-    				ideology = fascism
-    				long_name = "RNPF"
-    				name = "Rassemblement National Populaire Français"
+				ideology = fascism
+				long_name = "RNPF"
+				name = "Rassemblement National Populaire Français"
 			}
 		}
 	}
@@ -969,9 +947,6 @@ focus_tree = {
 				picture = GFX_portrait_fra_infante_jaime
 				expire = "1965.1.1"
 				ideology = despotism
-				traits = {
-						
-				}
 			}
 
 			set_party_name = {

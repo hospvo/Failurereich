@@ -2,12 +2,16 @@
 
 
   ### PARTIES ###
-  FRA_vanguardism_party:0 "Parti travailliste Francais"
-  FRA_left_party:0 "SFIO"
-  FRA_reactionary_party:0 "Military juntla"
-  FRA_communism_party:0 "Parti Communiste Francais"
-  FRA_democratic_party:0 "Parti Radical"
-  FRA_fascism_party:0 "Mouvement Franciste"
+  FRA_vanguardism_party: "POF"
+  FRA_vanguardism_party_long: "Parti Ouvrier Francais"
+  FRA_communism_party: "SFIO"
+  FRA_communism_party_long: "Section française de l'internationale ouvrière"
+  FRA_left_party: "PRS"
+  FRA_left_party_long: "Parti Radical-Socialiste"
+  FRA_neutrality_party: "Alliance démocratique"
+  FRA_democratic_party: "Rocquistes"
+  FRA_reactionary_party: "Pétainistes"
+  FRA_fascism_party: "Doriotistes"
 
   ### IDEAS ###
   FRA_military_junta: "Military Junta"
