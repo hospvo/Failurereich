@@ -18,7 +18,7 @@ focus_tree = {
 	focus = {
 		id = GER_thalmann
 		icon = GFX_focus_ger_bulwark_against_bolshevism
-		text = "Aggressive Germany"
+		text = "Thalmann keep power"
 		mutually_exclusive = { focus = GER_luxemburg }
 		mutually_exclusive = { focus = GER_Strasser }
 		x = 2
@@ -280,7 +280,7 @@ focus_tree = {
 	focus = {
 		id = GER_luxemburg
 		icon = GFX_focus_ger_great_red_menace
-		text = "Pacifist Germany"
+		text = "Luxemburg and Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
 		x = 6
