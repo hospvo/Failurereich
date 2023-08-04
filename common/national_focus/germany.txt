@@ -13,7 +13,7 @@ focus_tree = {
 	
 	default = no
 
-#### Aggressive Germany ####
+#### Thalmann's Germany ####
 
 	focus = {
 		id = GER_thalmann
@@ -275,7 +275,7 @@ focus_tree = {
 	}
 
 
-#### Passive Germany ####
+#### Lux's Germany ####
 
 	focus = {
 		id = GER_luxemburg
