@@ -994,7 +994,7 @@ focus_tree = {
 		text = "Rebuilt Germany"
 		prerequisite = { 
 				focus = GER_civil_war
-				focus = GER_attack_belgium
+				focus = GER_attack_switzerland
 		}
 
 		x = 12
