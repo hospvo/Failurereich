@@ -1056,8 +1056,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_czech_puppet
-		icon = GFX_foal_generic_small_arms
-		text = "Take Switzerland"
+		icon = GFX_goal_generic_small_arms
+		text = "Puppet Czech"
 		prerequisite = { 
 				focus = GER_reconstruction
 		}
@@ -1091,7 +1091,7 @@ focus_tree = {
 		icon = GFX_focus_ger_revive_kaiserreich
 		text = "Rebuilt Germany"
 		prerequisite = { 
-				focus = GER_Switzerland2
+				focus = GER_czech_puppet
 		}
 		prerequisite = { 
 				focus = GER_Austria2
