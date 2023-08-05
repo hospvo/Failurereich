@@ -1043,11 +1043,10 @@ focus_tree = {
 	focus = {
 		id = GER_motorization_effort
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = GER_land_effort }
-		bypass = { has_tech = GER_motorised_infantry }
+		prerequisite = { focus = GER_armament_effort }
 		text = "Rote Motorization"
 		x = 32
-		y = 1
+		y = 2
 
 		cost = 10
 
@@ -1065,12 +1064,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = doctrine_effort
+		id = GER_rote_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = GER_motorization_effort }
 		text = "Rote Doctrine"
 		x = 32
-		y = 2
+		y = 3
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1212,7 +1211,7 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = GER_equipment_effort_3 }
 		prerequisite = { focus = GER_doctrine_effort_2 }
-		prerequisite = { focus = GER_armor_effort }
+		prerequisite = { focus = GER_rote_doctrine }
 		text = "Red Special forces"
 		x = 30
 		y = 4
