@@ -1505,9 +1505,9 @@ focus_tree = {
 	focus = {
 		id = GER_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = GER_bomber_focus focus = GER_fighter_focus }
+		prerequisite = { focus = GER_fighter_focus }
 		text = "Built Air base"
-		x = 38
+		x = 34
 		y = 2
 		cost = 10
 
@@ -1592,37 +1592,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAS_effort
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = GER_aviation_effort_2 }
-		prerequisite = { focus = GER_motorization_effort }
-		text = "CAS for red"
-		x = 34
-		y = 2
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CAS_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
 		id = GER_rocket_effort
 		icon = GFX_focus_rocketry
-		prerequisite = { focus = GER_aviation_effort_2 }
+		prerequisite = { focus = GER_bomber_focus }
 		text = "Heinsenberg II"
-		x = 36
-		y = 3
+		x = 38
+		y = 2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1644,6 +1619,32 @@ focus_tree = {
 			modifier = {
 				factor = 0.25
 				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = GER_aviation_effort_2 }
+		prerequisite = { focus = GER_motorization_effort }
+		prerequisite = { focus = GER_rocket_effort }
+		text = "CAS for red"
+		x = 36
+		y = 3
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
 			}
 		}
 	}
