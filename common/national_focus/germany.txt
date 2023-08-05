@@ -529,13 +529,13 @@ focus_tree = {
 	focus = {
 		id = GER_non_aggression
 		icon = GFX_goal_continuous_armor_production
-		text = "Guarantee non-intervention"
+		text = "Guarantee US non-intervention"
 
-		x = 20
+		x = 16
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -550,6 +550,33 @@ focus_tree = {
    				target = USB
 			    	days = 600
 			}
+		}
+	}
+
+	focus = {
+		id = GER_non_aggression2
+		icon = GFX_goal_continuous_armor_production
+		text = "Neutrality toward Mexico"
+
+		prerequisite = { 
+				focus = GER_non_aggression
+		}
+
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			country_exists = USB
+		}
+
+		completion_reward = {
 			set_truce = {
    				target = MEX
 			    	days = 600
@@ -559,18 +586,14 @@ focus_tree = {
 
 	focus = {
 		id = GER_alliance_with_lombardia
-		icon = GFX_goal_generic_attack_allies
-		text = "Propose alliance with Lombardia"
+		icon = GFX_focus_ITA_il_sol_dell_avvenire
+		text = "Alliance with North Italy"
 
-		prerequisite = { 
-				focus = GER_non_aggression
-		}
-
-		x = 20
-		y = 1
+		x = 18
+		y = 0
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -588,19 +611,53 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_alliance_with_l
+		id = GER_alliance_with_spc
 		icon = GFX_focus_generic_befriend_communist_spain
-		text = "Propose alliance with spain"
+		text = "Support CNT-FAI"
 
 		prerequisite = { 
 				focus = GER_alliance_with_lombardia
 		}
 
-		x = 20
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+		}
+
+		completion_reward = {
+			GER = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 100
+				    target = SPC
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_alliance_with_spc2
+		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		text = "Deal with CNT-FAI"
+
+		prerequisite = { 
+				focus = GER_non_aggression2
+				focus = GER_alliance_with_spc
+		}
+
+		x = 17
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -618,6 +675,76 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_mexico_equ
+		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		text = "Support Zapatista"
+
+		prerequisite = { 
+				focus = GER_alliance_with_spc2
+		}
+
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+		}
+
+		completion_reward = {
+			GER = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 50
+				    target = MEX
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_mexico_equ
+		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		text = "Support FCSA"
+
+		prerequisite = { 
+				focus = GER_alliance_with_spc2
+		}
+
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+		}
+
+		completion_reward = {
+			GER = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 50
+				    target = USB
+				}
+			}
+		}
+	}
+
+#################
+### RELATIONS ###
+#################
+
+	focus = {
 		id = GER_hungary_relations
 		icon = GFX_focus_generic_befriend_hungary
 		text = "Approach Hungary"
@@ -626,7 +753,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -657,7 +784,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -688,7 +815,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
@@ -719,7 +846,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		search_filters = { FOCUS_FILTER_DIPLOMACY } 
 
 		ai_will_do = {
 			factor = 1
