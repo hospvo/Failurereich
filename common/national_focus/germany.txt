@@ -927,7 +927,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_attack_belgium
+		id = GER_attack_switzerland
 		icon = GFX_focus_attack_switzerland
 		text = "Violate Swiss neutrality"
 		mutually_exclusive = { focus = GER_civil_war }
@@ -962,8 +962,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		text = "A Collapsing Nation"
 		mutually_exclusive = {
-		focus = GER_attack_switzerland 
-		focus = GER_attack_belgium 		
+			focus = GER_attack_switzerland 		
 		}
 		prerequisite = { 
 				focus = GER_neutrality
@@ -1056,8 +1055,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_Switzerland2
-		icon = GFX_goal_rhineland
+		id = GER_czech_puppet
+		icon = GFX_foal_generic_small_arms
 		text = "Take Switzerland"
 		prerequisite = { 
 				focus = GER_reconstruction
@@ -1082,7 +1081,7 @@ focus_tree = {
 				add_manpower = 25000
 				create_wargoal= { 
 					type = annex_everything 
-					target = SWI
+					target = CZE
 				}
 		}
 	}
