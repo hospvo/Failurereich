@@ -1505,11 +1505,10 @@ focus_tree = {
 	focus = {
 		id = GER_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = bomber_focus focus = GER_fighter_focus }
+		prerequisite = { focus = GER_bomber_focus focus = GER_fighter_focus }
 		text = "Built Air base"
-		x = 34
+		x = 38
 		y = 2
-		relative_position_id = bomber_focus
 		cost = 10
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
