@@ -522,7 +522,9 @@ focus_tree = {
 		}
 	}
 
-#### Other focuses ####
+####################
+#### DIPLOMATIC ####
+####################
 
 	focus = {
 		id = GER_non_aggression
@@ -616,9 +618,133 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_hungary_relations
+		icon = GFX_focus_generic_befriend_hungary
+		text = "Approach Hungary"
+
+		x = 24
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = HUN
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_finland_relations
+		icon = GFX_focus_invite_finland
+		text = "Approach Finland"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = FIN
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_dutch_relations
+		icon = GFX_focus_generic_befriend_holland
+		text = "Approach Holland"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 24
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = HOL
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = GER_bulgaria_relations
+		icon = GFX_focus_generic_befriend_bulgaria
+		text = "Approach Bulgaria"
+
+		prerequisite = { 
+				focus = GER_hungary_relations
+		}
+
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = BUL
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+####################
+#### STRASSER ####
+####################
+
+	focus = {
 		id = GER_Strasser
 		icon = GFX_goal_generic_military_sphere
-		text = "National-Communist leader"
+		text = "A National-Communist leader"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_luxemburg }
 		x = 12
@@ -651,7 +777,7 @@ focus_tree = {
 	focus = {
 		id = GER_neutrality
 		icon = GFX_goal_generic_military_sphere
-		text = "Purge leftist"
+		text = "Purge Thalmanists"
 		prerequisite = { 
 				focus = GER_Strasser
 		}
@@ -676,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = GER_attack_belgium
 		icon = GFX_focus_attack_switzerland
-		text = "Violate neutrality"
+		text = "Violate Swiss neutrality"
 		mutually_exclusive = { focus = GER_civil_war }
 		prerequisite = { 
 				focus = GER_neutrality
@@ -707,7 +833,7 @@ focus_tree = {
 	focus = {
 		id = GER_civil_war
 		icon = GFX_goal_generic_war_with_comintern
-		text = "Failed Syndicate"
+		text = "A Collapsing Nation"
 		mutually_exclusive = {
 		focus = GER_attack_switzerland 
 		focus = GER_attack_belgium 		
@@ -731,126 +857,6 @@ focus_tree = {
 
 		completion_reward = {
 				country_event = { days = 1 id = ger_civil_war.1 }
-		}
-	}
-
-	focus = {
-		id = GER_hungary_relations
-		icon = GFX_focus_generic_befriend_hungary
-		text = "approach Hungary"
-
-		x = 24
-		y = 0
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = HUN
-			    modifier = sparcatists_collaborator 
-			}
-		}
-	}
-
-	focus = {
-		id = GER_finland_relations
-		icon = GFX_focus_invite_finland
-		text = "approach Finland"
-
-		prerequisite = { 
-				focus = GER_hungary_relations
-		}
-
-		x = 22
-		y = 1
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = FIN
-			    modifier = sparcatists_collaborator 
-			}
-		}
-	}
-
-	focus = {
-		id = GER_dutch_relations
-		icon = GFX_focus_generic_befriend_holland
-		text = "approach Holland"
-
-		prerequisite = { 
-				focus = GER_hungary_relations
-		}
-
-		x = 24
-		y = 1
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = HOL
-			    modifier = sparcatists_collaborator 
-			}
-		}
-	}
-
-	focus = {
-		id = GER_bulgaria_relations
-		icon = GFX_focus_generic_befriend_bulgaria
-		text = "approach Bulgaria"
-
-		prerequisite = { 
-				focus = GER_hungary_relations
-		}
-
-		x = 26
-		y = 1
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = BUL
-			    modifier = sparcatists_collaborator 
-			}
 		}
 	}
 
@@ -985,7 +991,151 @@ focus_tree = {
 	}
 
 #############################
-###### INDUSTRY AND ARMY ####
+###### ARMY AND RESEARCH ####
 #############################
 
+	focus = {
+		id = GER_land_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		text = "Built RöteKraft"
+		x = 30
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GER_armament_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = GER_land_effort }
+		text = "Built Artillery"
+		x = 30
+		y = 1
+		relative_position_id = GER_land_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 2.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GER_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = GER_land_effort }
+		bypass = { has_tech = GER_motorised_infantry }
+		text = "Rote Motorization"
+		x = 32
+		y = 1
+		relative_position_id = GER_land_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 2.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = GER_land_effort }
+		text = "Rote Doctrine"
+		x = 32
+		y = 2
+		relative_position_id = GER_land_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GER_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = GER_armament_effort }
+		text = "Improve Equipment"
+		x = 28
+		y = 2
+		relative_position_id = GER_armament_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 2.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GER_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = GER_motorization_effort }
+		text = "Rote Mechanization"
+		x = 28
+		y = 2
+		relative_position_id = GER_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
 }
