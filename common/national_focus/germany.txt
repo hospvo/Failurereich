@@ -1048,7 +1048,7 @@ focus_tree = {
 		text = "Rote Motorization"
 		x = 32
 		y = 1
-		relative_position_id = GER_land_effort
+
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1139,6 +1139,7 @@ focus_tree = {
 		id = GER_doctrine_effort_2
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = GER_doctrine_effort }
+		text = "Improve Land doctrine"
 		x = 30
 		y = 3
 		relative_position_id = GER_doctrine_effort
@@ -1163,6 +1164,7 @@ focus_tree = {
 		id = GER_equipment_effort_3
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = GER_equipment_effort_2 }
+		text = "Artillery upgrade"
 		x = 30
 		y = 3
 		cost = 10
@@ -1186,6 +1188,7 @@ focus_tree = {
 		id = GER_armor_effort
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = GER_mechanization_effort }
+		text = "Panzer on"
 		x = 30
 		y = 3
 		cost = 10
@@ -1210,6 +1213,7 @@ focus_tree = {
 		prerequisite = { focus = GER_equipment_effort_3 }
 		prerequisite = { focus = GER_doctrine_effort_2 }
 		prerequisite = { focus = GER_armor_effort }
+		text = "Red Special forces"
 		x = 30
 		y = 4
 		cost = 10
