@@ -1509,7 +1509,6 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_large_navy }
 		x = 40
 		y = 1
-		relative_position_id = naval_effort
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1550,7 +1549,6 @@ focus_tree = {
 		prerequisite = { focus = GER_flexible_navy }
 		x = 40
 		y = 2
-		relative_position_id = aviation_effort_2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1575,7 +1573,6 @@ focus_tree = {
 		mutually_exclusive = { focus = flexible_navy }
 		x = 42
 		y = 1
-		relative_position_id = naval_effort
 		cost = 10
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
@@ -1612,7 +1609,6 @@ focus_tree = {
 		prerequisite = { focus = flexible_navy focus = large_navy }
 		x = 40
 		y = 2
-		relative_position_id = flexible_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1650,7 +1646,6 @@ focus_tree = {
 		prerequisite = { focus = large_navy focus = flexible_navy }
 		x = 42
 		y = 3
-		relative_position_id = large_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1689,7 +1684,6 @@ focus_tree = {
 		prerequisite = { focus = submarine_effort }
 		x = 40
 		y = 4
-		relative_position_id = submarine_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -1727,7 +1721,6 @@ focus_tree = {
 		prerequisite = { focus = cruiser_effort }
 		x = 42
 		y = 4
-		relative_position_id = cruiser_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
