@@ -1377,7 +1377,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 41
+		x = 40
 		y = 0
 		cost = 10
 
@@ -1547,7 +1547,7 @@ focus_tree = {
 		id = GER_NAV_effort
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = GER_flexible_navy }
-		x = 40
+		x = 42
 		y = 2
 		cost = 10
 
@@ -1569,8 +1569,7 @@ focus_tree = {
 	focus = {
 		id = GER_large_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = naval_effort }
-		mutually_exclusive = { focus = flexible_navy }
+		mutually_exclusive = { focus = GER_flexible_navy }
 		x = 42
 		y = 1
 		cost = 10
