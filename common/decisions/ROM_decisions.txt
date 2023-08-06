@@ -7,7 +7,7 @@
 		allowed = { tag = ROM }
 		
 		available = {
-			has_completed_focus = ROM_revive_our_economy
+			has_completed_focus = ROM_army_reforms
 			has_tech = support_weapons
 			has_tech = tech_recon
 			has_tech = interwar_artillery
@@ -70,7 +70,6 @@
 			create_equipment_variant = {
 			name = "FCM 36"
 			type = light_tank_equipment_2
-			obsolete = yes
 			upgrades = {
 	        tank_armor_upgrade = 3
             tank_reliability_upgrade = 2
@@ -89,7 +88,6 @@
 			create_equipment_variant = {
 			name = "LT. vz. 35"
 			type = light_tank_equipment_2
-			obsolete = yes
 			upgrades = {
 			tank_reliability_upgrade = 1
             tank_engine_upgrade = 3
@@ -148,6 +146,47 @@
 
 		ai_will_do = {
 			base = 1
+		}
+	}
+}
+ROM_economy_reforms_decisions_category = {
+
+	ROM_mission_economy_reforms = {
+		
+		icon = generic_military
+		
+		allowed = { tag = ROM }
+		
+		available = {
+			has_completed_focus = ROM_revive_our_economy
+			has_tech = improved_machine_tools
+			has_tech = construction1
+			high_industriliazed_walachia_economy_reform = yes
+			industriliaze_rural_moldovia_economy_reform = yes
+			selected_expand_oil_industry = yes
+			selected_expanded_metalurgy = yes
+		}
+		
+		activation = { always = no }
+		
+		fire_only_once = yes
+		
+		is_good = no
+		
+		days_mission_timeout = 365
+		
+		cancel_trigger = {
+
+		}
+		
+		timeout_effect = {
+		country_event = romania_f.3 
+			add_stability = -0.02
+		}
+		
+		complete_effect = {
+			country_event = romania_f.2 
+			add_stability = 0.02
 		}
 	}
 }

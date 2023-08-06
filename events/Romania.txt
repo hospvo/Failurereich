@@ -255,3 +255,58 @@ country_event = {#fortification
 			}
 
 	}
+	
+	### economy
+	
+	country_event = {#
+	id = romania_f.11
+	title = romania_f.11.t
+	desc = romania_f.11.d
+	picture = GFX_event_test
+		fire_only_once = yes
+	
+	trigger = {
+	focus_progress = {
+    focus = ROM_revive_our_economy
+    progress > 0.5
+		}
+	}
+	option = {#walachia
+		name = romania_f.11.a
+		ai_chance = { factor = 0 }
+		set_country_flag = high_industriliazed_walachia_economy_reform
+				country_event = { days = 10 id = romania_f.12 }
+
+			}
+			
+	option = {#moldavia
+		name = romania_f.11.a
+		ai_chance = { factor = 0 }
+			set_country_flag = industriliaze_rural_moldovia_economy_reform
+					country_event = { days = 10 id = romania_f.12 }
+			}
+
+	}
+	
+	country_event = {#future of resource
+	id = romania_f.12
+	title = romania_f.12.t
+	desc = romania_f.12.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#expand oil industry
+		name = romania_f.12.a
+		ai_chance = { factor = 0 }
+		set_country_flag = expand_oil_industry_reform
+
+			}
+	option = {#metalurgy
+		name = romania_f.12.b
+		ai_chance = { factor = 0 }
+		set_country_flag = expand_metalurgy_industry_reform
+			}
+	}
+	

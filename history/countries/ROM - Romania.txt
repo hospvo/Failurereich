@@ -13,6 +13,8 @@ set_research_slots = 3
 set_stability = 0.38
 set_war_support = 0.45
 
+
+set_variable
 # Starting tech
 set_technology = {
 	tech_support = 1		

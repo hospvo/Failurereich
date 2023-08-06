@@ -30,7 +30,7 @@ ideas = {
 		
 		ROM_divided_land = {
 
-			picture = generic_volunteer_expedition_bonus
+			picture = GFX_idea_ROM_divided_romania
 
 			removal_cost = -1
 			

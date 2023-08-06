@@ -87,3 +87,39 @@
 			}
 		}
 	}
+	
+	high_industriliazed_walachia_economy_reform = {
+	if = {
+	limit = {
+	has_country_flag = high_industriliazed_walachia_reform
+			}
+		has_tech = concentrated_industry
+		}
+	}
+	
+	industriliaze_rural_moldovia_economy_reform = {
+	if = {
+	limit = {
+	has_country_flag = industriliaze_rural_moldovia_reform
+			}
+		has_tech = dispersed_industry
+		}
+	}
+	
+	selected_expand_oil_industry = {
+	if = {
+	limit = {
+	has_country_flag = expand_oil_industry_reform
+			}
+		has_tech = fuel_refining
+		}
+	}
+	
+	selected_expanded_metalurgy = {
+	if = {
+	limit = {
+	has_country_flag = expand_metalurgy_industry_reform
+			}
+		has_tech = fuel_refining
+		}
+	}
