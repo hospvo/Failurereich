@@ -120,7 +120,7 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
+			    type = annex_everything
 			    target = KOR
 			}
 			KOR = {
@@ -152,7 +152,7 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
+			    type = annex_everything
 			    target = VIN
 			}
 			VIN = {
@@ -284,7 +284,7 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
+			    type = annex_everything
 			    target = KOR
 			}
 			KOR = {
@@ -316,7 +316,7 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
+			    type = annex_everything
 			    target = VIN
 			}
 			VIN = {
