@@ -821,11 +821,11 @@ focus_tree = {
 		}
 		bypass = {
 			28 = { is_demilitarized_zone = no }
-			842 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
 		}
 
 		completion_reward = {
-			842 = { set_demilitarized_zone = no }
+			914 = { set_demilitarized_zone = no }
 			28 = { set_demilitarized_zone = no }
 			add_political_power = 190
 			army_experience = 5
