@@ -1655,7 +1655,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 40
+		x = 44
 		y = 0
 		cost = 10
 
@@ -1785,7 +1785,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_large_navy }
-		x = 38
+		x = 42
 		y = 1
 		cost = 10
 		
@@ -1825,7 +1825,7 @@ focus_tree = {
 		id = GER_NAV_effort
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = GER_flexible_navy }
-		x = 38
+		x = 42
 		y = 2
 		cost = 10
 
@@ -1849,7 +1849,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = GER_naval_effort }
 		mutually_exclusive = { focus = GER_large_navy }
-		x = 42
+		x = 46
 		y = 1
 		cost = 10
 		
@@ -1885,7 +1885,7 @@ focus_tree = {
 		id = GER_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = GER_large_navy }
-		x = 42
+		x = 46
 		y = 2
 		cost = 10
 		
@@ -1922,7 +1922,7 @@ focus_tree = {
 		id = GER_cruiser_effort
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = GER_NAV_effort }
-		x = 38
+		x = 42
 		y = 3
 		cost = 10
 		
@@ -1960,7 +1960,7 @@ focus_tree = {
 		id = GER_destroyer_effort
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = GER_submarine_effort }
-		x = 42
+		x = 46
 		y = 3
 		cost = 10
 
@@ -1997,7 +1997,7 @@ focus_tree = {
 		id = GER_capital_ships_effort
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GER_cruiser_effort focus = GER_destroyer_effort }
-		x = 40
+		x = 44
 		y = 4
 		cost = 10
 
