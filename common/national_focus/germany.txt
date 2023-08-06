@@ -1362,12 +1362,6 @@ focus_tree = {
 			}
 		}
 	}
-			fier = {
-				factor = 0.25
-				always = yes
-			}
-		}
-	}
 
 #################
 ### AIR FORCE ###
