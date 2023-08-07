@@ -491,6 +491,10 @@ focus_tree = {
 		}
 	}
 
+#####################
+### PETAIN-ROCQUE ###
+#####################
+
 	focus = {
 		id = FRA_old_marechal_speech
 		icon = GFX_goal_generic_dangerous_deal
@@ -504,6 +508,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			add_manpower = 100000
 		}
 	}
 
@@ -526,10 +531,10 @@ focus_tree = {
 
 		completion_reward = {
 			set_politics = {
-				ruling_party = democratic
+				ruling_party = fascism
 			}
 			set_party_name = { 
-    			ideology = democratic
+    			ideology = fascism
     			long_name = "PSF"
     			name = "Parti Social Français"
 			}
@@ -557,7 +562,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = FRA_military_junta_1
 			add_popularity = {
-				ideology = democratic 
+				ideology = fascism 
 				popularity = 0.20
 			}
 		}
@@ -605,10 +610,10 @@ focus_tree = {
 
 		completion_reward = {
 			set_politics = {
-				ruling_party = reactionary
+				ruling_party = fascism
 			}
 			set_party_name = { 
-				ideology = reactionary
+				ideology = fascism
 				long_name = "Military Junta"
 				name = "Military Junta"
 			}
@@ -738,7 +743,7 @@ focus_tree = {
 			add_political_power = 100
 			add_war_support = 0.10
 			add_popularity = {
-				ideology = reactionary 
+				ideology = fascism 
 				popularity = 0.20
 			}
 		}
@@ -832,9 +837,258 @@ focus_tree = {
 		}
 	}
 
-	##############
-	### DORIOT ###
-	##############
+###### WAR ######
+
+	focus = {
+		id = FRA_luxemburg
+		icon = GFX_goal_support_fascism
+		text = "Annex Luxemburg"
+
+		prerequisite = { 
+				focus = FRA_ardennes
+		}
+
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 400000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.0 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_belgium
+		icon = GFX_goal_support_fascism
+		text = "Divide Belgium"
+
+		prerequisite = { 
+				focus = FRA_ardennes
+		}
+
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+			has_army_manpower = { size > 600000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invade_holland
+		icon = GFX_goal_support_fascism
+		text = "Take Holland"
+
+
+		prerequisite = { 
+				focus = FRA_luxemburg
+		}
+		prerequisite = { 
+				focus = FRA_belgium
+		}
+
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = HOL
+		      		type = annex_everything
+	        	}
+			FRA = {
+				add_state_claim = 35
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invade_germany
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Invade Germany"
+
+		prerequisite = { 
+				focus = FRA_invade_holland
+		}
+
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+	focus = {
+		id = FRA_help_romania
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Allie Romania"
+
+		prerequisite = { 
+				focus = FRA_invade_holland
+		}
+
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			ROM = {
+				give_guarantee = FRA
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_romanian_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach Romania"
+
+		x = 26
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ROM
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_british_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach BUF"
+
+		prerequisite = { 
+				focus = FRA_romanian_relations
+		}
+
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ENG
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_SRI_relations
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		text = "approach NFP"
+
+		prerequisite = { 
+				focus = FRA_british_relations
+		}
+
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = ITA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+##############
+### DORIOT ###
+##############
 
 	focus = {
 		id = FRA_doriot
@@ -878,7 +1132,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 			    ideology = anarchist
-			    popularity = 0.2
+			    popularity = 0.1
 			}
 		}
 	}
@@ -901,10 +1155,38 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 			    ideology = anarchist
-			    popularity = 0.2
+			    popularity = 0.1
 			}
 		}
 	}
+
+	focus = {
+		id = FRA_revolution
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = FRA_reintroduce_trade_unions focus = FRA_social_reforms }
+		x = 1
+		y = 1
+		relative_position_id = FRA_doriot
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = anarchist
+			    popularity = 0.1
+			}
+		}
+	}
+
+
+##################
+### MONARCHIST ###
+##################
 
 	focus = {
 		id = FRA_monarchist_coup
@@ -920,6 +1202,15 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			add_manpower = 10000
+			set_politics = {
+				ruling_party = reactionary
+			}
+			set_party_name = { 
+				ideology = reactionary
+				long_name = "Regency"
+				name = "Council of the regency"
+			}
 		}
 	}
 
