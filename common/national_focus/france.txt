@@ -1497,7 +1497,7 @@ focus_tree = {
 		}
 
 		x = 1
-		y = 3
+		y = 4
 		relative_position_id = FRA_monarchist_coup
 		cost = 10
 		available_if_capitulated = yes
@@ -1524,7 +1524,7 @@ focus_tree = {
 				focus = FRA_turin
 		}
 
-		x = 0
+		x = -1
 		y = 4
 		relative_position_id = FRA_monarchist_coup
 		cost = 10
