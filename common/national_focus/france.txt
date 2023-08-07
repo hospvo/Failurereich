@@ -848,8 +848,9 @@ focus_tree = {
 				focus = FRA_ardennes
 		}
 
-		x = 2
-		y = 3
+		x = -1
+		y = 1
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
@@ -878,8 +879,9 @@ focus_tree = {
 				focus = FRA_ardennes
 		}
 
-		x = 6
-		y = 3
+		x = 1
+		y = 1
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
@@ -912,8 +914,9 @@ focus_tree = {
 				focus = FRA_belgium
 		}
 
-		x = 4
-		y = 4
+		x = 0
+		y = 2
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -945,8 +948,9 @@ focus_tree = {
 				focus = FRA_invade_holland
 		}
 
-		x = 2
-		y = 5
+		x = 1
+		y = 3
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -977,8 +981,9 @@ focus_tree = {
 				focus = FRA_invade_holland
 		}
 
-		x = 6
-		y = 5
+		x = -1
+		y = 3
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -1160,26 +1165,120 @@ focus_tree = {
 		}
 	}
 
+##### CIVIL WAR #####
+
 	focus = {
-		id = FRA_revolution
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		id = FRA_ana2
+		icon = GFX_focus_fra_french_union
+		text = "The Black Internationale"
 		prerequisite = { focus = FRA_reintroduce_trade_unions focus = FRA_social_reforms }
-		x = 1
-		y = 1
+		mutually_exclusive = { focus = FRA_ref }
+		x = 0
+		y = 2
 		relative_position_id = FRA_doriot
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.12 }
+			}
+		}
+	}
 
+	focus = {
+		id = FRA_CNT
+		icon = GFX_focus_fra_french_union
+		text = "CNT alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		x = -1
+		y = 3
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
 		ai_will_do = {
 			factor = 1
 		}
 
+		available = {
+			    country_exists = SPC
+		}
+
 		completion_reward = {
-			add_popularity = {
-			    ideology = anarchist
-			    popularity = 0.1
+			FRA = {
+				country_event = { days = 1 id = france.13 }
 			}
+		}
+	}
+
+	focus = {
+		id = FRA_free_ukraine
+		icon = GFX_focus_fra_french_union
+		text = "Ukraine Alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		x = 1
+		y = 3
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			    NOT = { country_exists = UKR }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.14 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_german_ana
+		icon = GFX_focus_fra_french_union
+		text = "A free Germany"
+		prerequisite = { 
+				focus = FRA_free_ukraine
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = GER
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
 		}
 	}
 
@@ -1215,7 +1314,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_con
+		id = FRA_conservatives_monarch
 		icon = GFX_focus_generic_monarchy_1
 		text = "The Conservatives"
 		prerequisite = { 
@@ -1286,6 +1385,160 @@ focus_tree = {
 			}
 			set_politics = { ruling_party = neutrality }
 			set_cosmetic_tag = FRA_ORLEANS
+		}
+	}
+
+	focus = {
+		id = FRA_luxemburg_belgium
+		icon = GFX_goal_support_fascism
+		text = "Belgium"
+
+		prerequisite = { 
+				focus = FRA_conservatives_monarch
+				focus = FRA_orleans_restoration
+		}
+
+		x = -1
+		y = 2
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_switzerland
+		icon = GFX_goal_support_fascism
+		text = "Geneve"
+
+		prerequisite = { 
+				focus = FRA_conservatives_monarch
+				focus = FRA_orleans_restoration
+		}
+
+		x = 1
+		y = 2
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_turin
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "130 departements"
+
+		prerequisite = { 
+				focus = FRA_luxemburg_belgium
+				focus = FRA_switzerland
+		}
+
+		x = -1
+		y = 3
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_spanish_crown
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Help Spanish monarchists"
+
+		prerequisite = { 
+				focus = FRA_turin
+		}
+
+		x = 1
+		y = 3
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	FRA = { add_to_faction = SPR }
+		}
+	}
+
+	focus = {
+		id = FRA_divided_ger
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Germany into piece"
+
+		prerequisite = { 
+				focus = FRA_spanish_crown
+		}
+
+		x = 0
+		y = 4
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
 		}
 	}
 }                       
