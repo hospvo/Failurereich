@@ -1007,7 +1007,7 @@ focus_tree = {
 		icon = GFX_focus_GRE_reevaluating_the_drachma
 		text = "approach Romania"
 
-		x = 26
+		x = 28
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -1038,7 +1038,7 @@ focus_tree = {
 				focus = FRA_romanian_relations
 		}
 
-		x = 26
+		x = 28
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -1069,7 +1069,7 @@ focus_tree = {
 				focus = FRA_british_relations
 		}
 
-		x = 26
+		x = 28
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -1254,6 +1254,7 @@ focus_tree = {
 		icon = GFX_focus_fra_french_union
 		text = "A free Germany"
 		prerequisite = { 
+				focus = FRA_CNT
 				focus = FRA_free_ukraine
 		}
 		x = 0
@@ -1291,7 +1292,7 @@ focus_tree = {
 		id = FRA_monarchist_coup
 		icon = GFX_focus_focus_fra_fascist_threat
 		mutually_exclusive = { focus = FRA_old_marechal_speech }
-		x = 9
+		x = 10
 		y = 0
 		relative_position_id = FRA_old_marechal_speech
 		cost = 10
@@ -1515,7 +1516,7 @@ focus_tree = {
 		text = "Germany into piece"
 
 		prerequisite = { 
-				focus = FRA_spanish_crown
+				focus = FRA_turin
 		}
 
 		x = 0
