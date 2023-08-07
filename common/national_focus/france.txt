@@ -811,7 +811,7 @@ focus_tree = {
 			focus = FRA_old_marechal_speech
 			focus = FRA_monarchist_coup
 		}
-		x = 10
+		x = 8
 		y = 1
 		relative_position_id = FRA_old_marechal_speech
 		cost = 10
@@ -1105,7 +1105,7 @@ focus_tree = {
 		icon = GFX_focus_fra_milice
 		prerequisite = { focus = FRA_old_marechal_speech }
 		mutually_exclusive = { focus = FRA_petain  focus = FRA_rocquist_coalition }
-		x = 6
+		x = 4
 		y = 1
 		relative_position_id = FRA_old_marechal_speech
 		cost = 5
