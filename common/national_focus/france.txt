@@ -811,7 +811,7 @@ focus_tree = {
 			focus = FRA_old_marechal_speech
 			focus = FRA_monarchist_coup
 		}
-		x = 6
+		x = 10
 		y = 1
 		relative_position_id = FRA_old_marechal_speech
 		cost = 10
