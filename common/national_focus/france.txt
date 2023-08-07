@@ -1466,7 +1466,7 @@ focus_tree = {
 				focus = FRA_switzerland
 		}
 
-		x = -1
+		x = 0
 		y = 3
 		relative_position_id = FRA_monarchist_coup
 		cost = 10
