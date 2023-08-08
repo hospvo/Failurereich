@@ -1,13 +1,13 @@
 state={
 	id=75
 	name="STATE_75"
-	manpower = 2598400
+	manpower = 2678400
 	resources={
 		steel=4 # was: 6
 		oil = 2 # was: 4
 	}
 
-	state_category = city
+	state_category = large_city
 
 	history={
 		owner = CZE
@@ -18,8 +18,9 @@ state={
 			6562 5
 		}
 		buildings = {
-			infrastructure = 7
+			infrastructure = 4
 			industrial_complex = 4
+			arms_factory = 2
 			air_base = 5
 
 		}

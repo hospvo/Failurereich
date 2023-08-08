@@ -134,3 +134,7 @@ if = {
 	}
 }
 
+	add_ideas = {
+		CZE_no_work_no_kolaches
+		CZE_competing_giant_industry
+	}

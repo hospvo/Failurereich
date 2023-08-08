@@ -30,7 +30,7 @@ ideas = {
 		
 		ROM_divided_land = {
 
-			picture = GFX_idea_ROM_divided_romania
+			picture = divided_romania
 
 			removal_cost = -1
 			
@@ -128,24 +128,6 @@ ideas = {
 			}
 		}
 
-		ROM_king_carol_emptied_accounts = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				consumer_goods_factor = 0.15
-				political_power_gain = -0.25
-			}
-		}
-
 		ROM_figurehead_king_michael = {
 
 			removal_cost = -1
@@ -203,82 +185,6 @@ ideas = {
 			}
 		}
 
-		ROM_constitutional_guarantees = {
-
-			picture = generic_constitutional_guarantees
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				industrial_capacity_factory = 0.05
-			}
-		}
-
-		ROM_preserve_greater_romania = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-				has_government = democratic 
-			}				
-
-			
-			modifier = {
-				guarantee_tension = -1.0
-				guarantee_cost = -0.5
-			}
-		}
-
-		ROM_a_deal_with_the_devil = {
-
-			picture = generic_deal_with_the_devil
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			modifier = {
-				communism_drift = 0.01
-			}
-		}
-
-		ROM_a_deal_with_the_devil_2 = {
-
-			picture = generic_deal_with_the_devil
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			modifier = {
-				communism_drift = 0.01
-				conscription = 0.01
-			}
-		}
 
 		ROM_agrarian_reform = {
 
@@ -296,42 +202,6 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.05
-			}
-		}
-
-		ROM_exploit_the_baita_mines = {
-
-			picture = generic_exploit_mines
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				production_speed_nuclear_reactor_factor = 0.25
-			}
-		}
-
-		ROM_balkans_dominance = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				justify_war_goal_time = -0.25
 			}
 		}
 
