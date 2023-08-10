@@ -1409,7 +1409,7 @@ focus_tree = {
 	focus = {
 		id = FRA_luxemburg_belgium
 		icon = GFX_goal_support_fascism
-		text = "Belgium"
+		text = "Invade Belgium"
 
 		prerequisite = { 
 				focus = FRA_conservatives_monarch
@@ -1440,7 +1440,7 @@ focus_tree = {
 	focus = {
 		id = FRA_switzerland
 		icon = GFX_goal_support_fascism
-		text = "Geneve"
+		text = "Annex Geneve"
 
 		prerequisite = { 
 				focus = FRA_conservatives_monarch
@@ -1471,7 +1471,7 @@ focus_tree = {
 	focus = {
 		id = FRA_turin
 		icon = GFX_focus_focus_fra_national_resistance_council
-		text = "130 departements"
+		text = "The 130 departements"
 
 		prerequisite = { 
 				focus = FRA_luxemburg_belgium
@@ -1502,7 +1502,7 @@ focus_tree = {
 	focus = {
 		id = FRA_spanish_crown
 		icon = GFX_focus_focus_fra_ratify_stresa
-		text = "Help Spanish monarchists"
+		text = "Help the Spanish monarchists"
 
 		prerequisite = { 
 				focus = FRA_turin
