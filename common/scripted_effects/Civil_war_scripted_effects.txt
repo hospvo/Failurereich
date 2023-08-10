@@ -335,25 +335,25 @@ GER_setup_civil_war = {
 
 		transfer_units_fraction = {
 			target = PRE
-			size = 0.23
+			size = 0.25
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = HAN
-			size = 0.23
+			size = 0.35
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = BAY
-			size = 0.23
+			size = 0.35
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = WUR
-			size = 0.23
+			size = 0.25
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
 		}
