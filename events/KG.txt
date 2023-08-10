@@ -185,7 +185,7 @@ country_event = {
 }
 
 country_event = {
-	id = ug.7
+	id = kg.7
 	title = "Operation Pericles"
 	desc = ""
 	picture = GFX_report_event_generic_read_write
@@ -294,7 +294,7 @@ country_event = {
 				}
 			}
 		}	
-}
+	}
 
 
 country_event = {
@@ -330,8 +330,7 @@ country_event = {
 				}
 			}	
 		}
-	}	
-}
+	}
 
 country_event = {
 	id = kg.11
@@ -359,4 +358,4 @@ country_event = {
 				}
 			}	
 		}
-}
+	}
