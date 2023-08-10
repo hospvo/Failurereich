@@ -2039,6 +2039,7 @@ focus_tree = {
 	focus = {
 		id = GER_industrial_effort
 		icon = GFX_goal_generic_production
+		text = "Red Industry"
 		x = 50
 		y = 0
 		cost = 10
@@ -2068,10 +2069,11 @@ focus_tree = {
 	focus = {
 		id = GER_construction_effort
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = industrial_effort }
+		prerequisite = { focus = GER_industrial_effort }
 		x = -1
 		y = 1
-		relative_position_id = industrial_effort
+		relative_position_id = GER_industrial_effort
+		text = "Bases for the industry"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2143,10 +2145,11 @@ focus_tree = {
 	focus = {
 		id = GER_production_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = industrial_effort }
+		prerequisite = { focus = GER_industrial_effort }
 		x = 1
 		y = 1
-		relative_position_id = industrial_effort
+		relative_position_id = GER_industrial_effort
+		text = "Industrial Red army"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2217,10 +2220,11 @@ focus_tree = {
 	focus = {
 		id = GER_construction_effort_2
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = construction_effort }
+		prerequisite = { focus = GER_construction_effort }
 		x = 0
 		y = 1
-		relative_position_id = construction_effort
+		relative_position_id = GER_construction_effort
+		text = "Collectivize buildings"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2291,10 +2295,11 @@ focus_tree = {
 	focus = {
 		id = GER_production_effort_2
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = production_effort }
+		prerequisite = { focus = GER_production_effort }
 		x = 0
 		y = 1
-		relative_position_id = production_effort
+		relative_position_id = GER_production_effort
+		text = "Collectivize lands"
 		cost = 10
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2365,10 +2370,11 @@ focus_tree = {
 	focus = {
 		id = GER_infrastructure_effort
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = construction_effort_2 }
+		prerequisite = { focus = GER_construction_effort_2 }
 		x = 0
 		y = 1
-		relative_position_id = construction_effort_2
+		relative_position_id = GER_construction_effort_2
+		text = "Built New infrastructures"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2461,10 +2467,11 @@ focus_tree = {
 	focus = {
 		id = GER_production_effort_3
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = production_effort_2 }
+		prerequisite = { focus = GER_production_effort_2 }
 		x = 0
 		y = 1
-		relative_position_id = production_effort_2
+		relative_position_id = GER_production_effort_2
+		text = "Effort for production"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2535,10 +2542,11 @@ focus_tree = {
 	focus = {
 		id = GER_infrastructure_effort_2
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = GER_infrastructure_effort }
 		x = 0
 		y = 1
-		relative_position_id = infrastructure_effort
+		relative_position_id = GER_infrastructure_effort
+		text = "Built improved Buildings"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2631,10 +2639,11 @@ focus_tree = {
 	focus = {
 		id = GER_construction_effort_3
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = GER_infrastructure_effort }
 		x = 2
 		y = 1
-		relative_position_id = infrastructure_effort
+		relative_position_id = GER_infrastructure_effort
+		text = "Built advanced Factories"
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -2705,10 +2714,11 @@ focus_tree = {
 	focus = {
 		id = GER_nuclear_effort
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = GER_infrastructure_effort_2 }
+		text = "Improve V1 and V2"
 		x = -2
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = GER_infrastructure_effort_2
 		cost = 10
 		
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -2735,10 +2745,11 @@ focus_tree = {
 	focus = {
 		id = GER_extra_tech_slot
 		icon = GFX_focus_research
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = GER_infrastructure_effort_2 }
+		text = "Spartacist technology"
 		x = 0
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = GER_infrastructure_effort_2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -2753,7 +2764,8 @@ focus_tree = {
 	focus = {
 		id = GER_extra_tech_slot_2
 		icon = GFX_focus_research
-		prerequisite = { focus = extra_tech_slot }
+		prerequisite = { focus = GER_extra_tech_slot }
+		text = "Advanced technology"
 		available = {
 			num_of_factories > 50
 		}
@@ -2761,7 +2773,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		x = 0
 		y = 1
-		relative_position_id = extra_tech_slot
+		relative_position_id = GER_extra_tech_slot
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -2776,10 +2788,11 @@ focus_tree = {
 	focus = {
 		id = GER_secret_weapons
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = GER_infrastructure_effort_2 }
+		text = "VolksRocket"
 		x = 2
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = GER_infrastructure_effort_2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
