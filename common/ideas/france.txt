@@ -192,6 +192,50 @@ ideas = {
 			}
 		}
 
+		FRA_work_family_fatherland = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = FRA
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				conscription_factor = 0.15
+			}
+		}
+
+		FRA_fascist_economic_bloc = {
+
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
 		FRA_womens_suffrage = {
 			picture = generic_constitutional_guarantees
 			allowed = {
@@ -206,7 +250,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.25
 			}
 		}
 		FRA_agricultural_collectivization = {
@@ -223,7 +266,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = 0.15
 			}
 		}
 		FRA_anti_fascist_immigrants = {

@@ -9,9 +9,11 @@
   FRA_left_party: "PRS"
   FRA_left_party_long: "Parti Radical-Socialiste"
   FRA_neutrality_party: "Alliance démocratique"
-  FRA_democratic_party: "Rocquistes"
-  FRA_reactionary_party: "Pétainistes"
-  FRA_fascism_party: "Doriotistes"
+  FRA_democratic_party: "Fédération républicaine"
+  FRA_reactionary_party: "Pétainistes - M"
+  FRA_reactionary_party_long: "Pétainistes - Militaires"
+  FRA_fascism_party: "Pétainistes - F"
+  FRA_fascism_party_long: "Pétainistes - Fascistes"
 
   ### IDEAS ###
   FRA_military_junta: "Military Junta"
@@ -35,14 +37,38 @@
   FRA_renforce_paramilitaries: "Renforce Paramilitaries"
   FRA_christian_social_values: "Christian Social Values"
   FRA_promote_solidarity: "Promote Solidarity"
+  FRA_reach_to_fascist_countries: "Reach to Fascist Countries"
+  FRA_ardennes: "Remilitarization of the Ardennes"
   FRA_patriotic_peasantry: "Patriotic Peasantry"
   FRA_renforce_corporatism: "Renforce Corporatism"
   FRA_petain: "Military Self-Coup"
   FRA_cult_of_personnality: "Continue the Cult of Personnality"
   FRA_renforce_the_army: "Renforce the Army"
   FRA_work_family_fatherland: "Work, Family, Fatherland"
+  FRA_fascist_economic_bloc: "Fascist Economic Bloc"
+  FRA_pact_with_the_netherlands: "Pact with [HOL.GetNameDef]"
+  FRA_luxembourg: "Annex [LUX.GetNameDef]"
+  FRA_belgium: "Annex Wallonia"
   FRA_doriot: "National Syndicalism"
   FRA_social_reforms: "Social Reforms"
   FRA_monarchist_coup: "Monarchists Coup"
+
+  ### EVENT ###
+  france.0.title: "Referundum on [LUX.GetNameDef]"
+  france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."
+  france.0.a: "Propose referendum to the [LUX.GetAdjective] Government."
+  france.0.b: "Invade [LUX.GetNameDef]"
+  france.1.title: "Integrate [LUX.GetNameDef]"
+  france.1.desc: "France ask if we can join their nation"
+  france.1.a: "Agree with proposition"
+  france.1.b: "Refuse proposition"
+  france.2.title: "They agree our request"
+  france.2.desc: "They agree with our proposition, [LUX.GetNameDef] will under us"
+  france.2.a: "That well"
+  france.3.title: "They rejects our request"
+  france.3.desc: "They refused due to political differences between us"
+  france.3.a: "We will not tolerate this"
+
+
   
 

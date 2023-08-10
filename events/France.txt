@@ -3,64 +3,56 @@ add_namespace = france
 
 country_event = {
 	id = france.0
-	title = "Referundum about Luxemburg"
-	desc = "Prussian parlement try to find if they can integrate Luxemburg, this referundum will be made because Petrograd alliance collapsed."
+	title = france.0.title
+	desc = france.0.desc
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
 	option = { 
-		name = "Propose referundum"
-		LUX = {
-			country_event = { days = 1 id = france.1 }
-		}
+		name = france.0.a
+		LUX = { country_event = { id = france.1 days = 1  } }
 	}
 	option = { 
-		name = "Invade Luxemburg"
-		
-	        declare_war_on = {
-		                target = LUX
-		                type = annex_everything
-	        }	
+		name = france.0.b
 		add_state_claim = 8
-
+		declare_war_on = {
+			target = LUX
+			type = annex_everything
+		}	
 	}
 }
 
 country_event = {
 	id = france.1
-	title = "Integrate Luxemburg"
-	desc = "Prussia ask if we can join their nation."
+	title = france.1.title
+	desc = france.1.desc
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
 	option = { # Accept demands
-		name = "Agree with proposition"
-		FRA = {
-			country_event = { days = 1 id = france.2 }
-		}
+		name = france.1.a
+		FRA = { country_event = { days = 1 id = france.2 } }
 	}
 	option = { # Refuse
-		name = "Refuse proposition"
+		name = france.1.b
 		hidden_effect = {
-			FRA = {
-				country_event = { days = 1 id = france.3 }
-			}
+			FRA = { country_event = { days = 1 id = france.3 } }
 		}		
 	}
 }
 
 country_event = {
 	id = france.2
-	title = "They agree our request"
-	desc = "they agree with our proposition, Luxemburg will under us"
+	title = france.2.title
+	desc = france.2.desc
 	picture = GFX_report_event_vienna_award_hungary
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "That well"
+		name = france.2.a
 		annex_country = {
 	   		 target = LUX
 	   		 transfer_troops = yes
@@ -70,19 +62,19 @@ country_event = {
 
 country_event = {
 	id = france.3
-	title = "They rejects our request"
-	desc = "They refused due to political differences between us"
+	title = france.3.title
+	desc = france.3.desc
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
 	
 	option = {
-		name = "We will not tolerate this"
-	        declare_war_on = {
-		                target = LUX
-		                type = annex_everything
-	        }
+		name = france.2.a
 		add_state_claim = 8	
+		declare_war_on = {
+			target = LUX
+			type = annex_everything
+		}
 	}
 }
 

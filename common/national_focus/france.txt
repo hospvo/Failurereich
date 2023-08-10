@@ -499,7 +499,7 @@ focus_tree = {
 		id = FRA_old_marechal_speech
 		icon = GFX_goal_generic_dangerous_deal
 		mutually_exclusive = { focus = FRA_monarchist_coup }
-		x = 13
+		x = 15
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -517,7 +517,7 @@ focus_tree = {
 		icon = GFX_focus_up_joan_of_arc
 		mutually_exclusive = { focus = FRA_doriot focus = FRA_petain }
 		prerequisite = { focus = FRA_old_marechal_speech }
-		x = -4
+		x = -6
 		y = 1
 		relative_position_id = FRA_old_marechal_speech
 		cost = 5
@@ -671,6 +671,77 @@ focus_tree = {
 	}
 
 	focus = {
+		id = FRA_reach_to_fascist_countries
+		icon = GFX_goal_support_fascism
+		prerequisite = { 
+			focus = FRA_rocquist_coalition
+			focus = FRA_petain
+		}
+		x = 3
+		y = 1
+		relative_position_id = FRA_rocquist_coalition
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						original_tag = ROM
+						original_tag = ENG
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = francist_collaborator 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ardennes
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = FRA_reach_to_fascist_countries }
+		x = 0
+		y = 1
+		relative_position_id = FRA_reach_to_fascist_countries
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = FRA_work_family_fatherland
+			has_army_manpower = { size > 200000 }
+			is_puppet = no
+		}
+		bypass = {
+			28 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
+		}
+
+		completion_reward = {
+			914 = { set_demilitarized_zone = no }
+			28 = { set_demilitarized_zone = no }
+			add_political_power = 190
+			army_experience = 5
+		}
+	}
+
+	focus = {
 		id = FRA_patriotic_peasantry
 		icon = GFX_focus_generic_population_growth
 		prerequisite = { 
@@ -781,14 +852,15 @@ focus_tree = {
 		id = FRA_work_family_fatherland
 		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = FRA_promote_solidarity }
+		prerequisite = { focus = FRA_ardennes }
 		prerequisite = { focus = FRA_renforce_corporatism }
 		prerequisite = { 
 			focus = FRA_renforce_paramilitaries
 			focus = FRA_renforce_the_army
 		}
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = FRA_promote_solidarity
+		relative_position_id = FRA_ardennes
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -801,19 +873,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = FRA_work_family_fatherland
 		}
 	}
 
 	focus = {
-		id = FRA_ardennes
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = {
-			focus = FRA_old_marechal_speech
-			focus = FRA_monarchist_coup
-		}
-		x = 8
-		y = 1
-		relative_position_id = FRA_old_marechal_speech
+		id = FRA_fascist_economic_bloc
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		prerequisite = {focus = FRA_work_family_fatherland }
+		x = -2
+		y = 2
+		relative_position_id = FRA_work_family_fatherland
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -822,44 +892,39 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_work_family_fatherland
-			has_army_manpower = { size > 200000 }
 			is_puppet = no
-		}
-		bypass = {
-			28 = { is_demilitarized_zone = no }
-			914 = { is_demilitarized_zone = no }
 		}
 
 		completion_reward = {
-			914 = { set_demilitarized_zone = no }
-			28 = { set_demilitarized_zone = no }
-			add_political_power = 190
-			army_experience = 5
+			every_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						original_tag = FRA
+						original_tag = ENG
+						original_tag = ITA
+					}
+				}
+				add_ideas = FRA_fascist_economic_bloc
+			}
 		}
 	}
-
-###### WAR ######
 
 	focus = {
 		id = FRA_luxemburg
 		icon = GFX_goal_support_fascism
-		text = "Annex Luxemburg"
-
-		prerequisite = { 
-				focus = FRA_ardennes
-		}
-
-		x = -1
+		prerequisite = { focus = FRA_work_family_fatherland }
+		x = 1
 		y = 1
-		relative_position_id = FRA_ardennes
-		cost = 10
+		relative_position_id = FRA_work_family_fatherland
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 1
 		}
+
 		available = {
 			is_puppet = no
 			has_army_manpower = { size > 400000 }
@@ -872,19 +937,17 @@ focus_tree = {
 		}
 	}
 
+	###### WAR ######
+
 	focus = {
 		id = FRA_belgium
 		icon = GFX_goal_support_fascism
-		text = "Divide Belgium"
-
-		prerequisite = { 
-				focus = FRA_ardennes
-		}
-
+		prerequisite = { focus = FRA_pact_with_the_netherlands }
+		prerequisite = { focus = FRA_luxemburg }
 		x = 1
 		y = 1
-		relative_position_id = FRA_ardennes
-		cost = 10
+		relative_position_id = FRA_pact_with_the_netherlands
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 
@@ -904,22 +967,68 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_invade_holland
+		id = FRA_pact_with_the_netherlands
 		icon = GFX_goal_support_fascism
-		text = "Take Holland"
+		prerequisite = { focus = FRA_work_family_fatherland }
+		x = -1
+		y = 1
+		relative_position_id = FRA_work_family_fatherland
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
 
+		ai_will_do = {
+			factor = 1
+		}
 
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_befriend_netherlands
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_pact_with_the_netherlands }
+		mutually_exclusive = {
+			focus = FRA_invade_netherlands
+		}	
+		x = 0
+		y = 2
+		relative_position_id = FRA_pact_with_the_netherlands
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_invade_netherlands
+		icon = GFX_goal_support_fascism
+		text = "Take netherlands"
+		mutually_exclusive = {
+			focus = FRA_befriend_netherlands
+		}
 		prerequisite = { 
 				focus = FRA_luxemburg
 		}
-		prerequisite = { 
-				focus = FRA_belgium
-		}
-
 		x = 0
 		y = 2
-		relative_position_id = FRA_ardennes
-		cost = 10
+		relative_position_id = FRA_luxemburg
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
@@ -945,15 +1054,14 @@ focus_tree = {
 		id = FRA_invade_germany
 		icon = GFX_focus_focus_fra_ratify_stresa
 		text = "Invade Germany"
-
 		prerequisite = { 
-				focus = FRA_invade_holland
+			focus = FRA_befriend_netherlands
+			focus = FRA_invade_netherlands
 		}
-
 		x = 1
-		y = 3
-		relative_position_id = FRA_ardennes
-		cost = 10
+		y = 1
+		relative_position_id = FRA_befriend_netherlands
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
@@ -977,106 +1085,14 @@ focus_tree = {
 	focus = {
 		id = FRA_help_romania
 		icon = GFX_focus_focus_fra_national_resistance_council
-		text = "Allie Romania"
-
+		text = "Ally Romania"
 		prerequisite = { 
-				focus = FRA_invade_holland
+				focus = FRA_fascist_economic_bloc
 		}
-
-		x = -1
-		y = 3
-		relative_position_id = FRA_ardennes
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-			ROM = {
-				give_guarantee = FRA
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_romanian_relations
-		icon = GFX_focus_GRE_reevaluating_the_drachma
-		text = "approach Romania"
-
-		x = 18
-		y = 0
-		relative_position_id = FRA_old_marechal_speech
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = ROM
-			    modifier = francist_collaborator 
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_british_relations
-		icon = GFX_focus_GRE_reevaluating_the_drachma
-		text = "approach BUF"
-
-		prerequisite = { 
-				focus = FRA_romanian_relations
-		}
-
-		x = 0
-		y = 1
-		relative_position_id = FRA_romanian_relations
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			is_puppet = no
-		}
-
-		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = ENG
-			    modifier = francist_collaborator 
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_SRI_relations
-		icon = GFX_focus_GRE_reevaluating_the_drachma
-		text = "approach NFP"
-
-		prerequisite = { 
-				focus = FRA_british_relations
-		}
-
 		x = 0
 		y = 2
-		relative_position_id = FRA_romanian_relations
-		cost = 10
+		relative_position_id = FRA_fascist_economic_bloc
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
@@ -1088,11 +1104,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-			add_opinion_modifier = {
-			    target = ITA
-			    modifier = francist_collaborator 
-			}
+			give_guarantee = ROM
+			ROM = { give_guarantee = FRA }
 		}
 	}
 
@@ -1177,7 +1190,6 @@ focus_tree = {
 		icon = GFX_focus_fra_french_union
 		text = "The Black Internationale"
 		prerequisite = { focus = FRA_reintroduce_trade_unions focus = FRA_social_reforms }
-		mutually_exclusive = { focus = FRA_ref }
 		x = 0
 		y = 2
 		relative_position_id = FRA_doriot
@@ -1297,7 +1309,7 @@ focus_tree = {
 		id = FRA_monarchist_coup
 		icon = GFX_focus_focus_fra_fascist_threat
 		mutually_exclusive = { focus = FRA_old_marechal_speech }
-		x = 14
+		x = 8
 		y = 0
 		relative_position_id = FRA_old_marechal_speech
 		cost = 10
