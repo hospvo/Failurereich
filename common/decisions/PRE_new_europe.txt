@@ -1,4 +1,4 @@
-	PRE_new_europe = {
+PRE_new_europe = {
      POL_PUPPET = {
 		allowed = {
 			tag = PRE
@@ -8,7 +8,7 @@
 			tag = PRE
 		}
           available = {
-        owns_state = 10
+        	owns_state = 10
 		owns_state = 89
 		owns_state = 91
           }
@@ -40,6 +40,10 @@
 	RENAME_FACTION = {
 	available = {
 		owns_state = 64
+		owns_state = 50
+		owns_state = 51
+		owns_state = 52
+		owns_state = 763
           }
 		  
 		fire_only_once = yes
@@ -65,7 +69,10 @@
 			tag = PRE
 		}
 			available = {
-				owns_state = 64
+			owns_state = 50
+			owns_state = 51
+			owns_state = 52
+			owns_state = 763
 			}
 		fire_only_once = yes
 		ai_will_do = {
@@ -90,7 +97,10 @@
 			tag = PRE
 		}
 		available = {
-			owns_state = 64
+			owns_state = 50
+			owns_state = 51
+			owns_state = 52
+			owns_state = 763
 			}
 		fire_only_once = yes
 		ai_will_do = {
