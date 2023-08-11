@@ -10,9 +10,12 @@ HAN_kommissariat = {
 		}
 
 		available = {
-			owns_state = 6
-			owns_state = 34
-			owns_state = 29
+			controls_state = 6
+			controls_state = 34
+			controls_state = 29
+			controls_state = 944
+			controls_state = 945
+			controls_state = 8
 		}
 
 		fire_only_once = yes
@@ -20,14 +23,17 @@ HAN_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
+			HAN = {
+				puppet = BEL
+				transfer_state = 944
+				transfer_state = 945
+				transfer_state = 8
+			}
 			BEL = {
 				set_cosmetic_tag = BEL_volkskommissariat 
 				transfer_state = 6
 				transfer_state = 34
 				transfer_state = 29
-			}
-			HAN = {
-				puppet = BEL
 			}
 		}	
 	}
@@ -42,9 +48,10 @@ HAN_kommissariat = {
 		}
 
 		available = {
-				owns_state = 7
-				owns_state = 35
-				owns_state = 36
+				controls_state = 7
+				controls_state = 35
+				controls_state = 36
+				controls_state = 946
 		}
 
 		fire_only_once = yes
@@ -52,14 +59,15 @@ HAN_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
+			HAN = {
+				puppet = HOL
+				transfer_state = 946
+			}
 			HOL = {
 				set_cosmetic_tag = HOL_volkskommissariat 
 				transfer_state = 35
 				transfer_state = 7
 				transfer_state = 36
-			}
-			HAN = {
-				puppet = HOL
 			}
 		}	
 	}
@@ -74,25 +82,29 @@ HAN_kommissariat = {
 		}
 
 		available = {
-				owns_state = 37
-				owns_state = 110
-				owns_state = 142
-				owns_state = 143
-				owns_state = 144
-				owns_state = 666
-				owns_state = 38
-				owns_state = 141
-				owns_state = 140
-				owns_state = 139
-				owns_state = 99
-				owns_state = 138
-				owns_state = 124
+				controls_state = 37
+				controls_state = 110
+				controls_state = 142
+				controls_state = 143
+				controls_state = 144
+				controls_state = 666
+				controls_state = 38
+				controls_state = 141
+				controls_state = 140
+				controls_state = 139
+				controls_state = 99
+				controls_state = 138
+				controls_state = 124
 			}
 		fire_only_once = yes
 		ai_will_do = {
 				factor = 100
 				}
 		complete_effect = {
+			HAN = {
+				puppet = NOR
+				transfer_state = 943
+			}
 			NOR = {
 				set_cosmetic_tag = SCA_volkskommissariat 
 				transfer_state = 37
@@ -108,9 +120,6 @@ HAN_kommissariat = {
 				transfer_state = 99
 				transfer_state = 138
 				transfer_state = 124
-			}
-			HAN = {
-				puppet = NOR
 			}
 		}	
 	}
