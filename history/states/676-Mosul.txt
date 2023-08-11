@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = IRQ
+		owner = MSQ
 		buildings = {
 			infrastructure = 3
 
@@ -22,7 +22,8 @@ state={
 			6826 1 
 		}
 		add_core_of = IRQ
-		add_core_of = KUR
+		add_core_of = MSQ
+		add_claim_by = KUR
 
 	}
 

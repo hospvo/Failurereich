@@ -5,7 +5,7 @@ state={
 	manpower=871202
 
 	history={
-		owner = CAN
+		owner = YEM
 		victory_points = {
 			5074 1 
 		}

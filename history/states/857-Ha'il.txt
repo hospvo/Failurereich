@@ -4,13 +4,14 @@ state={
 	name="STATE_857"
 
 	history={
-		owner = JSH
+		owner = HEJ
 		add_core_of = JSH
+		add_core_of = HEJ
 
 	}
 
 	provinces={
-		4968 5027 5058 5099 10892 10923 12749 
+		4968 5027 5058 5099 10892 10923 12749 12813 8004
 	}
 	manpower=5000
 	buildings_max_level_factor=1.000

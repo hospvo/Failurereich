@@ -4,7 +4,8 @@ state={
 	name="STATE_854"
 
 	history={
-		owner = JSH
+		owner = HEJ
+		add_core_of = HEJ
 		add_core_of = JSH
 
 	}
