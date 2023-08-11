@@ -11,7 +11,7 @@ country_event = {
 	
 	option = {
 
-		name = "Fu !"
+			name = "Here we go again!"
 
 		816 = { set_demilitarized_zone = yes }
 		362 = { set_demilitarized_zone = yes }
@@ -20,8 +20,6 @@ country_event = {
 		372 = { set_demilitarized_zone = yes }
 		379 = { set_demilitarized_zone = yes }
 		377 = { set_demilitarized_zone = yes }
-		921 = { set_demilitarized_zone = yes }
-		939 = { set_demilitarized_zone = yes }
 		389 = { set_demilitarized_zone = yes }
 		388 = { set_demilitarized_zone = yes }
 
@@ -43,7 +41,7 @@ country_event = {
 	
 	option = {
 
-		name = "No communists please"
+		name = "Commies should be killed!"
 
 		create_country_leader = {
 			name = "Dwight D. Eisenhower"
@@ -118,7 +116,7 @@ country_event = {
 	
 	option = {
 
-		name = "God hate the king"
+		name = "Union States must be disbanded"
 
 		USB = { 
 			load_oob = "USB_defense_force"
