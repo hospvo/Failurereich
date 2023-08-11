@@ -69,9 +69,6 @@ country_event = {
 		HUN = { set_state_owner = 82 }
 		HUN = { set_state_owner = 764 }
 		HUN = { set_state_owner = 45 }
-		HUN = { set_state_owner = 109 }
-		HUN = { set_state_owner = 103 }
-		HUN = { set_state_owner = 163 }
 	}
 }
 
