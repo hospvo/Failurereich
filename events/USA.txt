@@ -129,7 +129,7 @@ country_event = {
 		USB = {
 			  create_wargoal  = {
 		            	target = USA
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 
@@ -198,7 +198,7 @@ country_event = {
 		MEX = {
 			  create_wargoal  = {
 		            	target = USA
-		                type = civil_war
+		                type = annex_everything
 	      		  }	
 
 			diplomatic_relation = {
@@ -225,7 +225,7 @@ country_event = {
 		MEX = {
 			  create_wargoal  = {
 		            	target = CSA
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 	}
@@ -315,24 +315,24 @@ country_event = {
 			load_oob = "DES_1936"
 		}
 
+		USA = {
+			  create_wargoal  = {
+		            	target = DES
+		                type = annex_everything
+	      		  }
+		}
+
 		CSA = {
 			  create_wargoal  = {
 		            	target = DES
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 
 		USB = {
 			  create_wargoal  = {
 		            	target = DES
-		                type = civil_war
-	      		  }
-		}
-
-		USA = {
-			  create_wargoal  = {
-		            	target = DES
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 	}
@@ -442,21 +442,21 @@ country_event = {
 		USA = {
 			  create_wargoal  = {
 		            	target = NWG 
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 
 		CSA = {
 			  create_wargoal  = {
 		            	target = NWG 
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 
 		USB = {
 			  create_wargoal  = {
 		            	target = NWG 
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 	}
@@ -687,19 +687,19 @@ country_event = {
 		USA = {
 			  create_wargoal  = {
 		            	target = CAL
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 		CSA = {
 			  create_wargoal  = {
 		            	target = CAL
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 		USB = {
 			  create_wargoal  = {
 		            	target = CAL
-		                type = civil_war
+		                type = annex_everything
 	      		  }
 		}
 	}
