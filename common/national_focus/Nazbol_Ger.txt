@@ -167,7 +167,7 @@ focus_tree = {
 		text = "Invade Western Balkans"
 
 		prerequisite = { 
-				focus = NZC_czech
+				focus = NZC_cezch
 		}
 
 		x = 3
@@ -321,7 +321,7 @@ focus_tree = {
 				focus = NZC_SRI_relations
 		}
 
-		x = 12
+		x = 10
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -339,6 +339,38 @@ focus_tree = {
 
 			add_opinion_modifier = {
 			    target = TRK
+			    modifier = sparcatists_collaborator 
+			}
+		}
+	}
+
+
+	focus = {
+		id = NZC_GEO_relations
+		icon = GFX_focus_ITA_italo_balbo
+		text = "Meet Stalin"
+
+		prerequisite = { 
+				focus = NZC_SRI_relations
+		}
+
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+
+			add_opinion_modifier = {
+			    target = GEO
 			    modifier = sparcatists_collaborator 
 			}
 		}
