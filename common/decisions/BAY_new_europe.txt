@@ -2,11 +2,11 @@ BAY_kommissariat = {
 
 	BAY_kommissariat_belgien_nordfrankreich = {
 		allowed = {
-			tag = HAN
+			tag = BAY
 		}
 
 		visible = {
-			tag = HAN
+			tag = BAY
 		}
 
 		available = {
@@ -23,7 +23,7 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			HAN = {
+			BAY = {
 				puppet = BEL
 				transfer_state = 944
 				transfer_state = 945
@@ -40,11 +40,11 @@ BAY_kommissariat = {
 
 	BAY_kommissariat_niederlande = {
 		allowed = {
-			tag = HAN
+			tag = BAY
 		}
 
 		visible = {
-			tag = HAN
+			tag = BAY
 		}
 
 		available = {
@@ -59,7 +59,7 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			HAN = {
+			BAY = {
 				puppet = HOL
 				transfer_state = 946
 			}
@@ -74,11 +74,11 @@ BAY_kommissariat = {
 
 	BAY_kommissariat_scandinaven = {
 		allowed = {
-			tag = HAN
+			tag = BAY
 		}
 
 		visible = {
-			tag = HAN
+			tag = BAY
 		}
 
 		available = {
@@ -101,7 +101,7 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			HAN = {
+			BAY = {
 				puppet = NOR
 				transfer_state = 943
 			}
@@ -126,11 +126,11 @@ BAY_kommissariat = {
 
 	BAY_kommissariat_ukraine = {
 		allowed = {
-			tag = HAN
+			tag = BAY
 		}
 
 		visible = {
-			tag = HAN
+			tag = BAY
 		}
 
 		available = {
@@ -177,7 +177,7 @@ BAY_kommissariat = {
 				transfer_state = 227
 				transfer_state = 193
 			}
-			HAN = {
+			BAY = {
 				puppet = UKR
 			}
 		}	
@@ -185,11 +185,11 @@ BAY_kommissariat = {
 
 	BAY_kommissariat_ostland = {
 		allowed = {
-			tag = HAN
+			tag = BAY
 		}
 
 		visible = {
-			tag = HAN
+			tag = BAY
 		}
 
 		available = {
@@ -246,7 +246,7 @@ BAY_kommissariat = {
 				transfer_state = 96
 				transfer_state = 194
 			}
-			HAN = {
+			BAY = {
 				puppet = BLR
 			}
 		}	
