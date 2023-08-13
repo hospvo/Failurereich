@@ -168,12 +168,12 @@ PRE_new_europe = {
 				transfer_state = 75
 			PRE = {
 				puppet = CZE
-			}
-		}	
+				}
+			}	
+		}
 	}
-}
 
-		PUPPET_BNL = {
+	PUPPET_BNL = {
 		allowed = {
 			tag = PRE
 		}
