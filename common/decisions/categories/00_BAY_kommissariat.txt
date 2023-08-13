@@ -40,16 +40,25 @@ BAY_kommissariat_belgien_nordfrankreich = {
 	}
 }
 
-form_goguryeo_category = {
+BAY_kommissariat_ukraine = {
 
 	icon = generic_formable_nations
 
-	picture = GFX_decision_cat_generic_goguryeo
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
 }
 
-form_roman_federation_category = {
+BAY_kommissariat_ostland = {
 
 	icon = generic_formable_nations
 
-	picture = GFX_decision_cat_generic_latin
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
 }
+
