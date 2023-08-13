@@ -1,0 +1,33 @@
+﻿
+add_namespace = ger
+
+country_event = {
+	id = ger.1
+	title = "Retake our land!"
+	desc = ""
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = WGR
+		NOT = { FRA = { controls_state = 28 } } 
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Retake old lands"
+			GER = {
+				every_owned_state = {
+				    add_claim_by = WGR
+				}
+			}
+	        declare_war_on = {
+		                target = GER
+		                type = annex_everything
+	        }	
+	}
+}
