@@ -689,8 +689,9 @@ SWI_helvetic_republic = {
 }
 
 
-
+##############
 #### news ####
+##############
 
 CHI_second_empire = {
 	color = rgb { 220 220  150 }
@@ -760,13 +761,13 @@ NWG_USA = {
 }
 
 Strato_GER = {
-	color = rgb { 110 110 110 }
-	color_ui = rgb { 110 110 110 }
+	color = rgb { 100 100 100 }
+	color_ui = rgb { 100 100 100 }
 }
 
 Democrat_GER = {
-	color = rgb { 200 200 200 }
-	color_ui = rgb { 200 200 200 }
+	color = rgb { 150 150 150 }
+	color_ui = rgb { 150 150 150 }
 }
 
 NazBol_GER = {
@@ -775,8 +776,8 @@ NazBol_GER = {
 }
 
 Ultranat_GER = {
-	color = rgb { 50 50 0 }
-	color_ui = rgb { 50 50 0 }
+	color = rgb { 50 50 50 }
+	color_ui = rgb { 50 50 50 }
 }
 
 POL_HUN_UNION = {
@@ -804,7 +805,63 @@ POL_WS = {
 	color_ui = rgb { 220 140 50 }
 }
 
+#### ITALIAN EMPIRE/ ROMAN EMPIRE ####
+
 GRE_Thracia = {
 	color = rgb { 30 150 110 }
 	color_ui = rgb { 30 150 110 }
+}
+
+#### ORDENSTAAT ####
+
+HOL_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+BEL_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+NOR_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+LAT_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+UKR_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+HUN_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+
+#### CANADA_AFRICA ####
+
+COG_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+KEN_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+GAB_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+CAR_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+CMR_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+GAB_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
 }
