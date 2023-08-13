@@ -1338,6 +1338,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = FRA_monarchist_coup
 		}
+		mutually_exclusive = { focus = FRA_orleans_restoration }
 		x = -1
 		y = 1
 		relative_position_id = FRA_monarchist_coup
@@ -1374,6 +1375,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = FRA_monarchist_coup
 		}
+		mutually_exclusive = { focus = FRA_conservatives_monarch }
 		x = 1
 		y = 1
 		relative_position_id = FRA_monarchist_coup
