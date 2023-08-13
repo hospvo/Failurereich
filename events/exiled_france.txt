@@ -4,7 +4,7 @@ add_namespace = exiled
 country_event = {
 	id = exiled.1
 	title = "Colonies rebels"
-	desc = "After including absolute monarchy, most of Tuareg and tribes want to overthrown the emperor."
+	desc = "After including absolute monarchy, those bustard rebel want to overthrown the emperor."
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
@@ -61,7 +61,7 @@ country_event = {
 country_event = {
 	id = exiled.2
 	title = "French civil war"
-	desc = "After including absolute monarchy, most of Tuareg and tribes want to overthrown the emperor."
+	desc = "After including absolute monarchy, those bustard rebel want to overthrown the emperor."
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
