@@ -75,6 +75,8 @@ recruit_character = CAR_acgs
 	}
 }
 
+set_cosmetic_tag = CAR_british
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
