@@ -3,7 +3,7 @@ add_namespace = ger
 
 country_event = {
 	id = ger.1
-	title = "Retake Germany"
+	title = "Retake our land!"
 	desc = ""
 	picture = GFX_report_event_north_germany
 	
