@@ -57,6 +57,8 @@ set_popularities = {
 	neutrality = 100
 }
 
+set_cosmetic_tag = COG_british
+
 create_country_leader = {
 	
 	name = "François Tolenga"
