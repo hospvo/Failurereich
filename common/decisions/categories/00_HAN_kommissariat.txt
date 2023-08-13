@@ -40,6 +40,33 @@ HAN_kommissariat_belgien_nordfrankreich = {
 	}
 }
 
+
+HAN_kommissariat_ukraine = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+HAN_kommissariat_ostland = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+
+
+#### OTHER ####
+
 form_goguryeo_category = {
 
 	icon = generic_formable_nations
