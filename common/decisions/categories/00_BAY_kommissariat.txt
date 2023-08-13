@@ -1,4 +1,4 @@
-HAN_kommissariat = {
+BAY_kommissariat = {
 
 	icon = generic_formable_nations
 
@@ -7,7 +7,7 @@ HAN_kommissariat = {
 	}
 }
 
-HAN_kommissariat_scandinaven = {
+BAY_kommissariat_scandinaven = {
 
 	icon = generic_formable_nations
 
@@ -18,7 +18,7 @@ HAN_kommissariat_scandinaven = {
 	}
 }
 
-HAN_kommissariat_niederlande = {
+BAY_kommissariat_niederlande = {
 
 	icon = generic_formable_nations
 
@@ -29,7 +29,7 @@ HAN_kommissariat_niederlande = {
 	}
 }
 
-HAN_kommissariat_belgien_nordfrankreich = {
+BAY_kommissariat_belgien_nordfrankreich = {
 
 	icon = generic_formable_nations
 
