@@ -20,7 +20,7 @@ bookmarks = {
 			}
 		}
 		"GER"={
-			history = "Following revolutions and disgrace in the Great War, Spartacist succeed to instaure a communist dictatorship, stronger after 1930's. Despite the new reforms, no any elections are held."
+			history = "In the Great War, Germany suffered too much under Kaiser and his junkers regime. They drag Germany through its war and, after that, death, poverty, and hunger. This led to unrest, and after that revolution, which deposed Kaiser Wilhelm II. The brutal civil war was fought by, Freicorps against Startacus League. Spartacist had succeeded, and on the first party congress insuring for them a majority of votes. Karl Liebknecht was voted as the first president of Germany. This led to a communist dictatorship and a one-party state supported by the suppression of anything remaining from reactionary influence. In 1925 second party congress of KPD was held in Munich. There, a great power struggle began between Rosa Luxemburg and Ernst Thälmann, from which Thälmann emerge victorious. He enacts some reforms of the system but blocks any liberalization or democratization. From this position, Germany emerged as the head and beacon of the socialistic world, with many possible threats and successes ahead of them."
 			ideology = communism
 			ideas = {
 				GER_clamp_down_on_fascism 
