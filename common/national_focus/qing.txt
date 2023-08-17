@@ -11,7 +11,7 @@
 	default = no
 
 	focus = {
-		id = MAN_semi_constitutional_monarchy
+		id = MAN_constitutional_monarchy
 		text = "Rebuilt Beiyang China"
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		x = 8
@@ -38,7 +38,7 @@
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = MAN_semi_constitutional_monarchy }
+		prerequisite = { focus = MAN_constitutional_monarchy }
 		mutually_exclusive = { focus = MAN_compromise_with_kuomintang }
 		ai_will_do = {
 			factor = 1
@@ -143,7 +143,7 @@
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = MAN_semi_constitutional_monarchy }
+		prerequisite = { focus = MAN_constitutional_monarchy }
 		mutually_exclusive = { focus = MAN_reject_kuomintang }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
