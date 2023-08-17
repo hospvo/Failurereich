@@ -11,8 +11,8 @@
 	default = no
 
 	focus = {
-		id = MAN_constitutional_monarchy
-		tesxt = "Rebuilt Beiyang China"
+		id = MAN_semi_constitutional_monarchy
+		text = "Rebuilt Beiyang China"
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		x = 8
 		y = 0
@@ -28,18 +28,18 @@
 	}
 
 
-#### Focus for Reject Kuomindang ####
+#### Focus for Reject kuomintang ####
 
 	focus = {
-		id = MAN_reject_kuomindang
-		text = "Kuomindang out"
+		id = MAN_reject_kuomintang
+		text = "No compromise with bloody revolutionary!"
 		icon = GFX_goal_generic_demand_territory
 		x = 12
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = MAN_constitutional_monarchy }
-		mutually_exclusive = { focus = MAN_compromise_with_kuomindang }
+		mutually_exclusive = { focus = MAN_compromise_with_kuomintang }
 		ai_will_do = {
 			factor = 1
 		}
@@ -59,7 +59,7 @@
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = MAN_reject_kuomindang }
+		prerequisite = { focus = MAN_reject_kuomintang }
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
 		ai_will_do = {
 			factor = 1
@@ -112,19 +112,39 @@
 			}
 		}
 	}
+	#Focus for Retake Vladivostok
+	focus = {
+		id = MAN_retake_vladivostok
+		text = "reture vladivostok to our hand!"
+		icon = GFX_focus_chi_army_reform
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = SOV
+			}
+		}
+	}
 
-#### Focus for Compromise with Kuomindang ####
+#### Focus for Compromise with kuomintang ####
 
 	focus = {
-		id = MAN_compromise_with_kuomindang
-		text = "Compromise with Kuomindang"
+		id = MAN_compromise_with_kuomintang
+		text = "Compromise with kuomintang"
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		x = 4
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = MAN_constitutional_monarchy }
-		mutually_exclusive = { focus = MAN_reject_kuomindang }
+		mutually_exclusive = { focus = MAN_reject_kuomintang }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -143,7 +163,7 @@
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = MAN_compromise_with_kuomindang }
+		prerequisite = { focus = MAN_compromise_with_kuomintang }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -162,7 +182,7 @@
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = MAN_compromise_with_kuomindang }
+		prerequisite = { focus = MAN_compromise_with_kuomintang }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
