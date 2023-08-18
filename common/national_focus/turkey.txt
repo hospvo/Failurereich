@@ -299,9 +299,9 @@
 ###### Ottoman ########
 
 	focus = {
-		id = OTT_war_SYR 
+		id = OTT_war_MSQ
 		icon = GFX_focus_TUR_pivot_to_the_past
-		text = "War to Syria"
+		text = "War to Mashriqi"
 		prerequisite = { 
 				focus = TUR_collaborate_KUR 
 				focus = TUR_war_KUR
@@ -325,9 +325,9 @@
 		completion_reward = {
 			create_wargoal = {
 			    type = puppet_wargoal_focus
-			    target = SYR
+			    target = MSQ
 			}
-			SYR = {
+			MSQ = {
 				every_owned_state = {
 				    add_claim_by = OTT
 				}
@@ -336,11 +336,11 @@
 	}
 
 	focus = {
-		id = OTT_war_IRQ 
+		id = OTT_war_ARA
 		icon = GFX_focus_TUR_pivot_to_the_past
-		text = "War to Iraq"
+		text = "War to Arabian Peninsula"
 		prerequisite = { 
-				focus = OTT_war_SYR 
+				focus = OTT_war_MSQ 
 		}
 
 		x = 16
@@ -357,9 +357,9 @@
 		completion_reward = {
 			create_wargoal = {
 			    type = puppet_wargoal_focus
-			    target = IRQ
+			    target = UAE
 			}
-			IRQ = {
+			UAE = {
 				every_owned_state = {
 				    add_claim_by = OTT
 				}
@@ -372,7 +372,7 @@
 		icon = GFX_focus_TUR_pivot_to_the_past
 		text = "War to Egypt"
 		prerequisite = { 
-				focus = OTT_war_IRQ 
+				focus = OTT_war_ARA 
 		}
 
 		x = 16
