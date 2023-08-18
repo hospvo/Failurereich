@@ -14,4 +14,9 @@ spriteTypes = {
 	name = "GFX_idea_divided_romania"
 	texturefile = "gfx/interface/ideas/ROM/ROM_divided_romania.png"
 	}
+	
+	spriteType = {
+	name = "GFX_idea_young_king"
+	texturefile = "gfx/interface/ideas/SIA/SIA_young_king.png"
+	}
 }
