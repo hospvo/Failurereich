@@ -22,19 +22,19 @@ country_event = {
 	option = { 
 		name = "Invade Yugolsavia, Romania and Greece"
 		
-	        declare_war_on = {
+	        create_wargoal  = {
 		                target = YUG
 		                type = annex_everything
 	        }
-	        declare_war_on = {
+	        create_wargoal  = {
 		                target = GRE
 		                type = annex_everything
 	        }
-	        declare_war_on = {
+	        create_wargoal  = {
 		                target = ROM
 		                type = annex_everything
 	        }
-	        declare_war_on = {
+	        create_wargoal  = {
 		                target = MAC
 		                type = annex_everything
 	        }
@@ -69,16 +69,16 @@ country_event = {
 	option = { 
 		name = "Invade North Arabia"
 		
-	        declare_war_on = {
+	        create_wargoal  = {
 		                target = KUR
 		                type = annex_everything
 	        }	
-	        declare_war_on = {
-		                target = IRQ
+	        create_wargoal  = {
+		                target = MSQ
 		                type = annex_everything
 	        }	
-	        declare_war_on = {
-		                target = SYR
+	        create_wargoal  = {
+		                target = UAE
 		                type = annex_everything
 	        }			
 	}
