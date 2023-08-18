@@ -253,19 +253,33 @@ set_popularities = {
 set_convoys = 20
 set_stability = 0.5
 set_war_support = 0.3
-			create_country_leader = {
-    				character = TUR_ahmet_fevzi_pasha 
-				desc = "Islamist and fascist leader"
-				picture = GFX_TUR_ahmet_fevzi_pasha 
-				expire = "1965.1.1"
-				ideology = fascism_type
-				traits = {
-				}	
-			}
+
+create_country_leader = {
+    		character = TUR_ahmet_fevzi_pasha 
+		desc = "Islamist and fascist leader"
+		picture = GFX_TUR_ahmet_fevzi_pasha 
+		expire = "1965.1.1"
+		ideology = fascism_type
+		traits = {
+
+		}	
+}
+
+create_country_leader = {
+    		character = TUR_nihal_atsiz 
+		desc = "Ultranationalist Leader, with Turanist ambitions"
+		picture = GFX_TUR_ahmet_fevzi_pasha 
+		expire = "1965.1.1"
+		ideology = rexism
+		traits = {
+
+		}	
+}
 
 if = {
 	limit = { has_dlc = "Battle for the Bosporus" }
 
+	recruit_character = TUR_nihal_atsiz
 	recruit_character = TUR_ahmet_fevzi_pasha # Ottoman Sultanate general. Not available at game start
 	recruit_character = TUR_refet_pasha # Ottoman Sultanate general. Not available at game start
 	recruit_character = TUR_mehmet_esat_pasha # Ottoman Sultanate general. Not available at game start
@@ -319,7 +333,6 @@ if = {
 	recruit_character = TUR_nuri_killigil
 	recruit_character = TUR_said_i_nursi
 	recruit_character = TUR_ismet_inonu
-	recruit_character = TUR_nihal_atsiz
 	recruit_character = TUR_zeki_velidi_togan
 	recruit_character = TUR_nazim_hikmet
 
