@@ -7,7 +7,7 @@
  GER_neutrality_DEF:1 "the German Republic"
  GER_communism:0 "Spartacist Germany"
  GER_communism_DEF:0 "the Free Socialist Republic of Germany"
- GER_fascism_ADJ:0 "German"
+ GER_fascism_ADJ:0 "German reich"
  GER_democratic_ADJ:0 "German"
  GER_neutrality_ADJ:0 "German"
  GER_communism_ADJ:0 "German"
