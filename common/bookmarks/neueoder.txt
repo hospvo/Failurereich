@@ -170,10 +170,7 @@ bookmarks = {
 				young_king
 			}
 			focuses = {
-				SIA_Political_Effort
-				SIA_Industrial_Effort
-				SIA_Naval_Effort
-				SIA_Aviation_Effort
+				SIA_siam_crisis
 			}	
 		}
 
