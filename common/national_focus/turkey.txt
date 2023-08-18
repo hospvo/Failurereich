@@ -404,7 +404,7 @@
 		icon = GFX_focus_TUR_pivot_to_the_past
 		text = "War to Greece"
 		prerequisite = { 
-				focus = OTT_war_SYR 
+				focus = OTT_war_MSQ
 		}
 
 		x = 14
