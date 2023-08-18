@@ -255,8 +255,8 @@ set_stability = 0.5
 set_war_support = 0.3
 
 create_country_leader = {
-		character = TUR_hazi_aslanov 
-		desc = "Leader of Osman house"
+		character = TUR_abdulmejid_ii 
+		desc = "Leader of Osman house, fleed in Bukharan Sultanate"
 		picture = GFX_TUR_hazi_aslanov 
 		expire = "1965.1.1"
 		ideology = despotism
