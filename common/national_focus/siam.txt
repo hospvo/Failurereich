@@ -1,0 +1,37 @@
+
+focus_tree = {
+	id = siam_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SIA
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = SIA_siam_crisis
+		icon = GFX_goal_generic_military_sphere
+		text = "Siam crisis"
+		x = 8
+		y = 0
+		cost = 6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+					is_puppet = no
+		}
+		completion_reward = {
+			add_manpower = 1000
+			add_idea = SIA_young_king
+			}
+		}
+	}
