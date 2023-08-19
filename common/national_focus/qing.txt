@@ -225,7 +225,6 @@
 				country_event = { days = 1 id = qing.1 }
 		}
 	}
- }
 
 ### Focus for industrial ###
 
@@ -332,5 +331,6 @@
 			}
 		}
 	}
+}
 
 
