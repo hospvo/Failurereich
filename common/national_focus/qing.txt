@@ -27,6 +27,7 @@
 		}
 	}
 
+}
 #### Focus for Reject kuomintang ####
 
 	focus = {
@@ -225,6 +226,7 @@
 				country_event = { days = 1 id = qing.1 }
 		}
 	}
+ }
 
 ### Focus for industrial ###
 
@@ -232,9 +234,9 @@
 		id = MAN_economic_revise
 		icon = GFX_focus_chi_army_reform
 		text = "Economy revise"
-		x = 15
-		y = 0
-		cost = 9
+		x = 16
+		y = 1
+		cost = 6
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		
@@ -331,6 +333,5 @@
 			}
 		}
 	}
-}
 
 
