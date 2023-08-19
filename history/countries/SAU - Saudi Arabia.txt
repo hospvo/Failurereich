@@ -98,6 +98,8 @@ set_popularities = {
 	reactionary = 100
 }
 
+puppet = UAE
+
 create_country_leader = {
 	name = "Abdulaziz Ibn Saud"
 	desc = "POLITICS_ABDULAZIZ_DESC"
