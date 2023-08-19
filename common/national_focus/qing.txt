@@ -27,7 +27,6 @@
 		}
 	}
 
-}
 #### Focus for Reject kuomintang ####
 
 	focus = {
