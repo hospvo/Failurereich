@@ -206,7 +206,7 @@
 			factor = 1
 		}
 		completion_reward = {
-			set_stability = -0.2
+			set_stability = 0.2
 		}
 	}
 	focus = {
