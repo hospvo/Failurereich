@@ -1,0 +1,4 @@
+music = {
+	name = "la_marseillaise"
+	file = "la_marseillaise.ogg"
+}

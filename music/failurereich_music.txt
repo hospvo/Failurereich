@@ -1,0 +1,10 @@
+music_station = "failurereich_station"
+music = {
+	song = "la_marseillaise"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	}
+}
