@@ -26,8 +26,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
-			NOT = { TRK = { country_exists = yes }}
-			NOT = { OTT= { country_exists = yes }}
+			NOT = { 
+				original_tag = TRK
+				original_tag = OTT 
+			}
 		} 
 		ai_will_do = {
 			factor = 1
@@ -160,8 +162,8 @@
 		}
 
 		bypass = {
-			tag = OTT
-			tag = TRK
+			original_tag  = OTT
+			original_tag  = TRK
 		} 
 
 		completion_reward = {
@@ -187,11 +189,6 @@
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		bypass = {
-			tag = OTT
-			tag = TRK
-		} 
 
 		available = {
 			owns_state = 346
@@ -224,11 +221,6 @@
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		bypass = {
-			tag = OTT
-			tag = TRK
-		} 
 
 		available = {
 			owns_state = 346
