@@ -477,6 +477,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_to_faction = NOR
 			GER = {
 				country_event = { days = 1 id = germany.24 }
 			}
