@@ -2,3 +2,7 @@ music = {
 	name = "la_marseillaise"
 	file = "la_marseillaise.ogg"
 }
+music = {
+	name = "chant_du_depart"
+	file = "chant_du_depart.ogg"
+}

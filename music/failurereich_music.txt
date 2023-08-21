@@ -8,3 +8,12 @@ music = {
 		}
 	}
 }
+music = {
+	song = "chant_du_depart"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	}
+}
