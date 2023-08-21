@@ -285,7 +285,7 @@
 
 	focus = {
 		id = RUS_fascist_doctrine
-		icon = GFX_focus_SOV_panslavic_nationalism
+		icon = GFX_focus_SOV_facism_influence
 		text = "Facism influence"
 		x = 12
 		y = 1
