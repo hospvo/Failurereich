@@ -26,10 +26,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
-			N0T = {
-				tag = OTT
-				tag = TRK
-			}
+			NOT = { TRK = { country_exists = yes }}
+			NOT = { OTT= { country_exists = yes }}
 		} 
 		ai_will_do = {
 			factor = 1
