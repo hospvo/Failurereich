@@ -26,6 +26,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
+			N0T = {
+				tag = OTT
+				tag = TRK
+			}
 
 		} 
 		ai_will_do = {
@@ -157,6 +161,10 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			tag = OTT
+			tag = TRK
+		} 
 		completion_reward = {
 			TUR = {
 				country_event = { days = 1 id = turkey.2 }
@@ -180,6 +188,11 @@
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		bypass = {
+			tag = OTT
+			tag = TRK
+		} 
 
 		available = {
 			owns_state = 346
@@ -212,6 +225,11 @@
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		bypass = {
+			tag = OTT
+			tag = TRK
+		} 
 
 		available = {
 			owns_state = 346
