@@ -1,0 +1,17 @@
+
+add_namespace = siam.monarchy_question
+
+#### Monarchy question ####
+
+country_event = {
+	id = siam.monarchy_question.1
+	title = "Monarchy question?"
+	desc = "after king rama vii adicate siam going turmoli because new king is still young and his regency is khana ratsadon faction and khana ratsadon have question if they abolish monarchy it will help siam?"
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = "Oh very bad!"
+		ai_change = { factor = 100 }
+	}
