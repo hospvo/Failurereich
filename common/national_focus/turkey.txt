@@ -30,7 +30,6 @@
 				tag = OTT
 				tag = TRK
 			}
-
 		} 
 		ai_will_do = {
 			factor = 1
