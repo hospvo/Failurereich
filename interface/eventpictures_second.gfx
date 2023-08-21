@@ -15,4 +15,9 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_chinese_civil_war.dds"
 	}
 	
+		spriteType = {
+		name = "GFX_monarchy_question"
+		texturefile = "gfx/event_pictures/monarchy_question.dds"
+	}
+	
 }
