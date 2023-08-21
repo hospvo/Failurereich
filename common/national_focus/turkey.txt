@@ -161,10 +161,12 @@
 		ai_will_do = {
 			factor = 1
 		}
+
 		bypass = {
 			tag = OTT
 			tag = TRK
 		} 
+
 		completion_reward = {
 			TUR = {
 				country_event = { days = 1 id = turkey.2 }
