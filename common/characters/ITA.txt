@@ -38,6 +38,22 @@ characters = {
 		}
 	}
 
+	ITA_julius_evola = {
+		name = ITA_julius_evola
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_julius_evola
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { il_duce }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
 	ITA_grand_council = {
 		name = ITA_grand_council
 		portraits = {
