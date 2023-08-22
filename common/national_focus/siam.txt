@@ -55,7 +55,7 @@ focus_tree = {
 		completion_reward = {
 			set_stablity = -0.1
 			SIA = {
-				country_event = { days = 9 id = siam.monarchy_question.1 } 
+				country_event = { days = 1 id = siam.monarchy_question.1 } 
 			}
 		}
 	}
