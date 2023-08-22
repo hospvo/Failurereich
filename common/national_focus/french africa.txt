@@ -418,4 +418,19 @@ focus_tree = {
 			hold_election = AFR
 		}
 	}
- }
+	focus = {
+		id = AFR_election
+		icon = GFX_focus_generic_africa_production
+		text = "election for african"
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hold_election = AFR
+		}
+	}
