@@ -422,6 +422,9 @@ focus_tree = {
 		id = AFR_election
 		icon = GFX_focus_generic_africa_production
 		text = "election for african"
+		prerequisite = {
+			focus = AFR_west_africa
+		}
 		x = 16
 		y = 4
 		cost = 10
@@ -434,3 +437,4 @@ focus_tree = {
 			hold_election = AFR
 		}
 	}
+}
