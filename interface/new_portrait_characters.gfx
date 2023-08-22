@@ -1,0 +1,25 @@
+spriteTypes = {
+
+	### JAP
+
+	spriteType = {
+		name = "GFX_portrait_JAP_prov"
+		texturefile = "gfx/interface/leaders/Portrait_prov_japan.dds"
+	}
+
+	### SOV
+
+	spriteType = {
+		name = "GFX_portrait_SOV_prov"
+		texturefile = "gfx/interface/leaders/Portrait_prov_russia_com.dds"
+	}
+
+	### ITA
+
+	spriteType = {
+		name = "GFX_portrait_ITA_julius_evola"
+		texturefile = "gfx/interface/leaders/Portrait_ITA_julius_evola.dds"
+	}
+
+
+}
