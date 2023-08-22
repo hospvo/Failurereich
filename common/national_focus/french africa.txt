@@ -161,7 +161,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			NOT = { country_exists = LBA }
 		}
 		
 		bypass = {
