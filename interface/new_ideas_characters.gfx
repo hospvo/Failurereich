@@ -1,0 +1,24 @@
+spriteTypes = {
+
+	### ITA
+
+	spriteType = {
+		name = "GFX_idea_AFG_mohammed_zahir_shah"
+		texturefile = "gfx/interface/ideas/idea_AFG_mohammed_zahir_shah.dds"
+	}
+
+	### JAP
+
+	spriteType = {
+		name = "GFX_idea_ALB_king_zog"
+		texturefile = "gfx/interface/ideas/idea_ALB_king_zog.dds"
+	}
+
+	### SOV
+
+	spriteType = {
+		name = "GFX_idea_ARG_agustin_pedro_justo"
+		texturefile = "gfx/interface/ideas/idea_ARG_agustin_pedro_justo.dds"
+	}
+
+}
