@@ -32,7 +32,6 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 1000
 			add_idea = SIA_young_king
-			}
 		}
 	}
 	focus = {
