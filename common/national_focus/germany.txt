@@ -302,7 +302,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_luxemburg_idea
-		icon = GFX_focus_generic_occupy_start_war
+		icon = GFX_GER_democratic_socialism
 		text = "A Social-Democratic Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
@@ -328,7 +328,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_coup_austria
-		icon = GFX_focus_generic_attack_austria
+		icon = GFX_GER_coup_austria
 		text = "Red Austria"
 
 		bypass = {
@@ -361,7 +361,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_break_czech
-		icon = GFX_focus_cze_german_puppet
+		icon = GFX_GER_coup_bohemia
 		text = "Red Czechia"
 
 		bypass = {
@@ -613,7 +613,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_alliance_with_spc
-		icon = GFX_focus_generic_befriend_communist_spain
+		icon = GFX_GER_help_cntfai
 		text = "Support the CNT-FAI"
 
 		prerequisite = { 

@@ -65,6 +65,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GER/GFX_GER_work_with_hungary.png"			
 	}
 	
+	SpriteType = {
+		name = "GFX_GER_democratic_socialism"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_democratic_socialism.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_coup_austria"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_coup_austria.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_coup_bohemia"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_coup_bohemia.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_help_cntfai"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_help_cntfai.png"			
+	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {
