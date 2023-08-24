@@ -17,8 +17,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_thalmann
-		icon = GFX_focus_ger_bulwark_against_bolshevism
-		text = "Thalmann keep power"
+		icon = GFX_GER_thallmann_remains
+		text = "Thalmann keeps power"
 		mutually_exclusive = { focus = GER_luxemburg }
 		mutually_exclusive = { focus = GER_Strasser }
 		x = 2
@@ -36,7 +36,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rhineland
-		icon = GFX_focus_ger_reichskommisariats
+		icon = GFX_GER_communist_german_military
 		text = "Militarize Germany"
 
 		prerequisite = { 
@@ -72,7 +72,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_austria
-		icon = GFX_focus_generic_attack_austria
+		icon = GFX_GER_austrian_referendum
 		text = "Annex Austria"
 
 		
@@ -109,7 +109,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_bohemia
-		icon = GFX_focus_cze_german_puppet
+		icon = GFX_GER_bohemia_referendum
 		text = "Annex Bohemia"
 
 		prerequisite = { 
@@ -144,7 +144,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_invade_poland
-		icon = GFX_focus_generic_attack_poland
+		icon = GFX_GER_invade_poland
 		text = "Invade Poland"
 
 		prerequisite = { 
@@ -279,7 +279,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_luxemburg
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_GER_germany_and_luxembourg
 		text = "Luxemburg and Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
@@ -303,7 +303,7 @@ focus_tree = {
 	focus = {
 		id = GER_luxemburg_idea
 		icon = GFX_focus_generic_occupy_start_war
-		text = "Social-Democrat Germany"
+		text = "A Social-Democratic Germany"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_Strasser }
 		prerequisite = { 
@@ -362,7 +362,7 @@ focus_tree = {
 	focus = {
 		id = GER_break_czech
 		icon = GFX_focus_cze_german_puppet
-		text = "Red Czech"
+		text = "Red Czechia"
 
 		bypass = {
 			    NOT = { country_exists = CZE }
@@ -427,7 +427,7 @@ focus_tree = {
 	focus = {
 		id = GER_norse
 		icon = GFX_focus_generic_attack_norway
-		text = "Vassal Norway"
+		text = "Vassalize Norway"
 
 		prerequisite = { 
 				focus = GER_polish_cw
@@ -614,7 +614,7 @@ focus_tree = {
 	focus = {
 		id = GER_alliance_with_spc
 		icon = GFX_focus_generic_befriend_communist_spain
-		text = "Support CNT-FAI"
+		text = "Support the CNT-FAI"
 
 		prerequisite = { 
 				focus = GER_alliance_with_lombardia
@@ -647,7 +647,7 @@ focus_tree = {
 	focus = {
 		id = GER_alliance_with_spc2
 		icon = GFX_focus_spr_regional_defense_council_of_aragon
-		text = "Deal with CNT-FAI"
+		text = "Deal with the CNT-FAI"
 
 		prerequisite = { 
 				focus = GER_non_aggression2
@@ -747,7 +747,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_hungary_relations
-		icon = GFX_focus_generic_befriend_hungary
+		icon = GFX_GER_work_with_hungary
 		text = "Approach Hungary"
 
 		x = 24
@@ -871,7 +871,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Strasser
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_GER_national_communist_leader
 		text = "A National-Communist leader"
 		mutually_exclusive = { focus = GER_thalmann }
 		mutually_exclusive = { focus = GER_luxemburg }
@@ -904,8 +904,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_neutrality
-		icon = GFX_goal_generic_military_sphere
-		text = "Purge Thalmanists"
+		icon = GFX_GER_kill_thallmann
+		text = "Purge the Thalmanists"
 		prerequisite = { 
 				focus = GER_Strasser
 		}
@@ -992,7 +992,7 @@ focus_tree = {
 	focus = {
 		id = GER_reconstruction
 		icon = GFX_goal_tripartite_pact
-		text = "Rebuilt Germany"
+		text = "Rebuilding Germany"
 		prerequisite = { 
 				focus = GER_civil_war
 				focus = GER_attack_switzerland
@@ -1025,7 +1025,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_Austria2
-		icon = GFX_goal_rhineland
+		icon = GFX_GER_destroy_austria
 		text = "German Austria"
 		prerequisite = { 
 				focus = GER_reconstruction
@@ -1057,8 +1057,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_czech_puppet
-		icon = GFX_goal_generic_small_arms
-		text = "Puppet Czech"
+		icon = GFX_GER_destroy_bohemia
+		text = "Puppet Czechia"
 		prerequisite = { 
 				focus = GER_reconstruction
 		}
@@ -1089,8 +1089,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_HRE
-		icon = GFX_focus_ger_revive_kaiserreich
-		text = "Rebuilt Germany"
+		icon = GFX_GER_nazbol_supremacy
+		text = "A Rebuilt Germany"
 		prerequisite = { 
 				focus = GER_czech_puppet
 		}

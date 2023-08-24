@@ -2,13 +2,75 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_focus_SOV_facism_influence"
 		texturefile = "gfx/interface/goals/focus_SOV_facism_influence.dds"
-	}	
+	}
+	###Germany###
+	
+	SpriteType = {
+		name = "GFX_GER_kill_thallmann"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_kill_thallmann.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_national_communist_leader"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_national_communist_leader.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_communist_german_military"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_communist_german_military.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_destroy_austria"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_destroy_austria.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_destroy_bohemia"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_destroy_bohemia.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_bohemia_referendum"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_bohemia_referendum.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_austrian_referendum"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_austrian_referendum.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_nazbol_supremacy"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_nazbol_supremacy.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_invade_poland"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_invade_poland.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_thallmann_remains"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_thallmann_remains.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_germany_and_luxembourg"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_germany_and_luxembourg.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_work_with_hungary"
+		texturefile = "gfx/interface/goals/GER/GFX_GER_work_with_hungary.png"			
+	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {
 	name = "GFX_goal_continuous_air_production"
 	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
-	}	
+	}
 	
 	SpriteType = {
 	name = "GFX_goal_continuous_non_factory_construct"
