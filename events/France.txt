@@ -221,7 +221,7 @@ country_event = {
 
 	trigger= {
 		tag = POL
-		date > 1939.9.1
+		date > 1938.9.1
 		has_war = yes
 		OR = { 
 			POL = { controls_state = 43 }
@@ -307,6 +307,22 @@ country_event = {
 	   			 	target = CZE
 	   			 	transfer_troops = yes
 		      		}
+			}
+    			else = { 
+				GER = { release = CZE }
+				PRE = { release = CZE }
+    			}	
+		}
+
+		if = {
+   		 	limit = {
+			
+				NOT = { country_exists = AUS }
+
+			}
+			OR = { 
+				GER = { release = AUS }
+				PRE = { release = AUS }
 			}
     			else = { 
 
