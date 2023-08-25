@@ -85,6 +85,53 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GER/GFX_GER_help_cntfai.png"			
 	}
 	
+	###France###
+	
+	SpriteType = {
+		name = "GFX_FRA_legitimist_king"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_legitimist_king.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_orleanist_king"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_orleanist_king.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_annex_switzerland"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_annex_switzerland.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_annex_belgium"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_annex_belgium.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_130_departments"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_130_departments.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_work_with_monarchist_spain"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_work_with_monarchist_spain.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_destroy_germany"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_destroy_germany.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_old_marshals_speech"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_old_marshals_speech.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_petainism"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_petainism.png"			
+	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {

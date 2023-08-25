@@ -497,7 +497,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_old_marechal_speech
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_FRA_old_marshals_speech
 		mutually_exclusive = { focus = FRA_monarchist_coup }
 		x = 15
 		y = 0
@@ -792,7 +792,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_cult_of_personnality
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_FRA_petainism
 		prerequisite = { 
 			focus = FRA_petain
 		}
@@ -1333,7 +1333,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_conservatives_monarch
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_FRA_legitimist_king
 		text = "The Conservatives"
 		prerequisite = { 
 			focus = FRA_monarchist_coup
@@ -1371,7 +1371,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_orleans_restoration
-		icon = GFX_focus_focus_fra_orleans_restoration
+		icon = GFX_FRA_orleanist_king
 		prerequisite = { 
 			focus = FRA_monarchist_coup
 		}
@@ -1410,7 +1410,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_luxemburg_belgium
-		icon = GFX_goal_support_fascism
+		icon = GFX_FRA_annex_belgium
 		text = "Invade Belgium"
 
 		prerequisite = { 
@@ -1441,7 +1441,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_switzerland
-		icon = GFX_goal_support_fascism
+		icon = GFX_FRA_annex_switzerland
 		text = "Annex Geneve"
 
 		prerequisite = { 
@@ -1472,7 +1472,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_turin
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon = GFX_FRA_130_departments
 		text = "The 130 departements"
 
 		prerequisite = { 
@@ -1503,7 +1503,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_spanish_crown
-		icon = GFX_focus_focus_fra_ratify_stresa
+		icon = GFX_FRA_work_with_monarchist_spain
 		text = "Help the Spanish monarchists"
 
 		prerequisite = { 
@@ -1531,7 +1531,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_divided_ger
-		icon = GFX_focus_focus_fra_ratify_stresa
+		icon = GFX_FRA_destroy_germany
 		text = "Germany into piece"
 
 		prerequisite = { 
