@@ -32,6 +32,7 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 1000
 			add_idea = SIA_young_king
+			}
 		}
 	}
 	focus = {
@@ -39,7 +40,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		text = "Monarchy question?"
 		x = 8
-		y = 2
+		y = 1
 		cost = 6
 		available_if_capitulated = yes
                 prerequisite = { focus = SIA_siam_crisis }
@@ -54,8 +55,50 @@ focus_tree = {
 		completion_reward = {
 			set_stablity = -0.1
 			SIA = {
-				country_event = { days = 1 id = siam.monarchy_question.1 } 
+				country_event = { days = 1 id = siam.monarchy_question.1 }
 			}
 		}
 	}
-}
+	focus = {
+		id = SIA_time_to_choose
+		icon = GFX_goal_generic_military_sphere
+		text = "Time to choose future"
+		x = 8
+		y = 2
+		cost = 6
+		available_if_capitulated = yes
+                prerequisite = { focus = SIA_monarchy_question }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+					is_puppet = no
+		}
+		completion_reward = {
+			set_stablity = 0.1
+		}	
+	}
+	focus = {
+		id = SIA_abolish_monarchy
+		icon = GFX_goal_generic_military_sphere
+		text = "Abolish monarchy"
+		x = 9
+		y = 3
+		cost = 6
+		available_if_capitulated = yes
+                prerequisite = { focus = SIA_time_to_choose }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+					is_puppet = no
+		}
+		completion_reward = {
+			set_stablity = 0.1
+			add_manpower = 1200
+		}	
+	}
