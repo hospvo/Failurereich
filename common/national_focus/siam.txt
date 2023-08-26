@@ -34,7 +34,6 @@ focus_tree = {
 			add_idea = SIA_young_king
 			}
 		}
-	}
 	focus = {
 		id = SIA_monarchy_question
 		icon = GFX_goal_generic_military_sphere
@@ -102,3 +101,4 @@ focus_tree = {
 			add_manpower = 1200
 		}	
 	}
+}
