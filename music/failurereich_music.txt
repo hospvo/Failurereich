@@ -17,3 +17,12 @@ music = {
 		}
 	}
 }
+music = {
+	song = "chant_des_partisans"
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 100
+		}
+	}
+}
