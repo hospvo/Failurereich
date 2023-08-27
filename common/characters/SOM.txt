@@ -1,0 +1,15 @@
+characters = {
+	SOM_mohamoud_ali_shire = {
+		name = "Mohamoud Ali Shire"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOM/SOM_mohamoud_ali_shire.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = {
+			}
+		}
+	}
+}
