@@ -5,7 +5,7 @@ add_namespace = kg
 
 country_event = {
 	id = kg.1
-	title = "Operation Ansluch"
+	title = "Operation Anssluch"
 	desc = "Invade Austria"
 	picture = GFX_report_event_generic_read_write
 	
@@ -13,7 +13,7 @@ country_event = {
 	
 	option = {
 		name = "Invade Austria"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = AUS 
 		                type = annex_everything
 	        }
@@ -35,7 +35,7 @@ country_event = {
 	
 	option = {
 		name = "Invade Czech"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = CZE
 		                type = annex_everything
 	        }
@@ -63,7 +63,7 @@ country_event = {
 	
 	option = {
 		name = "Poland will be divided"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = POL
 		                type = annex_everything
 	        }
@@ -87,7 +87,7 @@ country_event = {
 	
 	option = {
 		name = "Invade Benelux"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = HOL
 		                type = annex_everything
 	        }
@@ -96,7 +96,7 @@ country_event = {
 				    add_claim_by = PRE
 				}
 			}
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = LUX
 		                type = annex_everything
 	        }
@@ -105,7 +105,7 @@ country_event = {
 				    add_claim_by = PRE
 				}
 			}
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = BEL
 		                type = annex_everything
 	        }
@@ -127,7 +127,7 @@ country_event = {
 	
 	option = {
 		name = "Invade Scandinavia"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = DEN
 		                type = annex_everything
 	        }
@@ -136,7 +136,7 @@ country_event = {
 				    add_claim_by = PRE
 				}
 			}	
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = SWE
 		                type = annex_everything
 	        }
@@ -145,7 +145,7 @@ country_event = {
 				    add_claim_by = PRE
 				}
 			}	
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = NOR
 		                type = annex_everything
 	        }
@@ -169,15 +169,15 @@ country_event = {
 	
 	option = {
 		name = "Destroy Yugoslavia and Greece"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = YUG
 		                type = annex_everything
 	        }	
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = GRE
 		                type = annex_everything
 	        }
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = ALB
 		                type = annex_everything
 	        }
@@ -194,11 +194,11 @@ country_event = {
 	
 	option = {
 		name = "Invade Thracia"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = GRE
 		                type = annex_everything
 	        }
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = BUL
 		                type = annex_everything
 	        }
@@ -272,7 +272,7 @@ country_event = {
 	
 	option = {
 		name = "Invade Switzerland"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = SWI
 		                type = puppet
 	        }
@@ -307,12 +307,12 @@ country_event = {
 	
 	option = {
 		name = "Invade Italy"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = LOM
 		                type = annex_everything
 	        }
 
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = ITA
 		                type = annex_everything
 	        }
@@ -342,7 +342,7 @@ country_event = {
 	
 	option = {
 		name = "Invade France"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = FRA
 		                type = puppet
 	        }
