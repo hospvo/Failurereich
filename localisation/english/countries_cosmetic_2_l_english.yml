@@ -48,14 +48,6 @@
 FRA_monarchist_coup:0 "Kingdom of France"
 FRA_monarchist_coup_DEF:0 "Kingdom of France"
 
-
-
-
-
-
-
-
-
  HEJ_left:0 "Republic of Hejaz"
  HEJ_left_DEF:0 "Republic of Hejaz"
  HEJ_left_ADJ:0 "Hejaz"
@@ -321,10 +313,8 @@ FRA_monarchist_coup_DEF:0 "Kingdom of France"
  HRE_UNIFIED_democratic_DEF:0 "the Elban Federation"
  HRE_UNIFIED_communism_DEF:0 "the Socialist Elban Republic"
 
-
-
  FRA_BOURBONS:0 "Kingdom of France"
- FRA_BOURBONS_DEF:0 "the King of France"
+ FRA_BOURBONS_DEF:0 "the Kingdom of France"
 
  POL_WS:0 "West Slavia"
  POL_WS_DEF:0 "the Weste Slavian Union"
