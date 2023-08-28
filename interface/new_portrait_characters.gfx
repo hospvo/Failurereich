@@ -18,7 +18,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_ITA_julius_evola"
-		texturefile = "gfx/interface/leaders/Portrait_ITA_julius_evola.dds"
+		texturefile = "gfx/interface/leaders/ITA/Portrait_ITA_julius_evola.dds"
 	}
 
 
