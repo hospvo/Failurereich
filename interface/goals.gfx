@@ -88,8 +88,18 @@ spriteTypes = {
 	###France###
 	
 	SpriteType = {
-		name = "GFX_FRA_legitimist_king"
-		texturefile = "gfx/interface/goals/FRA/GFX_FRA_legitimist_king.png"			
+		name = "GFX_FRA_a_free_germany"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_a_free_germany.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_cnt_alliance"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_cnt_alliance.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_ukraine_alliance"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_ukraine_alliance.png"			
 	}
 	
 	SpriteType = {

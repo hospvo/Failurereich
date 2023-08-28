@@ -1,0 +1,17 @@
+characters={
+
+	CHI_chiang_kai_shek={
+		name="Chiang Kai-Shek"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/CHI_chiang_kai_shek.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

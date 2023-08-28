@@ -294,16 +294,11 @@ set_autonomy = {
 	}
 }
 
-create_country_leader = {
-	name = "Franklin Delano Roosevelt"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Franklin_Roosevelt.dds"
-	expire = "1947.1.1"
-	ideology = liberalism
-	traits = {
-		dislikes_germany
-	}
-}
+recruit_character = USA_franklin_delano_roosevelt
+
+
+
+
 
 create_country_leader = {
 	name = "William Dudley Pelley"

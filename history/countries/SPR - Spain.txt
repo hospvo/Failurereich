@@ -133,6 +133,7 @@ if = {
 		SPR_political_violence
 		SPR_national_strikes_3
 	}
+	recruit_character = SPR_alphonso_xiii
 	recruit_character = SPR_niceto_alcala_zamora
 	recruit_character = SPR_jose_diaz
 	recruit_character = SPA_jose_antonio_primo_de_rivera
@@ -308,13 +309,3 @@ set_convoys = 150
 set_stability = 0.5
 
 
-create_country_leader = {
-	name = "Alphonse I"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = GFX_portrait_SPA_alfonso_xiii
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-						
-	}
-}

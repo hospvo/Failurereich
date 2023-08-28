@@ -1,0 +1,77 @@
+characters={
+
+	FRA_philippe_petain={
+		name="Philippe Pétain"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_philippe_petain.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	FRA_francois_de_la_rocque={
+		name="François de La Rocque"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_francois_de_la_rocque.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	FRA_jacques_doriot={
+		name="Dacques Doriot"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_jacques_doriot.png"
+			}
+		}
+		country_leader = {
+			ideology = nazbol
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	FRA_marcel_bucard={
+		name="Marcel Bucard"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_marcel_bucard.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	FRA_rene_binet={
+		name="René Binet"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_rene_binet.png"
+			}
+		}
+		country_leader = {
+			ideology = anarchist_communism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

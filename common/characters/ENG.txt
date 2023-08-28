@@ -1,0 +1,17 @@
+characters={
+
+	ENG_oswald_mosely={
+		name="Oswald Mosely"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_oswald_mosely.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

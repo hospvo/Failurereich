@@ -215,15 +215,15 @@ add_to_faction = ITA
 give_guarantee = POL
 
 set_politics = {
-	ruling_party = fascism 
+	ruling_party = reactionary 
 	last_election = "1932.5.1"
 	elections_allowed = no
 }
 
 set_popularities = {
 	democratic = 10
-	reactionary = 41
-	fascism = 49
+	reactionary = 50
+	fascism = 40
 }
 
 give_guarantee = ROM
@@ -236,27 +236,21 @@ add_ideas = {
 	limited_conscription
 }
 
-create_country_leader = {
-	name = "Philippe Pétain"
-	desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
-	picture = "Portrait_France_Philippe_Petain.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-}
+recruit_character = FRA_philippe_petain
+recruit_character = FRA_francois_de_la_rocque
+recruit_character = FRA_jacques_doriot
+recruit_character = FRA_marcel_bucard
+recruit_character = FRA_rene_binet
 
-create_country_leader = {
-	name = "François de la Rocque"
-	picture = GFX_portrait_fra_francois_de_la_rocque
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-}
 
-create_country_leader = {
-	name = "Jacques Doriot"
-	picture = GFX_portrait_fra_jacques_doriot
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-}
+
+
+
+
+
+
+
+
 
 create_corps_commander = {
 	name = "Jean de Lattre de Tassigny"

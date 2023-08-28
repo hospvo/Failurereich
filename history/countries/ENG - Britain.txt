@@ -143,6 +143,12 @@ give_guarantee = POL
 
 # Order matters - here Chamberlain becomes starting leader
 
+recruit_character = ENG_oswald_mosely
+
+
+
+
+
 create_country_leader = {
 	name = "Winston Churchill"
 	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
@@ -177,17 +183,6 @@ create_country_leader = {
 #	}
 #}
 
-create_country_leader = {
-	name = "Oswald Mosley"
-	desc = "POLITICS_OSWALD_MOSLEY_DESC"
-	picture = "Portrait_Britain_Oswald_Mosley.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		champion_of_peace_1
-		economic_reformer
-	}
-}
 
 create_country_leader = {
 	name = "Harry Pollitt"

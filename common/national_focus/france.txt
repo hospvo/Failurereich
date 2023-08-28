@@ -1208,7 +1208,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_CNT
-		icon = GFX_focus_fra_french_union
+		icon = GFX_FRA_cnt_alliance
 		text = "CNT alliance"
 		prerequisite = { 
 				focus = FRA_ana2
@@ -1238,7 +1238,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_free_ukraine
-		icon = GFX_focus_fra_french_union
+		icon = GFX_FRA_ukraine_alliance
 		text = "Ukraine Alliance"
 		prerequisite = { 
 				focus = FRA_ana2
@@ -1268,7 +1268,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_german_ana
-		icon = GFX_focus_fra_french_union
+		icon = GFX_FRA_a_free_germany
 		text = "A free Germany"
 		prerequisite = { 
 				focus = FRA_CNT

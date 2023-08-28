@@ -10,10 +10,10 @@ characters = {
 
 
 	ITA_benito_mussolini = {
-		name = ITA_benito_mussolini
+		name = "Benito Mussolini"
 		portraits = {
 			civilian = {
-				large = GFX_portrait_ITA_benito_mussolini
+				large = "gfx/leaders/ITA/ITA_benito_mussolini.png"
 			}
 		}
 
