@@ -68,12 +68,18 @@ PRE_new_europe = {
 		visible = {
 			tag = PRE
 		}
-			available = {
+		available = {
+			controls_state = 4
+			controls_state = 153
+			controls_state = 152
+			controls_state = 853
+			controls_state = 102
+
 			owns_state = 50
 			owns_state = 51
 			owns_state = 52
 			owns_state = 763
-			}
+		}
 		fire_only_once = yes
 		ai_will_do = {
 				factor = 100
@@ -91,17 +97,21 @@ PRE_new_europe = {
 	ANNEX_CZE = {
 		allowed = {
 			tag = PRE
+			
 		}
 
 		visible = {
 			tag = PRE
 		}
 		available = {
+			controls_state = 9
+			controls_state = 75
+
 			owns_state = 50
 			owns_state = 51
 			owns_state = 52
 			owns_state = 763
-			}
+		}
 		fire_only_once = yes
 		ai_will_do = {
 				factor = 100
@@ -125,7 +135,9 @@ PRE_new_europe = {
 			tag = PRE
 		}
 			available = {
-				owns_state = 806
+				controls_state = 29
+				controls_state = 28
+				controls_state = 17
 			}
 		fire_only_once = yes
 		ai_will_do = {
@@ -182,24 +194,31 @@ PRE_new_europe = {
 			tag = PRE
 		}
 		available = {
-			owns_state = 6
+			controls_state = 6
+			controls_state = 34
+			controls_state = 35
+			controls_state = 36
+			controls_state = 7
+			controls_state = 8
 		}
 		fire_only_once = yes
+
 		ai_will_do = {
-		factor = 100
-			}
+			factor = 100
+		}
+
 		complete_effect = {
-			BEL = {
+			HOL = {
 				set_cosmetic_tag = PRE_BNL
 				transfer_state = 6
 				transfer_state = 34
 				transfer_state = 35
 				transfer_state = 7
 				transfer_state = 36
+			}
 			PRE = {
-				puppet = BEL
-				}
-			}	
+				puppet = HOL
+			}
 		}
 	}
 }
