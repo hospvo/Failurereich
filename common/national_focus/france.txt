@@ -530,13 +530,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = fascism
+			FRA_philippe_petain = {
+				remove_country_leader_role = {
+					ideology = oligarchism
+				}
 			}
 			set_party_name = { 
-    			ideology = fascism
-    			long_name = "PSF"
-    			name = "Parti Social Français"
+    			ideology = reactionary
+    			long_name = "Parti Social Français"
+    			name = "PSF"
 			}
 		}
 	}
@@ -609,14 +611,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = fascism
-			}
-			set_party_name = { 
-				ideology = fascism
-				long_name = "Military Junta"
-				name = "Military Junta"
-			}
+			add_stability = 0.1
+			add_war_support = 0.10
 		}
 	}
 
