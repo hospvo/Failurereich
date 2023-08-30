@@ -348,6 +348,7 @@ country_event = {
 
 	option = { 
 		name = "Scheiss"
+		GER = { puppet = AUS }
 		AUS = { set_politics = { ruling_party = communism } }
 		AUS = {
 			set_popularities = {
@@ -368,6 +369,7 @@ country_event = {
 
 	option = { 
 		name = "Oh No ..."
+		GER = { puppet = CZE }
 		CZE = { set_politics = { ruling_party = communism } }
 		CZE = {
 			set_popularities = {
@@ -392,7 +394,7 @@ country_event = {
 			start_civil_war = {
 				ruling_party = communism
 				ideology = reactionary
-				size = 0.6
+				size = 0.4
 				only_own_territory = no
 				capital = 86 
 				states = {
@@ -417,7 +419,7 @@ country_event = {
 			start_civil_war = {
 				ruling_party = communism
 				ideology = neutrality
-				size = 0.6
+				size = 0.4
 				only_own_territory = no
 				capital = 142 
 				states = {
