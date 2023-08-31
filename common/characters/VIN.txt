@@ -1,0 +1,36 @@
+characters={
+	VIN_ho_chi_minh={
+		name= "Ho Chi Minh"
+		portraits={
+			civilian={
+				large="gfx/leaders/VIN/VIN_ho_chi_minh.png"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	VIN_bao_dai={
+		name= "Bao Dai"
+		portraits={
+			civilian={
+				large="gfx/leaders/VIN/VIN_bao_dai.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

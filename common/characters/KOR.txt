@@ -1,0 +1,76 @@
+characters={
+	KOR_kim_il_sung={
+		name= "Kim Il Sung"
+		portraits={
+			civilian={
+				large="gfx/leaders/KOR/KOR_kim_il_sung.png"
+			}
+		}
+		country_leader={
+			ideology=nazbol
+			traits={ dictator }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	KOR_kim_tu_bong={
+		name= "Kim Tu-Bong"
+		portraits={
+			civilian={
+				large="gfx/leaders/KOR/KOR_kim_tu_bong.png"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ dictator }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	KOR_yi_kang={
+		name= "Yi Kang"
+		portraits={
+			civilian={
+				large="gfx/leaders/KOR/KOR_yi_kang.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	KOR_yi_un={
+		name= "Yi Un"
+		portraits={
+			civilian={
+				large="gfx/leaders/KOR/KOR_yi_un.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	KOR_syngman_rhee={
+		name= "Syngman Rhee"
+		portraits={
+			civilian={
+				large="gfx/leaders/KOR/KOR_syngman_rhee.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

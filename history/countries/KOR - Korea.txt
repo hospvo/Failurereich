@@ -23,57 +23,15 @@ set_popularities = {
 	neutrality = 8
 }
 
-create_country_leader = {
-	name = "Syngman Rhee"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "Yi Kang"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+recruit_character = KOR_kim_il_sung
+recruit_character = KOR_kim_tu_bong
+recruit_character = KOR_yi_kang
+recruit_character = KOR_yi_un
+recruit_character = KOR_syngman_rhee
 
-create_country_leader = {
-	name = "Kim Tu-bong"
-	desc = "Leader of Socialist rebels in Korea, His main goal is to overthrown the colonial power of Japan."
-	picture = "gfx/leaders/Portrait_KOR_communism.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		dictator
-	}
-}
 
-create_country_leader = {
-	name = "Kim Il-sung"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = nazbol
-	traits = {
-		dictator
-	}
-}
 
-create_country_leader = {
-	name = "Yi Un"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
+
+
+

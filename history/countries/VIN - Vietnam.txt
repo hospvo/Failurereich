@@ -80,27 +80,13 @@ set_popularities = {
 
 #NOTICE# please watch out for spelling, im using Vietnamese names as they spell them, game might not support these characters!
 
-create_country_leader = {
-	name = "Phan Bôi Châu" 
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
-	expire = "1953.3.1"
-	ideology = fascism_ideology 
-	traits = {
-		
-	}
-}
+recruit_character = VIN_ho_chi_minh
+recruit_character = VIN_bao_dai
 
-create_country_leader = {
-	name = "Ho Chí Minh" 
-	desc = "One of the first Asian socialist rebels in his history."
-	picture = "gfx/leaders/Portrait_VIN_communism.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
+
+
+
+
 
 create_country_leader = {
 	name = "Ngô Đình Diêm"

@@ -1,0 +1,52 @@
+characters={
+	CAM_sisowath_monivong={
+		name= "Sisowath Monivong"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAM/CAM_sisowath_monivong.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	CAM_norodom_sihanouk={
+		name= "Norodom Sihanouk"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAM/CAM_norodom_sihanouk.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	
+	CAM_son_ngoc_thanh={
+		name= "Son Ngoc Thanh"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAM/CAM_son_ngoc_thanh.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

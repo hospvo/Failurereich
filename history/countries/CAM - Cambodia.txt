@@ -109,6 +109,16 @@ set_popularities = {
 	neutrality = 35
 }
 
+recruit_character = CAM_sisowath_monivong
+recruit_character = CAM_norodom_sihanouk
+recruit_character = CAM_son_ngoc_thanh
+
+
+
+
+
+
+
 create_country_leader = {
 	name = "Pol Pot" 
 	desc = ""
@@ -127,17 +137,6 @@ create_country_leader = {
 	picture = GFX_portrait_Sisowath_Youtevong
 	expire = "1953.3.1"
 	ideology = liberalism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Norodom Sihanouk" 
-	desc = ""
-	picture = GFX_portrait_Norodom_Sihanouk
-	expire = "1953.3.1"
-	ideology = conservatism
 	traits = {
 		
 	}

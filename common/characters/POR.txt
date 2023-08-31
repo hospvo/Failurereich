@@ -1,0 +1,16 @@
+characters={
+	POR_antonio_de_oliveira_salazar={
+		name= "Antonio de Oliveira Salazar"
+		portraits={
+			civilian={
+				large="gfx/leaders/POR/POR_antonio_de_oliveira_salazar.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

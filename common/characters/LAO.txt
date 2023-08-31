@@ -1,0 +1,22 @@
+characters={
+	LAO_sisavang_vong={
+		name= "Sisavang Vong"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAO/LAO_sisavang_vong.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

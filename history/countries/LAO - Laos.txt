@@ -102,23 +102,18 @@ set_popularities = {
 	neutrality = 40
 }
 
+recruit_character = LAO_sisavang_vong
+
+
+
+
+
 create_country_leader = {
 	name = "Souphanouvong"
 	desc = ""
 	picture = GFX_portrait_Souphanouvong
 	expire = "1953.3.1"
 	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Sisavang Vong"
-	desc = ""
-	picture = GFX_portrait_Sisavang_Vong
-	expire = "1953.3.1"
-	ideology = despotism
 	traits = {
 		
 	}
