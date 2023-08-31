@@ -198,6 +198,27 @@ focus_tree = {
 
 		completion_reward = {
 	        	set_cosmetic_tag = SAU_arabia
+				
+				HEJ = {
+					every_core_state = {
+						add_core_of = HEJ
+					}
+				}
+				UAE = {
+					every_core_state = {
+						add_core_of = HEJ
+					}
+				}
+				YEM = {
+					every_core_state = {
+						add_core_of = HEJ
+					}
+				}
+				OMA = {
+					every_core_state = {
+						add_core_of = HEJ
+					}
+				}
 		}
 	}
  }

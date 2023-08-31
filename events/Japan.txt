@@ -78,7 +78,7 @@ country_event = {
 
 	option = {
 		name = "Erase communists"
-		EDO = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
+		#EDO = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
 
 		JAP = { country_event= { days = 9 id = japan.4 } }
 	}
@@ -111,7 +111,8 @@ country_event = {
 	option = {
 		name = "Failed Emperor ..."
 
-	        declare_war_on = {
+	        set_country_flag = japan_civil_war
+			declare_war_on = {
 		                target = EDO
 		                type = annex_everything
 	        }
@@ -119,14 +120,21 @@ country_event = {
 		                target = TGW
 		                type = annex_everything
 	        }
-	        EDO = { declare_war_on = {
-		                target = TGW
-		                type = annex_everything
-	        } }
+	        EDO = { 
+				declare_war_on = {
+		               target = TGW
+		               type = annex_everything
+				}
+				set_country_flag = japan_civil_war
+			}
+			TGW = {
+				set_country_flag = japan_civil_war
+			}
 
 		JAP = { country_event= { days = 1 id = japan.5 } }
 		hidden_effect = {
 			news_event = { hours = 6 id = fr_news.3 }
+			mark_focus_tree_layout_dirty = yes
 		}
 		TGW = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
 	}
@@ -149,6 +157,7 @@ country_event = {
 		VIN= { transfer_state = 741 }
 		VIN= { transfer_state = 286 }
 		KOR= { transfer_state = 525 }
+		KOR= { transfer_state = 527 }
 	}
 }
 
@@ -194,3 +203,70 @@ country_event = {
 		add_state_claim = 717	
 	}
 }
+
+country_event = {
+	id = japan.7
+	title = japan.7.t
+	desc = japan.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = japan.7.o1
+		trigger = {
+			VIN = { exists = yes }
+        }
+		add_days_mission_timeout = {
+			mission = defeat_vietnamese_rebels
+			days = 40
+		}
+	}
+	option = {
+		name = japan.7.o2
+		trigger = {
+			VIN = { exists = no }
+        }
+	}
+}
+
+country_event = {
+	id = japan.8
+	title = japan.8.t
+	desc = japan.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = japan.8.o1
+		trigger = {
+			KOR = { exists = yes }
+        }
+		add_days_mission_timeout = {
+			mission = defeat_korean_rebels
+			days = 40
+		}
+	}
+	option = {
+		name = japan.8.o2
+		trigger = {
+			KOR = { exists = no }
+        }
+	}
+}
+

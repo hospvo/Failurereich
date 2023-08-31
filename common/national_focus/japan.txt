@@ -17,16 +17,32 @@
 	focus = {
 		id = JAP_unstability_war
 		icon = GFX_focus_generic_japanese_imperial_glory
-		text = "A failed monarchy"
-		x = 8
+		text = "Military Disaster"
+		x = 7
 		y = 0
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_country_flag = japan_civil_war
+			}
+		}
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
-
-		} 
+			always = no
+		}
+		allow_branch = { NOT = { has_completed_focus = JAP_status_quo } }
+		
+		bypass = {
+			NOT = { TAG = JAP }
+		}
+		mutually_exclusive = { 
+			focus = JAP_status_quo
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
@@ -40,13 +56,113 @@
 	focus = {
 		id = JAP_civil_war
 		icon = GFX_focus_AST_war_japan
-		text = "Japan collapse"
+		text = "Down Goes the House of Cards"
 		prerequisite = { 
 				focus = JAP_unstability_war
 		}
-		x = 8
+		relative_position_id = JAP_unstability_war
+		x = 0
 		y = 1
 		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		bypass = {
+			NOT = { TAG = JAP }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+				country_event = { days = 9 id = japan.3 } 
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_status_quo
+		icon = GFX_focus_generic_japanese_imperial_glory
+		text = "The Status Quo Holds"
+		x = 12
+		y = 0
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_completed_focus = JAP_status_quo
+			}
+		}
+		cost = 4
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		allow_branch = { NOT = { has_country_flag = japan_civil_war } }
+		available = {
+			VIN = {
+				exists = no
+			}
+			KOR = {
+				exists = no
+			}
+		}
+		mutually_exclusive = { 
+			focus = JAP_unstability_war
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {
+		id = JAP_imperial_expansion
+		icon = GFX_focus_generic_japanese_imperial_glory
+		text = "A New Empire"
+		prerequisite = { 
+				focus = JAP_reintegrate_korea
+				focus = JAP_reorganize_indochina
+		}
+		relative_position_id = JAP_status_quo
+		x = 0
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		allow_branch = {
+			has_completed_focus = JAP_reintegrate_korea
+			has_completed_focus = JAP_reorganize_indochina
+		}
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+	}
+###### Non-Civil War #######
+
+	focus = {
+		id = JAP_reintegrate_korea
+		icon = GFX_focus_generic_japanese_imperial_glory
+		text = "Reintegrate Korea"
+		prerequisite = { 
+				focus = JAP_status_quo
+		}
+		relative_position_id = JAP_status_quo
+		x = -1
+		y = 1
+		cost = 7
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -57,9 +173,62 @@
 			factor = 1
 		}
 		completion_reward = {
-			JAP = {
-				country_event = { days = 9 id = japan.3 } 
+			527 = {
+				set_compliance = 75
+				set_resistance = 10
 			}
+			525 = {
+				set_compliance = 75
+				set_resistance = 10
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {
+		id = JAP_reorganize_indochina
+		icon = GFX_focus_generic_japanese_imperial_glory
+		text = "Reorganize Indochina"
+		prerequisite = { 
+				focus = JAP_status_quo
+		}
+		relative_position_id = JAP_status_quo
+		x = 1
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			VIN = {
+				transfer_state = 671
+				transfer_state = 930
+				
+			}
+			CAM = {
+				transfer_state = 741
+				
+			}
+			LAO = {
+				transfer_state = 670
+				
+			}
+			JAP = {
+				puppet = VIN
+				puppet = CAM
+				puppet = LAO
+			}
+			286 = {
+				set_compliance = 75
+				set_resistance = 10
+			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -76,6 +245,7 @@
 			focus = JAP_republic 
 			focus = JAP_red
 		}
+		allow_branch = { has_country_flag = japan_civil_war }
 		x = 12
 		y = 2
 		cost = 10
@@ -234,6 +404,7 @@
 			focus = JAP_red
 			focus = JAP_showa
 		}
+		allow_branch = { has_country_flag = japan_civil_war }
 		x = 4
 		y = 2
 		cost = 10
@@ -398,6 +569,7 @@
 			focus = JAP_republic 
 			focus = JAP_showa
 		}
+		allow_branch = { has_country_flag = japan_civil_war }
 		x = 8
 		y = 2
 		cost = 10

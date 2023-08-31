@@ -321,3 +321,14 @@ FRA_monarchist_coup_DEF:0 "Kingdom of France"
 
  GRE_Thracia:0 "State of Thracia"
  GRE_Thracia_DEF:0 "The State of Thracia"
+
+
+ VIN_JAP_subject:0 "Empire of Vietnam"
+ VIN_JAP_subject_DEF:0 "the Empire of Vietnam"
+ VIN_JAP_subject_ADJ:0 "Vietnamese"
+ CAM_JAP_subject:0 "Kingdom of Kampuchea"
+ CAM_JAP_subject_DEF:0 "the Kingdom of Kampuchea"
+ CAM_JAP_subject_ADJ:0 "Cambodian"
+ LAO_JAP_subject:0 "Kingdom of Luang Prabang"
+ LAO_JAP_subject_DEF:0 "the Kingdom of Luang Prabang"
+ LAO_JAP_subject_ADJ:0 "Laotian"

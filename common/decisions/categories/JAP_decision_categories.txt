@@ -1,0 +1,6 @@
+JAP_colonial_uprising = {
+	allowed = {
+		original_tag = JAP
+	}
+	priority = 100
+}

@@ -1,0 +1,65 @@
+#Category allowed for JAP
+JAP_colonial_uprising = {
+	defeat_korean_rebels = {
+	
+		activation = {
+			KOR = {
+				exists = yes
+			}
+		}
+		
+		available = {
+			KOR = {
+				exists = no
+			}
+		}
+		
+		cancel_trigger = {
+		}
+		
+		is_good = no
+		days_mission_timeout = 50
+		
+		complete_effect = {
+			JAP = {
+				country_event = { id = japan.7 hours = 2 random_hours = 3 }
+			}
+		}
+		
+		timeout_effect = {
+			complete_national_focus = JAP_unstability_war
+		}
+		
+	}
+	defeat_vietnamese_rebels = {
+		
+		activation = {
+			VIN = {
+				exists = yes
+			}
+		}
+		
+		available = {
+			VIN = {
+				exists = no
+			}
+		}
+		
+		cancel_trigger = {
+		}
+		
+		is_good = no
+		days_mission_timeout = 50
+		
+		complete_effect = {
+			JAP = {
+				country_event = { id = japan.8 hours = 2 random_hours = 3 }
+			}
+		}
+		
+		timeout_effect = {
+			complete_national_focus = JAP_unstability_war
+		}
+		
+	}
+}
