@@ -31,20 +31,7 @@ characters = {
 		}
 	}
 
-	#TODO: This should be a country leader token added to Stalin in the appropriate event/focus/whatever
-	SOV_tsar_iosif_stalin = {
-		name = "Tsar Joseph I"
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_tsar_stalin"
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-		}
-	}
+	
 
 	# Kerensky and Rodzaevsky moved to the bottom of the file
 
@@ -1889,49 +1876,21 @@ characters = {
 	#   #  # #   #  #  #  #    #      #  # #  # ## ##  # #  {~._.~} 
 	##  ####  #  #     #   #   #      #### ###  # # #   #    ( Y )  
 	#   #  #   # #  #  #    #  #      #  # #  # #   #   #   ()~*~() 
-	#   #  # ##   ##  ### ##   #      #  # #  # #   #   #   (_)-(_) 
+	#   #  # ##   ##  ### ##   #      #  # #  # #   #   #   (_)-(_) \
+	
 	SOV_anton_denikin = {
-		name = SOV_anton_denikin
+		name = "Anton Denikin"
 		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_anton_denikin"
-				small = "GFX_idea_SOV_anton_denikin"
-			}
-		}
-		advisor = {
-			slot = army_chief
-			idea_token = anton_denikin
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}				
-			traits = {
-				army_chief_drill_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
+			civilian = {
+				large = "gfx/leaders/russia/RUS_anton_denikin.png"
 			}
 		}
 		
-		field_marshal = {
-			traits = { old_guard inflexible_strategist }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
+		country_leader = {
+			ideology = despotism
+			traits = {  }
+			expire = "1960.1.1.1"
+			id = -1
 		}
 	}
 

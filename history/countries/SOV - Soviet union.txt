@@ -101,13 +101,8 @@ set_popularities = {
 #COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	recruit_character = SOV_provisional_government # United Exiles
-	set_country_flag = vlasov_owner_flag
-}
+
+recruit_character = SOV_anton_denikin
 
 #POLITICAL ADVISORS
 recruit_character = SOV_mikhail_kalinin
@@ -215,16 +210,8 @@ set_cosmetic_tag = SOV_russia
 
 #COUNTRY LEADERS 2
 
-create_country_leader = {
-	name = "Anton Denikin"
-	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
-	picture = "gfx/leaders/russia/Portrait_Soviet_Anton_denekin.dds"
-	expire = "1953.3.1"
-	ideology = despotism
-	traits = {
-		
-	}
-}
+
+
 
 recruit_character = SOV_nikolay_bukharin
 recruit_character = SOV_patriarch_sergy

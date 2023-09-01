@@ -332,3 +332,13 @@ FRA_monarchist_coup_DEF:0 "Kingdom of France"
  LAO_JAP_subject:0 "Kingdom of Luang Prabang"
  LAO_JAP_subject_DEF:0 "the Kingdom of Luang Prabang"
  LAO_JAP_subject_ADJ:0 "Laotian"
+ 
+ 
+ COG_british:0 "British Congo"
+ COG_british_DEF:0 "British Congo"
+ NGA_british:0 "British Nigeria"
+ NGA_british_DEF:0 "British Nigeria"
+ CMR_british:0 "British Cameroon"
+ CMR_british_DEF:0 "British Cameroon"
+ KEN_british:0 "British East Africa"
+ KEN_british_DEF:0 "British East Africa"

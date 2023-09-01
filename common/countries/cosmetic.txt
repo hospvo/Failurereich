@@ -849,19 +849,11 @@ KEN_british = {
 	color = rgb { 150 20 20 }
 	color_ui = rgb { 150 20 20 }
 }
-GAB_british = {
-	color = rgb { 150 20 20 }
-	color_ui = rgb { 150 20 20 }
-}
-CAR_british = {
+NGA_british = {
 	color = rgb { 150 20 20 }
 	color_ui = rgb { 150 20 20 }
 }
 CMR_british = {
-	color = rgb { 150 20 20 }
-	color_ui = rgb { 150 20 20 }
-}
-GAB_british = {
 	color = rgb { 150 20 20 }
 	color_ui = rgb { 150 20 20 }
 }
