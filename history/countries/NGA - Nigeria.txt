@@ -73,6 +73,8 @@ recruit_character = NGA_communist_guy
 	}
 }
 
+set_cosmetic_tag = NGA_british
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
