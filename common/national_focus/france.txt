@@ -720,7 +720,6 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_work_family_fatherland
 			has_army_manpower = { size > 200000 }
 			is_puppet = no
 		}
