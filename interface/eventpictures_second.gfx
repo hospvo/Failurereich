@@ -19,5 +19,9 @@ spriteTypes = {
 		name = "GFX_monarchy_question"
 		texturefile = "gfx/event_pictures/monarchy_question.dds"
 	}
+	spriteType = {
+		name = "GFX_news_event_collaboration"
+		texturefile = "gfx/event_pictures/collaboration.png"
+	}
 	
 }

@@ -1,0 +1,16 @@
+characters={
+	LBA_idris_senussi={
+		name= "Idris Senussi"
+		portraits={
+			civilian={
+				large="gfx/leaders/LBA/LBA_idris_senussi.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

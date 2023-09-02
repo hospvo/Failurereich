@@ -3288,3 +3288,6 @@
  germany.1050.a:0 "$GER_karl_donitz$ was the Führer’s preferred successor."
  germany.1050.b:0 "$GER_albert_speer$ will fulfill the Führer’s ambitions."
  germany.1050.c:0 "$GER_heinz_guderian$ will get us out of this mess."
+ startup.1.t:0 "A Quick Thanks"
+ startup.1.d:0 "Hello and welcome to Failurreich!\nWe'd like to quickly thank the team at Fraternité en Rébellion for allowing us to use their font. A link to their Discord and Reddit can be found on the Failurreich Discord.\nEnjoy our mod!"
+ startup.1.o1:0 "Ok."

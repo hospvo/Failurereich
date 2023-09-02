@@ -79,15 +79,21 @@ set_popularities = {
 
 set_cosmetic_tag = KEN_british
 
-create_country_leader = {
-	
-	
-	name = "Dedan Ngwale"
-	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		#
-	}
-}
+recruit_character = ENG_joseph_byrne
+
+
+
+
+
+
+#create_country_leader = {
+#	
+#	name = "Dedan Ngwale"
+#	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+#	traits = {
+#		#
+#	}
+#}
 

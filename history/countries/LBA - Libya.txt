@@ -70,6 +70,10 @@ set_popularities = {
 	reactionary = 50
 }
 
+recruit_character = LBA_idris_senussi
+
+
+
 create_country_leader = {
 	name = "Bashir es Sadawi"
 	desc = ""
@@ -85,26 +89,6 @@ create_country_leader = {
 	desc = ""
 	picture = "Portrait_Italy_Giuseppe_Fioravanzo.dds"
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Idris Senussi"
-	desc = ""
-	picture = "Portrait_Arabia_Generic_land_3.dds"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Hassan as-Senussi"
-	desc = ""
-	picture = "Portrait_Arabia_Generic_communism1.dds"
-	ideology = leninism
 	traits = {
 		#
 	}

@@ -154,7 +154,7 @@ GER_provisional_gvt = {
 	color_ui = rgb { 115 115 115 }
 }
 
-GER_german_empire = {
+german_empire_exiled = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 115 115 115 }
 }

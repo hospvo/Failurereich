@@ -68,3 +68,10 @@ set_popularities = {
 }
 
 set_cosmetic_tag = CMR_british
+
+recruit_character = ENG_philip_christison
+
+
+
+
+

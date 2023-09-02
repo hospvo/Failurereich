@@ -14,4 +14,112 @@ characters={
 			id = -1
 		}
 	}
+	
+	ENG_bernard_bourdillon={
+		name="Bernard Bourdillon"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_bernard_bourdillon.png"
+			}
+		}
+		country_leader = {
+			ideology = depotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	ENG_george_giffard={
+		name="George Giffard"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_george_giffard.png"
+			}
+		}
+		country_leader = {
+			ideology = depotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	ENG_joseph_byrne={
+		name="Joseph Byrne"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_joseph_byrne.png"
+			}
+		}
+		country_leader = {
+			ideology = depotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	ENG_philip_christison={
+		name="Philip Christison"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_philip_christison.png"
+			}
+		}
+		country_leader = {
+			ideology = depotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 }

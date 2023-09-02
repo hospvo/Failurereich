@@ -1,0 +1,26 @@
+
+add_namespace = startup
+
+####Credit to FeR
+
+country_event = {
+	id = startup.1
+	title = startup.1.t
+	desc = startup.1.d
+	picture = GFX_news_event_collaboration
+	
+	is_triggered_only = yes
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+
+	option = {
+		name = startup.1.o1
+		trigger = {
+        }
+	}
+}

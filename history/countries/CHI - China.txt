@@ -214,6 +214,8 @@ set_popularities = {
 }
 
 recruit_character = CHI_chiang_kai_shek
+recruit_character = CHI_li_zongren
+
 
 create_country_leader = {
 	name = "Zhang Guotao"

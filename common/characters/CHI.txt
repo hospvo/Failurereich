@@ -14,4 +14,19 @@ characters={
 			id = -1
 		}
 	}
+	
+	CHI_li_zongren={
+		name="Li Zongren"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/CHI_li_zongren.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 }

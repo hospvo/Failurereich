@@ -75,6 +75,12 @@ recruit_character = NGA_communist_guy
 
 set_cosmetic_tag = NGA_british
 
+recruit_character = ENG_bernard_bourdillon
+
+
+
+
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
