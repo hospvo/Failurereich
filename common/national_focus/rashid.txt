@@ -4,11 +4,11 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = JSH
+			tag = UAE
 		}
 	}
 	focus = {
-		id = JSH_crush_terrorist
+		id = UAE_crush_terrorist
 		text="Invade Ikhwan"
 		icon = GFX_goal_generic_military_sphere
 		x = 2
@@ -33,17 +33,17 @@ focus_tree = {
 	        	}	
 			IKH = {
 				every_owned_state = {
-				    add_claim_by = JSH
+				    add_claim_by = UAE
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = JSH_invade_saudi
+		id = UAE_invade_saudi
 		text="Invade Saudi"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_crush_terrorist }
+		prerequisite = { focus = UAE_crush_terrorist }
 		x = 1
 		y = 1
 		cost = 5
@@ -61,23 +61,23 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = JSH
+		                target = UAE
 		                type = annex_everything
 	        	}
 
 			SAU = {
 				every_owned_state = {
-				    add_claim_by = JSH
+				    add_claim_by = UAE
 				}
 			}	
 		}
 	}
 
 	focus = {
-		id = JSH_invade_hejaz
+		id = UAE_invade_hejaz
 		text="Invade Holy earth"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_crush_terrorist }
+		prerequisite = { focus = UAE_crush_terrorist }
 		x = 3
 		y = 1
 		cost = 5
@@ -101,19 +101,19 @@ focus_tree = {
 
 			HEJ = {
 				every_owned_state = {
-				    add_claim_by = JSH
+				    add_claim_by = UAE
 				}
 			}	
 		}
 	}
 
 	focus = {
-		id = JSH_invade_oman
+		id = UAE_invade_oman
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { 
-		focus = JSH_invade_hejaz 
-		focus = JSH_invade_saudi
+		focus = UAE_invade_hejaz 
+		focus = UAE_invade_saudi
 		}
 		x = 1
 		y = 2
@@ -143,10 +143,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JSH_invade_yemen
+		id = UAE_invade_yemen
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_invade_hejaz focus = JSH_invade_saudi }
+		prerequisite = { focus = UAE_invade_hejaz focus = UAE_invade_saudi }
 		x = 3
 		y = 2
 		cost = 5
@@ -166,7 +166,7 @@ focus_tree = {
 		                type = annex_everything
 	        	}
 
-			JSH = {
+			UAE = {
 				every_owned_state = {
 				    add_claim_by = YEM
 				}
@@ -175,11 +175,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JSH_arabia
-		text="Create Arabia"
+		id = UAE_arabia
+		text= "Create Arabia"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_invade_yemen } 
-		prerequisite = { focus = JSH_invade_oman }
+		prerequisite = { focus = UAE_invade_yemen } 
+		prerequisite = { focus = UAE_invade_oman }
 		x = 2
 		y = 3
 		cost = 5
@@ -197,7 +197,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-	        	set_cosmetic_tag = JSH_arabia
+	        	set_cosmetic_tag = UAE_arabia
 		}
 	}
  }
