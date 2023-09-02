@@ -81,12 +81,12 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			JSH = { owns_state = 292 }
-			JSH = { owns_state = 679 }
-			JSH = { owns_state = 857 }
+			UAE = { owns_state = 292 }
+			UAE = { owns_state = 679 }
+			UAE = { owns_state = 857 }
 		}
 		completion_reward = {
-			add_to_faction = JSH 
+			add_to_faction = UAE 
 		}
 	}
 
