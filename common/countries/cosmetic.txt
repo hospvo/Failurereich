@@ -708,6 +708,8 @@ LOM_padania = {
 	color_ui = rgb { 179 29 12 }
 }
 
+##### ARABIA #####
+
 SAU_arabia = {
 	color = rgb { 10 100 10 }
 	color_ui = rgb { 10 100 10 }
@@ -724,6 +726,13 @@ HEJ_arabia = {
 	color = rgb { 100 100 0 }
 	color_ui = rgb { 100 100 0 }
 }
+
+UAE_arabia = {
+	color = rgb { 100 190 175 }
+	color_ui = rgb { 100 190 175 }
+}
+
+##############
 
 MAN_fengtian = {
 	color = rgb { 104 108 10 }
