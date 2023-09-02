@@ -13,13 +13,17 @@ focus_tree = {
 	
 	default = no
 
+
+########################
+##### Stronk Canada ####
+########################
+
 	focus = {
 		id = CAN_strong
 		icon = GFX_focus_eng_global_defense
 		text = "Integrate colonies"
-		mutually_exclusive = { focus = CAN_weak }
 
-		x = 4
+		x = 6
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -28,41 +32,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-
 			set_cosmetic_tag = CAN_federation
-
-			annex_country = {
-				   target = NGA
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = KEN
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = MAL
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = SUD
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = COG
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = CAR
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = CMR
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = GAB
- 				   transfer_troops = yes
-			}
 		}
 	}
 
@@ -72,7 +42,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAN_king
 		}
-		mutually_exclusive = { focus = CAN_Hashemite_alliance focus = CAN_rashid_alliance }
+		mutually_exclusive = { focus = CAN_Hashemite_alliance focus = CAN_Nahyane_alliance }
 
 		text = "Invite Saudi Arabia"
 		x = 6
@@ -94,14 +64,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_rashid_alliance
+		id = CAN_Nahyane_alliance
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
 			focus = CAN_king
 		}
 		mutually_exclusive = { focus = CAN_Hashemite_alliance focus = CAN_saudi_alliance }
 
-		text = "Invite Rashid"
+		text = "Invite Nahyane"
 		x = 8
 		y = 2
 		cost = 5
@@ -126,7 +96,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CAN_king
 		}
-		mutually_exclusive = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance }
+		mutually_exclusive = { focus = CAN_saudi_alliance focus = CAN_Nahyane_alliance }
 
 		text = "Invite Hashemite"
 		x = 4
@@ -170,7 +140,7 @@ focus_tree = {
 	focus = {
 		id = CAN_egypt
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
+		prerequisite = { focus = CAN_saudi_alliance focus = CAN_Nahyane_alliance focus = CAN_Hashemite_alliance }
 
 		text = "Secure Egypt"
 		x = 4
@@ -182,7 +152,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			FRA = { has_war_with = GER }
+			
 		}
 		completion_reward = {
 			create_wargoal = {
@@ -199,11 +169,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_oman
+		id = CAN_yemen
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
-		text = "Secure Oman"
-		x = 6
+		prerequisite = { focus = CAN_saudi_alliance focus = CAN_Nahyane_alliance focus = CAN_Hashemite_alliance }
+
+		text = "Retake Aden"
+		x = 8
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
@@ -212,7 +183,37 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			FRA = { has_war_with = GER }
+
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = YEM
+				type = annex_everything
+				expire = 0
+			}
+			YEM = {
+				every_owned_state = {
+				    add_claim_by = CAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAN_oman
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = CAN_yemen focus = CAN_egypt }
+		text = "Secure Oman"
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
 		}
 		completion_reward = {
 			create_wargoal = {
@@ -231,10 +232,10 @@ focus_tree = {
 	focus = {
 		id = CAN_somalia
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_saudi_alliance focus = CAN_rashid_alliance focus = CAN_Hashemite_alliance }
+		prerequisite = { focus = CAN_yemen focus = CAN_egypt }
 		text = "Secure Somalia"
 		x = 8
-		y = 3
+		y = 4
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -242,7 +243,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			FRA = { has_war_with = GER }
+
 		}
 		completion_reward = {
 			create_wargoal = {
@@ -261,7 +262,6 @@ focus_tree = {
 	focus = {
 		id = CAN_take_UK
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_egypt }
 		prerequisite = { focus = CAN_somalia }
 		prerequisite = { focus = CAN_oman }
 		text = "Secure United Kingdom"
@@ -291,13 +291,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_weak
+		id = CAN_africa
 		icon = GFX_focus_generic_the_giant_wakes
-		text = "Reorganize colonies"
-		mutually_exclusive = { focus = CAN_strong }
+		text = "Reorganize British Africa"
+		prerequisite = { focus = CAN_take_UK }
+		mutually_exclusive = { focus = CAN_weak }
 
 		x = 8
-		y = 0
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -305,39 +306,43 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			annex_country = {
-				   target = MAL
- 				   transfer_troops = yes
-			}
 			
 			KEN = {
-			
-			annex_country = {
-				   target = NGA
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = SUD
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = COG
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = CAR
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = CMR
- 				   transfer_troops = yes
-			}
-			annex_country = {
-				   target = GAB
- 				   transfer_troops = yes
-			}
+				annex_country = {
+					   target = NGA
+	 				   transfer_troops = yes
+				}
+				annex_country = {
+					   target = COG
+	 				   transfer_troops = yes
+				}
+				annex_country = {
+					   target = CMR
+	 				   transfer_troops = yes
+				}
 				set_cosmetic_tag = British_africa
 			}
+		}
+	}
+
+	focus = {
+		id = CAN_weak
+		icon = GFX_focus_generic_the_giant_wakes
+		text = "Keep African colonies"
+		prerequisite = { focus = CAN_take_UK }
+		mutually_exclusive = { focus = CAN_africa }
+
+		x = 4
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = -0.1
+			add_political_power = 100
 		}
 	}
  }
