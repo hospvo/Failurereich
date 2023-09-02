@@ -37,6 +37,26 @@ focus_tree = {
 	}
 
 	focus = {
+		id = CAN_king
+		icon = GFX_focus_eng_the_kings_party
+		prerequisite = {
+			focus = CAN_strong focus = CAN_weak
+		}
+		text = "King Edward"
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ENG_king_edward
+		}
+	}
+
+	focus = {
 		id = CAN_saudi_alliance
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
@@ -114,26 +134,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_to_faction = HEJ
-		}
-	}
-
-	focus = {
-		id = CAN_king
-		icon = GFX_focus_eng_the_kings_party
-		prerequisite = {
-			focus = CAN_strong focus = CAN_weak
-		}
-		text = "King Edward"
-		x = 6
-		y = 1
-		cost = 5
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = ENG_king_edward
 		}
 	}
 
