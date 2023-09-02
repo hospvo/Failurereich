@@ -2,7 +2,7 @@ music_station = "failurereich_station"
 music = {
 	song = "la_marseillaise"
 	chance = {
-		factor = 0
+		factor = 100
 		modifier = {
 			factor = 100
 		}
@@ -11,7 +11,7 @@ music = {
 music = {
 	song = "chant_du_depart"
 	chance = {
-		factor = 0
+		factor = 100
 		modifier = {
 			factor = 100
 		}
@@ -20,7 +20,16 @@ music = {
 music = {
 	song = "chant_des_partisans"
 	chance = {
-		factor = 0
+		factor = 100
+		modifier = {
+			factor = 100
+		}
+	}
+}
+music = {
+	song = "heil_dir_im_siegerkranz"
+	chance = {
+		factor = 100
 		modifier = {
 			factor = 100
 		}

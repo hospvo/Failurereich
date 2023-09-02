@@ -10,3 +10,6 @@ music = {
 	name = "chant_des_partisans"
 	file = "chant_des_partisans.ogg"
 }
+music = {
+    name = "heil_dir_im_siegerkranz"
+	file = "heil_dir_im_siegerkranz.ogg"
