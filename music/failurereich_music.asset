@@ -13,3 +13,8 @@ music = {
 music = {
     name = "heil_dir_im_siegerkranz"
 	file = "heil_dir_im_siegerkranz.ogg"
+}
+music = {
+    name = "le_chanson_de_l_oignon"
+	file = "le_chanson_de_l_oignon.ogg"
+}	
