@@ -497,7 +497,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_old_marechal_speech
-		icon = GFX_FRA_old_marshals_speech
+		icon = GFX_goal_generic_dangerous_deal
 		mutually_exclusive = { focus = FRA_monarchist_coup }
 		x = 15
 		y = 0
@@ -530,15 +530,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			FRA_philippe_petain = {
-				remove_country_leader_role = {
-					ideology = oligarchism
-				}
+			set_politics = {
+				ruling_party = fascism
 			}
 			set_party_name = { 
-    			ideology = reactionary
-    			long_name = "Parti Social Français"
-    			name = "PSF"
+    			ideology = fascism
+    			long_name = "PSF"
+    			name = "Parti Social Français"
 			}
 		}
 	}
@@ -611,8 +609,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.10
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_party_name = { 
+				ideology = fascism
+				long_name = "Military Junta"
+				name = "Military Junta"
+			}
 		}
 	}
 
@@ -720,6 +724,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_completed_focus = FRA_work_family_fatherland
 			has_army_manpower = { size > 200000 }
 			is_puppet = no
 		}
@@ -787,7 +792,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_cult_of_personnality
-		icon = GFX_FRA_petainism
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { 
 			focus = FRA_petain
 		}
@@ -1203,7 +1208,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_CNT
-		icon = GFX_FRA_cnt_alliance
+		icon = GFX_focus_fra_french_union
 		text = "CNT alliance"
 		prerequisite = { 
 				focus = FRA_ana2
@@ -1233,7 +1238,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_free_ukraine
-		icon = GFX_FRA_ukraine_alliance
+		icon = GFX_focus_fra_french_union
 		text = "Ukraine Alliance"
 		prerequisite = { 
 				focus = FRA_ana2
@@ -1263,7 +1268,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_german_ana
-		icon = GFX_FRA_a_free_germany
+		icon = GFX_focus_fra_french_union
 		text = "A free Germany"
 		prerequisite = { 
 				focus = FRA_CNT
@@ -1328,7 +1333,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_conservatives_monarch
-		icon = GFX_FRA_legitimist_king
+		icon = GFX_focus_generic_monarchy_1
 		text = "The Conservatives"
 		prerequisite = { 
 			focus = FRA_monarchist_coup
@@ -1366,7 +1371,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_orleans_restoration
-		icon = GFX_FRA_orleanist_king
+		icon = GFX_focus_focus_fra_orleans_restoration
 		prerequisite = { 
 			focus = FRA_monarchist_coup
 		}
@@ -1405,7 +1410,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_luxemburg_belgium
-		icon = GFX_FRA_annex_belgium
+		icon = GFX_goal_support_fascism
 		text = "Invade Belgium"
 
 		prerequisite = { 
@@ -1436,7 +1441,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_switzerland
-		icon = GFX_FRA_annex_switzerland
+		icon = GFX_goal_support_fascism
 		text = "Annex Geneve"
 
 		prerequisite = { 
@@ -1467,7 +1472,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_turin
-		icon = GFX_FRA_130_departments
+		icon = GFX_focus_focus_fra_national_resistance_council
 		text = "The 130 departements"
 
 		prerequisite = { 
@@ -1498,7 +1503,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_spanish_crown
-		icon = GFX_FRA_work_with_monarchist_spain
+		icon = GFX_focus_focus_fra_ratify_stresa
 		text = "Help the Spanish monarchists"
 
 		prerequisite = { 
@@ -1526,7 +1531,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_divided_ger
-		icon = GFX_FRA_destroy_germany
+		icon = GFX_focus_focus_fra_ratify_stresa
 		text = "Germany into piece"
 
 		prerequisite = { 
@@ -1556,4 +1561,60 @@ focus_tree = {
 			add_state_claim = 51
 		}
 	}
-}                       
+	
+	focus = {
+		id = FRA_king_of_the_french
+		icon = GFX_focus_focus_fra_orleans_restoration
+		text = "King of the french"
+		
+		prerequisite = {
+				focus = FRA_divided_ger
+		}	
+
+		x = -1
+		y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_france
+		}		 
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+                add_country_leader_trait = constitutional_monarch
+		}
+	}
+	
+	focus = {
+	    id = FRA_king_of_france
+		icon = GFX_focus_rom_royal_dictatorship
+		text = "King of france"
+		
+		prerequisite = {
+		        focus = FRA_spanish_crown
+		}
+
+	    x = 1
+        y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_the_french
+		}
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+        add_country_leader_trait = dictator
+		}
+	}	
+}   
