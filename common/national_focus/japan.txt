@@ -20,13 +20,6 @@
 		text = "Military Disaster"
 		x = 10
 		y = 0
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_country_flag = japan_civil_war
-			}
-		}
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -82,7 +75,9 @@
 			}
 		}
 	}
-	
+
+###### Non-Civil War #######
+
 	focus = {
 		id = JAP_status_quo
 		icon = GFX_focus_generic_japanese_imperial_glory
@@ -120,8 +115,6 @@
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-
-###### Non-Civil War #######
 
 	focus = {
 		id = JAP_reintegrate_korea
