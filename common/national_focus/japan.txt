@@ -18,7 +18,7 @@
 		id = JAP_unstability_war
 		icon = GFX_focus_generic_japanese_imperial_glory
 		text = "Military Disaster"
-		x = 12
+		x = 10
 		y = 0
 		offset = {
 			x = 1
@@ -406,7 +406,7 @@
 			focus = JAP_showa
 		}
 		allow_branch = { has_country_flag = japan_civil_war }
-		x = 8
+		x = 6
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -442,7 +442,7 @@
 		prerequisite = { 
 				focus = JAP_republic
 		}
-		x = 7
+		x = 5
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -474,7 +474,7 @@
 		prerequisite = { 
 				focus = JAP_republic
 		}
-		x = 9
+		x = 7
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -507,7 +507,7 @@
 				focus = JAP_korea3
 				focus = JAP_vin3
 		}
-		x = 7
+		x = 5
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -536,7 +536,7 @@
 				focus = JAP_korea3
 				focus = JAP_vin3
 		}
-		x = 9
+		x = 7
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
