@@ -18,7 +18,7 @@
 		id = JAP_unstability_war
 		icon = GFX_focus_generic_japanese_imperial_glory
 		text = "Military Disaster"
-		x = 7
+		x = 10
 		y = 0
 		offset = {
 			x = 1
@@ -87,7 +87,7 @@
 		id = JAP_status_quo
 		icon = GFX_focus_generic_japanese_imperial_glory
 		text = "The Status Quo Holds"
-		x = 12
+		x = 16
 		y = 0
 		offset = {
 			x = -4
@@ -246,7 +246,7 @@
 			focus = JAP_red
 		}
 		allow_branch = { has_country_flag = japan_civil_war }
-		x = 12
+		x = 15
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -276,7 +276,7 @@
 		prerequisite = { 
 				focus = JAP_showa
 		}
-		x = 11
+		x = 14
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -308,7 +308,7 @@
 		prerequisite = { 
 				focus = JAP_showa
 		}
-		x = 13
+		x = 16
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -341,7 +341,7 @@
 				focus = JAP_korea2
 				focus = JAP_vin2
 		}
-		x = 11
+		x = 14
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -405,7 +405,7 @@
 			focus = JAP_showa
 		}
 		allow_branch = { has_country_flag = japan_civil_war }
-		x = 4
+		x = 6
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -441,7 +441,7 @@
 		prerequisite = { 
 				focus = JAP_republic
 		}
-		x = 3
+		x = 7
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -473,7 +473,7 @@
 		prerequisite = { 
 				focus = JAP_republic
 		}
-		x = 5
+		x = 9
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -506,7 +506,7 @@
 				focus = JAP_korea3
 				focus = JAP_vin3
 		}
-		x = 3
+		x = 7
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -535,7 +535,7 @@
 				focus = JAP_korea3
 				focus = JAP_vin3
 		}
-		x = 5
+		x = 9
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -570,7 +570,7 @@
 			focus = JAP_showa
 		}
 		allow_branch = { has_country_flag = japan_civil_war }
-		x = 8
+		x = 10
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -599,7 +599,7 @@
 		prerequisite = { 
 				focus = JAP_red
 		}
-		x = 9
+		x = 11
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -626,7 +626,7 @@
 		prerequisite = { 
 				focus = JAP_red
 		}
-		x = 7
+		x = 9
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -654,7 +654,7 @@
 				focus = JAP_korea
 				focus = JAP_vin
 		}
-		x = 7
+		x = 9
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -683,7 +683,7 @@
 				focus = JAP_korea
 				focus = JAP_vin
 		}
-		x = 9
+		x = 11
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -716,7 +716,7 @@
 				focus = JAP_thailand2
 				focus = JAP_sinkiang
 		}
-		x = 8
+		x = 10
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -740,7 +740,7 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 6
+		x = 8
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -767,7 +767,7 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 10
+		x = 12
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -799,7 +799,7 @@
 				focus = JAP_war_india
 				focus = JAP_war_indonesia
 		}
-		x = 10
+		x = 12
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -827,7 +827,7 @@
 				focus = JAP_war_india
 				focus = JAP_war_indonesia
 		}
-		x = 6
+		x = 8
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
