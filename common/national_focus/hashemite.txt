@@ -112,7 +112,7 @@ focus_tree = {
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_invade_ikhwan }
-		prerequisite = { focus = HEJ_invade_rashid }
+		prerequisite = { focus = HEJ_invade_uae }
 		x = 1
 		y = 2
 		cost = 5
@@ -145,7 +145,7 @@ focus_tree = {
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_invade_ikhwan }
-		prerequisite = { focus = HEJ_invade_rashid }
+		prerequisite = { focus = HEJ_invade_uae }
 		x = 3
 		y = 2
 		cost = 5
