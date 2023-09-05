@@ -1,0 +1,55 @@
+characters={
+	CZE_edvard_benes={
+		name= "Edvard Beneš"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/CZE_edvard_benes.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	CZE_jaroslav_krejci={
+		name= "Jaroslav Krejčí"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/CZE_jaroslav_krejci.png"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	CZE_jan_syrovy={
+		name= "Jan Syrový"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/CZE_jan_syrovy.png"
+			}
+			army={
+				large="gfx/leaders/CZE/CZE_jan_syrovy.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+		field_marshal ={
+			traits = { defensive_doctrine }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 3
+		}
+	}
+}

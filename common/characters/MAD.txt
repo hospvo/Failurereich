@@ -1,0 +1,30 @@
+characters={
+	MAD_jean_ralaimongo={
+		name= "Jean Ralaimongo"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAD/MAD_jean_ralaimongo.png"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	MAD_joseph_ravoahangy={
+		name= "Joseph Ravoahangy"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAD/MAD_joseph_ravoahangy.png"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

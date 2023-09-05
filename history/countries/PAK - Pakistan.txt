@@ -101,17 +101,11 @@ set_popularities = {
 	neutrality = 80
 }
 
+recruit_character = PAK_qazi_isa
 
-create_country_leader = {
-	name = "Qazi Muhammad Essa"
-	
-	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
-	expire = "1960.1.1"
-	ideology = centrism
-	traits = {
-		
-	}
-}
+
+
+
 
 create_country_leader = {
 	name = "Muhammad Ali Jinnah"

@@ -1,0 +1,16 @@
+characters={
+	KAS_hari_singh={
+		name= "Hari Singh"
+		portraits={
+			civilian={
+				large="gfx/leaders/RAJ/KAS_hari_singh.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -19,4 +19,9 @@ spriteTypes = {
 	name = "GFX_idea_young_king"
 	texturefile = "gfx/interface/ideas/SIA/SIA_young_king.png"
 	}
+	
+	spriteType = {
+	name = "GFX_idea_american_militarism"
+	texturefile = "gfx/interface/ideas/USA/GFX_american_militarism.png"
+	}
 }

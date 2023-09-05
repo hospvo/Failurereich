@@ -1110,7 +1110,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_doriot
-		icon = GFX_focus_fra_milice
+		icon = GFX_FRA_ppf
 		prerequisite = { focus = FRA_old_marechal_speech }
 		mutually_exclusive = { focus = FRA_petain  focus = FRA_rocquist_coalition }
 		x = 4
@@ -1302,7 +1302,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_monarchist_coup
-		icon = GFX_focus_focus_fra_fascist_threat
+		icon = GFX_FRA_establish_the_monarchy
 		mutually_exclusive = { focus = FRA_old_marechal_speech }
 		x = 8
 		y = 0

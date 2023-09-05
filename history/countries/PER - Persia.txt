@@ -77,16 +77,13 @@ set_popularities = {
 	vanguardism = 5
 }
 
-create_country_leader = {
-	name = "Reza Shah Pahlavi"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Iran_Reza_Shah_Pahlavi.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+recruit_character = PER_reza_shah
+recruit_character = PER_soleiman_eskandari
+
+
+
+
+
 
 # His son, who came to power 41
 #create_country_leader = {
@@ -100,16 +97,6 @@ create_country_leader = {
 #	}
 #}
 
-create_country_leader = {
-	name = "Soleyman Mirza Eskandari"
-	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		dictator
-	}
-}
 
 create_corps_commander = {
 	name = "Hasan Arfa"

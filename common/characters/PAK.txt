@@ -1,0 +1,16 @@
+characters={
+	PAK_qazi_isa={
+		name= "Qazi Muhammad Isa"
+		portraits={
+			civilian={
+				large="gfx/leaders/RAJ/PAK_qazi_isa.png"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

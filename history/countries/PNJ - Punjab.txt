@@ -77,3 +77,8 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = PNJ_yar_khan
+
+
+
+

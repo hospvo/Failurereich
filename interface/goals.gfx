@@ -88,6 +88,16 @@ spriteTypes = {
 	###France###
 	
 	SpriteType = {
+		name = "GFX_FRA_establish_the_monarchy"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_establish_the_monarchy.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_ppf"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_ppf.png"			
+	}
+	
+	SpriteType = {
 		name = "GFX_FRA_a_free_germany"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_a_free_germany.png"			
 	}
@@ -100,6 +110,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_FRA_ukraine_alliance"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_ukraine_alliance.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_legitimist_king"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_legitimist_king.png"			
 	}
 	
 	SpriteType = {

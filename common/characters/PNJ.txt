@@ -1,0 +1,16 @@
+characters={
+	PNJ_yar_khan={
+		name= "Ahmad Yar Khan Ahmedzai"
+		portraits={
+			civilian={
+				large="gfx/leaders/RAJ/PNJ_yar_khan.png"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}

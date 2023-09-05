@@ -77,3 +77,8 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = HYD_osman_ali_khan
+
+
+
+
