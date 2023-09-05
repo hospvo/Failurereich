@@ -40,8 +40,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEJ_invade_rashid
-		text="Invade Rashidi"
+		id = HEJ_invade_uae
+		text="Invade Hassa"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_crush_terrorist }
 		x = 1
@@ -53,7 +53,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			   NOT = { country_exists = JSH }
+			   NOT = { country_exists = UAE }
 		}
 
 		completion_reward = {
@@ -61,11 +61,11 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = JSH
+		                target = UAE
 		                type = annex_everything
 	        	}
 
-			JSH = {
+			UAE = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
@@ -222,8 +222,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEJ_invite_syria 
-		text="Take Syria"
+		id = HEJ_invite_msq
+		text="Take Near Orient"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
 		x = 3
@@ -237,11 +237,11 @@ focus_tree = {
 		completion_reward = {
 				
 	        	create_wargoal = {
-		                target = SYR
+		                target = MSQ
 		                type = annex_everything
 	        	}
 
-			SYR = {
+			MSQ = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
@@ -250,8 +250,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEJ_invite_iraq
-		text="Take Iraq"
+		id = HEJ_invite_krd
+		text="Invade Kurdistan"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
 		x = 1
@@ -265,11 +265,11 @@ focus_tree = {
 		completion_reward = {
 				
 	        	create_wargoal = {
-		                target = IRQ
+		                target = KUR
 		                type = annex_everything
 	        	}
 
-			IRQ = {
+			KUR = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
