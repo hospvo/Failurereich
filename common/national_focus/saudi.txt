@@ -43,8 +43,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SAU_invade_rashid
-		text="Invade Rashidi"
+		id = SAU_invade_uae
+		text="Invade Al Hassa"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_crush_terrorist }
 		x = 1
@@ -64,11 +64,11 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = JSH
+		                target = UAE
 		                type = annex_everything
 	        	}
 
-			JSH = {
+			UAE = {
 				every_owned_state = {
 				    add_claim_by = SAU
 				}
