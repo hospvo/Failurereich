@@ -48,6 +48,20 @@ ideas = {
 				conscription_factor = 0.01
 			}
 		}
+		
+		FRA_french_labor_front = {
+			
+			picture = GFX_idea_french_labor_front
+			
+			modifier = {
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.25
+				communism_drift = -0.05
+				vanguardism_drift = 0.05
+			}
+			
+		}
 
 		FRA_sns = {
 

@@ -1157,7 +1157,8 @@ focus_tree = {
 
 	focus = {
 		id = FRA_reintroduce_trade_unions
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_FRA_ppf_labor_front
+		text = "Creation of the Labor Front"
 		prerequisite = { focus = FRA_doriot }
 		x = 1
 		y = 1
@@ -1171,9 +1172,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_popularity = {
-			    ideology = anarchist
-			    popularity = 0.1
+			add_ideas = {
+				FRA_french_labor_front
 			}
 		}
 	}
