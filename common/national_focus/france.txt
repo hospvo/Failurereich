@@ -1556,4 +1556,60 @@ focus_tree = {
 			add_state_claim = 51
 		}
 	}
-}                       
+	
+	focus = {
+		id = FRA_king_of_the_french
+		icon = GFX_focus_focus_fra_orleans_restoration
+		text = "King of the french"
+		
+		prerequisite = {
+				focus = FRA_divided_ger
+		}	
+
+		x = -1
+		y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_france
+		}		 
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+                add_country_leader_trait = constitutional_monarch
+		}
+	}
+	
+	focus = {
+	    id = FRA_king_of_france
+		icon = GFX_focus_rom_royal_dictatorship
+		text = "King of france"
+		
+		prerequisite = {
+		        focus = FRA_spanish_crown
+		}
+
+	    x = 1
+        y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_the_french
+		}
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+        add_country_leader_trait = dictator
+		}
+	}	
+}                      

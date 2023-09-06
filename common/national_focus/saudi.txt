@@ -43,8 +43,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SAU_invade_rashid
-		text="Invade Rashidi"
+		id = SAU_invade_uae
+		text="Invade Al Hassa"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_crush_terrorist }
 		x = 1
@@ -64,11 +64,11 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = JSH
+		                target = UAE
 		                type = annex_everything
 	        	}
 
-			JSH = {
+			UAE = {
 				every_owned_state = {
 				    add_claim_by = SAU
 				}
@@ -114,7 +114,7 @@ focus_tree = {
 		id = SAU_invade_oman
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_rashid }
+		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_uae }
 		x = 1
 		y = 2
 		cost = 5
@@ -146,7 +146,7 @@ focus_tree = {
 		id = SAU_invade_yemen
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_rashid }
+		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_uae }
 		x = 3
 		y = 2
 		cost = 5
@@ -201,22 +201,22 @@ focus_tree = {
 				
 				HEJ = {
 					every_core_state = {
-						add_core_of = HEJ
+						add_core_of = SAU
 					}
 				}
 				UAE = {
 					every_core_state = {
-						add_core_of = HEJ
+						add_core_of = SAU
 					}
 				}
 				YEM = {
 					every_core_state = {
-						add_core_of = HEJ
+						add_core_of = SAU
 					}
 				}
 				OMA = {
 					every_core_state = {
-						add_core_of = HEJ
+						add_core_of = SAU
 					}
 				}
 		}
