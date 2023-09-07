@@ -2,7 +2,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_french_labor_front"
-		texturefile = "gfx/interface/ideas/FRA/GFX_french_labor_front.dds"
+		texturefile = "gfx/interface/ideas/FRA/GFX_french_labor_front.png"
 	}
 	
 	spriteType = {

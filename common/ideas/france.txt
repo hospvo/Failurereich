@@ -51,7 +51,7 @@ ideas = {
 		
 		FRA_french_labor_front = {
 			
-			picture = GFX_idea_french_labor_front
+			picture = french_labor_front
 			
 			modifier = {
 				political_power_factor = -0.1

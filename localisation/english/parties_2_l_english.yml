@@ -575,6 +575,8 @@
  FRA_legitimist_party:0 "Parti légitimiste"
  FRA_bonepartist_party_long:0 "Parti bonapartiste"
  FRA_bonepartist_party:0 "Parti bonapartiste"
+ FRA_vanguardism_party:0 "RNPF"
+ FRA_vanguardism_party_long:0 "Rassemblement National Populaire Français"
  BRI_fascism_party:0 "NPB"
  BRI_fascism_party_long:0 "Breton National Party"
  BRI_neutrality_party:0 "URB"
