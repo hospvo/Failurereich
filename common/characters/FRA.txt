@@ -74,4 +74,18 @@ characters={
 			id = -1
 		}
 	}
+	FRA_marcel_deat={
+	    name="Marcel Déat"
+		portraits={
+		    civilian ={
+			    large="GFX/leaders/FRA/FRA_marcel_deat.png"
+			}
+        }
+        country_leader = {
+            ideology = socialism
+            traits = { }
+            expire = "1965.1.1.1"
+            id = -1
+        }
+    }		
 }

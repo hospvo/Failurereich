@@ -18,6 +18,7 @@ focus_tree = {
 	}
 
 	default = no
+	continuous_focus_position = { x = 3500 y = 2000 }
 
 	focus = {
 		id = FRA_economic_planning
@@ -499,6 +500,7 @@ focus_tree = {
 		id = FRA_old_marechal_speech
 		icon = GFX_FRA_old_marshals_speech
 		mutually_exclusive = { focus = FRA_monarchist_coup }
+		mutually_exclusive = { focus = FRA_freedom_way }
 		x = 15
 		y = 0
 		cost = 10
@@ -1304,6 +1306,7 @@ focus_tree = {
 		id = FRA_monarchist_coup
 		icon = GFX_FRA_establish_the_monarchy
 		mutually_exclusive = { focus = FRA_old_marechal_speech }
+		mutually_exclusive = { focus = FRA_freedom_way }
 		x = 8
 		y = 0
 		relative_position_id = FRA_old_marechal_speech
@@ -1612,4 +1615,81 @@ focus_tree = {
         add_country_leader_trait = dictator
 		}
 	}	
-}                      
+}
+
+####democrat path ####
+
+	focus = {
+	    id = FRA_freedom_way
+		icon = GFX_focus_rom_royal_dictatorship
+		mutually_exclusive = { 
+		         focus = FRA_old_marechal_speech 
+		}
+		mutually_exclusive = {
+		         focus = FRA_monarchist_coup
+		}		 
+		text = "Bring Back The Demoracts"
+	    x = 34
+        y = 0
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+				set_politics = {
+				         ruling_party = left
+				}
+			    set_party_name = {
+                        ideology = left
+                        long_name = "RP"
+                        name = "Revolution party" 						
+                }
+	    }
+    }
+	
+	focus = {
+	    id = FRA_hold_election
+	    icon = GFX_focus_rom_royal_dictatorship
+	    text = "Hold election"
+        prerequisite = {
+			   focus = FRA_freedom_way
+		}
+	    x = 34
+	    y = 1
+	    cost = 10
+	    available_if_capitulated = yes
+	    search_filters = { FOCUS_FILTER_POLITICAL } 
+	    ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+			    hold_election = FRA
+        }
+	}
+	
+	focus = {
+	    id = FRA_left_win
+	    icon = GFX_focus_fra_french_union
+	    text = "Leftist Victory"
+	    prerequisite = {
+	           focus = FRA_hold_election
+	    }
+        x = 38
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+			    set_party_name = {
+                        ideology = left
+                        long_name = "SD"
+						name = "Social democracy"
+		        }
+		}
+    }
+}	                      
