@@ -13,6 +13,32 @@ focus_tree = {
 	
 	default = no
 
+###################
+### NAPOLEON ####
+###################
+
+	focus = {
+		id = AFR_absolute_monarchy
+		icon = GFX_focus_focus_fra_third_empire
+		text = "A semi-absolute monarchy"
+		mutually_exclusive = { focus = AFR_constitutional_monarchy }
+		mutually_exclusive = { 	
+			focus = AFR_democracy
+		}
+		x = 4
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+			country_event = { id = exiled.1 days = 1 }
+		}
+	}
+
 	focus = {
 		id = AFR_constitutional_monarchy
 		icon = GFX_focus_focus_fra_third_empire
@@ -34,38 +60,15 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 100000
 			set_politics = {
-				ruling_party = neutrality
+				ruling_party = democratic
 			}	
-		}
-	}
-
-
-	focus = {
-		id = AFR_absolute_monarchy
-		icon = GFX_focus_focus_fra_third_empire
-		text = "Keep semi-absolute monarchy"
-		mutually_exclusive = { focus = AFR_constitutional_monarchy }
-		mutually_exclusive = { 	
-			focus = AFR_democracy
-		}
-		x = 4
-		y = 0
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_manpower = 200000
-			country_event = { id = exiled.1 days = 1 }
 		}
 	}
 
 	focus = {
 		id = FRA_avenge_morocco
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = "Invade Morroco"
+		text = "Puppet Morroco"
 		x = 6
 		y = 1
 		prerequisite = {
@@ -112,7 +115,7 @@ focus_tree = {
 	focus = {
 		id = FRA_liberia
 		icon = GFX_focus_focus_fra_intervention_spain
-		text = "Invasion of Liberia"
+		text = "Secure Liberia"
 		x = 6
 		y = 2
 		prerequisite = {
@@ -136,7 +139,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-				declare_war_on = {
+				creat_wargoal = {
    				 	target = LIB
    					type = annex_everything
 				}
@@ -146,7 +149,7 @@ focus_tree = {
 	focus = {
 		id = FRA_take_Lybia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = "Invade Lybia"
+		text = "Divide Lybia"
 		x = 4
 		y = 1
 		prerequisite = {
@@ -193,7 +196,7 @@ focus_tree = {
 	focus = {
 		id = FRA_reorganize_lybia
 		icon = GFX_focus_CZE_german_puppet
-		text = "Reorganize Lybia"
+		text = "Create Tripolitanian Republic"
 		x = 4
 		y = 2
 		prerequisite = {
@@ -230,10 +233,8 @@ focus_tree = {
 
 		prerequisite = {
 			focus = FRA_reorganize_lybia
-			focus = FRA_liberia
-			focus = AFR_democracy_2
 		}
-		x = 10
+		x = 5
 		y = 3
 		cost = 10
 
@@ -264,7 +265,7 @@ focus_tree = {
 	focus = {
 		id = FRA_retake_old_lands
 		icon = GFX_focus_attack_france
-		text = "Conquest France"
+		text = "Reconquer The Hexagone"
 		x = 10
 		y = 4
 		prerequisite = {
@@ -288,17 +289,21 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-				declare_war_on = {
+				create_wargoal = {
    				 	target = FRA
    					type = annex_everything
 				}
 			}
 	}
 
+################
+### REPUBLIC ###
+################
+
 	focus = {
 		id = AFR_democracy
 		icon = GFX_focus_fra_french_union
-		text = "Adopt Republican regime"
+		text = "Reetablish the Republic"
 		mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 
 		}
@@ -320,31 +325,26 @@ focus_tree = {
 			set_party_name = { 
 			    ideology = democratic
 			    long_name = "Parti Républicain"
-			    name = "Parti Républicain"
+			    name = "Parti Conservateur-Républicain"
 			}	
-			create_country_leader = {
-				name = "Charles de Gaulle"
-				desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
-				picture = "GFX_Portrait_France_Charles_De_Gaulle"
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
-			
-				}
-			}
 		}
 	}
+
+########################
+### FREE WEST AFRICA ###
+########################
+
 	focus = {
 		id = AFR_tunisian_kingdom
 		icon = GFX_focus_fra_regiment_normandie
-		text = "Tunisian independance"
+		text = "Tunisian autonomy"
 		prerequisite = {
 			focus = AFR_democracy
 		}
 		mutually_exclusive = { 	
 			focus = AFR_democracy_2
 		}
-		x = 16
+		x = 12
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -353,17 +353,17 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			release = TUN
+			release_puppet = TUN
 		}
 	}
 	focus = {
 		id = AFR_alger
 		icon = GFX_goal_generic_occupy_start_war
-		text = "Algerian independance"
+		text = "Algerian Autonomy"
 		prerequisite = {
 			focus = AFR_tunisian_kingdom
 		}
-		x = 16
+		x = 12
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -372,7 +372,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			release = ALG
+			release_puppet = ALG
 			set_capital = 272
 		}
 	}
@@ -383,7 +383,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_alger
 		}
-		x = 16
+		x = 12
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -396,9 +396,33 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = AFR_election
+		icon = GFX_focus_generic_africa_production
+		text = "election for african"
+		prerequisite = {
+			focus = AFR_west_africa
+		}
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hold_election = AFR
+		}
+	}
+
+#########################
+#### GENERAL REGIME #####
+#########################
+
+	focus = {
 		id = AFR_democracy_2
 		icon = GFX_focus_focus_fra_national_resistance_council
-		text = "Elections in France"
+		text = "Leclerc as leader"
 		prerequisite = {
 			focus = AFR_democracy
 		}
@@ -414,17 +438,101 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			hold_election = AFR
+			set_politics = {
+				ruling_party = neutrality
+			}	
 		}
 	}
+
 	focus = {
-		id = AFR_election
-		icon = GFX_focus_generic_africa_production
-		text = "election for african"
+		id = AFR_general
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Cut relations with Canada"
 		prerequisite = {
-			focus = AFR_west_africa
+			focus = AFR_democracy_2
 		}
-		x = 16
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CAN = { remove_from_faction = AFR }
+			add_named_threat = {
+			    threat = 5
+			    name = CAN_relations
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_Libya
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Invade Libya"
+		prerequisite = {
+			focus = AFR_general
+		}
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			creat_wargoal = {
+   				target = LBA
+   				type = annex_everything
+			}
+			LBA = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_Morocco
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Casablanca incident"
+		prerequisite = {
+			focus = AFR_general
+		}
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			creat_wargoal = {
+   				target = MOR
+   				type = annex_everything
+			}
+			MOR = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_EGY
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Reclaim Sudan"
+		prerequisite = {
+			focus = AFR_Libya
+			focus = AFR_Morocco
+		}
+		x = 15
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -433,7 +541,44 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			hold_election = AFR
+			creat_wargoal = {
+   				target = EGY
+   				type = annex_everything
+			}
+			EGY = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_general4
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Invade Middle East"
+		prerequisite = {
+			focus = AFR_Libya
+			focus = AFR_Morocco
+		}
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			creat_wargoal = {
+   				target = MSQ
+   				type = annex_everything
+			}
+			MSQ = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
 		}
 	}
 }
