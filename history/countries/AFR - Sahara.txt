@@ -101,4 +101,15 @@ set_politics = {
 				}
 			}
 
+			create_country_leader = {
+				name = "Charles de Gaulle"
+				desc = "Grand Général de France"
+				picture = "GFX_Portrait_France_Charles_De_Gaulle"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+			
+				}
+			}
+
 set_research_slots = 3
