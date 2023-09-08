@@ -95,7 +95,7 @@ set_politics = {
 				desc = "General de France"
 				picture = "gfx/leaders/FRA/portrait_france_philippe_leclerc.dds"
 				expire = "1965.1.1"
-				ideology = conservatism
+				ideology = centrism
 				traits = {
 					
 				}
