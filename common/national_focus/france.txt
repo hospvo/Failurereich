@@ -1640,6 +1640,13 @@ focus_tree = {
                         long_name = "RP"
                         name = "Revolution party" 						
                 }
+				remove_ideas = {
+				        idea = FRA_military_junta_1
+				}
+                add_popularity = {
+				ideology = left 
+				popularity = 0.20
+			    }				
 	    }
     }
 	
@@ -1661,6 +1668,10 @@ focus_tree = {
         completion_reward = {
 			    hold_election = FRA
         }
+		add_popularity = {
+				ideology = left 
+				popularity = 0.10
+	    }
 	}
 	
 	focus = {
@@ -1670,8 +1681,8 @@ focus_tree = {
 	    prerequisite = {
 	           focus = FRA_hold_election
 	    }
-        x = 38
-        y = 3
+        x = 29
+        y = 2
         cost = 10
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1684,6 +1695,71 @@ focus_tree = {
                         long_name = "SD"
 						name = "Social democracy"
 		        }
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
 		}
     }
+	focus = {
+	    id = FRA_start_education_reform
+	    icon = GFX_focus_fra_french_union
+	    text = "Education reform"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 30
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
+				add_stability = 0.10		
+		}
+    }
+	
+	focus = {
+	    id = FRA_help_usa
+	    icon = GFX_focus_fra_french_union
+	    text = "Help USA"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 28
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			is_puppet = no
+			country_exists = USA
+		}
+		bypass = {
+		    country_does_not_exists = USA
+		}	
+		
+        completion_reward = {
+                set_truce = {
+   				target = USA
+			    	days = 600
+			    }
+			FRA = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 1000
+				    target = USA
+				}				
+		    }
+        }
+	}	
 }
