@@ -429,7 +429,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AFR_tunisian_kingdom
 		}
-		x = 12
+		x = 16
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -451,7 +451,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_democracy_2
 		}
-		x = 12
+		x = 16
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
