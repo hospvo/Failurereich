@@ -171,6 +171,12 @@ ideologies = {
 			socialism = {
 			}
 
+			dem_soc = {
+			}
+
+			soc_lib = {
+			}
+
 		}
 		
 		dynamic_faction_names = {
@@ -230,6 +236,7 @@ ideologies = {
 			
 			centrism = {
 			}
+
 		}
 
 		dynamic_faction_names = {
@@ -278,8 +285,15 @@ ideologies = {
 			
 			conservatism = {
 			}
-		
-			liberalism = { ### Center Right politics
+
+			#### Right Liberalism ####
+			liberalism = { 
+			}
+
+			social_conservatism = {
+			}
+
+			traditionalism = {
 			}
 
 		}
@@ -339,6 +353,9 @@ ideologies = {
 			}
 			
 			oligarchism  = {
+			}
+
+			corporatism  = {
 			}
 
 		}
