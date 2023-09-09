@@ -222,14 +222,22 @@ create_country_leader = {
 #}
 
 create_country_leader = {
-	name = "Wilhelm II"
+	name = "Wilhelm ii"
 	desc = "POLITICS_WILHELM_II_DESC"
-	picture = "gfx/leaders/GER/GER_wilhelm_ii.png"
+	picture = "gfx/leaders/WGR/WGR_wilhelm_ii.png"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
 		anti_democrat imperial_connections
 	}
+create_country_leader = {
+	name = "Hermann Göring"
+	desc = "POLITICS_HERMANN_GORING_DESC"
+	picture = "gfx/leaders/WGR/WGR_hermann_goring.png"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}	
 }
 
 ### Ship Variants ###
