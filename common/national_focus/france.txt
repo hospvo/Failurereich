@@ -1666,7 +1666,7 @@ focus_tree = {
 			factor = 1
 	    }
         completion_reward = {
-			    hold_election = FRA
+			    elections_allowed = yes
         }
 		add_popularity = {
 				ideology = left 
