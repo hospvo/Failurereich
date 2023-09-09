@@ -137,6 +137,7 @@ country_event = {
 			mark_focus_tree_layout_dirty = yes
 		}
 		TGW = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
+		EDO = { load_focus_tree = { tree = japan_focus keep_completed = yes } }
 	}
 }
 
@@ -150,8 +151,11 @@ country_event = {
 
 	option = {
 		name = "Japan new friends"
-		EDO = { puppet = VIN }
-		EDO = { puppet = KOR }
+		EDO = { 
+			create_faction = "East Asian Workers Front"
+			add_to_faction = VIN
+			add_to_faction = KOR
+		}
 		VIN= { transfer_state = 671 }
 		VIN= { transfer_state = 670 }
 		VIN= { transfer_state = 741 }

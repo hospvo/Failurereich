@@ -207,7 +207,7 @@ if = {
 
 set_convoys = 300
 
-create_faction = "Axe"
+create_faction = "Pacte d'Acier"
 add_to_faction = FRA
 add_to_faction = ENG
 add_to_faction = ITA
