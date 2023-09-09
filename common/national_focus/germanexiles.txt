@@ -526,8 +526,12 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+                        WGR_wilhelm_ii = {
+			    remove_country_leader_role = {
+				ideology = oligarchism
+                            }
+                        }
 			add_manpower = 200000
-			retire_country_leader = yes
 			add_ideas = { GER_wilhelm_iii }
 		}
 	}
