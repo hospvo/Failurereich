@@ -1,0 +1,32 @@
+
+characters={
+	WGR_wilelm_ii={
+		name= "Wilelm ii"
+		portraits={
+			civilian={
+				large="gfx/leaders/WGR/WGR_wilelm_ii.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+	WGR_hermann_goring={
+	    name = "Hermann Göring"
+		portraits={
+		    civilian={
+			     large="gfx/leaders/WGR/WGR_hermann_goring.png"
+			}
+		}	
+        country_leader={
+            ideology=despotism
+            traits= { }
+            expire="1969.1.1.1"
+			id=-1
+        }
+    }
+}	
+	
