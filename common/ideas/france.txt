@@ -1537,6 +1537,25 @@ ideas = {
 			}
 		}
 		
+	    FRA_freedom_of_religion = {
+		    picture = anti_soviet_pact
+			allowed = {
+				original_tag = FRA
+			    always = no # Added via focus
+			}
+
+            allowed_civil_war = {
+                NOT = {
+                    has_government = fascism
+                }
+            }
+			
+			removal_cost = -1
+
+            modifier = {
+				stability_weekly = 0.010
+            }				
+		
 	}
 	
 	tank_manufacturer = {
@@ -1639,6 +1658,7 @@ ideas = {
 			traits = { armored_car_manufacturer }
 		}
 	}
+	
 	
 	materiel_manufacturer = {
 			

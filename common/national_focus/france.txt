@@ -1743,9 +1743,6 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			country_exists = USA
-		}
-		bypass = {
-		    country_does_not_exists = USA
 		}	
 		
         completion_reward = {
@@ -1761,5 +1758,33 @@ focus_tree = {
 				}				
 		    }
         }
-	}	
-}
+	}
+   
+    focus = {
+        id = FRA_religion_freedom
+        icon = GFX_focus_fra_french_union
+	    text = "Freedom of religion"
+	    prerequisite = {
+	           focus = FRA_help_usa
+	    }
+		prerequisite = {
+	           focus = FRA_start_education_reform
+	    }
+        x = 29
+        y = 4
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_ideas = FRA_freedom_of_religion
+                 add_manpower = 100
+        }				 
+    }
+}	

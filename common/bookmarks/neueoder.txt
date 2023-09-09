@@ -167,7 +167,7 @@ bookmarks = {
 			history = "SIA_GATHERING_STORM_DESC"
 			ideology = reactionary
 			ideas = {
-				young_king
+			      SIA_young_king
 			}
 			focuses = {
 				SIA_siam_crisis

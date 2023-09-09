@@ -1,0 +1,26 @@
+ideas = {
+
+	    country = {
+		    SIA_young_king = {
+			
+			    allowed = {
+				        riginal_tag = SIA
+					    always = no
+	            }
+
+			    allowed_civil_war = {
+				        always = yes
+			    }
+			    available = {
+				        has_stability < 0.7
+			    }
+
+			    removal_cost = -1
+			
+			    modifier = {
+				        stability_weekly = 0.3
+			    }
+
+		    }
+	    }
+}	
