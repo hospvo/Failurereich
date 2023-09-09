@@ -1615,7 +1615,7 @@ focus_tree = {
 
 	focus = {
 	    id = FRA_freedom_way
-		icon = GFX_focus_rom_royal_dictatorship
+		icon = GFX_FRA_republicanism
 		mutually_exclusive = { 
 		         focus = FRA_old_marechal_speech 
 		}
@@ -1652,7 +1652,7 @@ focus_tree = {
 	
 	focus = {
 	    id = FRA_hold_election
-	    icon = GFX_focus_rom_royal_dictatorship
+	    icon = GFX_FRA_election
 	    text = "Hold election"
         prerequisite = {
 			   focus = FRA_freedom_way
@@ -1676,7 +1676,7 @@ focus_tree = {
 	
 	focus = {
 	    id = FRA_left_win
-	    icon = GFX_focus_fra_french_union
+	    icon = GFX_FRA_marceal_deat
 	    text = "Leftist Victory"
 	    prerequisite = {
 	           focus = FRA_hold_election

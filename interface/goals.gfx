@@ -88,6 +88,21 @@ spriteTypes = {
 	###France###
 	
 	SpriteType = {
+		name = "GFX_FRA_republicanism"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_republicanism.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_marceal_deat"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_marceal_deat.png"			
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_election"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_election.png"			
+	}
+	
+	SpriteType = {
 		name = "GFX_FRA_ppf_labor_front"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_ppf_labor_front.png"			
 	}
