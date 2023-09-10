@@ -233,6 +233,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = FRA_reorganize_lybia
+			focus = FRA_liberia
 		}
 		x = 5
 		y = 3
@@ -337,7 +338,7 @@ focus_tree = {
 	focus = {
 		id = AFR_election
 		icon = GFX_focus_generic_africa_production
-		text = "A emocratic republic"
+		text = "A democratic republic"
 		prerequisite = {
 			focus = AFR_democracy
 		}
@@ -470,7 +471,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_Libya
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon = GFX_focus_focus_fra_border
 		text = "Invade Libya"
 		prerequisite = {
 			focus = AFR_general
@@ -498,7 +499,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_Morocco
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon = GFX_focus_focus_fra_border
 		text = "Casablanca incident"
 		prerequisite = {
 			focus = AFR_general
@@ -526,7 +527,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_EGY
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon = GFX_focus_focus_fra_border
 		text = "Reclaim Sudan"
 		prerequisite = {
 			focus = AFR_Libya
@@ -555,7 +556,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_general4
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon = GFX_focus_focus_fra_border
 		text = "Invade Middle East"
 		prerequisite = {
 			focus = AFR_Libya
