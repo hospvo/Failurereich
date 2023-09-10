@@ -396,14 +396,14 @@ country_event = {
 country_event = {
 	id = france.11
 	title = "War to Germany"
-	desc = "Germany need to be destroyed"
+	desc = "France fall under the Spartacists. Germany has to be destroyed."
 	picture = GFX_report_event_north_germany
 	
 	is_triggered_only = yes
 
 	option = { 
 		name = "Declare war to Germany"
-	        declare_war_on = {
+	        create_wargoal = {
 		                target = GER
 		                type = annex_everything
 	        }

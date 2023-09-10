@@ -4,7 +4,7 @@ add_namespace = tt
 country_event = {
 	id = tt.1
 	title = "Paris taken"
-	desc = "France is now under our control, we will instaure a new republic"
+	desc = "France is now under our control, we will instaure a new regime."
 	picture = GFX_report_event_north_germany
 	
 	fire_only_once = yes
@@ -448,5 +448,81 @@ country_event = {
 			}		
 		}
 
+	}
+}
+
+#####################
+### other ###
+###########
+
+
+country_event = {
+	id = tt.10
+	title = "Pass through Ardennes"
+	desc = "French front is strong, so we have to travel Ardennes."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = GER
+		has_war_with = FRA
+		OR = {
+    			country_exists = BEL
+    			country_exists = LUX
+		}    
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Take over Benelux"
+		if = {
+    			limit = {
+        			country_exists = BEL
+    			}
+			create_wargoal  = {
+			                target = BEL
+			                type = annex_everything
+		        }
+		}
+		if = {
+    			limit = {
+        			country_exists = LUX
+    			}
+			create_wargoal  = {
+			                target = LUX
+			                type = annex_everything
+		        }
+		}
+	}
+}
+
+country_event = {
+	id = tt.11
+	title = "Pressure Holland"
+	desc = "Holland need to join the war, We get issues from Benelux."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = GER
+		has_war_with = FRA
+		OR = {
+    			has_war_with = BEL
+    			has_war_with = LUX
+		}    
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Rally Holland"
+		add_to_faction = HOL
 	}
 }
