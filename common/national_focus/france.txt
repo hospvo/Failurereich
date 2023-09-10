@@ -1811,6 +1811,7 @@ focus_tree = {
                  add_political_power = 100
         }				 
     }
+	
 	focus = {
         id = FRA_human_right
         icon = GFX_focus_fra_french_union
@@ -1826,6 +1827,9 @@ focus_tree = {
         ai_will_do = {
 			factor = 1
 	    }
+		bypass = {
+		    has_government = fascism
+		}	
 		available = {
 			has_government = left
         }
