@@ -335,9 +335,9 @@ focus_tree = {
 ########################
 
 	focus = {
-		id = AFR_tunisian_kingdom
-		icon = GFX_focus_fra_regiment_normandie
-		text = "Tunisian autonomy"
+		id = AFR_election
+		icon = GFX_focus_generic_africa_production
+		text = "A emocratic republic"
 		prerequisite = {
 			focus = AFR_democracy
 		}
@@ -346,6 +346,25 @@ focus_tree = {
 		}
 		x = 12
 		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+		}
+	}
+	focus = {
+		id = AFR_tunisian_kingdom
+		icon = GFX_focus_fra_regiment_normandie
+		text = "Tunisian autonomy"
+		prerequisite = {
+			focus = AFR_election
+		}
+		x = 12
+		y = 2
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -364,7 +383,7 @@ focus_tree = {
 			focus = AFR_tunisian_kingdom
 		}
 		x = 12
-		y = 2
+		y = 3
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -384,25 +403,6 @@ focus_tree = {
 			focus = AFR_alger
 		}
 		x = 12
-		y = 3
-		cost = 10
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			AFR = { set_cosmetic_tag = West_africa }
-		}
-	}
-	focus = {
-		id = AFR_election
-		icon = GFX_focus_generic_africa_production
-		text = "election for african"
-		prerequisite = {
-			focus = AFR_west_africa
-		}
-		x = 12
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -411,7 +411,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			hold_election = AFR
+			AFR = { set_cosmetic_tag = West_africa }
 		}
 	}
 
