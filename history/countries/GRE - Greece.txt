@@ -73,6 +73,10 @@ set_popularities = {
 
 set_stability = 0.75
 
+add_ideas = {
+    george_ii
+}	
+
 create_country_leader = {
 	name = "Ioannis Metaxas"
 	desc = "POLITICS_IOANNIS_METAXAS_DESC"
