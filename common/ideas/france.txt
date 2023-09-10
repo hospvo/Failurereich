@@ -3,6 +3,7 @@ ideas = {
 	country = {
 
 		FRA_military_junta_1 = {
+		picture = military_junta
 
 			allowed = {
 				original_tag = FRA
