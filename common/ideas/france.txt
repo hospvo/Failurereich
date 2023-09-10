@@ -1538,7 +1538,7 @@ ideas = {
 		}
 		
 	    FRA_freedom_of_religion = {
-		    picture = anti_soviet_pact
+		    picture = freedom_of_religion
 			allowed = {
 				original_tag = FRA
 			    always = no # Added via focus
