@@ -556,8 +556,8 @@ country_event = {
 	
 country_event = {
 	id = tt.13
-	title = "czech and their friend fall"
-	desc = "czech romania and yugoslavia has fallen to ours"
+	title = "czech fall"
+	desc = "czech fallen to ours"
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes

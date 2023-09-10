@@ -197,6 +197,7 @@ country_event = {
 		HOL = { set_state_owner = 6 }
 		HOL = { set_state_owner = 29 }
 		LOM = { set_state_owner = 735 }
+		LOM = { set_state_owner = 851 }
 		GER = { set_state_owner = 914 }
 		GER = { set_state_owner = 944 }
 		GER = { set_state_owner = 945 }
