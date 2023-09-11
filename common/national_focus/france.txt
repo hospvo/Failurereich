@@ -1845,7 +1845,7 @@ focus_tree = {
         icon = GFX_focus_fra_french_union
 	    text = "Women's suffrage"
 	    prerequisite = {
-	           focus = FRA_human_right
+	           focus = FRA_write_con
 	    }
         x = 31
         y = 6
