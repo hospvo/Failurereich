@@ -88,4 +88,18 @@ characters={
             id = -1
         }
     }		
+	FRA_michel_clemenceau={
+	    name="Michel Clemenceau"
+		portraits={
+		    civilian ={
+			    large="GFX/leaders/FRA/FRA_michel_clemenceau.png"
+			}
+        }
+        country_leader = {
+            ideology = moderatism
+            traits = { }
+            expire = "1965.1.1.1"
+            id = -1
+        }
+    }
 }

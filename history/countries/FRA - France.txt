@@ -242,6 +242,7 @@ recruit_character = FRA_jacques_doriot
 recruit_character = FRA_marcel_bucard
 recruit_character = FRA_rene_binet
 recruit_character = FRA_marcel_deat
+recruit_character = FRA_michel_clemenceau
 
 
 
