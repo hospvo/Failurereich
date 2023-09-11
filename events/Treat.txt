@@ -552,6 +552,8 @@ country_event = {
 		name = "Rally social republic of pandania"
 		add_to_faction = LOM
 	}
+	option = {
+	    name = "No thank"
 }
 	
 country_event = {
@@ -565,7 +567,6 @@ country_event = {
 	trigger= {
 		tag = GER
 		    GER = { controls_state = 74 }
-			GER = { controls_state = 72 }
 			GER = { controls_state = 69 }
 	}
 	
@@ -575,18 +576,6 @@ country_event = {
 	
 	option = {
 		name = "our land!"
-		
-		GER = {
-		
-		white_peace = YUG
-		white_peace = ROM
-		}
-		
-		HUN = {
-		
-		white_peace = YUG
-		White_peace = ROM
-		}
 		
 		GER = { set_state_owner = 69 }
 		GER = { set_state_owner = 74 }
