@@ -1537,8 +1537,7 @@ ideas = {
 				communism_drift = -0.25
 			}
 		}
-		
-	    FRA_freedom_of_religion = {
+		FRA_freedom_of_religion = {
 		    picture = freedom_of_religion
 			allowed = {
 				original_tag = FRA
@@ -1554,10 +1553,32 @@ ideas = {
 			removal_cost = -1
 
             modifier = {
-				stability_weekly = 0.010
+				stability_weekly = 0.01
             }				
 		
-	}
+	    }
+		
+	    AFR_napoleon_king = {
+		    picture = napoleon_king
+			allowed = {
+				original_tag = AFR
+			    always = no # Added via focus
+			}
+
+            allowed_civil_war = {
+                NOT = {
+                    has_government = fascism
+					has_government = anarchist
+                }
+            }
+			
+			removal_cost = -1
+
+            modifier = {
+				stability_weekly = 0.1
+            }				
+		
+	    }
 	
 	tank_manufacturer = {
 
