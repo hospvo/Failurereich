@@ -1122,6 +1122,7 @@ focus_tree = {
 	focus = {
 		id = AFR_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
+		text = "Marine Française"
 		x = 44
 		y = 0
 		cost = 10
@@ -1250,6 +1251,7 @@ focus_tree = {
 	focus = {
 		id = AFR_flexible_navy
 		icon = GFX_goal_generic_build_navy
+		text = "Advanced marine"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
 		x = 42
@@ -1277,7 +1279,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
-				cost_reduction = 0.5
+				cost_reduction = 0.25
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -1291,6 +1293,7 @@ focus_tree = {
 	focus = {
 		id = AFR_NAV_effort
 		icon = GFX_goal_generic_air_naval_bomber
+		text = "Navy effort"
 		prerequisite = { focus = AFR_flexible_navy }
 		x = 42
 		y = 2
@@ -1303,9 +1306,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = nav_bomber_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
+				bonus = 2.0
+				ahead_reduction = 1
+				uses = 2
 				category = naval_bomber
 			}
 		}
@@ -1314,6 +1317,7 @@ focus_tree = {
 	focus = {
 		id = AFR_large_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
+		text = "Algerian fleet"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
 		x = 46
@@ -1341,7 +1345,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = fleet_in_being_bonus
-				cost_reduction = 0.25
+				cost_reduction = 0.5
 				uses = 2
 				category = fleet_in_being_tree
 			}
@@ -1351,6 +1355,7 @@ focus_tree = {
 	focus = {
 		id = AFR_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
+		text = "Mediteranean Submarine"
 		prerequisite = { focus = AFR_large_navy }
 		x = 46
 		y = 2
@@ -1388,6 +1393,7 @@ focus_tree = {
 	focus = {
 		id = AFR_cruiser_effort
 		icon = GFX_goal_generic_navy_cruiser
+		text = "Cruiser effort"
 		prerequisite = { focus = AFR_NAV_effort }
 		x = 42
 		y = 3
@@ -1426,6 +1432,7 @@ focus_tree = {
 	focus = {
 		id = AFR_destroyer_effort
 		icon = GFX_goal_generic_wolf_pack
+		text = "Destroyer effort"
 		prerequisite = { focus = AFR_submarine_effort }
 		x = 46
 		y = 3
@@ -1463,6 +1470,7 @@ focus_tree = {
 	focus = {
 		id = AFR_capital_ships_effort
 		icon = GFX_goal_generic_navy_battleship
+		text = "Prepare battleship"
 		prerequisite = { focus = AFR_cruiser_effort focus = AFR_destroyer_effort }
 		x = 44
 		y = 4
