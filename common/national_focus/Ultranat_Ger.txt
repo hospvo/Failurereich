@@ -37,6 +37,7 @@ focus_tree = {
 			controls_state = 59
 		}
 		completion_reward = {
+			set_capital = {state = 64}
 			add_manpower = 200000
 		}
 	}
