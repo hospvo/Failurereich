@@ -35,6 +35,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 200000
+			add_ideas = AFR_bonaparte_cult
 			country_event = { id = exiled.1 days = 1 }
 		}
 	}
@@ -58,7 +59,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 100000
+			add_manpower = 100000			
+			add_ideas = AFR_democrat_bonapartism
 			set_politics = {
 				ruling_party = democratic
 			}	
@@ -319,7 +321,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
+		completion_reward = {	
+			add_ideas = AFR_republic
 			set_politics = {
 				ruling_party = democratic
 			}
@@ -411,7 +414,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
+		completion_reward = {	
+			add_ideas = AFR_West_Africa
 			AFR = { set_cosmetic_tag = West_africa }
 		}
 	}
