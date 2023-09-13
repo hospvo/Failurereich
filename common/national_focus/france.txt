@@ -1763,7 +1763,7 @@ focus_tree = {
    
     focus = {
         id = FRA_religion_freedom
-        icon = GFX_focus_fra_french_union
+        icon = GFX_free_religion
 	    text = "Freedom of religion"
 	    prerequisite = {
 	           focus = FRA_help_usa
@@ -1862,8 +1862,8 @@ focus_tree = {
         }
 
         completion_reward = {
-                 add_political_power = 100
-				 add_ideas = { FRA_womens_suffrage }
+				 add_ideas = { FRA_women_election }
+				 add_political_power = 100
         }				 
     }
 }	

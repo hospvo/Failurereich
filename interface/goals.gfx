@@ -11,6 +11,10 @@ spriteTypes = {
 		name = "GFX_womens_suffrage"
 		texturefile = "gfx/interface/goals/FRA/GFX_womens_suffrage.png"
 	}
+	SpriteType = { 
+		name = "GFX_free_religion"
+		texturefile = "gfx/interface/goals/FRA/GFX_free_religion.png"
+	}
 	###Germany###
 	
 	SpriteType = {

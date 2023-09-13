@@ -46,7 +46,7 @@ spriteTypes = {
 	texturefile = "gfx/interface/ideas/FRA/GFX_napoleon_king.png"
 	}
 	spriteType = {
-	name = "GFX_idea_womens_suffrage"
-	texturefile = "gfx/interface/ideas/FRA/GFX_womens_suffrage.png"
+	name = "GFX_idea_women_election"
+	texturefile = "gfx/interface/ideas/FRA/GFX_women_election.png"
 	}
 }
