@@ -53,7 +53,9 @@
   FRA_social_reforms: "Social Reforms"
   FRA_monarchist_coup: "Monarchists Coup"
   FRA_orleans_restoration: "The Refomist"
-  FRA_orleans_restoration_desc: "After The Regency coucil choose new monarchy for france now the refomist have win the vote"
+  FRA_orleans_restoration_desc: "After The Regency coucil choose new monarchy for france now the refomist have win the vote Vive Orléans!"
+  FRA_woman_election: "Women suffrage"
+  FRA_woman_election_desc: "In the new constitution, we have added rights for women in elections and political participation."
 
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"

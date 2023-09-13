@@ -6,7 +6,7 @@ ideas = {
 			
 			    allowed = {
 				        original_tag = SIA
-					    always = yes
+					    always = no
 	            }
 
 			    allowed_civil_war = {

@@ -1863,6 +1863,7 @@ focus_tree = {
 
         completion_reward = {
                  add_political_power = 100
+				 add_ideas = { FRA_womens_suffrage }
         }				 
     }
 }	
