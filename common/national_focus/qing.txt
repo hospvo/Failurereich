@@ -12,7 +12,6 @@
 
 	focus = {
 		id = MAN_constitutional_monarchy
-		text = "Rebuilt Beiyang China"
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		x = 8
 		y = 0
@@ -31,7 +30,6 @@
 
 	focus = {
 		id = MAN_reject_kuomintang
-		text = "No compromise with bloody revolutionary!"
 		icon = GFX_goal_generic_demand_territory
 		x = 12
 		y = 1
@@ -52,7 +50,6 @@
 
 	focus = {
 		id = MAN_invade_ganxi
-		text = "Ma clique under us"
 		icon = GFX_focus_jap_manchurian_project
 		x = 12
 		y = 2
@@ -73,7 +70,6 @@
 	#Focus for Invade Sinkiang
 	focus = {
 		id = MAN_invade_sinkiang
-		text = "Xinjiang conquest"
 		icon = GFX_focus_jap_manchurian_project
 		x = 10
 		y = 3
@@ -94,7 +90,6 @@
 	#Focus for Retake Mongolia
 	focus = {
 		id = MAN_retake_mongolia
-		text = "Mongolia under us"
 		icon = GFX_focus_NZL_bob_semple_tank
 		x = 14
 		y = 3
@@ -114,7 +109,6 @@
 	#Focus for Retake Vladivostok
 	focus = {
 		id = MAN_retake_vladivostok
-		text = "reture vladivostok to our hand!"
 		icon = GFX_focus_chi_army_reform
 		x = 12
 		y = 3
@@ -136,7 +130,6 @@
 
 	focus = {
 		id = MAN_compromise_with_kuomintang
-		text = "Compromise with kuomintang"
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		x = 4
 		y = 1
@@ -156,7 +149,6 @@
 	}
 	focus = {
 		id = MAN_guarantee_from_german_empire
-		text = "German approchement"
 		icon = Focus_ger_revive_kaiserreich
 		x = 3
 		y = 2
@@ -175,7 +167,6 @@
 	}
 	focus = {
 		id = MAN_guarantee_austria
-		text = "Austrian help"
 		icon = GFX_focus_generic_monarchy
 		x = 5
 		y = 2

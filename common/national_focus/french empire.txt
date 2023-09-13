@@ -35,7 +35,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 200000
-			add_ideas = AFR_bonaparte_cult
+			add_ideas = { AFR_bonaparte_cult }
 			country_event = { id = exiled.1 days = 1 }
 		}
 	}
