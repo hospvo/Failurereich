@@ -41,4 +41,8 @@ spriteTypes = {
 	name = "GFX_idea_young_king"
 	texturefile = "gfx/interface/ideas/SIA/GFX_young_king.png"
 	}
+	spriteType = {
+	name = "GFX_idea_napoleon_king"
+	texturefile = "gfx/interface/ideas/FRA/GFX_napoleon_king.png"
+	}
 }

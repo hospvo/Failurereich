@@ -3,6 +3,10 @@ spriteTypes = {
 		name = "GFX_focus_SOV_facism_influence"
 		texturefile = "gfx/interface/goals/focus_SOV_facism_influence.dds"
 	}
+	SpriteType = { 
+		name = "GFX_FRA_constitution"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_constitution.png"
+	}
 	###Germany###
 	
 	SpriteType = {
