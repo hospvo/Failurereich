@@ -1579,7 +1579,7 @@ ideas = {
             }				
 		
 	    }
-		FRA_womens_suffrage = {
+		FRA_womens_election = {
 		    picture = womens_suffrage
 			allowed = {
 				original_tag = FRA
