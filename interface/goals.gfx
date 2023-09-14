@@ -15,6 +15,14 @@ spriteTypes = {
 		name = "GFX_free_religion"
 		texturefile = "gfx/interface/goals/FRA/GFX_free_religion.png"
 	}
+	SpriteType = { 
+		name = "GFX_help_usa"
+		texturefile = "gfx/interface/goals/FRA/GFX_help_usa.png"
+	}
+	SpriteType = { 
+		name = "GFX_education"
+		texturefile = "gfx/interface/goals/FRA/GFX_education.png"
+	}
 	###Germany###
 	
 	SpriteType = {

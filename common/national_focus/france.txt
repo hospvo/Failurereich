@@ -1704,7 +1704,7 @@ focus_tree = {
     }
 	focus = {
 	    id = FRA_start_education_reform
-	    icon = GFX_focus_fra_french_union
+	    icon = GFX_education
 	    text = "Education reform"
 	    prerequisite = {
 	           focus = FRA_left_win
@@ -1728,7 +1728,7 @@ focus_tree = {
 	
 	focus = {
 	    id = FRA_help_usa
-	    icon = GFX_focus_fra_french_union
+	    icon = GFX_help_usa
 	    text = "Help USA"
 	    prerequisite = {
 	           focus = FRA_left_win
