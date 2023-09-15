@@ -1866,4 +1866,56 @@ focus_tree = {
 				 add_political_power = 100
         }				 
     }
+	
+	focus = {
+        id = FRA_freedom_of_talk
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_human_right
+	    }
+        x = 29
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+        }				 
+    }
+	
+	focus = {
+        id = FRA_woman_army
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_human_right
+	    }
+        x = 31
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+        }				 
+    }
 }	
