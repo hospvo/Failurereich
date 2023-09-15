@@ -39,7 +39,7 @@ characters = {
 		name = "Vladimiar III"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/russia/Portrait_tsar_vladimir_kirillovich"
+				large = "gfx/leaders/russia/Portrait_RUS_vladimir_kirillovich"
 			}
 		}
 		country_leader = {
