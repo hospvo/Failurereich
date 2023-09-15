@@ -36,10 +36,10 @@ characters = {
 	# Kerensky and Rodzaevsky moved to the bottom of the file
 
 	SOV_tsar_vladimir_kirillovich = {
-		name = SOV_tsar_vladimir_kirillovich
+		name = "Vladimiar III"
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_SOV_vladimir_kirillovich"
+				large = "gfx/leaders/russia/Portrait_tsar_vladimir_kirillovich"
 			}
 		}
 		country_leader = {
