@@ -1897,7 +1897,7 @@ focus_tree = {
         id = FRA_woman_army
         icon = GFX_womens_suffrage
 	    prerequisite = {
-	           focus = FRA_human_right
+	           focus = FRA_woman_election
 	    }
         x = 31
         y = 7
@@ -1909,6 +1909,8 @@ focus_tree = {
 	    }
 		bypass = {
 		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
 		}	
 		available = {
 			has_government = left
