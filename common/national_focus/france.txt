@@ -1639,7 +1639,7 @@ focus_tree = {
 			    set_party_name = {
                         ideology = left
                         long_name = "RP"
-                        name = "Revolution party" 						
+                        name = "Revolution party"
                 }
 				remove_ideas = {
 				        idea = FRA_military_junta_1
@@ -1647,7 +1647,12 @@ focus_tree = {
                 add_popularity = {
 				ideology = left 
 				popularity = 0.20
-			    }				
+			    }
+				add_popularity = {
+				ideology = democratic 
+				popularity = 0.20
+			    }
+                set_cosmetic_tag = FRA_republic
 	    }
     }
 	
