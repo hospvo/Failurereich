@@ -8,6 +8,7 @@ set_war_support = 0.5
 add_ideas = {
 }
 
+recruit_character = PAP_pius_xi
 
 # Starting tech
 set_technology = {
@@ -111,7 +112,6 @@ set_popularities = {
 	communism = 0
 	reactionary = 80
 }
-
 
 
 ### VARIANTS ###

@@ -1,0 +1,16 @@
+characters={
+	PAP_pius_xi={
+		name= "Piux XI"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAP/PAP_Portrait_pius_xi.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}
