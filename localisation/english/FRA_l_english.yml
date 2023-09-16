@@ -56,6 +56,8 @@
   FRA_orleans_restoration_desc: "After The Regency coucil choose new monarchy for france now the refomist have win the vote Vive Orléans!"
   FRA_woman_election: "Women suffrage"
   FRA_woman_election_desc: "In the new constitution, we have added rights for women in elections and political participation."
+  FRA_freedom_of_talk: "Freedom of speech"
+  FRA_freedom_of_talk_desc: "Freedom of speech is a principle that supports the freedom of an individual or a community to articulate their opinions and ideas without fear of retaliation"
 
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
