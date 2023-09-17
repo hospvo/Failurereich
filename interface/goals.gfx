@@ -23,6 +23,10 @@ spriteTypes = {
 		name = "GFX_education"
 		texturefile = "gfx/interface/goals/FRA/GFX_education.png"
 	}
+	SpriteType = { 
+		name = "GFX_freedom_of_speech"
+		texturefile = "gfx/interface/goals/FRA/GFX_freedom_of_speech.png"
+	}
 	###Germany###
 	
 	SpriteType = {

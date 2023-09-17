@@ -1650,7 +1650,7 @@ focus_tree = {
 			    }
 				add_popularity = {
 				ideology = democratic 
-				popularity = 0.20
+				popularity = 0.10
 			    }
                 set_cosmetic_tag = FRA_republic
 	    }
@@ -1874,7 +1874,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_freedom_of_talk
-        icon = GFX_womens_suffrage
+        icon = GFX_freedom_of_speech
 	    prerequisite = {
 	           focus = FRA_human_right
 	    }
