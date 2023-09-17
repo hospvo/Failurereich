@@ -3,7 +3,7 @@ characters={
 		name= "Piux XI"
 		portraits={
 			civilian={
-				large="gfx/leaders/PAP/PAP_Portrait_pius_xi.png"
+				large="gfx/leaders/PAP/PAP_pius_xi.png"
 			}
 		}
 		country_leader={
