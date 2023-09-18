@@ -317,7 +317,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_revendicate_old_territories
 		}
-		x = 9
+		x = 11
 		y = 6
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
