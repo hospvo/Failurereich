@@ -314,11 +314,11 @@ focus_tree = {
 		id = FRA_retake_old_lands
 		icon = GFX_focus_attack_france
 		text = "Reconquer The Hexagone"
-		x = 9
-		y = 6
 		prerequisite = {
 			focus = FRA_revendicate_old_territories
 		}
+		x = 9
+		y = 7
 
 		cost = 10
 
