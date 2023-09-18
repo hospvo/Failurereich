@@ -315,7 +315,7 @@ focus_tree = {
 		icon = GFX_focus_attack_france
 		text = "Reconquer The Hexagone"
 		x = 9
-		y = 4
+		y = 6
 		prerequisite = {
 			focus = FRA_revendicate_old_territories
 		}
