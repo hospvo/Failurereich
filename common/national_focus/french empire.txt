@@ -160,40 +160,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_liberia
-		icon = GFX_focus_focus_fra_intervention_spain
-		text = "Secure Liberia"
-		x = 10
-		y = 4
-		prerequisite = {
-			focus = FRA_avenge_morocco
-		}
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			always = yes
-		}
-		
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-				creat_wargoal = {
-   				 	target = LIB
-   					type = annex_everything
-				}
-			}
-	}
-
-	focus = {
 		id = FRA_take_Lybia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Divide Lybia"
@@ -238,6 +204,40 @@ focus_tree = {
 				}
 			}
 		}
+	}
+
+	focus = {
+		id = FRA_liberia
+		icon = GFX_focus_focus_fra_intervention_spain
+		text = "Secure Liberia"
+		x = 10
+		y = 4
+		prerequisite = {
+			focus = FRA_avenge_morocco
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			always = yes
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+				creat_wargoal = {
+   				 	target = LIB
+   					type = annex_everything
+				}
+			}
 	}
 
 	focus = {
