@@ -57,7 +57,9 @@
   FRA_woman_election: "Women suffrage"
   FRA_woman_election_desc: "In the new constitution, we have added rights for women in elections and political participation."
   FRA_freedom_of_talk: "Freedom of speech"
-  FRA_freedom_of_talk_desc: "Freedom of speech is a principle that supports the freedom of an individual or a community to articulate their opinions and ideas without fear of retaliation"
+  FRA_freedom_of_talk_desc: "Freedom of speech is a principle that supports the freedom of an individual or a community to articulate their opinions and ideas without fear of retaliation."
+  FRA_human_right: "Universal Declaration of Human Rights"
+  FRA_human_right_desc: "Human rights are rights inherent to all human beings, regardless of race, sex, nationality, ethnicity, language, religion, or any other status."
 
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
@@ -75,7 +77,7 @@
   france.3.desc: "They refused due to political differences between us"
   france.3.a: "We will not tolerate this"
 
-
+  ### COSMETIC TAG ###
   FRA_republic: "Fourth french republic"
   FRA_republic_DEF: "france republic"
   FRA_republic_ADJ: "French republic"

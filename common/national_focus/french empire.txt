@@ -59,12 +59,11 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+		    add_ideas = { AFR_napoleon_king }
 			add_manpower = 100000			
 			set_politics = {
 				ruling_party = democratic
-			}
-			set_cosmetic_tag = french empire
-                        add_ideas = { AFR_napoleon_king }			
+			}			
 		}
 	}
 

@@ -22,7 +22,7 @@ spriteTypes = {
 	
 	spriteType = {
 	name = "GFX_idea_young_king"
-	texturefile = "gfx/interface/ideas/SIA/SIA_young_king.png"
+	texturefile = "gfx/interface/ideas/SIA/young_king.png"
 	}
 	
 	spriteType = {
@@ -48,5 +48,9 @@ spriteTypes = {
 	spriteType = {
 	name = "GFX_idea_women_election"
 	texturefile = "gfx/interface/ideas/FRA/GFX_women_election.png"
+	}
+	spriteType = {
+	name = "GFX_idea_freedom_of_speech"
+	texturefile = "gfx/interface/ideas/FRA/GFX_freedom_of_speech.png"
 	}
 }

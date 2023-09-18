@@ -1820,8 +1820,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_human_right
-        icon = GFX_focus_fra_french_union
-	    text = "Universal Declaration of Human Rights"
+        icon = GFX_rights_of_human
 	    prerequisite = {
 	           focus = FRA_write_con
 	    }
@@ -1895,6 +1894,7 @@ focus_tree = {
 
         completion_reward = {
 				 add_political_power = 100
+				 add_ideas = { FRA_freedom_of_talk }
         }				 
     }
 	
