@@ -25,7 +25,7 @@ focus_tree = {
 		mutually_exclusive = { 	
 			focus = AFR_democracy
 		}
-		x = 4
+		x = 8
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -50,7 +50,7 @@ focus_tree = {
 		mutually_exclusive = { 	
 			focus = AFR_democracy
 		}
-		x = 6
+		x = 10
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -72,7 +72,7 @@ focus_tree = {
 		id = FRA_avenge_morocco
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Puppet Morroco"
-		x = 6
+		x = 10
 		y = 1
 		prerequisite = {
 			focus = AFR_constitutional_monarchy
@@ -119,7 +119,7 @@ focus_tree = {
 		id = FRA_liberia
 		icon = GFX_focus_focus_fra_intervention_spain
 		text = "Secure Liberia"
-		x = 6
+		x = 10
 		y = 2
 		prerequisite = {
 			focus = FRA_avenge_morocco
@@ -153,7 +153,7 @@ focus_tree = {
 		id = FRA_take_Lybia
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Divide Lybia"
-		x = 4
+		x = 8
 		y = 1
 		prerequisite = {
 			focus = AFR_constitutional_monarchy
@@ -200,7 +200,7 @@ focus_tree = {
 		id = FRA_reorganize_lybia
 		icon = GFX_focus_CZE_german_puppet
 		text = "Create Tripolitanian Republic"
-		x = 4
+		x = 8
 		y = 2
 		prerequisite = {
 			focus = FRA_take_Lybia
@@ -238,7 +238,7 @@ focus_tree = {
 			focus = FRA_reorganize_lybia
 			focus = FRA_liberia
 		}
-		x = 5
+		x = 9
 		y = 3
 		cost = 10
 
@@ -270,7 +270,7 @@ focus_tree = {
 		id = FRA_retake_old_lands
 		icon = GFX_focus_attack_france
 		text = "Reconquer The Hexagone"
-		x = 5
+		x = 9
 		y = 4
 		prerequisite = {
 			focus = FRA_revendicate_old_territories
@@ -314,7 +314,7 @@ focus_tree = {
 		mutually_exclusive = { 	
 			focus = AFR_constitutional_monarchy
 		}
-		x = 14
+		x = 18
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -349,7 +349,7 @@ focus_tree = {
 		mutually_exclusive = { 	
 			focus = AFR_democracy_2
 		}
-		x = 12
+		x = 16
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -368,7 +368,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_election
 		}
-		x = 12
+		x = 16
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -387,7 +387,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_tunisian_kingdom
 		}
-		x = 12
+		x = 16
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -407,7 +407,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_alger
 		}
-		x = 12
+		x = 16
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -435,7 +435,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = AFR_tunisian_kingdom
 		}
-		x = 16
+		x = 20
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -457,7 +457,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_democracy_2
 		}
-		x = 16
+		x = 20
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -481,7 +481,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_general
 		}
-		x = 15
+		x = 19
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -509,7 +509,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AFR_general
 		}
-		x = 17
+		x = 21
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -538,7 +538,7 @@ focus_tree = {
 			focus = AFR_Libya
 			focus = AFR_Morocco
 		}
-		x = 15
+		x = 19
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -567,7 +567,7 @@ focus_tree = {
 			focus = AFR_Libya
 			focus = AFR_Morocco
 		}
-		x = 17
+		x = 21
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -1128,7 +1128,7 @@ focus_tree = {
 		id = AFR_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
 		text = "Marine Française"
-		x = 44
+		x = 84
 		y = 0
 		cost = 10
 
@@ -1259,7 +1259,7 @@ focus_tree = {
 		text = "Advanced marine"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
-		x = 42
+		x = 82
 		y = 1
 		cost = 10
 		
@@ -1300,7 +1300,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_naval_bomber
 		text = "Navy effort"
 		prerequisite = { focus = AFR_flexible_navy }
-		x = 42
+		x = 82
 		y = 2
 		cost = 10
 
@@ -1325,7 +1325,7 @@ focus_tree = {
 		text = "Algerian fleet"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
-		x = 46
+		x = 86
 		y = 1
 		cost = 10
 		
@@ -1362,7 +1362,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		text = "Mediteranean Submarine"
 		prerequisite = { focus = AFR_large_navy }
-		x = 46
+		x = 86
 		y = 2
 		cost = 10
 		
@@ -1400,7 +1400,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		text = "Cruiser effort"
 		prerequisite = { focus = AFR_NAV_effort }
-		x = 42
+		x = 82
 		y = 3
 		cost = 10
 		
@@ -1439,7 +1439,7 @@ focus_tree = {
 		icon = GFX_goal_generic_wolf_pack
 		text = "Destroyer effort"
 		prerequisite = { focus = AFR_submarine_effort }
-		x = 46
+		x = 86
 		y = 3
 		cost = 10
 
@@ -1477,7 +1477,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		text = "Prepare battleship"
 		prerequisite = { focus = AFR_cruiser_effort focus = AFR_destroyer_effort }
-		x = 44
+		x = 84
 		y = 4
 		cost = 10
 
@@ -1520,7 +1520,7 @@ focus_tree = {
 		id = AFR_industrial_effort
 		icon = GFX_goal_generic_production
 		text = "Algerian factories"
-		x = 50
+		x = 90
 		y = 0
 		cost = 10
 
