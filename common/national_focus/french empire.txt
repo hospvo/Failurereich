@@ -60,7 +60,8 @@ focus_tree = {
 		}
 		completion_reward = {
 		    add_ideas = { AFR_napoleon_king }
-			add_manpower = 100000			
+			add_manpower = 100000
+            set_cosmetic_tag = AFR_parliment_king			
 			set_politics = {
 				ruling_party = democratic
 			}			
