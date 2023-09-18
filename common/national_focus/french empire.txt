@@ -337,11 +337,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-				create_wargoal = {
-   				 	target = FRA
-   					type = annex_everything
-				}
+			create_wargoal = {
+  				 	target = FRA
+  					type = annex_everything
 			}
+		}
 	}
 
 ################
