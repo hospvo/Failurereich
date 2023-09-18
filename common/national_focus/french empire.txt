@@ -69,14 +69,54 @@ focus_tree = {
 	}
 
 	focus = {
+		id = AFR_bonaparte
+		icon = GFX_focus_focus_fra_third_empire
+		text = "Bonapart strategy"
+		prerequisite = { 	
+			focus = AFR_absolute_monarchy
+		}
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = { AFR_free_empire }
+		}
+	}
+
+	focus = {
+		id = AFR_de_gaulle
+		icon = GFX_focus_focus_fra_third_empire
+		text = "De Gaulle Doctrine"
+		prerequisite = { 	
+			focus = AFR_constitutional_monarchy
+		}
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+                        add_ideas = { AFR_free_france }			
+		}
+	}
+
+	focus = {
 		id = FRA_avenge_morocco
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Puppet Morroco"
 		x = 10
-		y = 1
+		y = 3
 		prerequisite = {
-			focus = AFR_constitutional_monarchy
-			focus = AFR_absolute_monarchy
+			focus = AFR_de_gaulle
+			focus = AFR_bonaparte
 		}
 		cost = 10
 
@@ -120,7 +160,7 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_intervention_spain
 		text = "Secure Liberia"
 		x = 10
-		y = 2
+		y = 4
 		prerequisite = {
 			focus = FRA_avenge_morocco
 		}
@@ -154,10 +194,10 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Divide Lybia"
 		x = 8
-		y = 1
+		y = 3
 		prerequisite = {
-			focus = AFR_constitutional_monarchy
-			focus = AFR_absolute_monarchy
+			focus = AFR_de_gaulle
+			focus = AFR_bonaparte
 		}
 		cost = 10
 
@@ -201,7 +241,7 @@ focus_tree = {
 		icon = GFX_focus_CZE_german_puppet
 		text = "Create Tripolitanian Republic"
 		x = 8
-		y = 2
+		y = 4
 		prerequisite = {
 			focus = FRA_take_Lybia
 		}
@@ -239,7 +279,7 @@ focus_tree = {
 			focus = FRA_liberia
 		}
 		x = 9
-		y = 3
+		y = 5
 		cost = 10
 
 		ai_will_do = {
