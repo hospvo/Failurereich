@@ -318,7 +318,8 @@ focus_tree = {
 			focus = FRA_revendicate_old_territories
 		}
 		x = 9
-		y = 7
+		y = 6
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cost = 10
 
@@ -329,13 +330,9 @@ focus_tree = {
 		available = {
 			FRA = { is_subject_of = GER }
 		}
-		
 		bypass = {
 
 		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
 		completion_reward = {
 			create_wargoal = {
   				 	target = FRA
