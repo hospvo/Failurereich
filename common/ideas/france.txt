@@ -1638,6 +1638,26 @@ ideas = {
             }				
 		
 	    }
+		FRA_democrat_con = {
+		    picture = constitution_agreement
+			allowed = {
+				original_tag = FRA
+			    always = no
+			}
+
+            allowed_civil_war = {
+                NOT = {
+                    has_government = fascism
+                }
+            }
+			
+			removal_cost = -1
+
+            modifier = {
+				stability_weekly = 0.08
+            }				
+		
+	    }
 	
 	tank_manufacturer = {
 

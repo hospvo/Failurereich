@@ -1927,4 +1927,64 @@ focus_tree = {
 				 add_political_power = 100
         }				 
     }
+	
+	focus = {
+        id = FRA_finish_con
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_woman_army
+			   focus = FRA_freedom_of_talk
+	    }
+        x = 30
+        y = 8
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = FRA_democrat_con
+        }				 
+    }
+	
+	focus = {
+        id = FRA_economy_revise
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_woman_army
+			   focus = FRA_freedom_of_talk
+	    }
+        x = 30
+        y = 8
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = FRA_democrat_con
+        }				 
+    }
 }	
