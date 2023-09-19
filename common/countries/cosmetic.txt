@@ -866,3 +866,11 @@ CMR_british = {
 	color = rgb { 150 20 20 }
 	color_ui = rgb { 150 20 20 }
 }
+
+
+#### FREE_INDIA ####
+
+Free_india  = {
+	color = rgb { 120 120 20 }
+	color_ui = rgb { 120 120 20 }
+}
