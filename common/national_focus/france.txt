@@ -1674,12 +1674,12 @@ focus_tree = {
 			factor = 1
 	    }
         completion_reward = {
-			    elections_allowed = yes
-        }
-		add_popularity = {
-				ideology = left 
-				popularity = 0.10
-	    }
+		    set_politics = elections_allowed = yes
+		    add_popularity = {
+				    ideology = left 
+				    popularity = 0.10
+	        }
+		}
 	}
 	
 	focus = {
@@ -1901,7 +1901,7 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_woman_army
+        id = FRA_justice_reform
         icon = GFX_womens_suffrage
 	    prerequisite = {
 	           focus = FRA_woman_election
@@ -1959,14 +1959,13 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_economy_revise
+        id = FRA_economy reform
         icon = GFX_womens_suffrage
 	    prerequisite = {
-	           focus = FRA_woman_army
-			   focus = FRA_freedom_of_talk
+	           focus = FRA_freedom_of_religion
 	    }
-        x = 30
-        y = 8
+        x = 33
+        y = 5
         cost = 9
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
