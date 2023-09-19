@@ -1665,6 +1665,9 @@ focus_tree = {
         prerequisite = {
 			   focus = FRA_freedom_way
 		}
+		available = {
+			is_puppet = no
+		}
 	    x = 38
 	    y = 1
 	    cost = 10
@@ -1674,7 +1677,6 @@ focus_tree = {
 			factor = 1
 	    }
         completion_reward = {
-		    set_politics = elections_allowed = yes
 		    add_popularity = {
 				    ideology = left 
 				    popularity = 0.10
