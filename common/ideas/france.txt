@@ -1658,6 +1658,20 @@ ideas = {
             }				
 		
 	    }
+		AFR_military_colony = {
+			allowed = {
+				original_tag = AFR
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.025
+			}
+		}
 	
 	tank_manufacturer = {
 
