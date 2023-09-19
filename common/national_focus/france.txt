@@ -1317,6 +1317,7 @@ focus_tree = {
 				ruling_party = reactionary
 			}
 			remove_ideas = FRA_military_junta_1
+			remove_ideas = FRA_military_constitution
 			set_party_name = { 
 				ideology = reactionary
 				long_name = "Regency"
@@ -1643,6 +1644,7 @@ focus_tree = {
                 }
 				remove_ideas = {
 				        idea = FRA_military_junta_1
+						idea = FRA_military_constitution
 				}
                 add_popularity = {
 				ideology = left 

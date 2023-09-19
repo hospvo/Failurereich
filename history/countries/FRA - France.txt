@@ -230,6 +230,7 @@ give_guarantee = ROM
 
 add_ideas = {
 	FRA_military_junta_1
+	FRA_military_constitution
 
 	#laws
 	limited_exports

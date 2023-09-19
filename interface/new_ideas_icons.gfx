@@ -53,4 +53,12 @@ spriteTypes = {
 	name = "GFX_idea_freedom_of_speech"
 	texturefile = "gfx/interface/ideas/FRA/GFX_freedom_of_speech.png"
 	}
+	spriteType = {
+	name = "GFX_idea_constitution_dissagreement"
+	texturefile = "gfx/interface/ideas/FRA/GFX_constitution_dissagreement.png"
+	}
+	spriteType = {
+	name = "GFX_idea_constitution_agreement"
+	texturefile = "gfx/interface/ideas/FRA/GFX_constitution_agreement.png"
+	}
 }
