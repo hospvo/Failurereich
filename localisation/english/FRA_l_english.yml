@@ -65,7 +65,8 @@
   FRA_human_right_desc: "Human rights are rights inherent to all human beings, regardless of race, sex, nationality, ethnicity, language, religion, or any other status."
   FRA_justice_reform: "Criminal justice reform"
   FRA_justice_reform_desc: "Criminal justice reform seeks to address structural issues in criminal justice systems such as racial profiling, police brutality, overcriminalization, mass incarceration, and recidivism."
-  
+  FRA_finish_com: "Finish Democratic Constitution"
+  FRA_finish_com_desc: "Now the Constitutional Assembly have completed Drafting the Democratic Constitution, and now we are a full-fledged democracy. vive la france!"
   
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
