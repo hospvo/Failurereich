@@ -15,10 +15,11 @@
   FRA_fascism_party: "Pétainistes - F"
   FRA_fascism_party_long: "Pétainistes - Fascistes"
 
-  ### IDEAS ###
+  ### IDEAS AND TOOLTIPS ###
   FRA_military_junta: "Military Junta"
   FRA_sns: "National Statistics Service" 
   FRA_sncf: "French National Railway Company"
+  FRA_hold_election_tt: "§RWe will hold election in france.§!"
   
   ### FOCUS ###
   FRA_economic_planning: "Economic Planning"

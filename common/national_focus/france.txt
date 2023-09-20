@@ -1677,6 +1677,7 @@ focus_tree = {
 			factor = 1
 	    }
         completion_reward = {
+		    custom_effect_tooltip = FRA_hold_election_tt
 		    add_popularity = {
 				    ideology = left 
 				    popularity = 0.10
@@ -1933,7 +1934,7 @@ focus_tree = {
         id = FRA_finish_con
         icon = GFX_womens_suffrage
 	    prerequisite = {
-	           focus = FRA_woman_army
+	           focus = FRA_justice_reform
 			   focus = FRA_freedom_of_talk
 	    }
         x = 30
@@ -1965,8 +1966,8 @@ focus_tree = {
 	    prerequisite = {
 	           focus = FRA_finish_con
 	    }
-        x = 31
-        y = 8
+        x = 30
+        y = 11
         cost = 9
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
