@@ -1904,7 +1904,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_justice_reform
-        icon = GFX_womens_suffrage
+        icon = GFX_prison_reform
 	    prerequisite = {
 	           focus = FRA_woman_election
 	    }
@@ -1918,8 +1918,7 @@ focus_tree = {
 	    }
 		bypass = {
 		    has_government = fascism
-			has_ideas = FRA_military_junta_1
-			has_ideas = FRA_military_junta_2
+            has_government = anarchist
 		}	
 		available = {
 			has_government = left
@@ -1961,13 +1960,13 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_economy reform
+        id = FRA_reuse_mar
         icon = GFX_womens_suffrage
 	    prerequisite = {
-	           focus = FRA_freedom_of_religion
+	           focus = FRA_finish_con
 	    }
-        x = 33
-        y = 5
+        x = 31
+        y = 8
         cost = 9
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1985,7 +1984,6 @@ focus_tree = {
 
         completion_reward = {
 				 add_political_power = 100
-				 add_ideas = FRA_democrat_con
         }				 
     }
 }	
