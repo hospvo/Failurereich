@@ -20,6 +20,8 @@
   FRA_sns: "National Statistics Service" 
   FRA_sncf: "French National Railway Company"
   FRA_hold_election_tt: "§RWe will hold election in france.§!"
+  FRA_justice_reform: "Justice Reform"
+  FRA_justice_reform_desc: " justice reform seeks to address structural issues in criminal justice systems such as racial profiling, police brutality, overcriminalization, mass incarceration, and recidivism."
   
   ### FOCUS ###
   FRA_economic_planning: "Economic Planning"

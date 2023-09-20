@@ -1923,10 +1923,11 @@ focus_tree = {
 		}	
 		available = {
 			has_government = left
+			is_puppet = no
         }
 
         completion_reward = {
-				 add_political_power = 100
+		         add_ideas = FRA_justice_reform
         }				 
     }
 	

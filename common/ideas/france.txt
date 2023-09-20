@@ -1672,6 +1672,20 @@ ideas = {
 				production_speed_arms_factory_factor = -0.025
 			}
 		}
+		FRA_justice_reform = {
+		    picture = justice_reform
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+			available = {
+				has_government = left
+			}
+
+			modifier = {
+				stability_weekly = 0.11
+			}
+		}
 	
 	tank_manufacturer = {
 

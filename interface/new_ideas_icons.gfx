@@ -61,4 +61,8 @@ spriteTypes = {
 	name = "GFX_idea_constitution_agreement"
 	texturefile = "gfx/interface/ideas/FRA/GFX_constitution_agreement.png"
 	}
+	spriteType = {
+	name = "GFX_idea_justice_reform"
+	texturefile = "gfx/interface/ideas/FRA/GFX_justice_reform.png"
+	}
 }
