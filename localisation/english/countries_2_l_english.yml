@@ -78,9 +78,9 @@ l_english:
  FRA_anarchist_DEF:0 "French Free State"
  FRA_left:0 "France"
  FRA_left_DEF:0 "France"
- 
- FRA_reactionary:0 "France"
- FRA_reactionary_DEF:0 "France"
+
+ FRA_reactionary:0 "French State"
+ FRA_reactionary_DEF:0 "The French State"
  FRA_reactionary:0 "Kingdom of France"
  FRA_reactionary_DEF:0 "the Kingdom of France"
  FRA_oligarchism:0 "French State"
