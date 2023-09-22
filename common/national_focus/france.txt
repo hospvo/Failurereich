@@ -1977,8 +1977,9 @@ focus_tree = {
 	    }
 		bypass = {
 		    has_government = fascism
-			has_ideas = FRA_military_junta_1
-			has_ideas = FRA_military_junta_2
+			28 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
+           
 		}	
 		available = {
 			has_government = left
@@ -1989,6 +1990,36 @@ focus_tree = {
 				country_event = { days = 1 id = germany.25 }
 			}
 				 add_political_power = 100
+        }				 
+    }
+	
+	focus = {
+        id = FRA_invite_sweden
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_religion_freedom
+	    }
+        x = 34
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    SWE = {
+				country_event = { days = 1 id = sweden.1 }
+			}
         }				 
     }
 }	
