@@ -1618,7 +1618,7 @@ focus_tree = {
 	focus = {
 	    id = FRA_freedom_way
 		icon = GFX_FRA_republicanism
-		mutually_exclusive = { 
+		mutually_exclusive = {
 		         focus = FRA_old_marechal_speech 
 		}
 		mutually_exclusive = {
@@ -1640,7 +1640,7 @@ focus_tree = {
 			    set_party_name = {
                         ideology = left
                         long_name = "RP"
-                        name = "Revolution party"
+                        name = "Parti de la Révolution"
                 }
 				remove_ideas = {
 				        idea = FRA_military_junta_1
@@ -1704,7 +1704,7 @@ focus_tree = {
 			    set_party_name = {
                         ideology = left
                         long_name = "SD"
-						name = "Social democracy"
+						name = "Parti Social démocrate"
 		        }
 				add_popularity = {
 				ideology = left 
