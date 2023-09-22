@@ -1985,6 +1985,9 @@ focus_tree = {
         }
 
         completion_reward = {
+		    GER = {
+				country_event = { days = 1 id = germany.25 }
+			}
 				 add_political_power = 100
         }				 
     }

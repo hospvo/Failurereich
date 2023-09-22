@@ -452,3 +452,40 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = germany.25
+	title = "france demands remilitary"
+	desc = "the new goverment of france has sent The embassy to negotiate with us regarding the demilitarized zone. The French military will enter the demilitarized zone, and France does not want any conflict with us."
+	picture = GFX_report_event_french_2nd_civilwar
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "Ok We accept"
+		
+		FRA = {
+				country_event = { days = 1 id = france.16 }
+		}		
+	}
+	option = { 
+		name = "We accept only remilitary in nancy"
+
+		FRA = {
+				country_event = { days = 1 id = france.17 }
+		}
+	}
+	option = { 
+		name = "we not accept!"
+		
+		FRA = {
+				country_event = { days = 1 id = france.18 }
+		}
+	}
+}
