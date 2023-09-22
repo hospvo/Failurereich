@@ -35,6 +35,10 @@ spriteTypes = {
 		name = "GFX_prison_reform"
 		texturefile = "gfx/interface/goals/FRA/GFX_prison_reform.png"
 	}
+	SpriteType = { 
+		name = "GFX_finish_the_constitution"
+		texturefile = "gfx/interface/goals/FRA/GFX_finish_the_constitution.png"
+	}
 	###Germany###
 	
 	SpriteType = {

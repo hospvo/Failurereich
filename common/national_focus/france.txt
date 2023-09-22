@@ -1933,7 +1933,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_finish_con
-        icon = GFX_womens_suffrage
+        icon = GFX_finish_the_constitution
 	    prerequisite = {
 	           focus = FRA_justice_reform
 			   focus = FRA_freedom_of_talk
@@ -1962,13 +1962,13 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_reuse_mar
+        id = FRA_remilitary_negition
         icon = GFX_womens_suffrage
 	    prerequisite = {
-	           focus = FRA_finish_con
+	           focus = FRA_religion_freedom
 	    }
-        x = 30
-        y = 11
+        x = 34
+        y = 5
         cost = 9
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
