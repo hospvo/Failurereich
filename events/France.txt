@@ -548,6 +548,9 @@ country_event = {
 		
 		914 = { set_demilitarized_zone = no }
 		28 =  { set_demilitarized_zone = no } 
+		ai_will_do = {
+			factor = 1
+		}
     }
 }	
 
@@ -569,12 +572,18 @@ country_event = {
 		name = "ok for dipomatic"
 		
 		914 = { set_demilitarized_zone = no }
+		ai_will_do = {
+			factor = 1
+		}
     }
 	option = {
 		name = "NO!"
 		
 		914 = { set_demilitarized_zone = no }
 		28 =  { set_demilitarized_zone = no }
+		ai_will_do = {
+			factor = 1
+		}
     }
 }
 
@@ -594,12 +603,17 @@ country_event = {
 	
 	option = {
 		name = "ok"
-		
+		ai_will_do = {
+			factor = 1
+		}
     }
 	option = {
 		name = "NO!"
 		
 		914 = { set_demilitarized_zone = no }
 		28 =  { set_demilitarized_zone = no }
+		ai_will_do = {
+			factor = 1
+		}
     }
 }

@@ -472,6 +472,9 @@ country_event = {
 		
 		FRA = {
 				country_event = { days = 1 id = france.16 }
+		}
+        ai_will_do = {
+			factor = 1
 		}		
 	}
 	option = { 
@@ -480,12 +483,18 @@ country_event = {
 		FRA = {
 				country_event = { days = 1 id = france.17 }
 		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
 	option = { 
 		name = "we not accept!"
 		
 		FRA = {
 				country_event = { days = 1 id = france.18 }
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }
