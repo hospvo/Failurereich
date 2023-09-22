@@ -1659,6 +1659,7 @@ ideas = {
 		
 	    }
 		AFR_military_colony = {
+		    picture = military_colony
 			allowed = {
 				original_tag = AFR
 				always = no
