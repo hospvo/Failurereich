@@ -1962,8 +1962,8 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_remilitary_negition
-        icon = GFX_womens_suffrage
+        id = FRA_remiliterize_negition
+        icon = GFX_FRA_remiliterize_moselland
 	    prerequisite = {
 	           focus = FRA_religion_freedom
 	    }
@@ -1995,11 +1995,11 @@ focus_tree = {
 	
 	focus = {
         id = FRA_invite_sweden
-        icon = GFX_womens_suffrage
+        icon = GFX_FRA_swedish_allies
 	    prerequisite = {
-	           focus = FRA_religion_freedom
+	           focus = FRA_remiliterize_negition
 	    }
-        x = 34
+        x = 35
         y = 6
         cost = 9
         available_if_capitulated = yes
@@ -2009,9 +2009,8 @@ focus_tree = {
 	    }
 		bypass = {
 		    has_government = fascism
-			has_ideas = FRA_military_junta_1
-			has_ideas = FRA_military_junta_2
-		}	
+            NOT = { country_exists = SWE }
+		}
 		available = {
 			has_government = left
         }
