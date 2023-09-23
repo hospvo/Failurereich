@@ -73,9 +73,7 @@ set_popularities = {
 	fascism = 20
 	reactionary = 80
 }
-add_ideas = {
-          SIA_young_king
-}	
+add_ideas = SIA_young_king	
 
 ### VARIANTS ###
 # 1936 Start #

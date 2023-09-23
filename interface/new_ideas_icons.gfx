@@ -69,4 +69,8 @@ spriteTypes = {
 	name = "GFX_idea_military_colony"
 	texturefile = "gfx/interface/ideas/FRA/GFX_military_colony.png"
 	}
+	spriteType = {
+	name = "GFX_idea_george_ii"
+	texturefile = "gfx/interface/ideas/GRE/GFX_george_ii.png"
+	}
 }

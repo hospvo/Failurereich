@@ -8,7 +8,7 @@ bookmarks = {
 		default = yes
 
 		"FRA"={
-			history = "FPetain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism."
+			history = "Petain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism."
 			ideology = fascism
 			ideas = {
 				FRA_protected_by_the_maginot_line
@@ -41,7 +41,7 @@ bookmarks = {
 			}		
 		}
 		"AFR"={
-			history = "Napoleon Revive under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa"
+			history = "Napoleon Restore under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa"
 			ideology = fascism
 			ideas = {
 				FRA_disjointed_government

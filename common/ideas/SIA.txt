@@ -11,14 +11,11 @@ ideas = {
 
 			    allowed_civil_war = {
 				        always = yes
-			    }
-                available = {
-				        has_stability < 0.7
-			    }
+		            }
 			    removal_cost = -1
 			
 			    modifier = {
-				        stability_weekly = 0.3
+				        stability_weekly = 0.03
 			    }
 
 		    }

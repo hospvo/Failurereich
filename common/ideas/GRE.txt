@@ -1,0 +1,22 @@
+ideas = {
+
+	country = {
+		george_ii = {
+		    picture = george_ii
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.02
+			}
+		}
+	}
+}	

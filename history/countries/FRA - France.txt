@@ -222,8 +222,9 @@ set_politics = {
 
 set_popularities = {
 	democratic = 10
-	reactionary = 50
+	reactionary = 40
 	fascism = 40
+	left = 10
 }
 
 give_guarantee = ROM
@@ -318,18 +319,6 @@ create_field_marshal = {
 	attack_skill = 1
 	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Charles De Gaulle"
-	picture = "Portrait_France_Charles_De_Gaulle.dds"
-	traits = {  armor_officer harsh_leader media_personality }
-	id = 101
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
 	logistics_skill = 2
 }
 
