@@ -1,8 +1,8 @@
 
-add_namespace = sweden
+add_namespace = denmark
 
 country_event = {
-	id = sweden.1
+	id = denmark.1
 	title = "france invite us"
 	desc = "A new france democracy goverment have invite us to join thier faction and if we join we will be member of united nation forever"
 	picture = GFX_report_event_greater_hungary2
@@ -13,7 +13,7 @@ country_event = {
 
 	option = { 
 		name = "ok"
-		FRA = { add_to_faction = SWE }
+		FRA = { add_to_faction = DEN }
 		ai_will_do = {
 			factor = 1
 		}

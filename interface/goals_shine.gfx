@@ -802,8 +802,8 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_FRA_swedish_allies_shine"
-		texturefile = "gfx/interface/goals/FRA/GFX_FRA_swedish_allies.png"
+		name = "GFX_FRA_remiliterize_moselland_shine"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_remiliterize_moselland.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/FRA/GFX_FRA_marceal_deat.png"			
@@ -834,8 +834,8 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_FRA_remiliterize_moselland_shine"
-		texturefile = "gfx/interface/goals/FRA/GFX_FRA_remiliterize_moselland.png"
+		name = "GFX_danish_alliance_shine"
+		texturefile = "gfx/interface/goals/FRA/GFX_danish_alliance.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/FRA/GFX_FRA_marceal_deat.png"			

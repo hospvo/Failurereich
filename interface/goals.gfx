@@ -40,12 +40,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/FRA/GFX_finish_the_constitution.png"
 	}
 	SpriteType = { 
-		name = "GFX_FRA_swedish_allies"
-		texturefile = "gfx/interface/goals/FRA/GFX_FRA_swedish_allies.png"
-	}
-	SpriteType = { 
 		name = "GFX_FRA_remiliterize_moselland"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_remiliterize_moselland.png"
+	}
+	SpriteType = { 
+		name = "GFX_danish_alliance"
+		texturefile = "gfx/interface/goals/FRA/GFX_danish_alliance.png"
 	}
 	###Germany###
 	

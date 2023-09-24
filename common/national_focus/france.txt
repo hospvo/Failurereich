@@ -1994,8 +1994,8 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_invite_sweden
-        icon = GFX_FRA_swedish_allies
+        id = FRA_invite_denmark
+        icon = GFX_danish_alliance
 	    prerequisite = {
 	           focus = FRA_remiliterize_negition
 	    }
@@ -2009,15 +2009,19 @@ focus_tree = {
 	    }
 		bypass = {
 		    has_government = fascism
-            NOT = { country_exists = SWE }
+			has_government = anarchist
+			is_puppet = yes
+            NOT = { country_exists = DEN }
+			NOT = { DEN = country_ruling = anarchist }
 		}
 		available = {
 			has_government = left
+			is_puppet = no
         }
 
         completion_reward = {
-		    SWE = {
-				country_event = { days = 1 id = sweden.1 }
+		    DEN = {
+				country_event = { days = 1 id = denmark.1 }
 			}
         }				 
     }
