@@ -147,3 +147,30 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = fr_news.6
+	title = "Pius XI dead"
+	desc = "Death of pope pius Xl AFTER reign of 17 years."
+	picture = GFX_news_event_pius_xi_dead
+	
+	major = yes
+	
+	trigger = {
+	        date > 1939.2.12
+	
+	option = {
+		name = "F"
+		trigger = {
+			OR = {
+				original_tag = ITA
+			}
+		}
+	}
+	option = {
+		name = "R.I.P"
+		trigger = { 
+			NOT = { original_tag = ITA }
+		}
+	}
+}

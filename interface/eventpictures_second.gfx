@@ -27,5 +27,9 @@ spriteTypes = {
 		name = "GFX_news_event_french_revolution"
 		texturefile = "gfx/event_pictures/french_revolution.dds"
 	}
+	spriteType = {
+		name = "GFX_news_event_pius_xi_dead"
+		texturefile = "gfx/event_pictures/pius_xi_dead.dds"
+	}
 	
 }
