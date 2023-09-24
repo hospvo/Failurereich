@@ -1655,6 +1655,9 @@ focus_tree = {
 				popularity = 0.10
 			    }
                 set_cosmetic_tag = FRA_republic
+				hidden_effect = {
+			        news_event = { hours = 1 id = fr_news.5 }
+				}		
 	    }
     }
 	

@@ -121,3 +121,29 @@ news_event = {
 		}
 	}
 }
+
+news_event = {
+	id = fr_news.5
+	title = "French revolution"
+	desc = "The French people have risen to revolution to restore democracy and currently the revolutionary council has taken control of Paris successfully. Petain and his supporters have been apprehended on charges of crimes against freedom."
+	picture = GFX_news_event_french_revolution
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Vive la révolution, vive la démocratie!"
+		trigger = {
+			OR = {
+				original_tag = FRA
+			}
+		}
+	}
+	option = {
+		name = "look like france want to back to 1789"
+		trigger = { 
+			NOT = { original_tag = FRA }
+		}
+	}
+}

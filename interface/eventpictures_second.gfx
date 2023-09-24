@@ -15,13 +15,17 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_chinese_civil_war.dds"
 	}
 	
-		spriteType = {
+	spriteType = {
 		name = "GFX_monarchy_question"
 		texturefile = "gfx/event_pictures/monarchy_question.dds"
 	}
 	spriteType = {
 		name = "GFX_news_event_collaboration"
 		texturefile = "gfx/event_pictures/collaboration.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_french_revolution"
+		texturefile = "gfx/event_pictures/french_revolution.dds"
 	}
 	
 }
