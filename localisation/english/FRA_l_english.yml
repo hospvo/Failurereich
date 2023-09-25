@@ -72,6 +72,8 @@
   FRA_invite_denmark_desc: "we will protect our democrat friend"
   FRA_remiliterize_negition: "Remiliterize by Negotiate"
   FRA_remiliterize_negition_desc: "we will Remiliterize in Alsace-lorraine and it near german bordor and we want to keep germany-france relations so we will negotitate with them"
+  FRA_expand_parliment: "Expand Parliment"
+  FRA_expand_parliment_desc: "We will increased the number of lower house seats"
   
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
