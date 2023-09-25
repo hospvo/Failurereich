@@ -1652,7 +1652,7 @@ focus_tree = {
 			    }
 				add_popularity = {
 				ideology = democratic 
-				popularity = 0.10
+				popularity = 0.15
 			    }
                 set_cosmetic_tag = FRA_republic
 				hidden_effect = {
@@ -1675,7 +1675,7 @@ focus_tree = {
 	    y = 1
 	    cost = 10
 	    available_if_capitulated = yes
-	    search_filters = { FOCUS_FILTER_POLITICAL } 
+	    search_filters = { FOCUS_FILTER_POLITICAL }
 	    ai_will_do = {
 			factor = 1
 	    }
@@ -1735,7 +1735,7 @@ focus_tree = {
 				ideology = left 
 				popularity = 0.05
 			    }
-				add_stability = 0.10		
+				add_stability = 0.10	
 		}
     }
 	
@@ -1754,6 +1754,9 @@ focus_tree = {
         ai_will_do = {
 			factor = 1
 	    }
+		bypass = {
+		    NOT = { country_exists = usa }
+		}	
 		available = {
 			is_puppet = no
 			country_exists = USA
@@ -1798,7 +1801,7 @@ focus_tree = {
 
         completion_reward = {
                  add_ideas = FRA_freedom_of_religion
-                 add_manpower = 100
+                 add_manpower = 10
         }				 
     }
 	
@@ -1822,7 +1825,7 @@ focus_tree = {
         }
 
         completion_reward = {
-                 add_political_power = 100
+                 add_political_power = 50
         }				 
     }
 	
@@ -1875,7 +1878,7 @@ focus_tree = {
 
         completion_reward = {
 				 add_ideas = { FRA_women_election }
-				 add_political_power = 100
+				 add_political_power = 40
         }				 
     }
 	
@@ -1965,6 +1968,40 @@ focus_tree = {
     }
 	
 	focus = {
+        id = FRA_expand_parliment
+        icon = GFX_prison_reform
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 31
+        y = 9
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}	
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.05
+			    }
+				custom_effect_tooltip = FRA_expand_parliment_tt
+				add_stability = 0.01
+        }				 
+    }
+	
+	focus = {
         id = FRA_remiliterize_negition
         icon = GFX_FRA_remiliterize_moselland
 	    prerequisite = {
@@ -1974,7 +2011,7 @@ focus_tree = {
         y = 5
         cost = 9
         available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = { FOCUS_FILTER_ANNEXATION }
         ai_will_do = {
 			factor = 1
 	    }
