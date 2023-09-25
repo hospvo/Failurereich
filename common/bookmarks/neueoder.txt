@@ -3,7 +3,7 @@ bookmarks = {
 		name = "WIP"
 		desc = "GATHERING_STORM_DESC"
 		date = 1954.6.1.12
-		picture = "GFX_select_date_1939_bookmark"
+		picture = "GFX_select_date_1939"
 		default_country = "GER"
 		default = yes
 
@@ -167,7 +167,7 @@ bookmarks = {
 			history = "SIA_GATHERING_STORM_DESC"
 			ideology = reactionary
 			ideas = {
-			      SIA_young_king
+			    SIA_young_king
 			}
 			focuses = {
 				SIA_siam_crisis
