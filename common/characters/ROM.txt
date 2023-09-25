@@ -1,0 +1,15 @@
+characters={
+	ROM_regency={
+		name= "The Regency Coucil"
+		portraits={
+			civilian={
+				large="gfx/leaders/ROM/ROM_regency.png"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={  }
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}

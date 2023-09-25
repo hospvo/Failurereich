@@ -204,6 +204,8 @@ create_country_leader = {
 	}
 }
 
+recruit_character = ROM_regency
+
 create_country_leader = {
 	name = "Constantin Ion Parhon"
 	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
@@ -225,6 +227,17 @@ create_country_leader = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "The Regency Coucil"
+	desc = "Regency Coucil of romania"
+	picture = "gfx/leaders/ROM/ROM_regency.png"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+	
+	}
+}		
 
 create_country_leader = {
 	name = "Octavian Goga"
