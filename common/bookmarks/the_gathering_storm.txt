@@ -3,7 +3,7 @@ bookmarks = {
 		name = "Rotër Reich"
 		desc = "GATHERING_STORM_DESC"
 		date = 1936.1.1.12
-		picture = "GFX_select_date_1936"
+		picture = "GFX_select_date_1936_bookmark"
 		default_country = "GER"
 		default = yes
 
