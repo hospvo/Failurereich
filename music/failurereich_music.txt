@@ -34,13 +34,4 @@ music = {
 			factor = 100
 		}
 	}
-}
-music = {
-	song = "le_chanson_de_l_oignon"
-	chance = {
-	    factor = 100
-		modifier = {
-		    factor = 100
-		}
-	}
 }	

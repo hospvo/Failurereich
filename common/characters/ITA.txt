@@ -42,7 +42,7 @@ characters = {
 		name = ITA_julius_evola
 		portraits = {
 			civilian = {
-				large = GFX_portrait_ITA_julius_evola
+				large = "gfx/leaders/ITA/Portrait_ITA_julius_evola.png"
 			}
 		}
 
