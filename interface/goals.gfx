@@ -47,6 +47,10 @@ spriteTypes = {
 		name = "GFX_danish_alliance"
 		texturefile = "gfx/interface/goals/FRA/GFX_danish_alliance.png"
 	}
+	SpriteType = { 
+		name = "GFX_par_ex"
+		texturefile = "gfx/interface/goals/FRA/GFX_par_ex.png"
+	}
 	###Germany###
 	
 	SpriteType = {
