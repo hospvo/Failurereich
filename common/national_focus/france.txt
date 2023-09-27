@@ -1969,7 +1969,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_expand_parliment
-        icon = GFX_prison_reform
+        icon = GFX_expand_parliment
 	    prerequisite = {
 	           focus = FRA_finish_con
 	    }
