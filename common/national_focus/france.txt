@@ -1642,10 +1642,8 @@ focus_tree = {
                         long_name = "RP"
                         name = "Parti de la Révolution"
                 }
-				remove_ideas = {
-				        idea = FRA_military_junta_1
-						idea = FRA_military_constitution
-				}
+				remove_ideas = FRA_military_junta_1
+				remove_ideas = FRA_military_constitution
                 add_popularity = {
 				ideology = left 
 				popularity = 0.20
