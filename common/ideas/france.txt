@@ -1687,6 +1687,20 @@ ideas = {
 				stability_weekly = 0.03
 			}
 		}
+		FRA_factory_demo = {
+		    picture = military_colony
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+			available = {
+				has_war = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.030
+			}
+		}
 	
 	tank_manufacturer = {
 

@@ -2063,4 +2063,38 @@ focus_tree = {
 			}
         }				 
     }
+	
+	focus = {
+        id = FRA_factory_democrat
+        icon = GFX_par_ex
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 29
+        y = 9
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_factory_demo
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+				add_stability = 0.01
+        }
+    }
 }	

@@ -74,6 +74,8 @@
   FRA_remiliterize_negition_desc: "we will Remiliterize in Alsace-lorraine and it near german bordor and we want to keep germany-france relations so we will negotitate with them"
   FRA_expand_parliment: "Expand Parliment"
   FRA_expand_parliment_desc: "We will increased the number of lower house seats"
+  FRA_factory_democrat: "Industrial Democracy"
+  FRA_factory_democrat_desc: "Industrial democracy is an arrangement which involves workers making decisions, sharing responsibility and authority in the workplace. While in participative management organizational designs workers are listened to and take part in the decision-making process, in organizations employing industrial democracy they also have the final decisive power."
   
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
