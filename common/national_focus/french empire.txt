@@ -115,6 +115,7 @@ focus_tree = {
 	focus = {
 		id = AFR_war_policy
 		icon = GFX_focus_focus_fra_third_empire
+		mutually_exclusive = { focus = AFR_avenge_france }
 		text = "Military doctrine"
 		prerequisite = { 	
 			focus = AFR_bonaparte
@@ -136,6 +137,7 @@ focus_tree = {
 	focus = {
 		id = AFR_avenge_france
 		icon = GFX_focus_focus_fra_third_empire
+		mutually_exclusive = { focus = AFR_war_policy }
 		text = "Revanchism"
 		prerequisite = { 	
 			focus = AFR_bonaparte
