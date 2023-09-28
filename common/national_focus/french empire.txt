@@ -113,15 +113,62 @@ focus_tree = {
 	}
 
 	focus = {
+		id = AFR_war_policy
+		icon = GFX_focus_focus_fra_third_empire
+		text = "Military doctrine"
+		prerequisite = { 	
+			focus = AFR_bonaparte
+			focus = AFR_de_gaulle
+		}
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = { AFR_warrior_france }
+		}
+	}
+
+	focus = {
+		id = AFR_avenge_france
+		icon = GFX_focus_focus_fra_third_empire
+		text = "Revanchism"
+		prerequisite = { 	
+			focus = AFR_bonaparte
+			focus = AFR_de_gaulle
+		}
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+                        add_ideas = { AFR_revanchism }			
+		}
+	}
+
+###################
+#### WAR FOCUS ####
+###################
+
+	focus = {
 		id = FRA_avenge_morocco
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		text = "Puppet Morroco"
 		x = 10
 		y = 3
 		prerequisite = {
-			focus = AFR_de_gaulle
-			focus = AFR_bonaparte
+			focus = AFR_war_policy
+			focus = AFR_avenge_france
 		}
+		search_filters = { FOCUS_FILTER_WARGOAL } 
 		cost = 10
 
 		ai_will_do = {
@@ -169,6 +216,7 @@ focus_tree = {
 			focus = AFR_de_gaulle
 			focus = AFR_bonaparte
 		}
+		search_filters = { FOCUS_FILTER_WARGOAL }
 		cost = 10
 
 		ai_will_do = {
@@ -215,6 +263,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_avenge_morocco
 		}
+		search_filters = { FOCUS_FILTER_WARGOAL }
 
 		cost = 10
 
@@ -249,6 +298,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_take_Lybia
 		}
+		search_filters = { FOCUS_FILTER_WARGOAL }
 		cost = 10
 
 		ai_will_do = {
@@ -282,6 +332,7 @@ focus_tree = {
 			focus = FRA_reorganize_lybia
 			focus = FRA_liberia
 		}
+		search_filters = { FOCUS_FILTER_WARGOAL }
 		x = 9
 		y = 5
 		cost = 10
@@ -319,7 +370,7 @@ focus_tree = {
 		}
 		x = 11
 		y = 6
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_WARGOAL }
 
 		cost = 10
 
@@ -1181,7 +1232,7 @@ focus_tree = {
 		id = AFR_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
 		text = "Marine Française"
-		x = 84
+		x = 44
 		y = 0
 		cost = 10
 
@@ -1378,7 +1429,7 @@ focus_tree = {
 		text = "Algerian fleet"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
-		x = 86
+		x = 46
 		y = 1
 		cost = 10
 		
@@ -1415,7 +1466,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		text = "Mediteranean Submarine"
 		prerequisite = { focus = AFR_large_navy }
-		x = 86
+		x = 46
 		y = 2
 		cost = 10
 		
@@ -1492,7 +1543,7 @@ focus_tree = {
 		icon = GFX_goal_generic_wolf_pack
 		text = "Destroyer effort"
 		prerequisite = { focus = AFR_submarine_effort }
-		x = 86
+		x = 46
 		y = 3
 		cost = 10
 
@@ -1530,7 +1581,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		text = "Prepare battleship"
 		prerequisite = { focus = AFR_cruiser_effort focus = AFR_destroyer_effort }
-		x = 84
+		x = 44
 		y = 4
 		cost = 10
 
@@ -1573,7 +1624,7 @@ focus_tree = {
 		id = AFR_industrial_effort
 		icon = GFX_goal_generic_production
 		text = "Algerian factories"
-		x = 90
+		x = 50
 		y = 0
 		cost = 10
 
