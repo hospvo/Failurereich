@@ -2066,7 +2066,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_factory_democrat
-        icon = GFX_par_ex
+        icon = GFX_democratic_industry
 	    prerequisite = {
 	           focus = FRA_finish_con
 	    }
