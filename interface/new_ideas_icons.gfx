@@ -73,4 +73,8 @@ spriteTypes = {
 	name = "GFX_idea_george_ii"
 	texturefile = "gfx/interface/ideas/GRE/GFX_george_ii.png"
 	}
+	spriteType = {
+	name = "GFX_idea_factory_democracy"
+	texturefile = "gfx/interface/ideas/GRE/GFX_factory_democracy.png"
+	}
 }
