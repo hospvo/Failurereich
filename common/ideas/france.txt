@@ -1691,7 +1691,7 @@ ideas = {
 			}
 		}
 		FRA_factory_demo = {
-		    picture = GFX_factory_democracy
+		    picture = factory_democracy
 			allowed = {
 				original_tag = FRA
 				always = no
