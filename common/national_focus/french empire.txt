@@ -1365,7 +1365,7 @@ focus_tree = {
 		text = "Advanced marine"
 		prerequisite = { focus = AFR_naval_effort }
 		mutually_exclusive = { focus = AFR_large_navy }
-		x = 82
+		x = 42
 		y = 1
 		cost = 10
 		
@@ -1406,7 +1406,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_naval_bomber
 		text = "Navy effort"
 		prerequisite = { focus = AFR_flexible_navy }
-		x = 82
+		x = 42
 		y = 2
 		cost = 10
 
@@ -1506,7 +1506,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_cruiser
 		text = "Cruiser effort"
 		prerequisite = { focus = AFR_NAV_effort }
-		x = 82
+		x = 42
 		y = 3
 		cost = 10
 		
