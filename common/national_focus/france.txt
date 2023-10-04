@@ -2065,6 +2065,38 @@ focus_tree = {
     }
 	
 	focus = {
+        id = FRA_invite_usa
+        icon = GFX_danish_alliance
+	    prerequisite = {
+	           focus = FRA_remiliterize_negition
+	    }
+        x = 33
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+            NOT = { country_exists = DEN }
+		}
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		    USA = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+        }				 
+    }
+	
+	focus = {
         id = FRA_factory_democrat
         icon = GFX_democratic_industry
 	    prerequisite = {
