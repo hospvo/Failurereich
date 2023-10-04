@@ -2164,4 +2164,37 @@ focus_tree = {
 			    }
         }
     }
+	focus = {
+        id = FRA_social_invesment
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_kid_right
+			   focus = FRA_worker_right
+	    }
+        x = 30
+        y = 11
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+        }
+    }
 }	
