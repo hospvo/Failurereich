@@ -2170,7 +2170,7 @@ focus_tree = {
 	    prerequisite = {
 	           focus = FRA_par_ex
 	    }
-        x = 30
+        x = 31
         y = 10
         cost = 9
         available_if_capitulated = yes
