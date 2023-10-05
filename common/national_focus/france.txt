@@ -2093,6 +2093,38 @@ focus_tree = {
 		    USA = {
 				country_event = { days = 1 id = denmark.1 }
 			}
+        }
+    }
+	
+	focus = {
+        id = FRA_london_treaty
+        icon = GFX_danish_alliance
+	    prerequisite = {
+	           focus = FRA_invite_usa
+			   focus = FRA_invite_denmark
+	    }
+        x = 34
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    ENG = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+			custom_effect_tooltip = FRA_london_treaty_tt
         }				 
     }
 	
