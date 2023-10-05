@@ -22,8 +22,9 @@
   FRA_hold_election_tt: "§RWe will hold election in france.§!"
   FRA_expand_parliment_tt: "§YWe Will Reduce appoint member of Parliment and increased the number of lower house seats and the senate will be angry.§!"
   FRA_justice_reform: "Justice Reform"
-  FRA_justice_reform_desc: " justice reform seeks to address structural issues in criminal justice systems such as racial profiling, police brutality, overcriminalization, mass incarceration, and recidivism."
-  
+  FRA_justice_reform_desc: "justice reform seeks to address structural issues in criminal justice systems such as racial profiling, police brutality, overcriminalization, mass incarceration, and recidivism."
+  FRA_factory_democracy: "Industrial Democracy"
+  FRA_factory_democracy_desc: "Industrial democracy is an arrangement which involves workers making decisions, sharing responsibility and authority in the workplace."
   ### FOCUS ###
   FRA_economic_planning: "Economic Planning"
   FRA_create_the_national_statistics_service: "Create the National Statistics Service"

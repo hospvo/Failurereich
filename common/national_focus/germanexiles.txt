@@ -511,7 +511,7 @@ focus_tree = {
 	focus = {
 		id = GEX_goering_first
 		icon = GFX_goal_generic_demand_territory
-		text = "Constitional Monarchy"
+		text = "Force Kaiser addicate"
 		x = 6
 		y = 0
 		cost = 5
@@ -535,6 +535,33 @@ focus_tree = {
 			add_ideas = { GER_wilhelm_iii }
 		}
 	}
+	
+	focus = {
+		id = GEX_republic
+		icon = GFX_goal_generic_demand_territory
+		text = "Establish Republic"
+		x = 3
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+		focus = GEX_goering_first
+		}
+		mutually_exclusive = {
+		focus = GEX_goering_second
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = { GER_wilhelm_iii }
+		}
+	}
 
 	focus = {
 		id = GEX_goering_second
@@ -547,6 +574,10 @@ focus_tree = {
 		prerequisite = {
 		focus = GEX_goering_first
 		}
+		
+		mutually_exclusive = {
+		focus = GEX_republic
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -555,7 +586,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_stability = -0.1
+			add_stability = 0.05
 		}
 	}
 
