@@ -2230,7 +2230,7 @@ focus_tree = {
     }
 	focus = {
         id = FRA_social_invesment
-        icon = GFX_democratic_industry
+        icon = GFX_social_investment
 	    prerequisite = {
 	           focus = FRA_kid_right
 			   focus = FRA_worker_right
