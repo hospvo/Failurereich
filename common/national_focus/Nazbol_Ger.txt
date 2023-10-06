@@ -376,5 +376,33 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = NZC_form_reich
+		icon = GFX_focus_ITA_italo_balbo
+		text = "Form Greater reich"
+
+		prerequisite = { 
+				focus = NZC_Poland
+				focus = NZC_france
+		}
+
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+         
+        set_cosmetic_tag = NZC_nazi
+	}
 
 }
