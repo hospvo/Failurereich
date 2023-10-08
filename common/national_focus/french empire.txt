@@ -2514,7 +2514,7 @@ focus_tree = {
 		prerequisite = { focus = AFR_approach_canada }
 		mutually_exclusive = { focus = AFR_approach_portugal }
 		text = "Help the Kaiser army"
-		x = 1
+		x = -1
 		y = -1
 		relative_position_id = AFR_approach_canada
 		cost = 10
@@ -2535,7 +2535,7 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = AFR_approach_portugal }
 		text = "Help Austria"
-		x = 1
+		x = -1
 		y = -2
 		relative_position_id = AFR_approach_canada
 		cost = 10
@@ -2556,7 +2556,7 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = AFR_help_norway }
 		text = "Help Czechs"
-		x = 1
+		x = -1
 		y = -3
 		relative_position_id = AFR_approach_canada
 		cost = 10
