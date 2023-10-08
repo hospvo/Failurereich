@@ -2425,7 +2425,7 @@ focus_tree = {
 		id = AFR_approach_canada
 		icon = GFX_goal_generic_secret_weapon
 		text = "Approach Winsdor"
-		x = 26
+		x = 24
 		y = 0
 		cost = 10
 
@@ -2533,7 +2533,7 @@ focus_tree = {
 	focus = {
 		id = AFR_help_austria
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = AFR_approach_portugal }
+		prerequisite = { focus = AFR_help_kaiser }
 		text = "Help Austria"
 		x = -1
 		y = 2
@@ -2554,7 +2554,7 @@ focus_tree = {
 	focus = {
 		id = AFR_defend_czech
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = AFR_help_norway }
+		prerequisite = { focus = AFR_help_austria }
 		text = "Help Czechs"
 		x = -1
 		y = 3
