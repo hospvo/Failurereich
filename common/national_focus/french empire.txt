@@ -2416,4 +2416,160 @@ focus_tree = {
 			}
 		}
 	}
+
+###################
+### R ####
+###################
+
+	focus = {
+		id = AFR_approach_canada
+		icon = GFX_goal_generic_secret_weapon
+		text = "Approach Winsdor"
+		x = 26
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = CAN
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_approach_portugal
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_approach_canada }
+		mutually_exclusive = { focus = AFR_help_kaiser }
+		text = "Befriend with Portugal"
+		x = 1
+		y = -1
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = POR
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+	focus = {
+		id = AFR_help_norway
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_approach_portugal }
+		text = "Help Norway"
+		x = 1
+		y = -2
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			give_guarantee = NOR
+			send_equipment_fraction = {
+ 			   value = 0.1
+ 			   target = NOR
+			}
+		}
+	}
+	focus = {
+		id = AFR_defend_denmark
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_help_norway }
+		text = "Danish coalition"
+		x = 1
+		y = -3
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			give_guarantee = DEN
+			send_equipment_fraction = {
+ 			   value = 0.1
+ 			   target = DEN
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_help_kaiser
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_approach_canada }
+		mutually_exclusive = { focus = AFR_approach_portugal }
+		text = "Help the Kaiser army"
+		x = 1
+		y = -1
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			send_equipment_fraction = {
+ 			   value = 0.1
+ 			   target = WGR
+			}
+		}
+	}
+	focus = {
+		id = AFR_help_austria
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_approach_portugal }
+		text = "Help Austria"
+		x = 1
+		y = -2
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			send_equipment_fraction = {
+ 			   value = 0.1
+ 			   target = AUS
+			}
+		}
+	}
+	focus = {
+		id = AFR_defend_czech
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = AFR_help_norway }
+		text = "Help Czechs"
+		x = 1
+		y = -3
+		relative_position_id = AFR_approach_canada
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			send_equipment_fraction = {
+ 			   value = 0.1
+ 			   target = CZE
+			}
+		}
+	}
 }
