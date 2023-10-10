@@ -1917,7 +1917,7 @@ focus_tree = {
         y = 7
         cost = 9
         available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
+        search_filters = {FOCUS_FILTER_STABILITY}
         ai_will_do = {
 			factor = 1
 	    }
@@ -2098,7 +2098,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_london_treaty
-        icon = GFX_danish_alliance
+        icon = GFX_treaty_of_london
 	    prerequisite = {
 	           focus = FRA_invite_usa
 			   focus = FRA_invite_denmark

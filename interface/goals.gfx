@@ -59,6 +59,10 @@ spriteTypes = {
 		name = "GFX_social_investment"
 		texturefile = "gfx/interface/goals/FRA/GFX_social_investment.png"
 	}
+	SpriteType = { 
+		name = "GFX_treaty_of_london"
+		texturefile = "gfx/interface/goals/FRA/GFX_treaty_of_london.png"
+	}
 	###Germany###
 	
 	SpriteType = {
