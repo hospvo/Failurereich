@@ -22,5 +22,8 @@ country_event = {
 		name = startup.1.o1
 		trigger = {
         }
+		complete_effect = {
+		    set_country_flag = startup_france
+		}	
 	}
 }
