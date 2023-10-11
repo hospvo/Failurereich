@@ -254,4 +254,7 @@ PAP = "countries/Papal States.txt"
 TOS = "countries/Tuscany.txt"
 SPM = "countries/Sardinia Piedmont.txt"
 TTS = "countries/The Two Sicilies.txt"
+SMI = "countries/Sami.txt"
+GRN = "countries/Greenland.txt"
+
 MSQ = "countries/Mashriq.txt"
