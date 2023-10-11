@@ -1,0 +1,33 @@
+state=
+{
+	id=74
+	name="STATE_74"
+	manpower = 880000
+		resources={
+		steel=5 # historicaly there is very big coal and metalurgy indutry called ostravsko-karvinský revír
+	}
+	
+	state_category = town
+	
+	
+	history=
+	{
+		victory_points = {
+			3583 5
+		}
+		owner = CZE
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = CZE
+
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces= {
+		421 3414 3583 6485
+ 	}
+}
