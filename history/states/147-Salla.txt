@@ -1,7 +1,7 @@
 state=
 {
 	id=147
-	name="STATE_147"
+	name="STATE_147" #SALLA
 	manpower = 4630
 	
 	state_category = enclave
@@ -9,11 +9,12 @@ state=
 	history = {	
 		owner = FIN
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1 #TODO_Manu: Was 2
 		}
 		add_core_of = FIN
-
-		victory_points = {
+		add_core_of = KAR
+		
+		victory_points = { #Salla
 			197 1
 		}
 	}
@@ -21,4 +22,6 @@ state=
 	provinces={
 		197 9158 11085 	
 	}
+
+	local_supplies=0.0 
 }

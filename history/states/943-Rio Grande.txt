@@ -1,6 +1,6 @@
 state={
-	id=917
-	name="STATE_917"
+	id=943
+	name="STATE_943"
 
 	history={
 		owner = USA
