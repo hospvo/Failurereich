@@ -1,10 +1,9 @@
-state = {
-	id = 913
-	name = "STATE_913"
-	manpower = 505226
-	state_category = town
-	resources = {
-		steel = 3
+
+state={
+	id=913
+	name="STATE_913"
+	resources={
+		steel=3.000
 	}
 
 	history={
@@ -22,13 +21,18 @@ state = {
 			air_base = 2
 			11380 = {
 				naval_base = 1
+
 			}
+
 		}
+
 	}
 
-	provinces = {
-		6311 6397 9308 9393 11289 11311 11380 11390 13095 13264 13265
+	provinces={
+		6311 6397 9308 9393 11289 11311 11380 11390 13095 13264 13265 
 	}
-	
-	local_supplies = 11
+	manpower=505226
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=11.000
 }

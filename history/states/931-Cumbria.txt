@@ -1,26 +1,30 @@
-state = {
+
+state={
 	id=931
 	name="STATE_931"
-	manpower = 745101
-	state_category = town
-	resources = {
-		steel = 20 
-		aluminium = 5
+	resources={
+		steel=20.000
+		aluminium=5.000
 	}
 
-	history = {
+	history={
 		owner = ENG
 		add_core_of = ENG
 		victory_points = {
-			11332 3 #Carlisle
+			11332 3 
 		}
 		buildings = {
-			infrastructure = 3 #was: 6
+			infrastructure = 3
+
 		}
+
 	}
 
-	provinces = {
+	provinces={
 		219 6399 9285 11332 
 	}
-	local_supplies = 0.000
+	manpower=745101
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

@@ -1,10 +1,9 @@
-state = {
-	id = 911
-	name = "STATE_911"
-	manpower = 497073
-	state_category = town
 
-	history = {
+state={
+	id=911
+	name="STATE_911"
+
+	history={
 		owner = DEN
 		add_core_of = DEN
 		victory_points = {
@@ -16,12 +15,18 @@ state = {
 			dockyard = 1
 			3325 = {
 				naval_base = 3
+
 			}
+
 		}
+
 	}
-	provinces = {
-		3325 3374 13260 13261
+
+	provinces={
+		3325 3374 13260 13261 
 	}
-	
-	local_supplies = 0.000
+	manpower=497073
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }
