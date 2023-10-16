@@ -24,7 +24,7 @@ TRK = "countries/Candar.txt"
 #### Temp tags ####
 
 SPA = "countries/Fal Spain.txt" ### Asturia
-SPC = "countries/Com Spain.txt" ### Aragon
+SPC = "countries/ComSpain.txt" ### Aragon
 
 AFR = "countries/Sahara.txt" ### Eastern Algeria
 RUS = "countries/Russia.txt" ### Novgorod
