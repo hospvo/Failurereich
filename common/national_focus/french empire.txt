@@ -596,7 +596,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			creat_wargoal = {
+			create_wargoal = {
    				target = LBA
    				type = annex_everything
 			}
@@ -624,7 +624,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			creat_wargoal = {
+			create_wargoal = {
    				target = MOR
    				type = annex_everything
 			}
@@ -653,7 +653,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			creat_wargoal = {
+			create_wargoal = {
    				target = EGY
    				type = annex_everything
 			}
@@ -682,7 +682,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			creat_wargoal = {
+			create_wargoal = {
    				target = MSQ
    				type = annex_everything
 			}
