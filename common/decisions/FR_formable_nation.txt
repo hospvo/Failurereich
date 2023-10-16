@@ -10,8 +10,8 @@ form_poland_hungary_category = {
 
 		available = {
 			is_subject = no
-			controls_state = 947
-			controls_state = 948
+			controls_state = 973
+			controls_state = 974
 			controls_state = 154
 			controls_state = 155
 			controls_state = 43
