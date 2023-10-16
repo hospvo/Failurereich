@@ -30,9 +30,10 @@ state={
 	}
 
 	provinces={
-		399 3206 3277 3341 6235 6364 13262 13263
+		399 3206 3277 3341 6235 6364 13262 13263 
 	}
 	manpower=1672235
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }
