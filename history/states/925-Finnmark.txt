@@ -16,7 +16,7 @@ state = {
 			9116 1
 		}
 		
-		owner = NOR
+		owner = SWE
 		add_core_of = NOR
 		if = {
 			limit = {
