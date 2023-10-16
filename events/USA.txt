@@ -400,7 +400,7 @@ country_event = {
 
 		NWG  = { transfer_state = 358 }
 		NWG  = { transfer_state = 357 }
-		NWG  = { transfer_state = 976 }
+		NWG  = { transfer_state = 950 }
 
 		NWG  = {	
 
