@@ -24,8 +24,8 @@ country_event = {
 		add_state_claim = 6
 		add_state_claim = 8
 		add_state_claim = 14
-		add_state_claim = 944
-		add_state_claim = 945
+		add_state_claim = 970
+		add_state_claim = 971
 	}
 }
 country_event = {

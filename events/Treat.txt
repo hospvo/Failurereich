@@ -384,7 +384,7 @@ country_event = {
 		DEN = { set_state_owner = 58 }
 		CAN = { set_state_owner = 57 }
 		CAN = { set_state_owner = 56 }
-		CAN = { set_state_owner = 915 }
+		CAN = { set_state_owner = 941 }
 		SOV = { set_state_owner = 722 }
 		SOV = { set_state_owner = 146 }
 		YUG = { set_state_owner = 45 }
@@ -395,8 +395,8 @@ country_event = {
 		YUG = { set_state_owner = 163 }
 		YUG = { set_state_owner = 109 }
 
-		BEL = { set_state_owner = 944 }
-		BEL = { set_state_owner = 945 }
+		BEL = { set_state_owner = 970 }
+		BEL = { set_state_owner = 971 }
 
 
 		WGR = {
