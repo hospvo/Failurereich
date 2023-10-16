@@ -14,7 +14,9 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_republic
+				FRA_freedom_way
+				FRA_monarchist_coup
+				FRA_old_marechal_speech
 			}
 		}
 		"GER"={

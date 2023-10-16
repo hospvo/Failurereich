@@ -16,7 +16,9 @@ bookmarks = {
 				FRA_anti_bolshevist_volunteers 
 			}
 			focuses = {
-				FRA_republic
+				FRA_freedom_way
+				FRA_monarchist_coup
+				FRA_old_marechal_speech
 			}
 		}
 		"GER"={
