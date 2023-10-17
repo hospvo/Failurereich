@@ -159,7 +159,7 @@ set_popularities = {
 
 set_cosmetic_tag = german_empire_exiled 
 
-create_faction = "Old Alliance"
+create_faction = "alter zentraler Machtpakt"
 add_to_faction = WGR
 
 
