@@ -1,0 +1,18 @@
+﻿l_english:
+
+ # Decisions
+  parliament_gui_decision_category:0 ".§!"
+  parliament_gui_decision_category_desc:0 "The Assemblée Nationale form, with the Senate, Parliament of the France.\Its members are the députés, whose primary role is to debate, amend and pass laws.\ The National Assembly is located in the Palais Bourbon in Paris"
+
+ # Scripted GUIs
+  parliament_gui_title:0 "Assemblée nationale en grille"
+  semicircle_parliament_gui_title:0 "Demi-cercle Assemblée nationale"
+  parliament_main_icon_tt:0 "[GetParliamentSeatName] - [GetParliamentPartyName]"
+  parliament_seat_text:0 "Seat [?temp_seat|Y0]"
+  parliament_member_text:0 "[GetParliamentPartyName] - [?parliament_seat_array^parliament_member_index] Seats"
+  parliament_modify_button_tt:0 "§GCtrl+Click§! to add §Y5§! Seats from [GetParliamentPartyName]\n§GShift+Click§! to subtract §Y5§! Seats from [GetParliamentPartyName]"
+
+  party_1_text:0 "Party §RA§!"
+  party_2_text:0 "Party §YB§!"
+  party_3_text:0 "Party §GC§!"
+  party_4_text:0 "Party §BD§!"
