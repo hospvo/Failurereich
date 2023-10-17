@@ -1635,8 +1635,9 @@ focus_tree = {
         }
         completion_reward = {
 				set_politics = {
-				         ruling_party = left
-				}
+				    ruling_party = left
+				    elections_allowed = yes
+			    }
 			    set_party_name = {
                         ideology = left
                         long_name = "RP"

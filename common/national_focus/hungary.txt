@@ -276,7 +276,7 @@ focus_tree = {
 			}
 			set_politics = {
 				ruling_party = vanguardism 
-				elections_allowed = no
+				elections_allowed = yes
 			}
 			add_popularity = {
 			    ideology = vanguardism 
@@ -446,7 +446,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			create_faction = "Danubian Communes"
+			create_faction = "Dunamenti Önkormányzatok"
 		}
 	}
 
