@@ -1612,4 +1612,738 @@ focus_tree = {
         add_country_leader_trait = dictator
 		}
 	}
+
+####democrat path ####
+
+	focus = {
+	    id = FRA_freedom_way
+		icon = GFX_FRA_republicanism
+		mutually_exclusive = {
+		         focus = FRA_old_marechal_speech 
+		}
+		mutually_exclusive = {
+		         focus = FRA_monarchist_coup
+		}		 
+		text = "Bring Back The Demoracts"
+	    x = 38
+        y = 0
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+				set_politics = {
+				    ruling_party = left
+				    elections_allowed = yes
+			    }
+			    set_party_name = {
+                        ideology = left
+                        long_name = "RP"
+                        name = "Parti de la Révolution"
+                }
+				remove_ideas = FRA_military_junta_1
+				remove_ideas = FRA_military_constitution
+                add_popularity = {
+				ideology = left 
+				popularity = 0.20
+			    }
+				add_popularity = {
+				ideology = democratic 
+				popularity = 0.15
+			    }
+                set_cosmetic_tag = FRA_republic
+				hidden_effect = {
+			        news_event = { hours = 1 id = fr_news.5 }
+				}		
+	    }
+    }
+	
+	focus = {
+	    id = FRA_hold_election
+	    icon = GFX_FRA_election
+	    text = "Hold election"
+        prerequisite = {
+			   focus = FRA_freedom_way
+		}
+		available = {
+			is_puppet = no
+		}
+	    x = 38
+	    y = 1
+	    cost = 10
+	    available_if_capitulated = yes
+	    search_filters = { FOCUS_FILTER_POLITICAL }
+	    ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+		    custom_effect_tooltip = FRA_hold_election_tt
+		    add_popularity = {
+				    ideology = left 
+				    popularity = 0.10
+	        }
+		}
+	}
+	
+	###war with german branch###
+	
+	focus = {
+	    id = FRA_they_not_pass
+	    icon = GFX_FRA_marceal_deat
+	    text = "Leftist Victory"
+        x = 22
+        y = 7
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+				add_popularity = {
+				ideology = left 
+				popularity = 0.01
+			    }
+		}
+    }
+	
+	###Leftist Branch###
+	
+	focus = {
+	    id = FRA_left_win
+	    icon = GFX_FRA_marceal_deat
+	    text = "Leftist Victory"
+	    prerequisite = {
+	           focus = FRA_hold_election
+	    }
+        x = 33
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+			    set_party_name = {
+                        ideology = left
+                        long_name = "SD"
+						name = "Parti Social démocrate"
+		        }
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
+		}
+    }
+	focus = {
+	    id = FRA_start_education_reform
+	    icon = GFX_education
+	    text = "Education reform"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 34
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
+				add_stability = 0.10	
+		}
+    }
+	
+	focus = {
+	    id = FRA_help_usa
+	    icon = GFX_help_usa
+	    text = "Help USA"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 32
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    NOT = { country_exists = usa }
+		}	
+		available = {
+			is_puppet = no
+			country_exists = USA
+		}	
+		
+        completion_reward = {
+                set_truce = {
+   				target = USA
+			    	days = 600
+			    }
+			FRA = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 1000
+				    target = USA
+				}				
+		    }
+        }
+	}
+   
+    focus = {
+        id = FRA_religion_freedom
+        icon = GFX_free_religion
+	    text = "Freedom of religion"
+	    prerequisite = {
+	           focus = FRA_help_usa
+	    }
+		prerequisite = {
+	           focus = FRA_start_education_reform
+	    }
+        x = 33
+        y = 4
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_ideas = FRA_freedom_of_religion
+                 add_manpower = 10
+        }				 
+    }
+	
+	focus = {
+        id = FRA_write_con
+        icon = GFX_FRA_constitution
+	    text = "Drafting a New Constitution by Referendum"
+	    prerequisite = {
+	           focus = FRA_religion_freedom
+	    }
+        x = 30
+        y = 5
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_political_power = 50
+        }				 
+    }
+	
+	focus = {
+        id = FRA_human_right
+        icon = GFX_rights_of_human
+	    prerequisite = {
+	           focus = FRA_write_con
+	    }
+        x = 29
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_political_power = 100
+        }				 
+    }
+	
+	focus = {
+        id = FRA_woman_election
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_write_con
+	    }
+        x = 31
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_ideas = { FRA_women_election }
+				 add_political_power = 40
+        }				 
+    }
+	
+	focus = {
+        id = FRA_freedom_of_talk
+        icon = GFX_freedom_of_speech
+	    prerequisite = {
+	           focus = FRA_human_right
+	    }
+        x = 29
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = { FRA_freedom_of_talk }
+        }				 
+    }
+	
+	focus = {
+        id = FRA_justice_reform
+        icon = GFX_prison_reform
+	    prerequisite = {
+	           focus = FRA_woman_election
+	    }
+        x = 31
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_STABILITY}
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+		}	
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		         add_ideas = FRA_justice_reform
+        }				 
+    }
+	
+	focus = {
+        id = FRA_finish_con
+        icon = GFX_finish_the_constitution
+	    prerequisite = {
+	           focus = FRA_justice_reform
+			   focus = FRA_freedom_of_talk
+	    }
+        x = 30
+        y = 8
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = FRA_democrat_con
+        }				 
+    }
+	
+	focus = {
+        id = FRA_expand_parliment
+        icon = GFX_par_ex
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 31
+        y = 9
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}	
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.05
+			    }
+				custom_effect_tooltip = FRA_expand_parliment_tt
+				add_stability = 0.01
+        }				 
+    }
+	
+	focus = {
+        id = FRA_remiliterize_negition
+        icon = GFX_FRA_remiliterize_moselland
+	    prerequisite = {
+	           focus = FRA_religion_freedom
+	    }
+        x = 34
+        y = 5
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_ANNEXATION }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			28 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
+           
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    GER = {
+				country_event = { days = 1 id = germany.25 }
+			}
+				 add_political_power = 100
+        }				 
+    }
+	
+	focus = {
+        id = FRA_invite_denmark
+        icon = GFX_danish_alliance
+	    prerequisite = {
+	           focus = FRA_remiliterize_negition
+	    }
+        x = 35
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+            NOT = { country_exists = DEN }
+			NOT = { DEN = country_ruling = anarchist }
+		}
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		    DEN = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+        }				 
+    }
+	
+	focus = {
+        id = FRA_invite_usa
+        icon = GFX_danish_alliance
+	    prerequisite = {
+	           focus = FRA_remiliterize_negition
+	    }
+        x = 33
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+            NOT = { country_exists = DEN }
+		}
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		    USA = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+        }
+    }
+	
+	focus = {
+        id = FRA_london_treaty
+        icon = GFX_treaty_of_london
+	    prerequisite = {
+	           focus = FRA_invite_usa
+			   focus = FRA_invite_denmark
+	    }
+        x = 34
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    ENG = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+			custom_effect_tooltip = FRA_london_treaty_tt
+        }				 
+    }
+	
+	focus = {
+        id = FRA_factory_democrat
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 29
+        y = 9
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_factory_democracy
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+				add_stability = 0.01
+        }
+    }
+	
+	focus = {
+        id = FRA_worker_right
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_factory_democrat
+	    }
+        x = 29
+        y = 10
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+				add_stability = 0.01
+        }
+    }
+	
+	focus = {
+        id = FRA_kid_right
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_expand_parliment
+	    }
+        x = 31
+        y = 10
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+        }
+    }
+	focus = {
+        id = FRA_social_invesment
+        icon = GFX_social_investment
+	    prerequisite = {
+	           focus = FRA_kid_right
+			   focus = FRA_worker_right
+	    }
+        x = 30
+        y = 11
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+        }
+    }
+	
+	focus = {
+        id = FRA_commune_of_paris
+        icon = GFX_social_investment
+	    prerequisite = {
+	           focus = FRA_social_invesment
+	    }
+        x = 25
+        y = 13
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			is_puppet = yes
+		}
+		available = {
+		    has_government = left
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+		        set_politics = {
+				         ruling_party = anarchist
+				}
+			    set_party_name = {
+                        ideology = anarchist
+                        long_name = "CR"
+                        name = "conseil révolutionnaire"
+                }
+        }
+    }
+	focus = {
+        id = FRA_abolish_class
+        icon = GFX_social_investment
+	    prerequisite = {
+	           focus = FRA_commune_of_paris
+	    }
+        x = 25
+        y = 13
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			is_puppet = yes
+		}
+		available = {
+			has_government = anarchist
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_worker_right
+    }
 }	
