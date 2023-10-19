@@ -242,6 +242,25 @@ ideas = {
 				army_leader_cost_factor = -0.3
 			}
 		}
+		
+		ROM_legacy_of_carol_ii = {
+
+			picture = legacy_of_carol_ii
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				stability_weekly = -0.090
+			}
+		}
 
 		ROM_local_development = {
 			

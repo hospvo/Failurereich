@@ -53,6 +53,7 @@ if = {
 add_ideas = neutrality_idea
 add_ideas = ROM_army_regime
 add_ideas = ROM_divided_land
+add_ideas = ROM_legacy_of_carol_ii
 
 #Kick off kings crazy life
 if = {

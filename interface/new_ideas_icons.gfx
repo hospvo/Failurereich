@@ -77,4 +77,8 @@ spriteTypes = {
 	name = "GFX_idea_factory_democrat"
 	texturefile = "gfx/interface/ideas/FRA/GFX_factory_democrat.png"
 	}
+	spriteType = {
+	name = "GFX_idea_legacy_of_carol_ii"
+	texturefile = "gfx/interface/ideas/FRA/GFX_legacy_of_carol_ii.png"
+	}
 }
