@@ -8,7 +8,7 @@ bookmarks = {
 		default = yes
 
 		"FRA"={
-			history = "Petain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism."
+			history = "from 1918, Petain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism after years of terror. Communists has been captured after the fall of the Commune. With Bucard as prime minister, Petain began to left more power to collaborationists and minor parties. Fascism come in France after the 20s, where the military juntla controlled everything. While Petain left power, democracy never come back."
 			ideology = fascism
 			ideas = {
 				FRA_up_with_jean_darc 
