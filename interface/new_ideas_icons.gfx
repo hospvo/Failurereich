@@ -79,6 +79,6 @@ spriteTypes = {
 	}
 	spriteType = {
 	name = "GFX_idea_legacy_of_carol_ii"
-	texturefile = "gfx/interface/ideas/FRA/GFX_legacy_of_carol_ii.png"
+	texturefile = "gfx/interface/ideas/ROM/GFX_legacy_of_carol_ii.png"
 	}
 }
