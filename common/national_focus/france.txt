@@ -2246,11 +2246,10 @@ focus_tree = {
         }
 
         completion_reward = {
-		        add_ideas = FRA_worker_right
-		        add_popularity = {
-				    ideology = left 
-				    popularity = 0.01
-			    }
+		    FRA = {
+			    country_event = { hours = 1 id = france.19 }
+		    }
+			 
         }
     }
 	focus = {

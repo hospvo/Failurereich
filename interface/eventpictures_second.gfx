@@ -31,5 +31,9 @@ spriteTypes = {
 		name = "GFX_news_event_pius_xi_dead"
 		texturefile = "gfx/event_pictures/pius_xi_dead.dds"
 	}
+	spriteType = {
+		name = "GFX_fate_of_petain"
+		texturefile = "gfx/event_pictures/fate_of_petain.dds"
+	}
 	
 }
