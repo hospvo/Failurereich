@@ -124,7 +124,7 @@ news_event = {
 
 news_event = {
 	id = fr_news.5
-	title = "French revolution"
+	title = "Second French revolution"
 	desc = "The French people have risen to revolution to restore democracy and currently the revolutionary council has taken control of Paris successfully. Petain and his supporters have been apprehended on charges of crimes against freedom."
 	picture = GFX_news_event_french_revolution
 	

@@ -697,7 +697,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "now petain regime are weak we should coup them and establish monarchy again"
+		name = "now petain regime are weak we should coup them and establish monarchy again Vive le Roi"
 		complete_national_focus = FRA_monarchist_coup
 		ai_will_do = {
 			factor = 1
