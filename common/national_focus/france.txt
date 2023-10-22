@@ -501,6 +501,9 @@ focus_tree = {
 		icon = GFX_FRA_old_marshals_speech
 		mutually_exclusive = { focus = FRA_monarchist_coup }
 		mutually_exclusive = { focus = FRA_freedom_way }
+		available = {
+		    always = no
+        }
 		x = 15
 		y = 0
 		cost = 10
@@ -511,6 +514,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+			custom_effect_tooltip = FRA_autocomplete_tt
 		}
 	}
 
@@ -1302,6 +1306,9 @@ focus_tree = {
 		icon = GFX_FRA_establish_the_monarchy
 		mutually_exclusive = { focus = FRA_old_marechal_speech }
 		mutually_exclusive = { focus = FRA_freedom_way }
+		available = {
+		    always = no
+        }
 		x = 8
 		y = 0
 		relative_position_id = FRA_old_marechal_speech
@@ -1312,7 +1319,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 10000
+		    custom_effect_tooltip = FRA_autocomplete_tt
+			add_manpower = 10000		
 			set_politics = {
 				ruling_party = reactionary
 			}
@@ -1623,7 +1631,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 		         focus = FRA_monarchist_coup
-		}		 
+		}
+        available = {
+		    always = no
+        }		
 		text = "Bring Back The Demoracts"
 	    x = 38
         y = 0
@@ -1634,6 +1645,7 @@ focus_tree = {
             factor = 1
         }
         completion_reward = {
+		        custom_effect_tooltip = FRA_autocomplete_tt
 				set_politics = {
 				    ruling_party = left
 				    elections_allowed = yes

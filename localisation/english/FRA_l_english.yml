@@ -25,7 +25,10 @@
   FRA_justice_reform_desc: "justice reform seeks to address structural issues in criminal justice systems such as racial profiling, police brutality, overcriminalization, mass incarceration, and recidivism."
   FRA_factory_democracy: "Industrial Democracy"
   FRA_factory_democracy_desc: "Industrial democracy is an arrangement which involves workers making decisions, sharing responsibility and authority in the workplace."
-  FRA_london_treaty_tt: ""§GWe will negition with british about england channel crisis.§!"
+  FRA_london_treaty_tt: ""§GWe will negition with british about england channel crisis.§!""
+  FRA_autocomplete_tt: ""§OThis focus will automatic complete by decision or events.§!""
+  FRA_demo_tt: ""§BSelect this will go the democratic path.§!""
+  king_or_petain_tt: ""§RSelect this will go the monarchy or old marchal speech path§!""
   
   ### FOCUS ###
   FRA_economic_planning: "Economic Planning"
@@ -100,7 +103,7 @@
   france.3.a: "We will not tolerate this"
 
   ### COSMETIC TAG ###
-  FRA_republic: "Fourth french republic"
+  FRA_republic: "Fourth French Republic"
   FRA_republic_DEF: "france republic"
   FRA_republic_ADJ: "French republic"
   AFR_parliment_king: "French empire"
