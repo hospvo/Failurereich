@@ -2053,7 +2053,6 @@ focus_tree = {
 			factor = 1
 	    }
 		bypass = {
-		    has_government = fascism
 			28 = { is_demilitarized_zone = no }
 			914 = { is_demilitarized_zone = no }
            
