@@ -714,7 +714,7 @@ country_event = {
 country_event = {
 	id = france.22
 	title = "our negotiator join them"
-	desc = "our negotiator and some soldier which we sent to protect negotiator are join them now we lose"
+	desc = "Fight again our regime is raging through the capital city of Paris. We tried to quell down the rebels by negotiating with them, but our negotiators switched sides and with their escort are now fighting against us. This isn't the first time since something like this happened, but this time it made us panic through our lines. With our lines collapsing and our support from the population missing, we capitulated. By this moment the fourth republic is born."
 	picture = GFX_fate_of_petain
 	
 	fire_only_once = yes
