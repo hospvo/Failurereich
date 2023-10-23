@@ -697,7 +697,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "now petain regime are weak we should coup them and establish monarchy again Vive le Roi"
+		name = "now petain regime are weak we should coup them and restablish monarchy again Vive la Roi"
 		complete_national_focus = FRA_monarchist_coup
 		ai_will_do = {
 			factor = 1
@@ -713,8 +713,8 @@ country_event = {
 }
 country_event = {
 	id = france.22
-	title = "our soldier join them"
-	desc = "French people are uprising to overthrow our regime we should do something if we do not do something France will go into anarchy"
+	title = "our negotiator join them"
+	desc = "our negotiator and some soldier which we sent to protect negotiator are join them now we lose"
 	picture = GFX_fate_of_petain
 	
 	fire_only_once = yes

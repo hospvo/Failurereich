@@ -1324,6 +1324,8 @@ focus_tree = {
 			set_politics = {
 				ruling_party = reactionary
 			}
+			retire_country_leader = yes
+			promote_character = FRA_regency
 			remove_ideas = FRA_military_junta_1
 			remove_ideas = FRA_military_constitution
 			set_party_name = { 
@@ -2200,7 +2202,7 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_worker_right
+        id = FRA_goal_luxem
         icon = GFX_democratic_industry
 	    prerequisite = {
 	           focus = FRA_factory_democrat
@@ -2234,7 +2236,7 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_kid_right
+        id = FRA_fate_petain
         icon = GFX_democratic_industry
 	    prerequisite = {
 	           focus = FRA_expand_parliment
@@ -2339,7 +2341,7 @@ focus_tree = {
 	           focus = FRA_commune_of_paris
 	    }
         x = 25
-        y = 13
+        y = 11
         cost = 9
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
