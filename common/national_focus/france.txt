@@ -2065,7 +2065,7 @@ focus_tree = {
 		    GER = {
 				country_event = { days = 1 id = germany.25 }
 			}
-				 add_political_power = 100
+				 add_political_power = 10
         }				 
     }
 	
@@ -2084,11 +2084,7 @@ focus_tree = {
 			factor = 1
 	    }
 		bypass = {
-		    has_government = fascism
-			has_government = anarchist
-			is_puppet = yes
             NOT = { country_exists = DEN }
-			NOT = { DEN = country_ruling = anarchist }
 		}
 		available = {
 			has_government = left
@@ -2104,7 +2100,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_invite_usa
-        icon = GFX_danish_alliance
+        icon = GFX_american_alliance
 	    prerequisite = {
 	           focus = FRA_remiliterize_negition
 	    }
@@ -2269,8 +2265,8 @@ focus_tree = {
         id = FRA_social_invesment
         icon = GFX_social_investment
 	    prerequisite = {
-	           focus = FRA_kid_right
-			   focus = FRA_worker_right
+	           focus = FRA_fate_petain
+			   focus = FRA_goal_luxem
 	    }
         x = 30
         y = 11

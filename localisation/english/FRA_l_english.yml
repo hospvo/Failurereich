@@ -82,9 +82,9 @@
   FRA_expand_parliment_desc: "We will increased the number of lower house seats"
   FRA_factory_democrat: "Industrial Democracy"
   FRA_factory_democrat_desc: "Industrial democracy is an arrangement which involves workers making decisions, sharing responsibility and authority in the workplace. While in participative management organizational designs workers are listened to and take part in the decision-making process, in organizations employing industrial democracy they also have the final decisive power."
-  FRA_kid_right: "Fate of petain"
-  FRA_kid_right_desc: "The main pride of what rebels manage to capture. petain surrendered to rebel leaders in his festive uniform with his highest awards. Rebellion had won, and now there are many questions to answer.
-  One of the most important is what to do with Petain. There are three main groups of ideas about what to do. The first one, the most cruel, is to hold a great trial with Petain and his closest supporters and sentence him for high treason to death by hanging. The second one argues that we are better than them and also with his credits in the war against Germany, which is to judge him with his clique but sentence him to life imprisonment. The third one is to sentence him to a life ban to enter mainland France."
+  FRA_fate_petain: "Fate of petain"
+  FRA_fate_petain_desc: "One of the most important is what to do with Petain. There are three main groups of ideas about what to do. The first one, the most cruel, is to hold a great trial with Petain and his closest supporters and sentence him for high treason to death by hanging. The second one argues that we are better than them and also with his credits in the war against Germany, which is to judge him with his clique but sentence him to life imprisonment. The third one is to sentence him to a life ban to enter mainland France."
+  FRA_invite_usa: "Invite United State of American"
   FRA_london_treaty: "Deal with british"
   FRA_london_treaty_desc: " We will deal with united kingdom about english channel crisis"
   ### EVENT ###
