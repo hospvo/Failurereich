@@ -649,7 +649,7 @@ country_event = {
 	id = france.20
 	title = "Paris uprising"
 	desc = "French people are uprising to overthrow our regime we should do something if we do not do something France will go into anarchy"
-	picture = GFX_fate_of_petain
+	picture = GFX_FRA_uprising
 	
 	fire_only_once = yes
 
@@ -681,7 +681,7 @@ country_event = {
 }
 country_event = {
 	id = france.21
-	title = "Paris uprising crash"
+	title = "Paris uprising crush"
 	desc = "now we can control capital"
 	picture = GFX_fate_of_petain
 	

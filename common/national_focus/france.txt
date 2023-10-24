@@ -1851,7 +1851,7 @@ focus_tree = {
 	    }
         x = 30
         y = 5
-        cost = 9
+        cost = 4
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         ai_will_do = {
@@ -1874,7 +1874,7 @@ focus_tree = {
 	    }
         x = 29
         y = 6
-        cost = 9
+        cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         ai_will_do = {
@@ -1900,7 +1900,7 @@ focus_tree = {
 	    }
         x = 31
         y = 6
-        cost = 9
+        cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         ai_will_do = {
@@ -1927,7 +1927,7 @@ focus_tree = {
 	    }
         x = 29
         y = 7
-        cost = 9
+        cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         ai_will_do = {
@@ -1954,7 +1954,7 @@ focus_tree = {
 	    }
         x = 31
         y = 7
-        cost = 9
+        cost = 5
         available_if_capitulated = yes
         search_filters = {FOCUS_FILTER_STABILITY}
         ai_will_do = {
@@ -2012,7 +2012,7 @@ focus_tree = {
 	    }
         x = 31
         y = 9
-        cost = 9
+        cost = 7
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         ai_will_do = {
@@ -2197,7 +2197,7 @@ focus_tree = {
     }
 	
 	focus = {
-        id = FRA_goal_luxem
+        id = FRA_goal_lux
         icon = GFX_democratic_industry
 	    prerequisite = {
 	           focus = FRA_factory_democrat
@@ -2211,8 +2211,6 @@ focus_tree = {
 			factor = 1
 	    }
 		bypass = {
-		    has_government = fascism
-            has_government = anarchist
 			is_puppet = yes
 		}
 		available = {
@@ -2221,12 +2219,9 @@ focus_tree = {
         }
 
         completion_reward = {
-		        add_ideas = FRA_worker_right
-		        add_popularity = {
-				    ideology = left 
-				    popularity = 0.01
+		        LUX = {
+				    country_event = { days = 1 id = luxemborg.1 }
 			    }
-				add_stability = 0.01
         }
     }
 	
@@ -2266,7 +2261,7 @@ focus_tree = {
         icon = GFX_social_investment
 	    prerequisite = {
 	           focus = FRA_fate_petain
-			   focus = FRA_goal_luxem
+			   focus = FRA_goal_lux
 	    }
         x = 30
         y = 11
@@ -2287,7 +2282,6 @@ focus_tree = {
         }
 
         completion_reward = {
-		        add_ideas = FRA_worker_right
 		        add_popularity = {
 				    ideology = left 
 				    popularity = 0.01
