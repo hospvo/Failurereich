@@ -63,6 +63,10 @@ spriteTypes = {
 		name = "GFX_treaty_of_london"
 		texturefile = "gfx/interface/goals/FRA/GFX_treaty_of_london.png"
 	}
+	SpriteType = { 
+		name = "GFX_fate_petain"
+		texturefile = "gfx/interface/goals/FRA/GFX_fate_petain.png"
+	}
 	###Germany###
 	
 	SpriteType = {

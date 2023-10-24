@@ -2236,7 +2236,7 @@ focus_tree = {
 	
 	focus = {
         id = FRA_fate_petain
-        icon = GFX_democratic_industry
+        icon = GFX_fate_petain
 	    prerequisite = {
 	           focus = FRA_expand_parliment
 	    }
