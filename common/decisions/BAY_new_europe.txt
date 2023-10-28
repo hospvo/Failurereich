@@ -120,6 +120,24 @@ BAY_kommissariat = {
 				transfer_state = 99
 				transfer_state = 138
 				transfer_state = 124
+
+				transfer_state = 920
+				transfer_state = 921
+				transfer_state = 922
+				transfer_state = 923
+				transfer_state = 924
+
+				transfer_state = 910
+				transfer_state = 911
+				transfer_state = 912
+
+				transfer_state = 913
+				transfer_state = 914
+				transfer_state = 915
+				transfer_state = 916
+				transfer_state = 917
+				transfer_state = 918
+				transfer_state = 919
 			}
 		}	
 	}
