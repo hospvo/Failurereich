@@ -20,6 +20,7 @@ set_technology = {
 	fuel_refining = 1
 }
 
+recruit_character = RAJ_winston_churchill
 recruit_character = RAJ_lord_linlithgow
 recruit_character = RAJ_v_d_savarkar
 recruit_character = RAJ_p_krishna_pillai
