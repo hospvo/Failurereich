@@ -1,4 +1,18 @@
 characters={
+	RAJ_winston_churchill ={
+		name="Winston Churchill"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Winston_Churchill.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1955.1.1.1"
+			id = -1
+		}
+	}
 	RAJ_lord_linlithgow={
 		name=RAJ_lord_linlithgow
 		portraits={
