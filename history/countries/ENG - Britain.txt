@@ -129,13 +129,13 @@ if = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = reactionary
 	last_election = "1935.11.14"
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 90
-	communism = 10
+	reactionary = 60
+	fascism  = 40
 }
 
 give_guarantee = FRA
@@ -145,10 +145,6 @@ give_guarantee = POL
 
 recruit_character = ENG_oswald_mosely
 
-
-
-
-
 create_country_leader = {
 	name = "Winston Churchill"
 	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
@@ -157,6 +153,17 @@ create_country_leader = {
 	ideology = conservatism
 	traits = {
 		#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
+	}
+}
+
+create_country_leader = {
+	name = "J. F. C. Fuller"
+	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
+	picture = "Portrait_Britain_fuller.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+
 	}
 }
 
