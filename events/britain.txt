@@ -11,7 +11,7 @@ country_event = {
 	
 	option = {
 		name = "Come with George VI"
-			release = IRL
+			release = IRE
 			start_civil_war = {
 			    ruling_party = reactionary
 			    ideology = fascism
@@ -37,7 +37,7 @@ country_event = {
 	
 	option = {
 		name = "Mosley and the State"
-			release = IRL
+			release = IRE
 			start_civil_war = {
 			    ruling_party = fascism
 			    ideology = reacctionary
