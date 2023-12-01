@@ -110,13 +110,13 @@ create_import = {
 set_convoys = 400
 
 set_politics = {
-	ruling_party = reactionary
+	ruling_party = fascism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	reactionary = 90
+	fascism = 90
 	democratic = 10
 }
 
@@ -128,6 +128,16 @@ create_country_leader = {
 	ideology = despotism
 	traits = {
 		warrior_code
+	}
+}
+
+create_country_leader = {
+	name = "Harukichi Shimoi"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "gfx/leaders/JAP/JAP_Harukichi_Shimoi.dds"
+	expire = "1989.1.1"
+	ideology = rexism
+	traits = {
 	}
 }
 
