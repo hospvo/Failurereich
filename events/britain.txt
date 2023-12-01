@@ -3,30 +3,52 @@ add_namespace = britain
 
 country_event = {
 	id = britain.1
-	title = "Regency come back"
+	title = "New Regency come back"
 	desc = "Fascists want to come back and serve the country. We need to get rid of this and reetablish monarchy."
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
 	
 	option = {
-
-		name = "Come with the King"
-start_civil_war = {
-    ruling_party = reactionary
-
-    ideology = fascism
-
-    size = 0.4
-    capital = 282
-    states = {
-        282 533 536 555 529 530 528
-    }
-    keep_unit_leaders = {
-        750 751 752
-    }
-    keep_political_leader = yes
-    keep_political_party_members = yes
-}
+		name = "Come with George VI"
+			release = IRL
+			start_civil_war = {
+			    ruling_party = reactionary
+			    ideology = fascism
+	
+			    size = 0.4
+			    capital = 126
+			    states = {
+			        122 123 125 126 127 128 338 129
+			    }
+			    keep_political_leader = yes
+			    keep_political_party_members = yes
+			}
+		}
 	}
-}
+
+country_event = {
+	id = britain.2
+	title = "A new State"
+	desc = "Fascists want to come back and serve the country. We need help them."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mosley and the State"
+			release = IRL
+			start_civil_war = {
+			    ruling_party = fascism
+			    ideology = reacctionary
+	
+			    size = 0.4
+			    capital = 121
+			    states = {
+			        121 120 133 136 931 932 131
+			    }
+			    keep_political_leader = yes
+			    keep_political_party_members = yes
+			}
+		}
+	}
