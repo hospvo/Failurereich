@@ -23,7 +23,7 @@ focus_tree = {
 	focus = {
 		id = ENG_economic_planning
 		icon = GFX_goal_generic_construct_civilian
-		x = 2
+		x = 5
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -51,6 +51,7 @@ focus_tree = {
 	focus = {
 		id = ENG_mosley_way
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Mosley way"
 		mutually_exclusive = { focus = ENG_monarchist_coup focus = ENG_army }
 		x = 15
 		y = 0
@@ -62,12 +63,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+			add_ideas = ENG_mosley_first
+			add_popularity = {
+    				ideology = fascism
+    				popularity = 0.2
+			}
 		}
 	}
 
 	focus = {
 		id = ENG_blackshirts
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "The Blackshirts"
 		prerequisite = { focus = ENG_mosley_way }
 		x = 15
 		y = 1
@@ -89,12 +96,51 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_BUF_republic
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "The State of Britain"
+		prerequisite = { focus = ENG_mosley_way }
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			ENG = {
+				country_event = { days = 1 id = britain.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_keep_king
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "The British Empire"
+		prerequisite = { focus = ENG_mosley_way }
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ENG_mosley_and_the_king
+		}
+	}
+
 ##############
 ### ARMY ###
 ##############
 
 	focus = {
 		id = ENG_army 
+		text = "Army first"
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		mutually_exclusive = { focus = ENG_monarchist_coup focus = ENG_mosley_way }
 		x = 20
@@ -107,11 +153,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+			remove_ideas = ENG_juntla_and_lord
+			add_popularity = {
+    				ideology = reactionary
+    				popularity = 0.1
+			}
 		}
 	}
 
 	focus = {
 		id = ENG_coup
+		text = "The British Juntla"
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = ENG_army }
 		x = 20
@@ -128,8 +180,8 @@ focus_tree = {
 			}
 			set_party_name = { 
     				ideology = reactionary
-    				long_name = "Royal army"
-    				name = "Royal army"
+    				long_name = "Juntla of the Lord"
+    				name = "Juntla"
 			}
 		}
 	}
@@ -141,6 +193,7 @@ focus_tree = {
 	focus = {
 		id = ENG_monarchist_coup 
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Regency and transition"
 		mutually_exclusive = { focus = ENG_mosley_way focus = ENG_army }
 		x = 25
 		y = 0
@@ -152,12 +205,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+			add_ideas = ENG_true_winsdor_back
+			ENG = {
+				country_event = { days = 1 id = britain.1 }
+			}
 		}
 	}
 
 	focus = {
 		id = ENG_crown
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "God save George VI"
 		prerequisite = { focus = ENG_monarchist_coup }
 		x = 25
 		y = 1
@@ -168,14 +226,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			set_politics = {
-				ruling_party = reactionary
-			}
-			set_party_name = { 
-    				ideology = reactionary
-    				long_name = "Winsdor"
-    				name = "Winsdor"
-			}
+			add_ideas = ENG_george_IV
 		}
 	}
 }
