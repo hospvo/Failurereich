@@ -1,0 +1,32 @@
+
+add_namespace = britain
+
+country_event = {
+	id = britain.1
+	title = "Regency come back"
+	desc = "Fascists want to come back and serve the country. We need to get rid of this and reetablish monarchy."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+
+		name = "Come with the King"
+start_civil_war = {
+    ruling_party = reactionary
+
+    ideology = fascism
+
+    size = 0.4
+    capital = 282
+    states = {
+        282 533 536 555 529 530 528
+    }
+    keep_unit_leaders = {
+        750 751 752
+    }
+    keep_political_leader = yes
+    keep_political_party_members = yes
+}
+	}
+}
