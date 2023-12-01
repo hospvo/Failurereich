@@ -207,9 +207,15 @@ set_popularities = {
 
 recruit_character = JAP_emperor_hirohito
 
-
-
-
+create_country_leader = {
+	name = "Harukichi Shimoi"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "gfx/leaders/JAP/JAP_Harukichi_Shimoi.dds"
+	expire = "1989.1.1"
+	ideology = rexism
+	traits = {
+	}
+}
 
 create_country_leader = {
 	name = "Kyuichi Tokuda"
