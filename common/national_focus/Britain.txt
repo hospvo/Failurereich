@@ -88,11 +88,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 			}
-			set_party_name = { 
-    				ideology = fascism
-    				long_name = "British Union of Legion"
-    				name = "BUL"
-			}
+			add_ideas = ENG_home_of_fascism
 		}
 	}
 
@@ -100,6 +96,7 @@ focus_tree = {
 		id = ENG_BUF_republic
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		text = "The State of Britain"
+		mutually_exclusive = { focus = ENG_keep_king }
 		prerequisite = { focus = ENG_blackshirts }
 		x = 13
 		y = 2
@@ -120,6 +117,7 @@ focus_tree = {
 		id = ENG_keep_king
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		text = "The British Empire"
+		mutually_exclusive = { focus = ENG_BUF_republic }
 		prerequisite = { focus = ENG_blackshirts }
 		x = 17
 		y = 2
