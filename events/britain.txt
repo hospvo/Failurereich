@@ -12,15 +12,17 @@ country_event = {
 	option = {
 		name = "Come with George VI"
 			release = IRE
-			start_civil_war = {
-			    ruling_party = reactionary
-			    ideology = fascism
-			    size = 0.4
-			    only_own_territory = no
-			    capital = 126
-			    states = {
-			        122 123 125 126 127 128 338 129
-			    }
+			ENG = {
+				start_civil_war = {
+				    ruling_party = reactionary
+				    ideology = fascism
+				    size = 0.4
+				    only_own_territory = no
+				    capital = 126
+				    states = {
+				        122 123 125 126 127 128 338 129
+				    }
+				}
 			}
 		}
 	}
@@ -36,15 +38,17 @@ country_event = {
 	option = {
 		name = "Mosley and the State"
 			release = IRE
-			start_civil_war = {
-			    ruling_party = fascism
-			    ideology = reacctionary
-			    size = 0.4
-			    only_own_territory = no
-			    capital = 121
-			    states = {
-			        121 120 133 136 931 932 131
-			    }
+			ENG = {
+				start_civil_war = {
+				    ruling_party = fascism
+				    ideology = reacctionary
+				    size = 0.4
+				    only_own_territory = no
+				    capital = 121
+				    states = {
+				        121 120 133 136 931 932 131
+				    }
+				}
 			}
 		}
 	}
