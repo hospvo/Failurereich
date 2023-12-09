@@ -355,7 +355,10 @@ focus_tree = {
 		id = ENG_take_Ireland 
 		icon = GFX_focus_eng_the_sun_never_sets
 		text = "Regency and transition"
-		prerequisite = { focus = ENG_conservatives focus = ENG_social }
+		prerequisite = { 
+			focus = ENG_conservatives 
+			focus = ENG_social 
+		}
 		x = 15
 		y = 5
 		cost = 10
