@@ -135,7 +135,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = END_social
+		id = ENG_social
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		text = "Labor and social values"
 		prerequisite = { focus = ENG_republican }
