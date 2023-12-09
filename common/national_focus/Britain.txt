@@ -356,7 +356,7 @@ focus_tree = {
 		text = "Regency and transition"
 		prerequisite = { focus = ENG_conservatives focus = ENG_social }
 		x = 15
-		y = 4
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_WAR } 
