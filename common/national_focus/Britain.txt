@@ -175,7 +175,7 @@ focus_tree = {
 	focus = {
 		id = ENG_traditions
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
-		text = "Republican values"
+		text = "Tradition values"
 		prerequisite = { focus = ENG_keep_king }
 		x = 17
 		y = 3
@@ -195,7 +195,7 @@ focus_tree = {
 	focus = {
 		id = ENG_conservatives
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
-		text = "Labor and social values"
+		text = "Conservatives values"
 		prerequisite = { focus = ENG_blackshirts }
 		x = 17
 		y = 4
