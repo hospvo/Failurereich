@@ -73,7 +73,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_blackshirts
-		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_eng_organise_the_blackshirts
 		text = "The Blackshirts"
 		prerequisite = { focus = ENG_mosley_way }
 		x = 15
@@ -114,10 +114,49 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_republican
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Republican values"
+		prerequisite = { focus = ENG_BUF_republic }
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			ENG = {
+				add_ideas = ENG_republican_institutions
+			}
+		}
+	}
+
+	focus = {
+		id = END_social
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Labor and social values"
+		prerequisite = { focus = ENG_republican }
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			ENG = {
+				add_ideas = ENG_social_values
+			}
+		}
+	}
+
+	focus = {
 		id = ENG_keep_king
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		text = "The British Empire"
-		mutually_exclusive = { focus = ENG_BUF_republic }
 		prerequisite = { focus = ENG_blackshirts }
 		x = 17
 		y = 2
@@ -132,6 +171,46 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_traditions
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Republican values"
+		prerequisite = { focus = ENG_keep_king }
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			ENG = {
+				add_ideas = ENG_traditions
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_conservatives
+		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		text = "Labor and social values"
+		prerequisite = { focus = ENG_blackshirts }
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			ENG = {
+				add_ideas = ENG_conservatives
+			}
+		}
+	}
+
 ##############
 ### ARMY ###
 ##############
@@ -139,7 +218,7 @@ focus_tree = {
 	focus = {
 		id = ENG_army 
 		text = "Army first"
-		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		mutually_exclusive = { focus = ENG_monarchist_coup focus = ENG_mosley_way }
 		x = 20
 		y = 0
@@ -162,7 +241,7 @@ focus_tree = {
 	focus = {
 		id = ENG_coup
 		text = "The British Juntla"
-		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_eng_the_kings_party
 		prerequisite = { focus = ENG_army }
 		x = 20
 		y = 1
@@ -184,13 +263,31 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_rebuilt
+		text = "Rebuilt economy"
+		icon = GFX_focus_eng_the_kings_party
+		prerequisite = { focus = ENG_coup }
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
 ##############
 ### KING ###
 ##############
 
 	focus = {
 		id = ENG_monarchist_coup 
-		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_eng_the_sun_never_sets
 		text = "Regency and transition"
 		mutually_exclusive = { focus = ENG_mosley_way focus = ENG_army }
 		x = 25
@@ -211,11 +308,31 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_crown
-		icon = GFX_focus_tfv_strengthen_commonwealth_ties
+		id = ENG_home_crown
+		icon = GFX_focus_eng_god_save_the_king
+		text = "God save Edward VIII"
+		prerequisite = { focus = ENG_monarchist_coup }
+		mutually_exclusive = { focus = ENG_canada_crown }
+		x = 23
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ENG_edward_VIII
+		}
+	}
+
+	focus = {
+		id = ENG_canada_crown
+		icon = GFX_focus_eng_god_save_the_king
 		text = "God save George VI"
 		prerequisite = { focus = ENG_monarchist_coup }
-		x = 25
+		mutually_exclusive = { focus = ENG_home_crown }
+		x = 27
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -228,3 +345,28 @@ focus_tree = {
 		}
 	}
 }
+
+###########
+### WAR ###
+###########
+
+	focus = {
+		id = ENG_take_Ireland 
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Regency and transition"
+		prerequisite = { focus = ENG_conservatives focus = ENG_social }
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = IRE
+			}
+		}
+	}
