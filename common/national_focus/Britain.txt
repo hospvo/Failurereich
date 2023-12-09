@@ -23,6 +23,7 @@ focus_tree = {
 	focus = {
 		id = ENG_economic_planning
 		icon = GFX_goal_generic_construct_civilian
+		text = "Economy"
 		x = 5
 		y = 0
 		cost = 10
@@ -344,7 +345,7 @@ focus_tree = {
 			add_ideas = ENG_george_IV
 		}
 	}
-}
+
 
 ###########
 ### WAR ###
@@ -370,3 +371,4 @@ focus_tree = {
 			}
 		}
 	}
+}
