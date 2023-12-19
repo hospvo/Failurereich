@@ -94,7 +94,7 @@ focus_tree = {
 		prerequisite = { focus = HUN_greater_hungary }
 
 		available = { 
-			SLO = { country_exists = yes }	
+			NOT = { SLO = { country_exists = yes } }	
 		}
 
 		ai_will_do = {
@@ -119,7 +119,7 @@ focus_tree = {
 		prerequisite = { focus = HUN_greater_hungary }
 
 		available = { 
-			TRA = { country_exists = yes }	
+			NOT = { TRA = { country_exists = yes } }	
 		}
 
 		ai_will_do = {
