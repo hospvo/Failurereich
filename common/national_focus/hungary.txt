@@ -56,24 +56,6 @@ focus_tree = {
 		}
 	}
 
-	#Focus for Demand Vovodjina
-	focus = {
-		id = HUN_demand_vovodjina
-		icon = GFX_goal_generic_military_deal
-		x = 4
-		y = 3
-		cost = 10
-		available_if_capitulated = yes
-		prerequisite = { focus = HUN_deal_with_the_enemies }
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			YUG = { country_event= { days = 1 id = yugoslavia.1 } }
-		}
-	}
-
 	#Focus for Deal with the enemies
 	focus = {
 		id = HUN_deal_with_the_enemies
@@ -101,15 +83,81 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = HUN_slovakia
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_greater_hungary }
+
+		available = { 
+			SLO = { country_exists = yes }	
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				annex_country = {
+				    target = SLO
+				    transfer_troops = yes
+				}
+		}
+	}
+
+	focus = {
+		id = HUN_transylvania
+		icon = GFX_goal_support_communism
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_greater_hungary }
+
+		available = { 
+			TRA = { country_exists = yes }	
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				annex_country = {
+				    target = TRA
+				    transfer_troops = yes
+				}
+		}
+	}
+
+	#Focus for Demand Vovodjina
+	focus = {
+		id = HUN_demand_vovodjina
+		icon = GFX_goal_generic_military_deal
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_transylvania focus = HUN_slovakia }
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			YUG = { country_event= { days = 1 id = yugoslavia.1 } }
+		}
+	}
+
 	#Focus for Subjugate Romania
 	focus = {
 		id = HUN_subjugate_romania
 		icon = GFX_goal_support_communism
 		x = 0
-		y = 4
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = HUN_deal_with_the_enemies }
+		prerequisite = { focus = focus = HUN_transylvania focus = HUN_slovakia }
 		ai_will_do = {
 			factor = 1
 		}
@@ -118,12 +166,45 @@ focus_tree = {
 		}
 	}
 
+	#Focus for Subjugate Yugoslavia
+	focus = {
+		id = HUN_subjugate_yugoslavia
+		icon = GFX_goal_support_communism
+		x = 4
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = HUN_demand_vovodjina }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			owns_state = 82 
+			owns_state = 764 
+			owns_state = 45
+		}
+		available = {
+			NOT = { 107 = { is_controlled_by = YUG } }
+			HUN = { has_war_with = YUG }
+			YUG = { surrender_progress > 0.8 }
+		}
+		completion_reward = {
+			BUL = { set_state_owner = 106 }
+			BUL = { puppet = YUG }
+			set_state_owner = 45 
+			set_state_owner = 109 
+			set_state_owner = 764 
+			set_state_owner = 82
+			set_state_owner = 103
+		}
+	}
+
 	#Focus for Proclaim Greater Soviet Hungary
 	focus = {
 		id = HUN_proclaim_greater_soviet_hungary
 		icon = GFX_goal_generic_war_with_comintern
 		x = 2
-		y = 5
+		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { 
@@ -155,40 +236,7 @@ focus_tree = {
 		}
 	}
 
-	#Focus for Subjugate Yugoslavia
-	focus = {
-		id = HUN_subjugate_yugoslavia
-		icon = GFX_goal_support_communism
-		x = 4
-		y = 4
-		cost = 1
-		available_if_capitulated = yes
-		prerequisite = { focus = HUN_demand_vovodjina }
-		ai_will_do = {
-			factor = 1
-		}
-		bypass = {
-			owns_state = 82 
-			owns_state = 764 
-			owns_state = 45
-		}
-		available = {
-			NOT = { 107 = { is_controlled_by = YUG } }
-			BUL = { has_war_with = YUG }
-			YUG = { surrender_progress > 0.8 }
-		}
-		completion_reward = {
-			BUL = { set_state_owner = 106 }
-			BUL = { puppet = YUG }
-			set_state_owner = 45 
-			set_state_owner = 109 
-			set_state_owner = 764 
-			set_state_owner = 82
-			set_state_owner = 103
-		}
-	}
-
-#### Danubian Social Monarchy ####
+#### Danubian Monarchy ####
 
 	focus = {
 		id = HUN_support_syncretics
