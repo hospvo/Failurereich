@@ -118,6 +118,7 @@ set_popularities = {
 }
 
 puppet = SLO
+puppet = TRA
 
 #Start Horty as neutral if DOD
 if = {
