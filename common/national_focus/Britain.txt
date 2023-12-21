@@ -196,7 +196,7 @@ focus_tree = {
 		id = ENG_conservatives
 		icon = GFX_focus_tfv_strengthen_commonwealth_ties
 		text = "Conservatives values"
-		prerequisite = { focus = ENG_blackshirts }
+		prerequisite = { focus = ENG_traditions }
 		x = 17
 		y = 4
 		cost = 10
@@ -268,7 +268,7 @@ focus_tree = {
 	focus = {
 		id = ENG_rebuilt
 		text = "Rebuilt economy"
-		icon = GFX_focus_eng_the_kings_party
+		icon = GFX_focus_eng_chiefs_of_staff_committee
 		prerequisite = { focus = ENG_coup }
 		x = 20
 		y = 2
@@ -286,7 +286,7 @@ focus_tree = {
 	focus = {
 		id = ENG_russia
 		text = "Russian Entente"
-		icon = GFX_focus_eng_the_kings_party
+		icon = GFX_focus_eng_motion_of_no_confidence
 		prerequisite = { focus = ENG_rebuilt }
 		x = 21
 		y = 3
@@ -438,7 +438,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_canada
-		icon = GFX_focus_eng_god_save_the_king
+		icon = GFX_focus_eng_motion_of_no_confidence
 		text = "Keep ties with Canada"
 		prerequisite = { focus = ENG_canada_crown }
 		x = 27
