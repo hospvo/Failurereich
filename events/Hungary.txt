@@ -168,13 +168,13 @@ country_event = {
 }
 
 
-####
+#### Czech 
 
 
 country_event = {
 	id = hungary.9
-	title = "Referundum about Austria"
-	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	title = "Referundum about Czech"
+	desc = "Prussian parlement try to find if they can integrate czech, this referundum will be made because Petrograd alliance collapsed."
 	picture = GFX_report_event_vienna_award_hungary
 	
 	is_triggered_only = yes
@@ -186,7 +186,7 @@ country_event = {
 		}
 	}
 	option = { 
-		name = "Invade Austria"
+		name = "Invade Czech"
 		
 	        declare_war_on = {
 		                target = CZE
@@ -203,7 +203,7 @@ country_event = {
 
 country_event = {
 	id = hungary.10
-	title = "Integrate Austria"
+	title = "Integrate Czech"
 	desc = "Prussia ask if we can join their nation."
 	picture = GFX_report_event_vienna_award_hungary
 	
@@ -228,7 +228,7 @@ country_event = {
 country_event = {
 	id = hungary.11
 	title = "They agree our request"
-	desc = "they agree with our proposition, Austria will under us"
+	desc = "they agree with our proposition, Czech will under us"
 	picture = GFX_report_event_vienna_award_hungary
 	
 	is_triggered_only = yes
