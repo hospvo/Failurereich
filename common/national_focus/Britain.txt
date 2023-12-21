@@ -285,10 +285,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_russia
-		text = "Rebuilt economy"
+		text = "Russian Entente"
 		icon = GFX_focus_eng_the_kings_party
 		prerequisite = { focus = ENG_rebuilt }
-		x = 22
+		x = 21
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -306,10 +306,10 @@ focus_tree = {
 
 	focus = {
 		id = ENG_help_usa
-		text = "Rebuilt economy"
+		text = "Help US military"
 		icon = GFX_focus_eng_the_kings_party
 		prerequisite = { focus = ENG_rebuilt }
-		x = 18
+		x = 19
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
