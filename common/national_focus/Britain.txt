@@ -376,7 +376,7 @@ focus_tree = {
 	focus = {
 		id = ENG_french_state
 		icon = GFX_focus_eng_god_save_the_king
-		text = "God save Edward VIII"
+		text = "Keep French relations"
 		prerequisite = { focus = ENG_home_crown }
 		x = 23
 		y = 2
@@ -397,7 +397,7 @@ focus_tree = {
 	focus = {
 		id = ENG_italy_state
 		icon = GFX_focus_eng_god_save_the_king
-		text = "God save Edward VIII"
+		text = "Italian help"
 		prerequisite = { focus = ENG_french_state }
 		x = 23
 		y = 3
