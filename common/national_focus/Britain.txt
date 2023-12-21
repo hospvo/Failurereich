@@ -23,7 +23,7 @@ focus_tree = {
 	focus = {
 		id = ENG_economic_planning
 		icon = GFX_goal_generic_construct_civilian
-		text = "Economy"
+		text = "British Economy"
 		x = 5
 		y = 0
 		cost = 10
@@ -253,6 +253,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			FRA = { remove_from_faction = ENG }
 			set_politics = {
 				ruling_party = reactionary
 			}
@@ -282,6 +283,48 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_russia
+		text = "Rebuilt economy"
+		icon = GFX_focus_eng_the_kings_party
+		prerequisite = { focus = ENG_rebuilt }
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = SOV
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_help_usa
+		text = "Rebuilt economy"
+		icon = GFX_focus_eng_the_kings_party
+		prerequisite = { focus = ENG_rebuilt }
+		x = 18
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = USA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
 ##############
 ### KING ###
 ##############
@@ -301,12 +344,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+			FRA = { remove_from_faction = ENG }
 			add_ideas = ENG_true_winsdor_back
 			ENG = {
 				country_event = { days = 1 id = britain.1 }
 			}
 		}
 	}
+
+#### Keep Axis relations ####
 
 	focus = {
 		id = ENG_home_crown
@@ -328,6 +374,50 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_french_state
+		icon = GFX_focus_eng_god_save_the_king
+		text = "God save Edward VIII"
+		prerequisite = { focus = ENG_home_crown }
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = FRA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_italy_state
+		icon = GFX_focus_eng_god_save_the_king
+		text = "God save Edward VIII"
+		prerequisite = { focus = ENG_french_state }
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = ITA
+			    modifier = francist_collaborator 
+			}
+		}
+	}
+
+#### Join Entente ####
+
+	focus = {
 		id = ENG_canada_crown
 		icon = GFX_focus_eng_god_save_the_king
 		text = "God save George VI"
@@ -346,6 +436,47 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_canada
+		icon = GFX_focus_eng_god_save_the_king
+		text = "Keep ties with Canada"
+		prerequisite = { focus = ENG_canada_crown }
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = CAN
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_french_africa
+		icon = GFX_focus_eng_god_save_the_king
+		text = "Help Bonaparte"
+		prerequisite = { focus = ENG_canada }
+		x = 27
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = AFR
+			    modifier = entente_collaborator 
+			}
+		}
+	}
 
 ###########
 ### WAR ###
