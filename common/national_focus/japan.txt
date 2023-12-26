@@ -460,6 +460,7 @@
 			factor = 1
 		}
 		completion_reward = {
+			add_to_faction = KOR
 			set_collaboration = {
 			    target = KOR
 			    value = 0.3
@@ -487,6 +488,7 @@
 			factor = 1
 		}
 		completion_reward = {
+			add_to_faction = VIN
 			set_collaboration = {
 			    target = VIN
 			    value = 0.3
