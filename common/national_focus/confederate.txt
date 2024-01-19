@@ -281,7 +281,7 @@
 			date > 1937.1.1
 			owns_state = 376
 			owns_state = 374
-			owns_state = 918
+			owns_state = 944
 		}
 		ai_will_do = {
 			factor = 1
