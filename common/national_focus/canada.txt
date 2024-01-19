@@ -140,7 +140,11 @@ focus_tree = {
 	focus = {
 		id = CAN_egypt
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_saudi_alliance focus = CAN_Nahyane_alliance focus = CAN_Hashemite_alliance }
+		prerequisite = { 
+			focus = CAN_saudi_alliance 
+			focus = CAN_Nahyane_alliance 
+			focus = CAN_Hashemite_alliance 
+		}
 
 		text = "Secure Egypt"
 		x = 4
@@ -171,7 +175,11 @@ focus_tree = {
 	focus = {
 		id = CAN_yemen
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_saudi_alliance focus = CAN_Nahyane_alliance focus = CAN_Hashemite_alliance }
+		prerequisite = { 
+			focus = CAN_saudi_alliance 
+			focus = CAN_Nahyane_alliance 
+			focus = CAN_Hashemite_alliance 
+		}
 
 		text = "Retake Aden"
 		x = 8
