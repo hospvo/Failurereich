@@ -443,6 +443,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
+		bypass = {
+			YUG = { is_puppet = yes }
+		}
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -485,6 +489,10 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		bypass = {
+			GRE = { is_puppet = yes }
+		}
 
 		ai_will_do = {
 			factor = 1
