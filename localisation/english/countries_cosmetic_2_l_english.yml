@@ -351,3 +351,6 @@ FRA_monarchist_coup_DEF:0 "Kingdom of France"
  Free_india:0 "Azad Hind"
  Free_india_DEF:0 "Provisional Government of Free India"
  Free_india_ADJ:0 "Indian"
+
+ HUN_puppet:0 "$OVERLORDADJ$ Council of $NONIDEOLOGY$"
+ HUN_puppet_DEF:0 "The $OVERLORDADJ$ Council of $NONIDEOLOGY$"
