@@ -874,3 +874,8 @@ Free_india  = {
 	color = rgb { 120 120 20 }
 	color_ui = rgb { 120 120 20 }
 }
+
+HUN_puppet = {	
+	color = rgb { 240 126 98 }
+	color_ui = rgb { 250 164 127 }
+}
