@@ -85,6 +85,8 @@ set_popularities = {
 	communism = 34
 }
 
+set_cosmetic_tag = HUN_puppet
+
 recruit_character = TRA_pot
 recruit_character = TRA_awt
 recruit_character = TRA_communist_guy
