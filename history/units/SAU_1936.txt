@@ -51,7 +51,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Khobar"
+		#name = "Alfurqat Najd"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
@@ -62,7 +62,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Khobar"
+		#name = "Alfurqat Najd"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
