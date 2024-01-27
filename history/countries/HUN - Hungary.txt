@@ -113,8 +113,9 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	communism = 79
-	vanguardism = 21
+	communism = 75
+	vanguardism = 11
+	reactionary = 14
 }
 
 puppet = SLO
