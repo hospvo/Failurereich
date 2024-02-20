@@ -56,6 +56,24 @@ units = {
 		division_template = "bengal effective"
 		start_experience_factor = 0.4
 	}
+	division = {
+		name = "bengal V01"
+		location = 11929
+		division_template = "bengal effective"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "bengal V02"
+		location = 11929
+		division_template = "bengal effective"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "bengal V03"
+		location = 11929
+		division_template = "bengal effective"
+		start_experience_factor = 0.4
+	}
 }
 
 
