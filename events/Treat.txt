@@ -529,8 +529,8 @@ country_event = {
 
 country_event = {
 	id = tt.12
-	title = "weak brother"
-	desc = "social republic of pandania want to join war and want some land"
+	title = "Weak brother"
+	desc = "Social republic of pandania want to join war and want some land"
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -583,5 +583,54 @@ country_event = {
 		HUN = { set_state_owner = 9 }
 		GER = { set_state_owner = 72 }
 		
+	}
+}
+
+#### EAST ASIA ####
+
+
+country_event = {
+	id = tt.1
+	title = "Fall of Beijing"
+	desc = "With the nwar coming from the south, Qing house should surrender."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = MAN
+		has_war_with = CHI
+		NOT = {
+			MAN = { controls_state = 517 }
+		}
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Unconditional surrender"
+
+		set_capital = 328
+		CHI = { set_state_owner = 606 }
+		CHI = { set_state_owner = 607 }
+		CHI = { set_state_owner = 608 }
+		CHI = { set_state_owner = 611 }
+		CHI = { set_state_owner = 612 }
+		CHI = { set_state_owner = 598 }
+		CHI = { set_state_owner = 597 }
+		CHI = { set_state_owner = 614 }
+		CHI = { set_state_owner = 615 }
+		CHI = { set_state_owner = 621 }
+		CHI = { set_state_owner = 622 }
+		CHI = { set_state_owner = 744 }
+		CHI = { set_state_owner = 746 }
+		CHI = { set_state_owner = 605 }
+		CHI = { set_state_owner = 620 }
+		CHI = { set_state_owner = 283 }
+		CHI = { set_state_owner = 753 }
+		MON = { set_state_owner = 819 }
+
 	}
 }
