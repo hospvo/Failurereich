@@ -101,6 +101,18 @@ add_ideas = {
 	home_of_revolution
 } 
 
+
+create_country_leader = {
+	name = "Nicholas II."
+	desc = "POLITICS_NICHOLAS_II_DESC"
+	picture = "Portrait_RUS_Nicholas_II.dds"
+	expire = "1953.3.1"
+	ideology = authoritan
+	traits = {
+		
+	}
+}
+
 create_country_leader = {
 	name = "Joseph Stalin"
 	desc = "POLITICS_JOSEPH_STALIN_DESC"
