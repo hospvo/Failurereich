@@ -51,9 +51,27 @@ units = {
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "Burmese D03"
-		location = 4140
-		division_template = "Burmese effective"
+		name = "Cavalery Burma"
+		location = 1492
+		division_template = "Burmese cav"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Cavalery Burma"
+		location = 1492
+		division_template = "Burmese cav"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Cavalery Burma"
+		location = 1492
+		division_template = "Burmese cav"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Cavalery Burma"
+		location = 1492
+		division_template = "Burmese cav"
 		start_experience_factor = 0.2
 	}
 }
