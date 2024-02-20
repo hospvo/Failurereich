@@ -187,6 +187,8 @@
 		text = "Old Thai friends"
 		prerequisite = { 
 				focus = JAP_korea2
+		}
+		prerequisite = { 
 				focus = JAP_vin2
 		}
 		x = 13
@@ -216,6 +218,8 @@
 		text = "Ally Sinkiang"
 		prerequisite = { 
 				focus = JAP_korea2
+		}
+		prerequisite = { 
 				focus = JAP_vin2
 		}
 		x = 15
@@ -352,6 +356,8 @@
 		text = "Ask help from Siam"
 		prerequisite = { 
 				focus = JAP_korea3
+		}
+		prerequisite = { 
 				focus = JAP_vin3
 		}
 		x = 5
@@ -378,9 +384,11 @@
 	focus = {
 		id = JAP_mongolia
 		icon = GFX_focus_jap_zaibatsu
-		text = "Rally Chandra Bose"
+		text = "Rally the Khan"
 		prerequisite = { 
 				focus = JAP_korea3
+		}
+		prerequisite = { 
 				focus = JAP_vin3
 		}
 		x = 7
@@ -502,6 +510,8 @@
 		text = "Ally Burma"
 		prerequisite = { 
 				focus = JAP_korea
+		}
+		prerequisite = { 
 				focus = JAP_vin
 		}
 		x = 9
@@ -531,6 +541,8 @@
 		text = "Ally Bengal"
 		prerequisite = { 
 				focus = JAP_korea
+		}
+		prerequisite = { 
 				focus = JAP_vin
 		}
 		x = 11
