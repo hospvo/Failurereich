@@ -1,6 +1,6 @@
 ﻿capital = 430
 
-#oob = "BAN_1936"
+oob = "BAN_1936"
 
 # Starting tech
 set_technology = {
