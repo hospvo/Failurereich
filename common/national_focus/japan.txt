@@ -586,6 +586,71 @@
 	}
 
 	focus = {
+		id = JAP_War_Siam
+		icon = GFX_Goal_tfv_smiling_buddha
+		text = "Take over Siam"
+		prerequisite = { 
+				focus = JAP_bengal
+				focus = JAP_burma
+				focus = JAP_mongolia
+				focus = JAP_thailand
+				focus = JAP_thailand2
+				focus = JAP_sinkiang
+		}
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			tag = EDO
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = SIA
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_War_Burma
+		icon = GFX_Goal_tfv_smiling_buddha
+		text = "Secure Rangoon"
+		prerequisite = { 
+				focus = JAP_bengal
+				focus = JAP_burma
+				focus = JAP_mongolia
+				focus = JAP_thailand
+				focus = JAP_thailand2
+				focus = JAP_sinkiang
+		}
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			tag = TGW
+			tag = JAP
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRM
+			}
+		}
+	}
+
+	focus = {
 		id = JAP_war_indonesia
 		icon = GFX_focus_jap_strike_south
 		text = "Control Indonesia"
