@@ -554,6 +554,7 @@ country_event = {
 	}
 	option = {
 	    name = "No thank"
+	}
 }
 	
 country_event = {
