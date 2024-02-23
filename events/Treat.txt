@@ -590,7 +590,7 @@ country_event = {
 
 
 country_event = {
-	id = tt.1
+	id = tt.14
 	title = "Fall of Beijing"
 	desc = "With the nwar coming from the south, Qing house should surrender."
 	picture = GFX_report_event_north_germany
