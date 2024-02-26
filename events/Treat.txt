@@ -612,7 +612,7 @@ country_event = {
 
 	option = { 
 		name = "Unconditional surrender"
-
+		white_peace = CHI
 		set_capital = 328
 		CHI = { set_state_owner = 606 }
 		CHI = { set_state_owner = 607 }
