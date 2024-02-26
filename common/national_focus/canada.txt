@@ -41,7 +41,7 @@ focus_tree = {
 		icon = GFX_focus_eng_the_kings_party
 		text = "God Save the King"
 		prerequisite = {
-			focus = CAN_strong focus = CAN_weak
+			focus = CAN_strong
 		}
 		text = "King Edward"
 		x = 6
