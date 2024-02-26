@@ -147,8 +147,6 @@ focus_tree = {
 		text = "Take Karachi"
 		prerequisite = { 
 			focus = CAN_saudi_alliance 
-		}
-		prerequisite = { 
 			focus = CAN_Hashemite_alliance 
 		}
 		mutually_exclusive = { focus = CAN_california }
@@ -185,8 +183,6 @@ focus_tree = {
 		text = "Take the bay"
 		prerequisite = { 
 			focus = CAN_saudi_alliance 
-		}
-		prerequisite = { 
 			focus = CAN_Nahyane_alliance 
 		}
 		mutually_exclusive = { focus = CAN_karachi }
