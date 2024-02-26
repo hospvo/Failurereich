@@ -39,6 +39,7 @@ focus_tree = {
 	focus = {
 		id = CAN_king
 		icon = GFX_focus_eng_the_kings_party
+		text = "God Save the King"
 		prerequisite = {
 			focus = CAN_strong focus = CAN_weak
 		}
@@ -52,13 +53,14 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = ENG_king_edward
+			add_ideas = ENG_king_george
 		}
 	}
 
 	focus = {
 		id = CAN_saudi_alliance
 		icon = GFX_goal_generic_military_sphere
+		text = "Ally Saudi"
 		prerequisite = {
 			focus = CAN_king
 		}
@@ -86,6 +88,7 @@ focus_tree = {
 	focus = {
 		id = CAN_Nahyane_alliance
 		icon = GFX_goal_generic_military_sphere
+		text = "Ally Nahyane"
 		prerequisite = {
 			focus = CAN_king
 		}
@@ -112,6 +115,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_Hashemite_alliance
+		text = "Ally Hashemite"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
 			focus = CAN_king
@@ -138,15 +142,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAN_egypt
+		id = CAN_karachi
 		icon = GFX_goal_generic_military_sphere
+		text = "Take Karachi"
 		prerequisite = { 
 			focus = CAN_saudi_alliance 
 			focus = CAN_Nahyane_alliance 
 			focus = CAN_Hashemite_alliance 
 		}
+		mutually_exclusive = { focus = CAN_madagascar }
 
-		text = "Secure Egypt"
+		text = "Secure Karachi"
 		x = 4
 		y = 3
 		cost = 5
@@ -160,28 +166,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_wargoal = {
-				target = EGY
-				type = annex_everything
+				target = PAK
+				type = puppet
 				expire = 0
 			}
-			EGY = {
+			PAK = {
 				every_owned_state = {
-				    add_claim_by = CAN
+				    add_claim_by = RAJ
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = CAN_yemen
+		id = CAN_california
 		icon = GFX_goal_generic_military_sphere
+		text = "Take the bay"
 		prerequisite = { 
 			focus = CAN_saudi_alliance 
 			focus = CAN_Nahyane_alliance 
 			focus = CAN_Hashemite_alliance 
 		}
+		mutually_exclusive = { focus = CAN_karachi }
 
-		text = "Retake Aden"
+		text = "Retake Merina land"
 		x = 8
 		y = 3
 		cost = 5
@@ -195,23 +203,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_wargoal = {
-				target = YEM
-				type = annex_everything
+				target = CAL
+				type = puppet
 				expire = 0
-			}
-			YEM = {
-				every_owned_state = {
-				    add_claim_by = CAN
-				}
 			}
 		}
 	}
 
 	focus = {
-		id = CAN_oman
+		id = CAN_kashmir
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_yemen focus = CAN_egypt }
-		text = "Secure Oman"
+		prerequisite = { focus = CAN_karachi }
+		text = "Secure Kashmir"
 		x = 4
 		y = 4
 		cost = 5
@@ -225,23 +228,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_wargoal = {
-				target = OMA
-				type = annex_everything
+				target = KAS
+				type = puppet
 				expire = 0
 			}
-			OMA = {
+			RAJ = {
 				every_owned_state = {
-				    add_claim_by = CAN
+				    add_claim_by = KAS
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = CAN_somalia
+		id = CAN_puppet_boston
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_yemen focus = CAN_egypt }
-		text = "Secure Somalia"
+		prerequisite = { focus = CAN_madagascar }
+		text = "Secure Boston"
 		x = 8
 		y = 4
 		cost = 5
@@ -255,14 +258,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_wargoal = {
-				target = SOM
-				type = annex_everything
+				target = NWG
+				type = puppet
 				expire = 0
-			}
-			SOM = {
-				every_owned_state = {
-				    add_claim_by = CAN
-				}
 			}
 		}
 	}
@@ -274,7 +272,7 @@ focus_tree = {
 		prerequisite = { focus = CAN_oman }
 		text = "Secure United Kingdom"
 		x = 6
-		y = 6
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -306,7 +304,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CAN_weak }
 
 		x = 8
-		y = 7
+		y = 6
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -341,7 +339,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CAN_africa }
 
 		x = 4
-		y = 7
+		y = 6
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
