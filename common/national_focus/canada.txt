@@ -166,7 +166,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = PAK
-				type = puppet
+				type = annex_everything
 				expire = 0
 			}
 			PAK = {
@@ -202,7 +202,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = CAL
-				type = puppet
+				type = annex_everything
 				expire = 0
 			}
 		}
@@ -227,7 +227,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = KAS
-				type = puppet
+				type = annex_everything
 				expire = 0
 			}
 			RAJ = {
@@ -257,7 +257,7 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = NWG
-				type = puppet
+				type = annex_everything
 				expire = 0
 			}
 		}
