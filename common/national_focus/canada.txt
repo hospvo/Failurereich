@@ -266,8 +266,10 @@ focus_tree = {
 	focus = {
 		id = CAN_take_UK
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = CAN_puppet_boston }
-		prerequisite = { focus = CAN_kashmir }
+		prerequisite = { 
+			focus = CAN_puppet_boston 
+			focus = CAN_kashmir 
+		}
 		text = "Secure United Kingdom"
 		x = 6
 		y = 5
