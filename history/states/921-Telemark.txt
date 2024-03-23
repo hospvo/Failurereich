@@ -1,0 +1,27 @@
+
+state={
+	id=921
+	name="STATE_921"
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		victory_points = {
+			6151 1 
+		}
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		100 3059 3094 6080 6151 6184 9036 9174 9204 11029 
+	}
+	manpower=141502
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

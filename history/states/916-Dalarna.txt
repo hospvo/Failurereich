@@ -1,0 +1,29 @@
+
+state={
+	id=916
+	name="STATE_916"
+	resources={
+		steel=20.000
+	}
+
+	history={
+		victory_points = {
+			156 1 
+		}
+		owner = SWE
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		77 114 156 202 3005 3070 3191 6093 6123 6147 6207 9068 9148 9173 9182 11053 11197 13099 
+	}
+	manpower=249717
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}
