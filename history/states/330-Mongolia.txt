@@ -10,13 +10,13 @@ state={
 	history={
 		owner = MON
 		victory_points = {
-			4801 5 
+			4801 10
 		}
 		victory_points = {
 			7799 1 
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			arms_factory = 1
 			industrial_complex = 3
 			air_base = 1
@@ -27,10 +27,10 @@ state={
 	}
 
 	provinces={
-		1725 1728 1798 1859 4697 4732 4792 4801 4862 7752 7823 7881 7885 10554 10623 10704 10708 12533 12605 12665 12675 12686 
+		1725 1728 1798 1859 4697 4732 4801 4862 7799 7881 10554 10623 12605 12675 
 	}
-	manpower=502000
+	manpower=435550
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=large_town
 	local_supplies=0.000
 }
