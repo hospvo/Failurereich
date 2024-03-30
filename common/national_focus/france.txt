@@ -1743,7 +1743,7 @@ focus_tree = {
         completion_reward = {
 			    set_party_name = {
                         ideology = left
-                        long_name = "SD"
+                        long_name = "PSD"
 						name = "Parti Social démocrate"
 		        }
 				add_popularity = {
