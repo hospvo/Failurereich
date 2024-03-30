@@ -4,13 +4,13 @@ state={
 	name="STATE_773"
 
 	history={
-		owner = CMR
+		owner = FRA
 		add_core_of = CMR
 		victory_points = {
 			2080 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 			air_base = 1
 			6039 = {
@@ -23,7 +23,7 @@ state={
 	}
 
 	provinces={
-		2080 5036 5054 6008 6039 9137 11012 11194 
+		2080 5036 5054 6008 6039 7963 9137 11012 11194 
 	}
 	manpower=2945782
 	buildings_max_level_factor=1.000
