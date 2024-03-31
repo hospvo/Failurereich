@@ -2703,6 +2703,7 @@
  CAN_booming_economy_desc:0 "With the great depression firmly a thing of the past, our economy has begun to improve under the significant demands of the current world situation."
  GEN_cheaper_amphib: "Improved Amphibious Designs"
  GER_german_swedish_trade_agreement: "German-Swedish Trade Agreement"
+ AFR_napoleon_king: "Napoleon VI"
 
  will_turn_to: "Will Turn Into"
  upon_timeout: "Upon Timeout"

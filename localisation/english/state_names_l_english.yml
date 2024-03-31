@@ -954,7 +954,7 @@
  STATE_936: "Pernambuco"
  STATE_937: "Piauí"
  STATE_938: "Pará"
- STATE_939:1 "Amapá"
+ STATE_939: "Amapá"
  STATE_940: "Acre"
  STATE_941: "Tocantins"
  STATE_942: "Guaporé" # can be renamed to Rondônia later
@@ -985,5 +985,6 @@
  STATE_967: "Amazon" # impassables
  STATE_968: "Amazon" # impassables
  STATE_969: "Rio Branco"
+ STATE_986: "Jordan desert"
  
 
