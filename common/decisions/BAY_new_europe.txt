@@ -13,8 +13,8 @@ BAY_kommissariat = {
 			controls_state = 6
 			controls_state = 34
 			controls_state = 29
-			controls_state = 969
-			controls_state = 970
+			controls_state = 1003
+			controls_state = 1004
 			controls_state = 8
 		}
 
@@ -25,8 +25,8 @@ BAY_kommissariat = {
 		complete_effect = {
 			BAY = {
 				puppet = BEL
-				transfer_state = 969
-				transfer_state = 970
+				transfer_state = 1003
+				transfer_state = 1004
 				transfer_state = 8
 			}
 			BEL = {
@@ -51,7 +51,7 @@ BAY_kommissariat = {
 				controls_state = 7
 				controls_state = 35
 				controls_state = 36
-				controls_state = 971
+				controls_state = 1005	
 		}
 
 		fire_only_once = yes
@@ -61,7 +61,7 @@ BAY_kommissariat = {
 		complete_effect = {
 			BAY = {
 				puppet = HOL
-				transfer_state = 946
+				transfer_state = 980
 			}
 			HOL = {
 				set_cosmetic_tag = HOL_RK

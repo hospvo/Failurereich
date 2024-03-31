@@ -13,8 +13,8 @@ HAN_kommissariat = {
 			controls_state = 6
 			controls_state = 34
 			controls_state = 29
-			controls_state = 969
-			controls_state = 970
+			controls_state = 1003
+			controls_state = 1004
 			controls_state = 8
 		}
 
@@ -25,8 +25,8 @@ HAN_kommissariat = {
 		complete_effect = {
 			HAN = {
 				puppet = BEL
-				transfer_state = 969
-				transfer_state = 970
+				transfer_state = 1003
+				transfer_state = 1004
 				transfer_state = 8
 			}
 			BEL = {
@@ -121,7 +121,7 @@ HAN_kommissariat = {
 		complete_effect = {
 			HAN = {
 				puppet = NOR
-				transfer_state = 943
+				transfer_state = 977
 			}
 			NOR = {
 				set_cosmetic_tag = SCA_volkskommissariat 
