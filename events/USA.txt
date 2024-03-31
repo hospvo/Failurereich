@@ -259,8 +259,8 @@ country_event = {
 		MEX = { set_state_owner = 480 }
 		MEX = { set_state_owner = 483 }
 		MEX = { set_state_owner = 484 }
-		MEX = { set_state_owner = 943 }
-		MEX = { set_state_owner = 962 }
+		MEX = { set_state_owner = 977 }
+		MEX = { set_state_owner = 986 }
 	}
 }
 
@@ -362,7 +362,7 @@ country_event = {
 	        white_peace = USB
 		DES = { set_state_owner = 377 }
 		DES = { set_state_owner = 379 }
-		DES = { set_state_owner = 947 }
+		DES = { set_state_owner = 991 }
 		
 			diplomatic_relation = {
     				country = USA
@@ -400,7 +400,7 @@ country_event = {
 
 		NWG  = { transfer_state = 358 }
 		NWG  = { transfer_state = 357 }
-		NWG  = { transfer_state = 950 }
+		NWG  = { transfer_state = 984 }
 
 		NWG  = {	
 
@@ -527,7 +527,7 @@ country_event = {
 
 		CSA = { set_state_owner = 374 }
 		CSA = { set_state_owner = 376 }
-		CSA = { set_state_owner = 944 }
+		CSA = { set_state_owner = 978 }
 
 		CAN = { set_state_owner = 686 }
 
@@ -541,7 +541,7 @@ country_event = {
 		NWG  = { set_state_owner = 360 }
 		NWG  = { set_state_owner = 359 }
 		NWG  = { set_state_owner = 816 }
-		NWG  = { set_state_owner = 949 }
+		NWG  = { set_state_owner = 993 }
 
 		NWG  = { set_cosmetic_tag = NWG_USA }
 
@@ -643,7 +643,7 @@ country_event = {
 		name = "Liberal revolt"
 
 		CAL = { transfer_state = 378 }
-		CAL = { transfer_state = 948 }
+		CAL = { transfer_state = 982 }
 
 		CAL = {	
 			set_politics = {

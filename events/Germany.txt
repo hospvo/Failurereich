@@ -238,12 +238,12 @@ country_event = {
 	        white_peace = POL
 	        puppet = POL
 		GER = { set_state_owner = 67 }
-		GER = { set_state_owner = 961 }
+		GER = { set_state_owner = 995 }
 		GER = { set_state_owner = 762 }
 		GER = { set_state_owner = 86 }
 		GER = { set_state_owner = 87 }
 		GER = { set_state_owner = 98 }
-		GER = { set_state_owner = 966 }
+		GER = { set_state_owner = 1000 }
 		SOV = { set_state_owner = 97 }
 		SOV = { set_state_owner = 91 }
 		SOV = { set_state_owner = 89 }

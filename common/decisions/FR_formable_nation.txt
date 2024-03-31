@@ -34,8 +34,8 @@ form_poland_hungary_category = {
 
 		complete_effect = {
 			set_cosmetic_tag = POL_HUN_UNION
-			947 = { add_core_of = ROOT }
-			948 = { add_core_of = ROOT }
+			981 = { add_core_of = ROOT }
+			982 = { add_core_of = ROOT }
 			154 = { add_core_of = ROOT }
 			155 = { add_core_of = ROOT }
 			43 = { add_core_of = ROOT }
