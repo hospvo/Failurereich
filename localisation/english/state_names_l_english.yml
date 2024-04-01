@@ -984,7 +984,25 @@
  STATE_966: "Amazon" # impassables
  STATE_967: "Amazon" # impassables
  STATE_968: "Amazon" # impassables
- STATE_969: "Rio Branco"
- STATE_986: "Jordan desert"
+ STATE_969: "Central Algeria"
+ STATE_970: "Rio Branco"
+ STATE_971: "Sikhim"
+ STATE_972: "Himalaya"
+ STATE_973: "West Timor"
+ STATE_974: "Brunei"
+ STATE_975: "Sabah"
+ STATE_976: "Nancy"
+ STATE_977: "Rurh"
+ STATE_978: "Erbil"
+ STATE_979: "Rio Grande"
+ STATE_980: "Boise city"
+ STATE_981: "East Colorado"
+ STATE_982: "South California"
+ STATE_983: "Jefferson"
+ STATE_984: "Buffalo"
+ STATE_985: "Maine"
+ STATE_986: "Lesotho"
+ STATE_987: "Al jaz"
+ STATE_980: "Swaziland"
  
 
