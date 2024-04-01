@@ -601,9 +601,8 @@ country_event = {
 	trigger= {
 		tag = MAN
 		has_war_with = CHI
-		NOT = {
-			MAN = { controls_state = 517 }
-		}
+		CHI = { controls_state = 517 }
+		CHI = { controls_state = 608 }
         }
 	
 	mean_time_to_happen = {
