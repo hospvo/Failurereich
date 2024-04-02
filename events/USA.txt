@@ -259,8 +259,8 @@ country_event = {
 		MEX = { set_state_owner = 480 }
 		MEX = { set_state_owner = 483 }
 		MEX = { set_state_owner = 484 }
-		MEX = { set_state_owner = 977 }
-		MEX = { set_state_owner = 986 }
+		MEX = { set_state_owner = 978 }
+		MEX = { set_state_owner = 996 }
 	}
 }
 
