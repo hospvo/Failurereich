@@ -21,14 +21,15 @@ FRA_alternate_francism = {
 	}
 
 	ai_national_focuses = {
-		FRA_republic
-		FRA_rocque
+		FRA_old_marechal_speech
+		FRA_rocquist_coalition
+		FRA_renforce_premier_power
+		FRA_christian_social_values
+		FRA_promote_solidarity
+		FRA_economic_planning
+		FRA_reach_to_fascist_countries
 		FRA_ardennes
-		FRA_luxemburg
-		FRA_belgium
-		FRA_invade_holland
-		FRA_invade_germany
-		FRA_help_romania
+		FRA_work_family_fatherland
 	}			
 	research = {
 
@@ -69,14 +70,15 @@ FRA_alternate_doriot = {
 	}
 
 	ai_national_focuses = {
-		FRA_republic
+		FRA_old_marechal_speech
 		FRA_doriot
-		FRA_ana
+		FRA_social_reforms
+		FRA_reintroduce_trade_unions
 		FRA_ana2
-		FRA_belgium
+		FRA_economic_planning
 		FRA_CNT
 		FRA_free_ukraine
-		FRA_german_ana
+		FRA_germa_ana
 	}			
 	research = {
 
@@ -117,13 +119,14 @@ FRA_alternate_bourbon = {
 	}
 
 	ai_national_focuses = {
-		FRA_bourbons
-		FRA_con
+		FRA_monarchist_coup
+		FRA_conservatives_monarch
 		FRA_switzerland
 		FRA_luxemburg_belgium
 		FRA_turin
 		FRA_spanish_crown
 		FRA_divided_ger
+		FRA_king_of_france
 	}			
 	research = {
 
@@ -164,14 +167,15 @@ FRA_alternate_orleans = {
 	}
 
 	ai_national_focuses = {
-		FRA_bourbons
-		FRA_ref
+		FRA_monarchist_coup
+		FRA_orleans_restoration
 		FRA_switzerland
 		FRA_luxemburg_belgium
 		FRA_turin
 		FRA_spanish_crown
 		FRA_divided_ger
-	}			
+		FRA_king_of_the_french
+	}		
 	research = {
 
 	}
