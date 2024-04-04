@@ -6,7 +6,7 @@ state = {
 
 	history = {
 		
-		owner = SAU
+		owner = QAT
 		add_core_of = QAT
 
 		victory_points = {
@@ -17,7 +17,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			8051 = {
 				naval_base = 2
 			}
