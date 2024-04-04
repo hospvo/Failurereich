@@ -89,7 +89,7 @@ German_worker_republic = {
 	}
 
 	ai_national_focuses = {
-		GER_strasser
+		GER_Strasser
 		GER_neutrality
 		GER_civil_war
 		GER_reconstruction
