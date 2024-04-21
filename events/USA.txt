@@ -527,7 +527,7 @@ country_event = {
 
 		CSA = { set_state_owner = 374 }
 		CSA = { set_state_owner = 376 }
-		CSA = { set_state_owner = 978 }
+		CSA = { set_state_owner = 980 }
 
 		CAN = { set_state_owner = 686 }
 
@@ -541,7 +541,7 @@ country_event = {
 		NWG  = { set_state_owner = 360 }
 		NWG  = { set_state_owner = 359 }
 		NWG  = { set_state_owner = 816 }
-		NWG  = { set_state_owner = 993 }
+		NWG  = { set_state_owner = 985 }
 
 		NWG  = { set_cosmetic_tag = NWG_USA }
 
