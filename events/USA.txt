@@ -644,6 +644,7 @@ country_event = {
 
 		CAL = { transfer_state = 378 }
 		CAL = { transfer_state = 982 }
+		CAL = { transfer_state = 983 }
 
 		CAL = {	
 			set_politics = {
