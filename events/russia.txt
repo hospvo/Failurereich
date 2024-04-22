@@ -494,8 +494,10 @@ country_event = {
 		tag = SOV
 		country_exists = GER
 		OR = {
+		GER  = {
 			controls_state = 219
 			controls_state = 195
+		}
 		}
 		NOT = { 	
 			country_exists = HAN
