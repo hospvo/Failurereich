@@ -524,7 +524,24 @@ country_event = {
 			white_peace = LOM
 			release = BLR
 			release = LAT
+			release = LIT
+			release = EST
 			release = UKR
+			LAT = { 
+				annex_country = {
+				    target = LIT
+				    transfer_troops = yes
+				}
+				annex_country = {
+				    target = EST
+				    transfer_troops = yes
+				}
+			}
+			GER = {
+				puppet = UKR
+				puppet = BLR
+				puppet = LAT 
+			}
 			POL = { set_state_owner = 89 }
 			POL = { set_state_owner = 91 }
 			GER = { set_state_owner = 97 }
