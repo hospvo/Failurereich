@@ -99,7 +99,7 @@ CSA_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 370 state = 371 state = 372 state = 366  
+					state = 370 state = 371 state = 372  
 				}
 			}
 			LOU = { add_state_core = PREV }
@@ -108,7 +108,7 @@ CSA_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 375 state = 376 state = 374 state = 94 state = 978
+					state = 375 state = 376 state = 374 state = 94 state = 980
 				}
 			}
 			TEX = { add_state_core = PREV }
