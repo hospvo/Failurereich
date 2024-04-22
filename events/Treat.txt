@@ -91,8 +91,8 @@ country_event = {
 		has_war_with = GER 
 		CAN = { has_war_with = GER }
 		OR = {
-			CAN = { controls_state = 159 }
 			AFR = { controls_state = 159 }
+			AFR = { controls_state = 851 }
 			POR = { controls_state = 159 }
 		}
         }
@@ -382,9 +382,10 @@ country_event = {
 		AFR = { set_state_owner = 42 }
 		AFR = { set_state_owner = 51 }
 		DEN = { set_state_owner = 58 }
+		DEN = { set_state_owner = 909 }
 		CAN = { set_state_owner = 57 }
 		CAN = { set_state_owner = 56 }
-		CAN = { set_state_owner = 975 }
+		CAN = { set_state_owner = 977 }
 		SOV = { set_state_owner = 722 }
 		SOV = { set_state_owner = 146 }
 		YUG = { set_state_owner = 45 }
