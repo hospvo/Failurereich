@@ -546,6 +546,8 @@ country_event = {
 			POL = { set_state_owner = 91 }
 			GER = { set_state_owner = 97 }
 			GER = { set_state_owner = 814 }
+			GER = { set_state_owner = 137 }
+			GER = { set_state_owner = 196 }
 			GEO = { set_state_owner = 828 }
 			GEO = { set_state_owner = 827 }
 			GEO = { set_state_owner = 233 }
@@ -553,5 +555,11 @@ country_event = {
 			GEO = { set_state_owner = 232 }
 			GEO = { set_state_owner = 234 }
 			GEO = { set_state_owner = 235 }
+			GEO = { set_state_owner = 236 }
+			GEO = { set_state_owner = 237 }
+			GEO = { set_state_owner = 238 }
+			GEO = { set_state_owner = 217 }
+			GEO = { set_state_owner = 218 }
+			GEO = { set_state_owner = 245 }
 	}
 }
