@@ -387,7 +387,7 @@
 		}
 		completion_reward = {
 			controller = { 
-				    ROOT = {
+				    MSQ = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
@@ -428,12 +428,40 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    ROOT = {
+				    UAE = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
 				            generator = { 859 856 }
 				        }
+				}
+			}
+			controller = { 
+				    SAU = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 859 856 }
+				        }
+				}
+			}
+			controller = { 
+				    HEJ = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 859 856 }
+				        }
+				}
+			}
+			HEJ = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			SAU = {
+				every_owned_state = {
+				    add_claim_by = OTT
 				}
 			}
 			UAE = {
@@ -469,7 +497,7 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    ROOT = {
+				    EGY = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
@@ -478,11 +506,6 @@
 				}
 			}
 			EGY = {
-				every_owned_state = {
-				    add_claim_by = OTT 
-				}
-			}
-			SUD = {
 				every_owned_state = {
 				    add_claim_by = OTT 
 				}
@@ -517,7 +540,16 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    ROOT = {
+				    LBA = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 448 450 458 }
+				        }
+				}
+			}
+			controller = { 
+				    TUN = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
