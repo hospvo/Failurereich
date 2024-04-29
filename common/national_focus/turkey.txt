@@ -305,6 +305,56 @@
 		}
 	}
 
+	focus = {
+		id = TRK_Turkestan
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Threat Iran"
+		prerequisite = { 
+				focus = TRK_war_SOV
+		}
+
+		x = 10
+		y = 3
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			tag = TRK
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SOV
+			}
+			KAZ = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			KYR = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			TRM = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			UZB = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+		}
+	}
+
 ###### Ottoman ########
 
 	focus = {
@@ -328,13 +378,22 @@
 		available = {
 			tag = OTT
 		} 
+		bypass = {
+			controls_state = 554
+			controls_state = 291
+		} 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = MSQ
+			controller = { 
+				    OTT = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 554 291 }
+				        }
+				}
 			}
 			MSQ = {
 				every_owned_state = {
@@ -363,10 +422,19 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			controls_state = 856
+			controls_state = 859
+		} 
 		completion_reward = {
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = UAE
+			controller = { 
+				    OTT = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 859 856 }
+				        }
+				}
 			}
 			UAE = {
 				every_owned_state = {
@@ -395,12 +463,74 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			controls_state = 549
+			controls_state = 907
+		} 
 		completion_reward = {
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = EGY
+			controller = { 
+				    OTT = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 907 549 }
+				        }
+				}
 			}
 			EGY = {
+				every_owned_state = {
+				    add_claim_by = OTT 
+				}
+			}
+			SUD = {
+				every_owned_state = {
+				    add_claim_by = OTT 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OTT_war_LBA
+		icon = GFX_focus_TUR_pivot_to_the_past
+		text = "War to Maghreb"
+		prerequisite = { 
+				focus = OTT_war_EGY 
+				focus = OTT_war_BUL
+		}
+
+		x = 15
+		y = 5
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			controls_state = 448
+			controls_state = 450
+			controls_state = 458
+		} 
+		completion_reward = {
+			controller = { 
+				    OTT = {
+				        create_wargoal = {
+				            target = PREV
+				            type = take_state_focus
+				            generator = { 448 450 458 }
+				        }
+				}
+			}
+			LBA = {
+				every_owned_state = {
+				    add_claim_by = OTT 
+				}
+			}
+			TUN = {
 				every_owned_state = {
 				    add_claim_by = OTT 
 				}
@@ -427,6 +557,10 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			controls_state = 187
+			controls_state = 931
+		} 
 		completion_reward = {
 			create_wargoal = {
 			    type = puppet_wargoal_focus
@@ -456,6 +590,11 @@
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			controls_state = 184
+			controls_state = 211
+			controls_state = 212
+		} 
 		completion_reward = {
 			create_wargoal = {
 			    type = puppet_wargoal_focus
