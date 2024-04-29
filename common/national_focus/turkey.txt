@@ -310,7 +310,7 @@
 		icon = GFX_focus_TUR_turanist_ambition
 		text = "Threat Iran"
 		prerequisite = { 
-				focus = TRK_war_SOV
+				focus = TRK_war_PER
 		}
 
 		x = 10
