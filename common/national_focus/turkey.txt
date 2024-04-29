@@ -308,7 +308,7 @@
 	focus = {
 		id = TRK_Turkestan
 		icon = GFX_focus_TUR_turanist_ambition
-		text = "Threat Iran"
+		text = "Conquer old lands"
 		prerequisite = { 
 				focus = TRK_war_PER
 		}
