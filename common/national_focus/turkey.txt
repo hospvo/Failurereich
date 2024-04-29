@@ -387,7 +387,7 @@
 		}
 		completion_reward = {
 			controller = { 
-				    OTT = {
+				    ROOT = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
@@ -428,7 +428,7 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    OTT = {
+				    ROOT = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
@@ -469,7 +469,7 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    OTT = {
+				    ROOT = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
@@ -517,7 +517,7 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    OTT = {
+				    ROOT = {
 				        create_wargoal = {
 				            target = PREV
 				            type = take_state_focus
