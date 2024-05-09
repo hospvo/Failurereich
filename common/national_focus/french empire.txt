@@ -2575,7 +2575,7 @@ focus_tree = {
 	# Main Branch: De Gaulle's Vision
     focus = {
         id = nationalize_industries
-        icon = GFX_goal_generic_construct_civ_factory
+        icon = GFX_nationalize_factory
         x = 4
         y = 0
         cost = 5

@@ -71,6 +71,11 @@ spriteTypes = {
 		name = "GFX_american_alliance"
 		texturefile = "gfx/interface/goals/FRA/GFX_american_alliance.png"
 	}
+	SpriteType = { 
+		name = "GFX_nationalize_factory"
+		texturefile = "gfx/interface/goals/FRA/GFX_nationalize_factory.dds"
+	}
+	GFX_nationalize_factory
 	###Germany###
 	
 	SpriteType = {
