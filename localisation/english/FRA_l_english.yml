@@ -89,6 +89,8 @@
   FRA_london_treaty_desc: " We will deal with united kingdom about english channel crisis"
   implement_rueff_plan: "Implement Rueff Plan"
   implement_rueff_plan_desc: "Charles de gaulle has turned to the expertise of Jacques Rueff. His plan proposes a series of bold measures aimed at restructuring our financial system. This includes a significant devaluation of the Franc, stringent budgetary controls, and tax reforms. By adopting these measures, we aim to reduce public expenditure, encourage private investment, and foster economic growth."
+  nationalize_industries: "Nationalize Key Industries"
+  nationalize_industries_desc: "charles de gaulle embarks on an ambitious program to bring key industries under state control. This will ensure that the fruits of labor benefit the nation as a whole and not just a select few."
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."
