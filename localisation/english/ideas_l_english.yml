@@ -2705,6 +2705,10 @@
  GER_german_swedish_trade_agreement: "German-Swedish Trade Agreement"
  AFR_napoleon_king: "Napoleon VI"
  AFR_napoleon_king_desc: "He was born in Brussels, Belgium, due to the law which then banned heirs of the former French ruling dynasties from residing in France. He was the son of Victor, Prince Napoléon and his wife Princess Clémentine of Belgium, daughter of King Leopold II of the Belgians and Archduchess Marie Henriette of Austria. Leopold II's mother, Princess Louise-Marie of Orléans, was the eldest daughter of King Louis Philippe I, ruler of France during the July Monarchy and  after french exiled government collapsed in Africa with Bonaparte putch. To ensure protection against fascism and communism he was occupy the throne as Emperor of the french"
-
+ AFR_military_colony: "Militarism&Unstable colony"
+ AFR_military_colony1: "Militarism&Unstable colony"
+ AFR_military_colony2: "Militarism&Unstable colony"
+ AFR_military_colony3: "Militarism&Unstable colony"
+ AFR_military_colony4: "Militarism&Unstable colony"
  will_turn_to: "Will Turn Into"
  upon_timeout: "Upon Timeout"

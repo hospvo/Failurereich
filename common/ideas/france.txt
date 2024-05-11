@@ -1672,8 +1672,94 @@ ideas = {
             }
 
 			modifier = {
+				conscription = -0.025
+				production_speed_arms_factory_factor = -0.45
+				production_speed_industrial_complex_factor = -0.45
+				attack_bonus_against = -0.3
+				mobilization_speed = -0.4
+			}
+		}
+		AFR_military_colony1 = {
+		    picture = military_colony
+			allowed = {
+				original_tag = AFR
+				always = no
+			}
+			
+			allowed_civil_war = {
+                NOT = {
+                    has_government = anarchist
+                }
+            }
+
+			modifier = {
+				conscription = -0.015
+				production_speed_arms_factory_factor = -0.35
+				production_speed_industrial_complex_factor = -0.35
+				attack_bonus_against = -0.2
+				mobilization_speed = -0.3
+			}
+		}
+		AFR_military_colony2 = {
+		    picture = military_colony
+			allowed = {
+				original_tag = AFR
+				always = no
+			}
+			
+			allowed_civil_war = {
+                NOT = {
+                    has_government = anarchist
+                }
+            }
+
+			modifier = {
+				conscription = -0.010
+				production_speed_arms_factory_factor = -0.35
+				production_speed_industrial_complex_factor = -0.35
+				attack_bonus_against = -0.1
+				mobilization_speed = -0.2
+			}
+		}
+		AFR_military_colony3 = {
+		    picture = military_colony
+			allowed = {
+				original_tag = AFR
+				always = no
+			}
+			
+			allowed_civil_war = {
+                NOT = {
+                    has_government = anarchist
+                }
+            }
+
+			modifier = {
 				conscription = -0.005
-				production_speed_arms_factory_factor = -0.025
+				production_speed_arms_factory_factor = -0.35
+				production_speed_industrial_complex_factor = -0.35
+				attack_bonus_against = -0.1
+				mobilization_speed = -0.2
+			}
+		}
+		AFR_military_colony4 = {
+		    picture = military_colony
+			allowed = {
+				original_tag = AFR
+				always = no
+			}
+			
+			allowed_civil_war = {
+                NOT = {
+                    has_government = anarchist
+                }
+            }
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				mobilization_speed = -0.1
 			}
 		}
 		FRA_justice_reform = {
