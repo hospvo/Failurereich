@@ -42,7 +42,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_constitutional_monarchy
-		icon = GFX_focus_focus_fra_third_empire
+		icon = GFX_democrat_empire
 		text = "A democratic Empire"
 		mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 
