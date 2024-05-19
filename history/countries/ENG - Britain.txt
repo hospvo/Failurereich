@@ -144,6 +144,7 @@ give_guarantee = POL
 # Order matters - here Chamberlain becomes starting leader
 
 recruit_character = ENG_oswald_mosely
+recruit_character = ENG_general_sir_edmund_ironside
 
 create_country_leader = {
 	name = "Winston Churchill"
@@ -157,17 +158,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "J. F. C. Fuller"
-	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
-	picture = "Portrait_Britain_fuller.dds"
-	expire = "1965.1.1"
+	name = "General Sir Edmund Ironside"
+	desc = "."
+	picture = "gfx/leaders/ENG/ENG_general_sir_edmund_ironside.png"
+	expire = "1970.1.1"
 	ideology = despotism
 	traits = {
-
+	
 	}
 }
 
-
+ENG_general_sir_edmund_ironside
 create_country_leader = {
 	name = "Stanley Baldwin"
 	desc = "POLITICS_STANLEY_BALDWIN_DESC"

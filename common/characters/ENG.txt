@@ -122,4 +122,19 @@ characters={
 			id = -1
 		}
 	}
+	
+	ENG_general_sir_edmund_ironside={
+		name="General Sir Edmund Ironside"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/ENG_general_sir_edmund_ironside.png"
+			}
+		}
+		country_leader = {
+			ideology = depotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 }
