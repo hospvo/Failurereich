@@ -485,7 +485,7 @@ focus_tree = {
 	focus = {
 		id = ENG_take_Ireland 
 		icon = GFX_focus_eng_the_sun_never_sets
-		text = "Regency and transition"
+		text = "British Ansluchss"
 		prerequisite = { 
 			focus = ENG_conservatives 
 			focus = ENG_social 
@@ -502,6 +502,100 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 			    target = IRE
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_norway
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Puppet Norway"
+		prerequisite = { 
+			focus = ENG_take_Ireland 
+		}
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = NOR
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_denmark
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Puppet Denmark"
+		prerequisite = { 
+			focus = ENG_take_Ireland 
+		}
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = DEN
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_holland
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Crush Batavia"
+		prerequisite = { 
+			focus = ENG_take_Ireland 
+		}
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = HOL
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_germany
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Broke Germany"
+		prerequisite = { 
+			focus = ENG_puppet_norway 
+			focus = ENG_puppet_denmark 
+			focus = ENG_puppet_holland 
+		}
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = GER
 			}
 		}
 	}
