@@ -356,7 +356,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_home_crown
-		icon = GFX_focus_eng_god_save_the_king
+		icon = GFX_ENG_edward
 		text = "God save Edward VIII"
 		prerequisite = { focus = ENG_monarchist_coup }
 		mutually_exclusive = { focus = ENG_canada_crown }

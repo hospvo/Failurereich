@@ -250,6 +250,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_petainism.png"			
 	}
 	
+	#### Britain
+	SpriteType = {
+		name = "GFX_ENG_edward"
+		texturefile = "gfx/interface/goals/FRA/GFX_ENG_edward.png"			
+	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {
