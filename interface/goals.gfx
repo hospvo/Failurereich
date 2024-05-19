@@ -253,7 +253,7 @@ spriteTypes = {
 	#### Britain
 	SpriteType = {
 		name = "GFX_ENG_edward"
-		texturefile = "gfx/interface/goals/FRA/GFX_ENG_edward.png"			
+		texturefile = "gfx/interface/goals/ENG/GFX_ENG_edward.png"			
 	}
 	
 	#### Generic continuous goal icons
