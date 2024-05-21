@@ -41,8 +41,7 @@ focus_tree = {
 	
 	focus = {
 		id = AFR_oppose_napoleon
-		icon = GFX_democrat_empire
-		text = "Oppose The Emperor"
+		icon = GFX_oppose_emperor
 		x = 15
 		y = 0
 		cost = 10
@@ -130,8 +129,7 @@ focus_tree = {
             }
         }
     }
-    ai_will_do = {
+     ai_will_do = {
         factor = 1
+     }
     }
-}
-}

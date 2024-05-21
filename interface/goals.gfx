@@ -79,6 +79,10 @@ spriteTypes = {
 		name = "GFX_democrat_empire"
 		texturefile = "gfx/interface/goals/FRA/GFX_democrat_empire.png"
 	}
+	SpriteType = { 
+		name = "GFX_oppose_emperor"
+		texturefile = "gfx/interface/goals/FRA/GFX_oppose_emperor.dds"
+	}
 	###Germany###
 	
 	SpriteType = {
