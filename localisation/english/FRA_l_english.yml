@@ -93,6 +93,9 @@
   nationalize_industries_desc: "charles de gaulle embarks on an ambitious program to bring key industries under state control. This will ensure that the fruits of labor benefit the nation as a whole and not just a select few."
   AFR_oppose_napoleon: "Oppose The Emperor"
   AFR_oppose_napoleon_desc: "As dissatisfaction with Emperor Napoleon VI's rule grows, factions within our nation are beginning to organize and plan for a future without him. By openly opposing his regime, we aim to rally support for a new direction and restore democratic governance."
+  AFR_constitutional_monarchy: "Forced emperors share power"
+  AFR_constitutional_monarchy_desc: ""The growing unrest and demand for democratic reforms have reached a tipping point. By compelling Emperor Napoleon to share power with the Parliament, we aim to introduce a balanced governance system that represents the will of the people while maintaining national stability. This crucial step will pave the way for a more inclusive and participatory government."
+  
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."

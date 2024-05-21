@@ -64,13 +64,12 @@ focus_tree = {
 	focus = {
 		id = AFR_constitutional_monarchy
 		icon = GFX_democrat_empire
-		text = "A democratic Empire"
 		prerequisite = {
 		    focus = AFR_oppose_napoleon
 		}	
 		x = 15
 		y = 2
-		cost = 10
+		cost = 6
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
@@ -90,7 +89,7 @@ focus_tree = {
 		}
 	}
 
-	# Main Branch: De Gaulle's Vision
+	# France conservative Main Branch: De Gaulle's Vision
     focus = {
         id = nationalize_industries
         icon = GFX_nationalize_factory
