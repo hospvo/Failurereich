@@ -55,7 +55,7 @@ bookmarks = {
 				FRA_constitutional_revision 
 			}	
 			focuses = {
-				AFR_constitutional_monarchy
+				AFR_oppose_the_emperor
 				AFR_absolute_monarchy
 			}		
 		}
