@@ -120,6 +120,9 @@ ideologies = {
 			
 			leninism = {
 			}
+			
+            mladorossism = {
+			}
 
 		}
 		
