@@ -261,66 +261,6 @@ units = {
 
 	}
 
-	### Army: Protectorat du Maroc ### -- Casablanca
-	division= {	# "Division de Meknès"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 98
-		}
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	# "Division de Casablanca"	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 95
-		}
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	# "Division de Fès"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 96
-		}
-		location = 7100
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	# "Division de Marrakech"	
-		division_name = {
-			is_name_ordered = yes
-			name_order = 97
-		}
-		location = 7069
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division= {	
-		name = "Groupement de Maroc"
-		location = 7100
-		division_template = "Division de Cavalerie" 	
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
-
 	##### Far Seas Theatre ##### -- Dakar
 	division= {	
 		name = "Troupes de Sénégalais"
