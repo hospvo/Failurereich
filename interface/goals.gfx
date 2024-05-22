@@ -83,6 +83,10 @@ spriteTypes = {
 		name = "GFX_oppose_emperor"
 		texturefile = "gfx/interface/goals/FRA/GFX_oppose_emperor.dds"
 	}
+	SpriteType = { 
+		name = "GFX_recovery_nation"
+		texturefile = "gfx/interface/goals/FRA/GFX_recovery_nation.dds"
+	}
 	###Germany###
 	
 	SpriteType = {

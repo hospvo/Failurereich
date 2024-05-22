@@ -91,7 +91,7 @@ focus_tree = {
 	
 	focus = {
 		id = AFR_recovery_the_nation
-		icon = GFX_democrat_empire
+		icon = GFX_recovery_nation
 		prerequisite = {
 		    focus = AFR_oppose_napoleon
 			focus = AFR_absolute_monarchy
