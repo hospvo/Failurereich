@@ -12,6 +12,7 @@ focus_tree = {
 	}
 	
 	default = no
+	continuous_focus_position = { x = 4000 y = 3500 }
 
 ###################
 ### NAPOLEON ####
@@ -60,6 +61,26 @@ focus_tree = {
 			}		
 		}
 	}
+	
+	focus = {
+        id = AFR_seize_napoleon
+        icon = GFX_goal_generic_demand_power
+        x = 19
+        y = 2
+        cost = 10
+        prerequisite = {
+		    focus = AFR_oppose_napoleon
+		}
+		mutually_exclusive = {
+			focus = AFR_constitutional_monarchy
+		}
+        completion_reward = {
+            # Here you can add the effects of the focus, such as changes to political power, stability, or triggering an event
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 	focus = {
 		id = AFR_constitutional_monarchy
@@ -74,6 +95,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
+		}
+		mutually_exclusive = {
+			focus = AFR_seize_napoleon
 		}
 		completion_reward = {
 		    	add_ideas = { AFR_napoleon_king }
