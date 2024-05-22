@@ -94,7 +94,9 @@
   AFR_oppose_napoleon: "Oppose The Emperor"
   AFR_oppose_napoleon_desc: "As dissatisfaction with Emperor Napoleon VI's rule grows, factions within our nation are beginning to organize and plan for a future without him. By openly opposing his regime, we aim to rally support for a new direction and restore democratic governance."
   AFR_constitutional_monarchy: "Forced emperors share power"
-  AFR_constitutional_monarchy_desc: ""The growing unrest and demand for democratic reforms have reached a tipping point. By compelling Emperor Napoleon to share power with the Parliament, we aim to introduce a balanced governance system that represents the will of the people while maintaining national stability. This crucial step will pave the way for a more inclusive and participatory government."
+  AFR_constitutional_monarchy_desc: "The growing unrest and demand for democratic reforms have reached a tipping point. By compelling Emperor Napoleon to share power with the Parliament, we aim to introduce a balanced governance system that represents the will of the people while maintaining national stability. This crucial step will pave the way for a more inclusive and participatory government."
+  AFR_recovery_the_nation: "Recover the Nation"
+  AFR_recovery_the_nation_desc: "The French Empire has faced significant challenges and adversity, but now is the time to focus on recovery and rebuilding. By implementing comprehensive economic reforms, restoring our grand infrastructure, and ensuring social stability, we can pave the way for a brighter future. This focus will set the foundation for the French Empire to regain its former glory and prosperity."
   
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
