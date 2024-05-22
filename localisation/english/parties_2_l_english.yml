@@ -634,4 +634,7 @@
  BUL_national_social_movement_party:0 "NSM"
  BUL_national_social_movement_party_long:0 "National Social Movement"
  SIA_facism_party: "PBP"
- SAF_fascism_party_long: "Phibun party"
+ SIA_facism_party_long: "Phibun party"
+ SIA_democratic_party: "SPDP"
+ SIA_democratic_party_long: "Siamese People's Democratic Party"
+ 
