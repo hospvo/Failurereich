@@ -88,6 +88,35 @@ focus_tree = {
 			}		
 		}
 	}
+	
+	focus = {
+		id = AFR_recovery_the_nation
+		icon = GFX_democrat_empire
+		prerequisite = {
+		    focus = AFR_oppose_napoleon
+			focus = AFR_absolute_monarchy
+		}	
+		x = 11
+		y = 1
+		cost = 6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            add_tech_bonus = {
+			    name = assembly_bonus
+                bonus = 0.25  # 50% research speed boost
+                uses = 1
+                technology = improved_machine_tools	
+	            technology = advanced_machine_tools
+	            technology = assembly_line_production
+	            technology = flexible_line
+	            technology = streamlined_line
+            }
+        }
+	}
 
 	# France conservative Main Branch: De Gaulle's Vision
     focus = {
