@@ -112,5 +112,16 @@ set_politics = {
 			
 				}
 			}
+			
+			create_country_leader = {
+				name = "Leon Blum"
+				desc = ""
+				picture = "gfx/leaders/AFR/AFR_leon_blum.png"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+			
+				}
+			}
 
 set_research_slots = 3

@@ -63,7 +63,7 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = AFR_seize_napoleon
+        id = AFR_republic
         icon = GFX_goal_generic_demand_power
         x = 19
         y = 2
@@ -75,7 +75,9 @@ focus_tree = {
 			focus = AFR_constitutional_monarchy
 		}
         completion_reward = {
-            # Here you can add the effects of the focus, such as changes to political power, stability, or triggering an event
+            set_politics = {
+				ruling_party = democratic
+			}
         }
         ai_will_do = {
             factor = 1
@@ -97,7 +99,7 @@ focus_tree = {
 			factor = 1
 		}
 		mutually_exclusive = {
-			focus = AFR_seize_napoleon
+			focus = AFR_republic
 		}
 		completion_reward = {
 		    	add_ideas = { AFR_napoleon_king }
