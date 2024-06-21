@@ -41,6 +41,25 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = AFR_appoint_gaulle
+		icon = GFX_focus_focus_fra_third_empire
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = {
+		    focus = AFR_oppose_napoleon
+		}
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+	
+	focus = {
 		id = AFR_oppose_napoleon
 		icon = GFX_oppose_emperor
 		x = 15
