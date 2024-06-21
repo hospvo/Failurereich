@@ -47,7 +47,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 		prerequisite = {
-		    focus = AFR_oppose_napoleon
+		    focus = AFR_absolute_monarchy
 		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 

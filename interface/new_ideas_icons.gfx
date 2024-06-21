@@ -83,6 +83,6 @@ spriteTypes = {
 	}
 	spriteType = {
 	name = "GFX_idea_AFR_gaulle_minister"
-	texturefile = "gfx/interface/ideas/ROM/AFR_gaulle_minister.dds"
+	texturefile = "gfx/leaders/AFR/AFR_gaulle_minister.dds"
 	}
 }

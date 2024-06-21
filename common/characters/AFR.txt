@@ -26,12 +26,18 @@ characters={
 		    has_completed_focus = AFR_appoint_gaulle
 		}	
 		
-		traits = { his_majesty_minister }
+		traits = { 
+		    his_majesty_minister 
+		}
+		
+		ai_will_do = {
+		    factor = 1
+		}	
 
         do_effect = {
 		     NOT = {
 			     has_goverment = communist
-            }
+             }
 		}
 	}
 }	
