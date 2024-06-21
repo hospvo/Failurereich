@@ -85,10 +85,10 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Aisin Gioro Puyi"
+	name = "Yuan Keding"
 	
-	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
-	expire = "1960.1.1"
+	picture = "gfx/leaders/MAN/MAN_yuan_son.png"
+	expire = "1958.1.1"
 	ideology = despotism
 	traits = {
 		warrior_code
