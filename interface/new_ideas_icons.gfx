@@ -81,4 +81,8 @@ spriteTypes = {
 	name = "GFX_idea_legacy_of_carol_ii"
 	texturefile = "gfx/interface/ideas/ROM/GFX_legacy_of_carol_ii.png"
 	}
+	spriteType = {
+	name = "GFX_idea_AFR_gaulle_minister"
+	texturefile = "gfx/interface/ideas/ROM/AFR_gaulle_minister.dds"
+	}
 }
