@@ -363,15 +363,7 @@ GER_setup_civil_war = {
 			transfer_technology_without_doctrines = yes
 			country_lock_all_division_template = yes
 		}
-
-		for_each_scope_loop = {
-			remove_core_of = GER
-			add_claim_by = GER
-			teleport_armies = {
-				limit = { tag = GER }
-				to_state_array = owned_controlled_states
-			}
-		}
+		
 		for_each_scope_loop = {
 			add_core_of = WUR
 			add_core_of = BAY
