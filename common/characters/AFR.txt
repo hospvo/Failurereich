@@ -13,31 +13,5 @@ characters={
 			expire = "1965.1.1.1"
 			id = -1
 		}
-	}
-	
-	AFR_gaulle_minister={
-		
-		allowed = {
-		    original_tag = AFR
-			
-		}
-		
-		available = {
-		    has_completed_focus = AFR_appoint_gaulle
-		}	
-		
-		traits = { 
-		    his_majesty_minister 
-		}
-		
-		ai_will_do = {
-		    factor = 1
-		}	
-
-        do_effect = {
-		     NOT = {
-			     has_goverment = communist
-             }
-		}
-	}
+	}	
 }	

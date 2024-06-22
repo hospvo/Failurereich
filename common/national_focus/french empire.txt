@@ -55,7 +55,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_manpower = 200000
+			add_manpower = 2000
+			add_ideas = { AFR_gaulle_minister }
 		}
 	}
 	

@@ -26,6 +26,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+ recruit_charecters = AFR_gaulle_minister
  add_ideas = AFR_military_colony
 
 
@@ -68,7 +69,7 @@ set_politics = {
 				desc = ""
 				picture = "gfx/leaders/AFR/AFR_leon_blum.png"
 				expire = "1965.1.1"
-				ideology = socialism
+				ideology = dem_soc
 				traits = {
 			
 				}

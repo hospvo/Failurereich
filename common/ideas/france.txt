@@ -1658,6 +1658,28 @@ ideas = {
             }				
 		
 	    }
+	    AFR_gaulle_minister = {
+	
+	        political_advisor = {
+             slot = political_advisor
+            }
+			picture = GFX_idea_AFR_gaulle_minister
+		          allowed = {
+		              original_tag = AFR
+		          }
+		        cost = 125
+		
+		        available = {
+		             has_completed_focus = AFR_appoint_gaulle
+		        }
+		
+		        traits = { his_majesty_minister }
+		
+		        ai_will_do = {
+		           factor = 1
+		        }
+	       
+        }
 		AFR_military_colony = {
 		    picture = military_colony
 			allowed = {
