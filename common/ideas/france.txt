@@ -1660,9 +1660,9 @@ ideas = {
 	    }
 	    AFR_gaulle_minister = {
 	
-	        political_advisor = {
+	        advisor = {
              slot = political_advisor
-            }
+			} 
 			picture = GFX_idea_AFR_gaulle_minister
 		          allowed = {
 		              original_tag = AFR

@@ -42,7 +42,7 @@ focus_tree = {
 	
 	focus = {
 		id = AFR_appoint_gaulle
-		icon = GFX_focus_focus_fra_third_empire
+		icon = GFX_appoint_gaulle
 		x = 7
 		y = 2
 		cost = 5

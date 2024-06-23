@@ -87,6 +87,10 @@ spriteTypes = {
 		name = "GFX_recovery_nation"
 		texturefile = "gfx/interface/goals/FRA/GFX_recovery_nation.dds"
 	}
+	SpriteType = { 
+		name = "GFX_appoint_gaulle"
+		texturefile = "gfx/interface/goals/AFR/GFX_appoint_gaulle.dds"
+	}
 	###Germany###
 	
 	SpriteType = {
