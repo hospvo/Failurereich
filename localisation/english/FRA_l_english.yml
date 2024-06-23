@@ -97,7 +97,8 @@
   AFR_constitutional_monarchy_desc: "The growing unrest and demand for democratic reforms have reached a tipping point. By compelling Emperor Napoleon to share power with the Parliament, we aim to introduce a balanced governance system that represents the will of the people while maintaining national stability. This crucial step will pave the way for a more inclusive and participatory government."
   AFR_recovery_the_nation: "Recover the Nation"
   AFR_recovery_the_nation_desc: "The French Empire has faced significant challenges and adversity, but now is the time to focus on recovery and rebuilding. By implementing comprehensive economic reforms, restoring our grand infrastructure, and ensuring social stability, we can pave the way for a brighter future. This focus will set the foundation for the French Empire to regain its former glory and prosperity."
-  
+  AFR_appoint_gaulle: "Appoints Charles De Gaulle"
+  AFR_appoint_gaulle_desc: "Emperor Napoleon VI has appointed Charles de Gaulle as the minister A transformative period begins under the visionary leadership of Charles de Gaulle, who has been appointed by Napoleon VI to lead the French Empire into a new era. This marks the start of a comprehensive reform agenda aimed at revitalizing our political institutions, strengthening our economy, and enhancing our global standing."
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."
