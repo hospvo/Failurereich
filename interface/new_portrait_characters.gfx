@@ -4,21 +4,28 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_portrait_JAP_prov"
-		texturefile = "gfx/interface/leaders/Portrait_prov_japan.dds"
+		texturefile = "gfx/leaders/Portrait_prov_japan.dds"
 	}
 
 	### SOV
 
 	spriteType = {
 		name = "GFX_portrait_SOV_prov"
-		texturefile = "gfx/interface/leaders/Portrait_prov_russia_com.dds"
+		texturefile = "gfx/leaders/Portrait_prov_russia_com.dds"
 	}
 
 	### ITA
 
 	spriteType = {
 		name = "GFX_portrait_ITA_julius_evola"
-		texturefile = "gfx/interface/leaders/ITA/Portrait_ITA_julius_evola.dds"
+		texturefile = "gfx/leaders/ITA/Portrait_ITA_julius_evola.dds"
+	}
+	
+	### LOM
+	
+	spriteType = {
+		name = "GFX_portrait_LOM_antonio_gramsci"
+		texturefile = "gfx/leaders/LOM/portrait_antonio_gramsci.png"
 	}
 
 }

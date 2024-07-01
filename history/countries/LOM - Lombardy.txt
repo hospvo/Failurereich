@@ -62,11 +62,10 @@ set_technology = {
 set_convoys = 10
 
 set_popularities = {
-        democratic = 0
-        communism = 90
-        fascism = 10
-        neutrality = 0
-
+    democratic = 15
+    communism = 81
+    fascism = 2
+    neutrality = 2
 }
 
 set_politics = {
@@ -80,13 +79,4 @@ set_politics = {
 
 set_cosmetic_tag = LOM_padania 
 
-create_country_leader = {
-	name = "Palmiro Togliatti"
-	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
-	picture = "GFX_portrait_ita_palmiro_togliatti"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
+recruit_character = LOM_antonio_gramsci

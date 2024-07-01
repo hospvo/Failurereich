@@ -1,0 +1,16 @@
+characters={
+	LOM_antonio_gramsci={
+		name= "Antonio Gramsci"
+		portraits={
+			civilian={
+				large="GFX_portrait_LOM_antonio_gramsci"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={}
+			expire="1969.1.1.1"
+			id=-1
+		}
+	}
+}
