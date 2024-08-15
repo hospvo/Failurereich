@@ -7,7 +7,7 @@ state = {
 	
 	history = {
 
-		owner = ENG
+		owner = ARG
 		add_claim_by = ARG
 
 		buildings = {

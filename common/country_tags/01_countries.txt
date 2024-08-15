@@ -1,5 +1,4 @@
 KOS = "countries/Kosovo.txt"
-HRZ = "countries/Herzegovina.txt"
 TEX = "countries/Texas.txt"
 LOU = "countries/Louisiana.txt"
 EDO = "countries/Hokkaido.txt" # Sapporo

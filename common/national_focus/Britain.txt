@@ -259,9 +259,10 @@ focus_tree = {
 			}
 			set_party_name = { 
     				ideology = reactionary
-    				long_name = "Juntla of the Lord"
+    				long_name = "Military Juntla"
     				name = "Juntla"
 			}
+			set_cosmetic_tag = ENG_junta
 		}
 	}
 
@@ -489,6 +490,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = ENG_conservatives 
 			focus = ENG_social 
+			focus = ENG_help_usa
 		}
 		x = 15
 		y = 5
@@ -596,6 +598,71 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 			    target = GER
+			}
+		}
+	}
+
+#### war ####
+
+	focus = {
+		id = ENG_help_falange
+		icon = GFX_GER_help_cntfai
+		text = "Help Falange"
+		prerequisite = { 
+			focus = ENG_conservatives 
+			focus = ENG_social 
+		}
+		x = 18
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+
+		available = {
+			has_political_party = fascism
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ENG = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 100
+				    target = SPA
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_help_carlist
+		icon = GFX_focus_intervention_spain_republic
+		text = "Help Carlists"
+		prerequisite = { 
+			focus = ENG_help_usa
+		}
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+
+		available = {
+			has_political_party = reactionary
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ENG = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 100
+				    target = SPR
+				}
 			}
 		}
 	}
