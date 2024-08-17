@@ -332,7 +332,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_monarchist_coup 
-		icon = GFX_focus_eng_the_sun_never_sets
+		icon = GFX_ENG_crown
 		text = "Regency and transition"
 		mutually_exclusive = { focus = ENG_mosley_way focus = ENG_army }
 		x = 25

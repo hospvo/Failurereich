@@ -270,6 +270,10 @@ spriteTypes = {
 		name = "GFX_ENG_edward"
 		texturefile = "gfx/interface/goals/ENG/GFX_ENG_edward.png"			
 	}
+	SpriteType = {
+		name = "GFX_ENG_crown"
+		texturefile = "gfx/interface/goals/ENG/GFX_ENG_crown.png"			
+	}
 	
 	#### Generic continuous goal icons
 
