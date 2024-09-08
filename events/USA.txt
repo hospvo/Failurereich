@@ -348,7 +348,7 @@ country_event = {
 
 	trigger= {
 		tag = DES
-		DES = { controls_state = 377 }
+		controls_state = 377
         }
 	
 	mean_time_to_happen = {
