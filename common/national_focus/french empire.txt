@@ -20,7 +20,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_absolute_monarchy
-		icon = GFX_focus_focus_fra_third_empire
+		icon = GFX_god_save_king
 		text = "God save the Emperor"
 		mutually_exclusive = {
 			focus = AFR_oppose_napoleon

@@ -91,6 +91,10 @@ spriteTypes = {
 		name = "GFX_appoint_gaulle"
 		texturefile = "gfx/interface/goals/AFR/GFX_appoint_gaulle.dds"
 	}
+	SpriteType = { 
+		name = "GFX_god_save_king"
+		texturefile = "gfx/interface/goals/AFR/GFX_god_save_king.png"
+	}
 	###Germany###
 	
 	SpriteType = {
