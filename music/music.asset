@@ -9,7 +9,7 @@ music = {
 # General Peace:
 music = {
 	name = "general_peace_1"
-	file = "la_marseillaise.ogg"
+	file = "i_love_you_california.ogg"
 	volume = 0.65
 }
 music = {
