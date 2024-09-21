@@ -2323,29 +2323,4 @@ focus_tree = {
                 }
         }
     }
-	focus = {
-        id = FRA_abolish_class
-        icon = GFX_social_investment
-	    prerequisite = {
-	           focus = FRA_commune_of_paris
-	    }
-        x = 25
-        y = 11
-        cost = 9
-        available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        ai_will_do = {
-			factor = 1
-	    }
-		bypass = {
-		    has_government = fascism
-			is_puppet = yes
-		}
-		available = {
-			has_government = anarchist
-        }
-
-        completion_reward = {
-		        add_ideas = FRA_worker_right
-    }
 }	
