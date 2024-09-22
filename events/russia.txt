@@ -28,7 +28,6 @@ country_event = {
 			release = KBK
 			release = NOA
 
-			release = TAT
 			release = KOM
 			release = KAL
 
@@ -163,10 +162,6 @@ country_event = {
 
 			KOM = { set_state_owner = 825 }
 
-			TAT = { set_state_owner = 256 }
-			TAT = { set_state_owner = 250 }
-			TAT = { set_state_owner = 251 }
-
 			KAL = { set_state_owner = 234 }
 			KAL = { set_state_owner = 235 }
 			KAL = { set_state_owner = 238 }
@@ -208,14 +203,14 @@ country_event = {
 	}
 
 	option = {
-		name = "Bukharine will help us."
+		name = "For the people"
 		
 
 			add_country_leader_role = {
-  				Character = SOV_nikolay_bukharin 
+  				Character = SOV_stalin
   				Promote_leader = yes
   				Country_leader = {
-					ideology = leninism
+					ideology = stalinism
     					expire = “1965.1.1.1”
     						traits = {
       						  	war_industrialist

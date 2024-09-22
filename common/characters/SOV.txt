@@ -12,15 +12,11 @@ characters = {
   ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
                                                                                                                   
 
-	SOV_iosif_stalin = {
-		name = SOV_iosif_stalin
+	SOV_stalin = {
+		name = SOV_stalin
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/SOV/SOV_joseph_stalin.png"
-			}
-			army = {
-				large = GFX_portrait_SOV_iosif_stalin
-				small = GFX_portrait_SOV_iosif_stalin_small
+				large = "gfx/leaders/russia/SOV_stalin.dds"
 			}
 		}
 		country_leader = {

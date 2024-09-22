@@ -537,7 +537,7 @@
 	focus = {
 		id = RUS_democracy
 		icon = GFX_focus_SOV_restore_cossack_units
-		text = "Social democracy"
+		text = "Will of labour"
 
 		mutually_exclusive = { 	
 			focus = RUS_Kolchak
@@ -597,17 +597,6 @@
 		}
 
 		completion_reward = {
-			add_country_leader_role = {
-  				Character = SOV_provisional_government 
-				Promote_leader = yes
-  				Country_leader = {
-					ideology = left
-				    	expire = “1965.01.01.01”
-   					traits = {
-        					war_industrialist
-    					}
-				}
-     			}
 			add_popularity = {
 				ideology = left
 				popularity = 0.25

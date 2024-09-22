@@ -13,6 +13,11 @@ spriteTypes = {
 		name = "GFX_portrait_SOV_prov"
 		texturefile = "gfx/leaders/Portrait_prov_russia_com.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_SOV_stalin"
+		texturefile = "gfx/leaders/russia/SOV_stalin.dds"
+	}
 
 	### ITA
 
