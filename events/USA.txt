@@ -10,8 +10,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-
-			name = "Here we go again!"
+		name = "Here we go again!"
 
 		816 = { set_demilitarized_zone = yes }
 		362 = { set_demilitarized_zone = yes }
@@ -274,7 +273,7 @@ country_event = {
 	
 	option = {
 
-		name = "No mormons please"
+		name = "We must stop mormons !"
 
 		set_global_flag = deseret_war
 
@@ -321,20 +320,6 @@ country_event = {
 		                type = annex_everything
 	      		  }
 		}
-
-		CSA = {
-			  create_wargoal  = {
-		            	target = DES
-		                type = annex_everything
-	      		  }
-		}
-
-		USB = {
-			  create_wargoal  = {
-		            	target = DES
-		                type = annex_everything
-	      		  }
-		}
 	}
 }
 
@@ -358,24 +343,12 @@ country_event = {
 	option = {
 		name = "Well, that good."
 	        white_peace = USA
-	        white_peace = CSA
-	        white_peace = USB
 		DES = { set_state_owner = 377 }
 		DES = { set_state_owner = 379 }
 		DES = { set_state_owner = 982 }
 		
 			diplomatic_relation = {
     				country = USA
-    				relation = non_aggression_pact
-   				active = yes
-			}
-			diplomatic_relation = {
-    				country = CSA
-    				relation = non_aggression_pact
-   				active = yes
-			}
-			diplomatic_relation = {
-    				country = USB
     				relation = non_aggression_pact
    				active = yes
 			}
@@ -409,12 +382,20 @@ country_event = {
 				elections_allowed = no
 			}
 			add_popularity = {
-				ideology = communism
-				popularity = 0.3
+				ideology = democratic
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = reactionary
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = left
+				popularity = 0.1
 			}
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.7
+				popularity = 0.5
 			}
 		}
 
@@ -425,7 +406,7 @@ country_event = {
 
 country_event = {
 	id = usa.9
-	title = "Souverainist revolt"
+	title = "Monarchist revolt"
 	desc = "New England under Monarchist delcare war to USA"
 	picture = GFX_report_event_lithuania_army
 	
@@ -464,8 +445,8 @@ country_event = {
 
 country_event = {
 	id = usa.10
-	title = "North USA join Canada"
-	desc = "Canada can take access to our lands and we are now lose."
+	title = "North USA seek to join Canada"
+	desc = "Canada can now take access to our lands. After multiple economic problems and civil war consequencies, the northen midwest seek to joing the Rupert's land and stap back a knife on our president."
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -480,7 +461,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Seriously ?"
+		name = "Why they ask land ?"
 
 		CAN = { set_state_owner = 463 }
 		CAN = { set_state_owner = 388 }
@@ -497,7 +478,7 @@ country_event = {
 country_event = {
 	id = usa.11
 	title = "Second American Civil War end."
-	desc = "Conference of Ottawa forced us to let our country divided between every factions. President Roosevelt give his dismiss."
+	desc = "Under the conference of Ottawa, we are forced leave our country divided between every factions. President McArthurs give his dismiss for this day."
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -620,7 +601,7 @@ country_event = {
 country_event = {
 	id = usa.15
 	title = "Californian Secession"
-	desc = "Californian democrat forces did secessions."
+	desc = "Californian people feel embarassed by the 'Caesar' president. They now ask us to leave the western coast and even plan to rebuild their nation as for 1848. We all remember the Mexican wars in the 19th century. But nobody will let USA shattered by blood."
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -640,7 +621,7 @@ country_event = {
 	
 	option = {
 
-		name = "Liberal revolt"
+		name = "Those liberal idiots betray us!"
 
 		CAL = { transfer_state = 378 }
 		CAL = { transfer_state = 982 }
@@ -670,7 +651,7 @@ country_event = {
 country_event = {
 	id = usa.16
 	title = "California War"
-	desc = "Californian government declare war to USA to take coasts"
+	desc = "Californian government officialy declare war to USA. We have now to defend Western coasts."
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
@@ -708,8 +689,8 @@ country_event = {
 
 country_event = {
 	id = usa.17
-	title = "White peace with California"
-	desc = "California propose a truce."
+	title = "White peace with California."
+	desc = "California propose a truce where only the states on the coast are independent."
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -724,7 +705,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Well, that good."
+		name = "I hate you, California."
 	        white_peace = CAL
 	        USB = { white_peace = CAL }
 	        CSA = { white_peace = CAL }
@@ -740,8 +721,8 @@ country_event = {
 
 country_event = {
 	id = usa.18
-	title = "Choose camp"
-	desc = "Take one of the camps."
+	title = "Shattered USA."
+	desc = "After a long civil war, take one of the new nations."
 	picture = GFX_report_event_lithuania_army
 
 	fire_only_once = yes
@@ -764,27 +745,27 @@ country_event = {
 	}
 	
 	option = {
-		name = "California"
+		name = "Pacific coasts"
 	        CAL = { change_tag_from = ROOT }
 	}
 	
 	option = {
-		name = "New England"
+		name = "The New Kingdom"
 	        NWG  = { change_tag_from = ROOT }
 	}
 	
 	option = {
-		name = "Mormons"
+		name = "The Mormons"
 	        DES = { change_tag_from = ROOT }
 	}
 	
 	option = {
-		name = "Confederates"
+		name = "The New Confederates"
 	        CSA = { change_tag_from = ROOT }
 	}
 	
 	option = {
-		name = "Syndicates"
+		name = "Join Syncalists"
 	        USB = { change_tag_from = ROOT }
 	}
 	
