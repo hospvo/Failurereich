@@ -138,5 +138,6 @@ country_event = {
 		CAN = { transfer_state = 662 }
 		CAN = { transfer_state = 663 }
 		CAN = { transfer_state = 273 }
+		release_puppet = LBA
 	}
 }
