@@ -138,13 +138,17 @@ division_template = {
 
 ##### OOB #####
 units = {
-	##### North African Theatre #####
-	### Army: Algerian Troops ###
+	division = {
+		name = "bengal V01"
+		location = 11929
+		division_template = "bengal effective"
+		start_experience_factor = 0.4
+	}
+
 	division= {	
 		name = "1st Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -152,7 +156,6 @@ units = {
 		name = "2nd Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -160,7 +163,6 @@ units = {
 		name = "4th Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -168,7 +170,6 @@ units = {
 		name = "5th Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -176,7 +177,6 @@ units = {
 		name = "3rd Algerian Infantry Brigade"
 		location = 7132
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -184,7 +184,6 @@ units = {
 		name = "7th Algerian Infantry Brigade"
 		location = 7132
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
@@ -192,7 +191,6 @@ units = {
 		name = "Algerian Cavalry Group"
 		location = 7132
 		division_template = "Cavalry Division"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -202,7 +200,6 @@ units = {
 		name = "Tunis Infantry Division"
 		location = 11969
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -210,15 +207,13 @@ units = {
 		name = "1st Tunisian Motorized Division"
 		location = 11969
 		division_template = "Motorized Division"
-		force_equipment_variants = { motorized_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "2nd Tunisian Motorized Division"
 		location = 11969
 		division_template = "Motorized Division"
-		force_equipment_variants = { motorized_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -236,7 +231,6 @@ units = {
 		name = "Moroccan Infantry Brigade"
 		location = 7160
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -244,7 +238,6 @@ units = {
 		name = "1st Moroccan Infantry Brigade"
 		location = 7160
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -252,7 +245,6 @@ units = {
 		name = "2nd Moroccan Infantry Brigade"
 		location = 7160
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -260,7 +252,6 @@ units = {
 		name = "3rd Moroccan Infantry Brigade"
 		location = 7160
 		division_template = "Colonial Brigade"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 	}
@@ -268,8 +259,7 @@ units = {
 		name = "Moroccan Cavalry Brigade"
 		location = 7160
 		division_template = "Cavalry Division"
-		force_equipment_variants = { motorized_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 }
