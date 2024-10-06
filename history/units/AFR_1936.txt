@@ -145,48 +145,48 @@ units = {
 		location = 1145
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "2nd Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "4th Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "5th Algerian Infantry Brigade"
 		location = 1145
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "3rd Algerian Infantry Brigade"
 		location = 7132
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "7th Algerian Infantry Brigade"
 		location = 7132
 		division_template = "Colonial Brigade"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "Algerian Cavalry Group"
