@@ -848,4 +848,49 @@ country_event = {
 	}
 }
 
-#### Europe Second ####
+#### European wars ####
+
+country_event = {
+	id = tt.21
+	title = "Hungary return to the soviets"
+	desc = "Our old ally should return into our Alliance and no with monarchists or anything bad for us."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = GER
+		has_government = communism
+		has_war_with = HUN
+		controls_state = 43
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Keep Bela Kun has leader"
+		HUN = { set_state_owner = 43 }
+		HUN = { set_state_owner = 154 }
+		HUN = { set_state_owner = 155 }
+
+		if = {
+		        limit = {
+				SLO = { is_puppet_of = HUN }
+				TRA = { is_puppet_of = HUN }
+			}
+		HUN = {
+			annex_country = {
+	   		target = SLO
+	   		transfer_troops = yes
+		      	}
+			annex_country = {
+	   		target = TRA
+	   		transfer_troops = yes
+		      	}
+		}
+		else = {
+		}
+	}
+}
