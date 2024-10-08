@@ -776,6 +776,7 @@ country_event = {
 	option = { 
 		name = "Ne Win has to leave."
 		white_peace = BRM
+		BRM = { set_ruling_party = democratic }
 		RAJ = { puppet = BRM }
 
 	}
