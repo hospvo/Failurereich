@@ -830,7 +830,7 @@ country_event = {
 		controls_state = 596
 		controls_state = 613
 		controls_state = 600
-		controls_state = 602
+		controls_state = 595
         }
 	
 	mean_time_to_happen = {
@@ -843,7 +843,7 @@ country_event = {
 		PRC = { set_state_owner = 749 }
 		PRC = { set_state_owner = 613 }
 		PRC = { set_state_owner = 600 }
-		PRC = { set_state_owner = 602 }
+		PRC = { set_state_owner = 595 }
 		puppet = PRC
 	}
 }
@@ -891,6 +891,7 @@ country_event = {
 		      	}
 		}
 		else = {
+			}
 		}
 	}
 }
