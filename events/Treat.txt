@@ -871,6 +871,8 @@ country_event = {
 
 	option = { 
 		name = "Keep Bela Kun has leader"
+		puppet = HUN
+		white_peace = HUN
 		HUN = { set_state_owner = 43 }
 		HUN = { set_state_owner = 154 }
 		HUN = { set_state_owner = 155 }
