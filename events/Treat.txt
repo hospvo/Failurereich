@@ -827,10 +827,7 @@ country_event = {
 			has_war_with = CHI
 			has_war_with = MAN
 		}
-		controls_state = 593 
-		controls_state = 595 
 		controls_state = 596
-		controls_state = 743
 		controls_state = 613
 		controls_state = 600
 		controls_state = 602
@@ -842,10 +839,9 @@ country_event = {
 
 	option = { 
 		name = "Manage A Socialist state in the south"
-		PRC = { set_state_owner = 593 }
-		PRC = { set_state_owner = 595 }
 		PRC = { set_state_owner = 596 }
 		PRC = { set_state_owner = 743 }
+		PRC = { set_state_owner = 749 }
 		PRC = { set_state_owner = 613 }
 		PRC = { set_state_owner = 600 }
 		PRC = { set_state_owner = 602 }
