@@ -776,13 +776,13 @@ country_event = {
 	option = { 
 		name = "Ne Win has to leave."
 		white_peace = BRM
-		puppet = BRM
+		RAJ = { puppet = BRM }
 
 	}
 }
 country_event = {
 	id = tt.19
-	title = "Fall of Burma"
+	title = "Red Siam"
 	desc = "Japan succeed to take over the Siamese Empire, we will now make this country our base."
 	picture = GFX_report_event_north_germany
 	
@@ -794,7 +794,7 @@ country_event = {
 			tag = JAP
 			tag = TGW
 		}
-		has_war_with = BRM
+		has_war_with = SIA
 		controls_state = 640 
 		controls_state = 288
         }
@@ -805,8 +805,8 @@ country_event = {
 
 	option = { 
 		name = "Unconditional surrender"
-		white_peace = BRM
-		puppet = BRM
+		white_peace = SIA
+		puppet = SIA
 
 	}
 }
