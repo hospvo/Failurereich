@@ -619,8 +619,6 @@ country_event = {
 		CHI = { set_state_owner = 606 }
 		CHI = { set_state_owner = 607 }
 		CHI = { set_state_owner = 608 }
-		CHI = { set_state_owner = 611 }
-		CHI = { set_state_owner = 612 }
 		CHI = { set_state_owner = 598 }
 		CHI = { set_state_owner = 597 }
 		CHI = { set_state_owner = 614 }
@@ -637,3 +635,222 @@ country_event = {
 
 	}
 }
+
+#### Japan wars ####
+
+country_event = {
+	id = tt.15
+	title = "Fall of Bangkok"
+	desc = "Japan succeed to take over the Siamese Empire, we will now make this country our base."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = EDO
+			tag = JAP
+			tag = TGW
+		}
+		has_war_with = SIA
+		controls_state = 289 
+		controls_state = 724 
+		controls_state = 868
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Unconditional surrender"
+		white_peace = SIA
+		puppet = SIA
+
+	}
+}
+
+country_event = {
+	id = tt.16
+	title = "Manchuria under People Japan"
+	desc = "Japan succeed to take over the Northen regions. With the help of Wang Jingwei and the CCP, we will have to create a new government."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = EDO
+		}
+		OR = {
+			has_war_with = CHI
+			has_war_with = MAN
+		}
+		controls_state = 717 
+		controls_state = 715 
+		controls_state = 716
+		controls_state = 714
+		controls_state = 328
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Create a Puppet State in the north"
+		PRC = { set_state_owner = 717 }
+		PRC = { set_state_owner = 715 }
+		PRC = { set_state_owner = 716 }
+		PRC = { set_state_owner = 328 }
+		PRC = { set_state_owner = 714 }
+		PRC = { set_state_owner = 610 }
+		PRC = { set_state_owner = 761 }
+		puppet = PRC
+	}
+}
+
+country_event = {
+	id = tt.17
+	title = "Fall of The Bengal"
+	desc = "Bengal State is now liberated from the Azad Hind, We expect a new puppet states but we need to think about their future."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = RAJ
+			tag = CAN
+			tag = AFR
+		}
+		has_war_with = BAN
+		OR = { controls_state = 430 controls_state = 431 }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Demolishe it."
+		white_peace = BAN
+		RAJ = {
+			annex_country = {
+	   		target = BAN
+	   		transfer_troops = yes
+		      	}
+		}
+	}
+
+	option = { 
+		name = "Let some freedom."
+		white_peace = BAN
+		RAJ = { puppet = BAN }
+		RAJ = { set_state_owner = 431 }
+	}
+}
+
+country_event = {
+	id = tt.18
+	title = "Fall of Burma"
+	desc = "We failed to maintain the socialist republic, this last fall after a long fight against Raj forces."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = RAJ
+			tag = CAN
+			tag = AFR
+		}
+		has_war_with = BRM
+		OR = { controls_state = 288 controls_state = 640 }
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Ne Win has to leave."
+		white_peace = BRM
+		puppet = BRM
+
+	}
+}
+country_event = {
+	id = tt.19
+	title = "Fall of Burma"
+	desc = "Japan succeed to take over the Siamese Empire, we will now make this country our base."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = EDO
+			tag = JAP
+			tag = TGW
+		}
+		has_war_with = BRM
+		controls_state = 640 
+		controls_state = 288
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Unconditional surrender"
+		white_peace = BRM
+		puppet = BRM
+
+	}
+}
+
+country_event = {
+	id = tt.20
+	title = "Nankin under People Japan"
+	desc = "Japan succeed to take over the Southern regions. Many communists and Wang would like to make a new republic in the region, following our ideology and our honor."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = EDO
+		}
+		OR = {
+			has_war_with = CHI
+			has_war_with = MAN
+		}
+		controls_state = 593 
+		controls_state = 595 
+		controls_state = 596
+		controls_state = 743
+		controls_state = 613
+		controls_state = 600
+		controls_state = 602
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Manage A Socialist state in the south"
+		PRC = { set_state_owner = 593 }
+		PRC = { set_state_owner = 595 }
+		PRC = { set_state_owner = 596 }
+		PRC = { set_state_owner = 743 }
+		PRC = { set_state_owner = 613 }
+		PRC = { set_state_owner = 600 }
+		PRC = { set_state_owner = 602 }
+		puppet = PRC
+	}
+}
+
+#### Europe Second ####
