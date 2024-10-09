@@ -335,19 +335,19 @@ GER_setup_civil_war = {
 
 		transfer_units_fraction = {
 			target = PRE
-			size = 0.25
-			navy_ratio = 0
+			size = 0.20
+			navy_ratio = 0.3
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = HAN
 			size = 0.35
-			navy_ratio = 0
+			navy_ratio = 0.5
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = BAY
-			size = 0.35
+			size = 0.40
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
 		}
@@ -391,7 +391,7 @@ FRA_setup_civil_war = {
 
 		transfer_units_fraction = {
 			target = OCC
-			size = 0.45
+			size = 0.4
 			navy_ratio = 0.2
 			keep_unit_leaders_trigger = { always = yes }
 		}
@@ -445,13 +445,13 @@ TUR_start_civil_war = {
 
 		transfer_units_fraction = {
 			target = OTT
-			size = 0.35
+			size = 0.45
 			navy_ratio = 0.1
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = TRK
-			size = 0.35
+			size = 0.55
 			navy_ratio = 0.1
 			keep_unit_leaders_trigger = { always = yes }
 		}
