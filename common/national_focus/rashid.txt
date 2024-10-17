@@ -11,7 +11,7 @@ focus_tree = {
 		id = UAE_crush_terrorist
 		text="Invade Ikhwan"
 		icon = GFX_goal_generic_military_sphere
-		x = 2
+		x = 1
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -32,6 +32,37 @@ focus_tree = {
 		                type = annex_everything
 	        	}	
 			IKH = {
+				every_owned_state = {
+				    add_claim_by = UAE
+				}
+			}
+		}
+	}
+	focus = {
+		id = UAE_take_hail
+		text="Invade Hail region"
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = JSH }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = JSH
+		                type = annex_everything
+	        	}	
+			JSH = {
 				every_owned_state = {
 				    add_claim_by = UAE
 				}
