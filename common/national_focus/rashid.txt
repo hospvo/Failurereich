@@ -42,7 +42,7 @@ focus_tree = {
 		id = UAE_take_hail
 		text="Invade Hail region"
 		icon = GFX_goal_generic_military_sphere
-		x = 1
+		x = 3
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -74,7 +74,7 @@ focus_tree = {
 		id = UAE_invade_saudi
 		text="Invade Saudi"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = UAE_crush_terrorist }
+		prerequisite = { focus = UAE_crush_terrorist focus = UAE_take_hail }
 		x = 1
 		y = 1
 		cost = 5
