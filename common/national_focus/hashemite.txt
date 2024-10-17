@@ -8,8 +8,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = HEJ_crush_terrorist
-		text="Invade Saudi"
+		id = HEJ_invade_saudi
+		text="Invade The Saudi State"
 		icon = GFX_goal_generic_military_sphere
 		x = 2
 		y = 0
@@ -40,10 +40,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HEJ_take_hail
+		text="Invade Hail region"
+		icon = GFX_goal_generic_military_sphere
+		x = 3
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = JSH }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = JSH
+		                type = annex_everything
+	        	}	
+			JSH = {
+				every_owned_state = {
+				    add_claim_by = SAU
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = HEJ_invade_uae
 		text="Invade Hassa"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_crush_terrorist }
+		prerequisite = { focus = HEJ_crush_terrorist focus = HEJ_take_hail }
 		x = 1
 		y = 1
 		cost = 5
