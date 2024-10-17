@@ -74,7 +74,8 @@ focus_tree = {
 		id = UAE_invade_saudi
 		text="Invade Saudi"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = UAE_crush_terrorist focus = UAE_take_hail }
+		prerequisite = { focus = UAE_crush_terrorist }
+		prerequisite = { focus = UAE_take_hail }
 		x = 1
 		y = 1
 		cost = 5
