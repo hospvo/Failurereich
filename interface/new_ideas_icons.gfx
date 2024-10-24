@@ -85,4 +85,8 @@ spriteTypes = {
 	name = "GFX_idea_AFR_gaulle_minister"
 	texturefile = "gfx/interface/ideas/AFR/AFR_gaulle_minister.png"
 	}
+	spriteType = {
+	name = "GFX_idea_SIA_young_king"
+	texturefile = "gfx/interface/ideas/SIA/GFX_young_king.png"
+	}
 }

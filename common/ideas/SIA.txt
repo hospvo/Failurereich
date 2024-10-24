@@ -2,7 +2,7 @@ ideas = {
 
 	    country = {
 		    SIA_young_king = {
-			picture = young_king
+			picture = GFX_idea_SIA_young_king
 			
 			    allowed = {
 				        original_tag = SIA
