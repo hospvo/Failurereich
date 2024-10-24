@@ -649,7 +649,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Send an army to end this revolt!"
+		name = "Send an loyal army to end this revolt!"
 		custom_effect_tooltip = king_or_petain_tt
 		set_country_flag = FRA_king_or_petain
 		ai_will_do = {
@@ -657,7 +657,7 @@ country_event = {
 		}
     }
 	option = {
-		name = "Negotiation with them"
+		name = "Send National guard to negotiation with them"
 		custom_effect_tooltip = FRA_demo_tt
 		set_country_flag = FRA_liberty_way
 		ai_will_do = {
@@ -667,8 +667,8 @@ country_event = {
 }
 country_event = {
 	id = france.21
-	title = "Paris uprising crush"
-	desc = "now we can control capital"
+	title = "Paris uprising ended"
+	desc = "now we can control capital The uprising's leaders were publicly executed at the Place de la Concorde, serving as a stark reminder of the fate that awaits traitors."
 	picture = GFX_fate_of_petain
 	
 	fire_only_once = yes
@@ -683,7 +683,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "now petain regime are weak we should coup them and restablish monarchy again Vive la Roi"
+		name = "now Petain regime are weak we should coup them and restablish monarchy again Vive le Roi!"
 		complete_national_focus = FRA_monarchist_coup
 		ai_will_do = {
 			factor = 1
@@ -745,7 +745,7 @@ country_event = {
 		}
     }
 	option = {
-		name = "I want to read more"
+		name = "I want to read more(it may take long time to appear)"
 		set_country_flag = AFR_read_more
 		ai_will_do = {
 			factor = 1
