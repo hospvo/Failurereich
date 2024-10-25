@@ -21,7 +21,7 @@ ideas = {
 	}	
 	country = {
 		two_nation_not_indivisible = {
-			picture = GFX_idea_two_nation
+			picture = two_nation
 			
 			allowed = {
 				        original_tag = USA
