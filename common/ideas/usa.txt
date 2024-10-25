@@ -18,6 +18,29 @@ ideas = {
 				conscription_factor = 0.4
 			}
 		}
+	}	
+	country = {
+		two_nation_not_indivisible = {
+			picture = GFX_idea_two_nation
+			
+			allowed = {
+				        original_tag = USA
+					    always = no
+	        }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				stability_weekly = -0.25
+				conscription_factor = -0.3
+			}
+		}
+	}	
 		country = {
 		great_depression = {
 			picture = usa_great_depression_3

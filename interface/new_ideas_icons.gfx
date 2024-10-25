@@ -89,4 +89,8 @@ spriteTypes = {
 	name = "GFX_idea_SIA_young_king"
 	texturefile = "gfx/interface/ideas/SIA/GFX_young_king.png"
 	}
+	spriteType = {
+	name = "GFX_idea_two_nation"
+	texturefile = "gfx/interface/ideas/USA/GFX_two_nation.png"
+	}
 }
