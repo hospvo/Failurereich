@@ -13,6 +13,8 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 3500 y = 2000 }
 
+### Monarchy ###
+
 	focus = {
 		id = GEX_wilhelm
 		icon = GFX_focus_ger_revive_kaiserreich
@@ -514,7 +516,7 @@ focus_tree = {
 		}
 	}
 
-#### Herman Voring ####
+#### Republic or Goering ####
 
 	focus = {
 		id = GEX_goering_first
@@ -548,15 +550,15 @@ focus_tree = {
 		id = GEX_republic
 		icon = GFX_goal_generic_demand_territory
 		text = "Establish Republic"
-		x = 3
+		x = 5
 		y = 1
 		cost = 5
 		
 		prerequisite = {
-		focus = GEX_goering_first
+			focus = GEX_goering_first
 		}
 		mutually_exclusive = {
-		focus = GEX_goering_second
+			focus = GEX_goering_second
 		}
 
 		available_if_capitulated = yes
@@ -568,6 +570,13 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			remove_ideas = { GER_wilhelm_iii }
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				    ideology = neutrality
+				    popularity = 0.3
+			}	
 		}
 	}
 
@@ -575,16 +584,16 @@ focus_tree = {
 		id = GEX_goering_second
 		icon = GFX_goal_generic_demand_territory
 		text = "Goering as Chancellor"
-		x = 6
+		x = 8
 		y = 1
 		cost = 5
 		
 		prerequisite = {
-		focus = GEX_goering_first
+			focus = GEX_goering_first
 		}
 		
 		mutually_exclusive = {
-		focus = GEX_republic
+			focus = GEX_republic
 		}
 
 		available_if_capitulated = yes
@@ -600,7 +609,7 @@ focus_tree = {
 
 	focus = {
 		id = GEX_alliance_somalia
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_focus_ETH_protector_of_the_somalis
 		text = "Rally Somalia"
 		x = 4
 		y = 2
@@ -608,7 +617,8 @@ focus_tree = {
 
 		
 		prerequisite = {
-		focus = GEX_goering_second
+			focus = GEX_goering_second
+			focus = GEX_republic
 		}
 
 		available_if_capitulated = yes
@@ -625,7 +635,7 @@ focus_tree = {
 
 	focus = {
 		id = GEX_alliance_senussi
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_focus_generic_develop_libya
 		text = "Rally Senussi"
 		x = 8
 		y = 2
