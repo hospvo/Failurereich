@@ -705,6 +705,7 @@ focus_tree = {
 		text = "Help Carlists loyalists"
 		prerequisite = { 
 			focus = ENG_help_usa
+			focus = ENG_russia
 		}
 		x = 21
 		y = 5
