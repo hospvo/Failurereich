@@ -83,26 +83,26 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = AFR_republic
-        icon = GFX_goal_generic_demand_power
-        x = 19
-        y = 2
-        cost = 10
-        prerequisite = {
-		    focus = AFR_oppose_napoleon
-		}
-		mutually_exclusive = {
-			focus = AFR_constitutional_monarchy
-		}
-        completion_reward = {
-            set_politics = {
-				ruling_party = democratic
-			}
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		        id = AFR_republic
+		        icon = GFX_goal_generic_demand_power
+		        x = 19
+		        y = 2
+		        cost = 10
+		        prerequisite = {
+				    focus = AFR_oppose_napoleon
+				}
+				mutually_exclusive = {
+					focus = AFR_constitutional_monarchy
+				}
+		        completion_reward = {
+		            set_politics = {
+						ruling_party = democratic
+					}
+		        }
+		        ai_will_do = {
+		            factor = 1
+			 }
+	}
 
 	focus = {
 		id = AFR_constitutional_monarchy
