@@ -186,8 +186,6 @@ focus_tree = {
 			focus = CAN_Nahyane_alliance 
 		}
 		mutually_exclusive = { focus = CAN_karachi }
-
-		text = "Retake Merina land"
 		x = 8
 		y = 3
 		cost = 5
