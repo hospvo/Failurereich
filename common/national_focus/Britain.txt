@@ -735,7 +735,8 @@ focus_tree = {
 		icon = GFX_focus_por_portuguese_legion
 		text = "Revolution in Portugal"
 		prerequisite = { 
-			focus = ENG_help_usa
+			focus = ENG_help_falange
+			focus = ENG_help_carlist
 		}
 		x = 20
 		y = 6
