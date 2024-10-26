@@ -577,14 +577,76 @@ focus_tree = {
 		}
 	}
 
+### Puppet monarchies ###
+
 	focus = {
-		id = ENG_puppet_germany
+		id = ENG_puppet_norway2
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Puppet Norway"
+		prerequisite = { 
+			focus = ENG_puppet_norway 
+		}
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet = NOR
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_denmark2
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Puppet Denmark"
+		prerequisite = { 
+			focus = ENG_puppet_denmark 
+		}
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet = DEN
+		}
+	}
+
+	focus = {
+		id = ENG_puppet_holland2
+		icon = GFX_focus_eng_the_sun_never_sets
+		text = "Crush Batavia"
+		prerequisite = { 
+			focus = ENG_puppet_holland 
+		}
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			release_puppet = HOL
+		}
+	}
+
+	focus = {
+		id = ENG_invade_germany
 		icon = GFX_focus_eng_the_sun_never_sets
 		text = "Broke Germany"
 		prerequisite = { 
-			focus = ENG_puppet_norway 
-			focus = ENG_puppet_denmark 
-			focus = ENG_puppet_holland 
+			focus = ENG_puppet_norway2 
+			focus = ENG_puppet_denmark2 
+			focus = ENG_puppet_holland2 
 		}
 		x = 15
 		y = 7
@@ -602,17 +664,18 @@ focus_tree = {
 		}
 	}
 
-#### war ####
+#### War support/Diplomacy ####
 
 	focus = {
 		id = ENG_help_falange
 		icon = GFX_GER_help_cntfai
-		text = "Help Falange"
+		text = "Help Falange rebels"
 		prerequisite = { 
 			focus = ENG_conservatives 
+			focus = ENG_help_usa
 			focus = ENG_social 
 		}
-		x = 18
+		x = 19
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -639,11 +702,11 @@ focus_tree = {
 	focus = {
 		id = ENG_help_carlist
 		icon = GFX_focus_intervention_spain_republic
-		text = "Help Carlists"
+		text = "Help Carlists loyalists"
 		prerequisite = { 
 			focus = ENG_help_usa
 		}
-		x = 22
+		x = 21
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -663,6 +726,34 @@ focus_tree = {
 				    amount = 100
 				    target = SPR
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_coup_portugal
+		icon = GFX_focus_por_portuguese_legion
+		text = "Revolution in Portugal"
+		prerequisite = { 
+			focus = ENG_help_usa
+		}
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+
+		available = {
+			has_political_party = fascism
+			has_political_party = reactionary
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ENG = {
+				country_event = { days = 1 id = portugal.1 }
 			}
 		}
 	}
