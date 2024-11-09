@@ -35,7 +35,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.25
+				consumer_goods_factor = 0.25
 				stability_weekly = -0.25
 				conscription_factor = -0.3
 			}
