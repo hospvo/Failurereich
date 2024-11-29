@@ -13,7 +13,7 @@ state = {
 	}
 
 	history = {
-		owner = LOM
+		owner = ITA
 		victory_points = {
 			6788 10 
 		}
@@ -37,6 +37,9 @@ state = {
 				arms_factory = 10
 				industrial_complex = 2
 				dockyard = 3
+				6788 = {
+					naval_facility = 1 # Genoa Facilities
+				}
 			}
 		}
 	}

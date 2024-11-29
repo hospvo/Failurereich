@@ -1,23 +1,29 @@
+state = {
+	id = 902
+	name = "STATE_902"
+	manpower = 332479
+	state_category = pastoral
 
-state={
-	id=902
-	name="STATE_902"
+	history = {
 
-	history={
-		owner = AFR
+		owner = NGA
 		add_core_of = NGA
+		add_core_of = SOK
+
 		buildings = {
 			infrastructure = 1
+		}
 
+		victory_points = {
+			1891 1 # Sokoto
 		}
 
 	}
 
-	provinces={
-		1891 1969 4938 4972 
+	provinces = {
+		1891 1932 1969 2025 4938 4972 8021 
 	}
-	manpower=332479
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=0.000
+	
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
 }

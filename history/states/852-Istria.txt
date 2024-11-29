@@ -8,7 +8,7 @@ state = {
 
 
 	history = {
-		owner = LOM
+		owner = ITA
 		victory_points = { #Fiume (Rijeka)
 			11564 1 
 		}
@@ -24,8 +24,9 @@ state = {
 		add_core_of = CRO
 		add_core_of = LBV
 
-		#CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
-		set_province_name = { id = 11564 name = VICTORY_POINTS_11564_ITA }
+		### CHANGED TO A MROE ROBUST SYSTEM
+		##CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
+		#set_province_name = { id = 11564 name = VICTORY_POINTS_11564_ITA }
 	}
 
 	provinces = {
