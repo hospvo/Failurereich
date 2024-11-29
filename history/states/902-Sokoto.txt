@@ -6,7 +6,7 @@ state = {
 
 	history = {
 
-		owner = NGA
+		owner = AFR
 		add_core_of = NGA
 		add_core_of = SOK
 

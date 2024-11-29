@@ -11,7 +11,7 @@ state = {
 
 	history = {
 
-		owner = GER
+		owner = POL
 		add_core_of = GER
 		add_core_of = SIL
 		add_core_of = PRE
@@ -30,7 +30,7 @@ state = {
 	}
 
 	provinces = {
-		479 6512 9457 9511 11467 
+		479 9511 11467 
 	}
 
 	local_supplies = 4.0 
