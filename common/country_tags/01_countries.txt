@@ -26,4 +26,4 @@ SPA = "countries/Fal Spain.txt" ### Asturia
 SPC = "countries/ComSpain.txt" ### Aragon
 
 AFR = "countries/Sahara.txt" ### Eastern Algeria
-RUS = "countries/Russia.txt" ### Novgorod
+RSR = "countries/Russia.txt" ### Novgorod
