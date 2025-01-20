@@ -333,6 +333,7 @@ country_event = {#fortification
         add_stability = 0.15
         add_political_power = 100
         add_ideas = ROM_figurehead_king_michael
+		remove_ideas = ROM_legacy_of_carol_ii
         set_country_flag = ROM_kept_monarchy
         hidden_effect = {
             news_event = { id = romania_monarchy.3 hours = 6 }
@@ -346,6 +347,7 @@ country_event = {#fortification
         add_stability = -0.10
         add_political_power = -50
         retire_country_leader = yes
+		remove_ideas = ROM_legacy_of_carol_ii
         create_country_leader = {
             name = "Gheorghe Gheorghiu-Dej"
             desc = "POLITICS_GHEORGHIU_DEJ_DESC"
