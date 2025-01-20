@@ -30,7 +30,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1 #TODO_Manu: Was 2
+			infrastructure = 1 #MM: Was 2
 			industrial_complex = 1
 		}
 		

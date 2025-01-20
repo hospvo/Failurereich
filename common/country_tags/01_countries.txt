@@ -1,8 +1,8 @@
 KOS = "countries/Kosovo.txt"
 TEX = "countries/Texas.txt"
 LOU = "countries/Louisiana.txt"
-EDO = "countries/Hokkaido.txt" # Sapporo
-TGW = "countries/Tokugawa.txt" # Kyoto
+EDO = "countries/Hokkaido.txt" # Hokkaido
+TGW = "countries/Tokugawa.txt" # Kyoto region
 
 HEJ = "countries/Hejaz.txt"
 LOM = "countries/Lombardy.txt"
@@ -26,4 +26,4 @@ SPA = "countries/Fal Spain.txt" ### Asturia
 SPC = "countries/ComSpain.txt" ### Aragon
 
 AFR = "countries/Sahara.txt" ### Eastern Algeria
-RUS = "countries/Russia.txt" ### Novgorod
+RSR = "countries/Russia.txt" ### Novgorod
