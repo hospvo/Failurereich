@@ -61,3 +61,16 @@
  ROM_divided_land: "divided land"
  ROM_legacy_of_carol_ii: "Figure King"
  ROM_legacy_of_carol_ii_desc: "When Ferdinand I. died, he gave the throne to his grandson Michael I. But, he is now too young to rule by himself. This situation was used by his father Carol, who came back from exile. He usurped crone from his son and crowned himself as King Carol II. His lifestyle is causing damage to crown prestige. What is even that his parties and costly cars, villas, and concubines are taking a toll on the nation's budget. This chaos needs to end, or he can bring the population against the monarchy, which can end by supporting leftists and the abolition of the monarchy and when the facist coup the king carol ii only figure of them"
+ romania_monarchy.1.t: "The Future of the Romanian Monarchy"
+ romania_monarchy.1.d: "As our socialist transformation progresses, we face a crucial decision regarding prince Michael. While some hardliners demand the immediate abolition of the monarchy, others argue for a more pragmatic approach. The young prince, respected by much of the population, could provide stability during our transition to socialism.\n\nKeeping Michael as a constitutional monarch, stripped of real power but maintaining ceremonial duties, could ease our people's acceptance of socialist reforms. His presence would also maintain valuable diplomatic connections with Western powers, particularly Canada. However, this unprecedented arrangement - a 'People's Kingdom' - would require careful ideological justification."
+ romania_monarchy.1.a: "A Constitutional Monarch can serve socialism But Carol must abdicate"
+ romania_monarchy.1.b: "The monarchy has no place in socialist Romania"
+
+ romania_monarchy.2.t: "King Michael Addresses the Nation"
+ romania_monarchy.2.d: "In a carefully orchestrated public address, King Michael has spoken to the nation about Romania's socialist path. Speaking from the balcony of the Royal Palace, now renamed the People's Palace, he emphasized the need for social progress and expressed support for the ongoing reforms.\n\nThe sight of the young monarch, wearing a simple military uniform rather than royal regalia, speaking about workers' rights and social justice, has had a powerful effect on the public. His statement that 'the Crown must serve all Romanians, especially the working people' has been particularly well-received."
+ romania_monarchy.2.a: "A new type of monarchy for a new Romania"
+
+ news.romania_monarchy.3.t: "Romania Maintains Constitutional Monarchy"
+ news.romania_monarchy.3.d: "In an unprecedented development, Romania's communist government has announced its decision to maintain the monarchy, with King Michael accede the throne as a constitutional head of state. This unique arrangement, dubbed by some as 'Royal Socialism,' represents a departure from traditional communist practice.\n\nThe young king, stripped of real political power but retaining ceremonial functions, will serve as a symbol of national unity during Romania's socialist transformation. This decision has been met with surprise internationally, though many observers note it may help stabilize Romania during this period of dramatic change."
+ news.romania_monarchy.3.a: "An interesting compromise"
+ news.romania_monarchy.3.b: "A curious development in Romania"
