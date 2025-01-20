@@ -1,0 +1,17 @@
+state={
+	id=971
+	name="STATE_971"
+	provinces={
+		4435 
+	}
+	history={
+		owner = TIB
+		buildings = {
+			infrastructure = 2S
+		}
+		add_core_of = TIB
+	}
+	manpower=17000
+	buildings_max_level_factor=1.000
+	state_category = town
+}

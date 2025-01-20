@@ -172,3 +172,26 @@ country_event = {
 
 	}
 }
+
+country_event = {
+    id = turkey_communist.1
+    title = turkey_communist.1.t
+    desc = turkey_communist.1.d
+    picture = GFX_report_event_generic_rally
+    
+    trigger = {
+        tag = TUR
+        has_government = communism
+        date > 1936.1.1
+    }
+    
+    mean_time_to_happen = {
+        days = 2
+    }
+    
+    option = {
+        name = turkey_communist.1.a
+        add_political_power = 50
+        add_stability = 0.05
+    }
+}

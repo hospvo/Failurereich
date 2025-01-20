@@ -16,12 +16,12 @@ SOV_setup_civil_war = {
 					state = 589 state = 588 state = 590
 				}
 			}
-			RSR = { add_state_core = PREV }
+			RUS = { add_state_core = PREV }
 		}
-		release = RSR
+		release = RUS
 
 		transfer_units_fraction = {
-			target = RSR
+			target = RUS
 			size = 0.4
 			navy_ratio = 0
 			keep_unit_leaders_trigger = { always = yes }
@@ -29,7 +29,7 @@ SOV_setup_civil_war = {
 		SOV = {
 			set_major = yes
 			transfer_technology_without_doctrines = yes
-			transfer_navy = { target = RSR }
+			transfer_navy = { target = RUS }
 			country_lock_all_division_template = yes
 		}
 		219 = { #Moscow
@@ -58,13 +58,13 @@ SOV_setup_civil_war = {
 			}
 		}
 		for_each_scope_loop = {
-			add_core_of = RSR
+			add_core_of = RUS
 		}
 		set_major = yes
 	}
 }
 
-RSR_add_stability = {
+RUS_add_stability = {
 	if = {
 		limit = {
 			has_stability > 0.1

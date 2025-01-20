@@ -17,24 +17,6 @@ country_event = {
 		NGR = { transfer_state = 515 }
 		CHA = { transfer_state = 774 }
 		CHA = { transfer_state = 775 }
-		SOK = { transfer_state = 901 }
-		SOK = { transfer_state = 902 }
-
-		SOK = {	
-
-			set_politics = {
-				ruling_party = reactionary
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.3
-			}
-			add_popularity = {
-				ideology = reactionary
-				popularity = 0.7
-			}
-		}
 
 		CHA = {	
 

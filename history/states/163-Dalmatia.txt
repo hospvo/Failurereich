@@ -20,12 +20,11 @@ state = {
 		add_core_of = CRO
 		add_core_of = LBV
 		start_resistance = CRO #Yugoslavia shouldn't resist occupation
-		set_compliance = 70
+		set_compliance = 70 #TODO_Manu: Check if this is okay when it comes to collab government
 
-		### CHANGED TO A MROE ROBUST SYSTEM
-		##CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
-		#set_state_name = STATE_163_ITA
-		#set_province_name = { id = 3943 name = VICTORY_POINTS_3943_ITA }
+		#CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
+		set_state_name = STATE_163_ITA
+		set_province_name = { id = 3943 name = VICTORY_POINTS_3943_ITA }
 	}
 	provinces = {	
 		3943 

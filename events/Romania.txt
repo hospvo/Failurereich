@@ -189,7 +189,7 @@ country_event = {#fortification
 		}
 	}
 	
-	country_event = {#compromise fortification or question of airplanes
+country_event = {#compromise fortification or question of airplanes
 	id = romania_f.8
 	title = romania_f.8.t
 	desc = romania_f.8.d
@@ -211,7 +211,7 @@ country_event = {#fortification
 		}
 	}
 	
-	country_event = {#new tanks
+country_event = {#new tanks
 	id = romania_f.9
 	title = romania_f.9.t
 	desc = romania_f.9.d
@@ -239,7 +239,7 @@ country_event = {#fortification
 		}
 	}
 	
-		country_event = {#
+country_event = {#
 	id = romania_f.10
 	title = romania_f.10.t
 	desc = romania_f.10.d
@@ -258,7 +258,7 @@ country_event = {#fortification
 	
 	### economy
 	
-	country_event = {#
+country_event = {#
 	id = romania_f.11
 	title = romania_f.11.t
 	desc = romania_f.11.d
@@ -310,7 +310,7 @@ country_event = {#fortification
 			}
 	}
 	
-	country_event = {
+country_event = {
     id = romania_monarchy.1
     title = romania_monarchy.1.t
     desc = romania_monarchy.1.d
@@ -319,11 +319,7 @@ country_event = {#fortification
     trigger = {
         tag = ROM
         has_government = communism
-        NOT = { has_country_flag = ROM_monarchy_decided }
-    }
-    
-    mean_time_to_happen = {
-        days = 1
+		has_government = vanguardism
     }
 	
 	option = { # Keep Michael as Constitutional Monarch
@@ -333,7 +329,6 @@ country_event = {#fortification
         add_stability = 0.15
         add_political_power = 100
         add_ideas = ROM_figurehead_king_michael
-		remove_ideas = ROM_legacy_of_carol_ii
         set_country_flag = ROM_kept_monarchy
         hidden_effect = {
             news_event = { id = romania_monarchy.3 hours = 6 }
@@ -347,22 +342,18 @@ country_event = {#fortification
         add_stability = -0.10
         add_political_power = -50
         retire_country_leader = yes
-		remove_ideas = ROM_legacy_of_carol_ii
         create_country_leader = {
             name = "Gheorghe Gheorghiu-Dej"
             desc = "POLITICS_GHEORGHIU_DEJ_DESC"
             picture = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Gheorghiu_Dej.dds"
             ideology = marxism
-            traits = {
-                stalinist_communist
-            }
         }
         set_country_flag = ROM_abolished_monarchy
     }
-}	
+ }	
 
     # King's Public Support for Socialism
-    country_event = {
+country_event = {
     id = romania_monarchy.2
     title = romania_monarchy.2.t
     desc = romania_monarchy.2.d
@@ -380,10 +371,10 @@ country_event = {#fortification
             add_political_power = 50
             add_popularity = { ideology = communism popularity = 0.05 }
         }
-    }
+ }
 
     # News Event
-    news_event = {
+news_event = {
     id = romania_monarchy.3
     title = romania_monarchy.3.t
     desc = romania_monarchy.3.d
@@ -406,4 +397,4 @@ country_event = {#fortification
                    NOT = { tag = ROM }
             }
         }
-    }	
+}	
