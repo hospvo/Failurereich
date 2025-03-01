@@ -1,7 +1,7 @@
 state={
 	id=1017
 	name="STATE_1017"
-		resources={
+	resources={
 		steel=3.000
 	}
 	provinces={
@@ -9,11 +9,14 @@ state={
 	}
 	
 	history = {
-			owner = POL
-			buildings = {
+
+		owner = POL
+
+		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
+
 		add_core_of = POL
 		add_claim_by = CZE
 	}

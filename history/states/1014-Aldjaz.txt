@@ -5,6 +5,9 @@ state={
 	history={
 		owner = AFR
 		add_core_of = ALG
+		buildings = {
+			infrastructure = 1
+		}
 	}
 	provinces={
 		1958 8088 10731

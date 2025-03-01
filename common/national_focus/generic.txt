@@ -1,17 +1,14 @@
 ﻿search_filter_prios = {
 	FOCUS_FILTER_POLITICAL = 1010
-
-	
- 
-	
 	
 	FOCUS_FILTER_RESEARCH = 522
-
 	
 	FOCUS_FILTER_INDUSTRY = 509
 
+	FOCUS_FILTER_BALANCE_OF_POWER = 200
 	FOCUS_FILTER_SOV_POLITICAL_PARANOIA = 111
 	FOCUS_FILTER_PROPAGANDA = 110
+	FOCUS_FILTER_MISSIOLINI = 110
 	FOCUS_FILTER_ARMY_XP = 103
 	FOCUS_FILTER_NAVY_XP = 102
 	FOCUS_FILTER_AIR_XP = 101
@@ -32,6 +29,8 @@ focus_tree = {
 		focus = industrial_effort
 	}
 
+	#shared_focus = HABSBURG_part_of_something_bigger
+
 	focus = {
 		id = army_effort
 		icon = GFX_goal_generic_allies_build_infantry
@@ -43,7 +42,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -67,6 +66,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -74,6 +79,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+
 		}
 	}
 
@@ -94,7 +100,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 3.0
+				bonus = 1.0
 				technology = motorised_infantry
 			}
 		}
@@ -114,7 +120,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -138,6 +144,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -145,6 +157,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+
 		}
 	}
 
@@ -168,6 +181,15 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
+			IF = {
+				limit = {
+					has_tech = motorised_infantry
+				}
+				add_equipment_to_stockpile = { 
+					type = motorized_equipment
+					amount = 1
+				}
+			}
 		}
 	}
 
@@ -185,7 +207,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -209,6 +231,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				ahead_reduction = 2
@@ -216,6 +244,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+
 		}
 	}
 
@@ -377,13 +406,8 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 1.0
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 		}
 	}
@@ -407,9 +431,7 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 1.0
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				category = cat_strategic_bomber
 				category = tactical_bomber
 			}
 		}
@@ -544,13 +566,20 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = jet_rocket_bonus
 				ahead_reduction = 2
-				uses = 2
+				uses = 1 # was 2
 				category = rocketry
 				category = jet_technology
 			}
+
 		}
 
 		ai_will_do = {
@@ -1644,11 +1673,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
+
 			add_tech_bonus = {
 				name = nuclear_bonus
-				ahead_reduction = 2
+				ahead_reduction = 1 # was 2
 				category = nuclear
 			}
+
 		}
 
 		ai_will_do = {
@@ -1715,14 +1751,18 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 1.0
-				uses = 4
-				category = electronics
-				category = nuclear
-				category = rocketry
-			}
+
+			add_ideas = generic_secret_weapons_ns
+
+			#add_tech_bonus = {
+			#	name = secret_bonus
+			#	bonus = 0.5
+			#	uses = 4
+			#	category = electronics
+			#	category = nuclear
+			#	category = rocketry
+			#}
+
 		}
 
 		ai_will_do = {
@@ -2304,15 +2344,25 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
 			if = {
 				limit = {
 					original_research_slots < 3
 				}
 				add_research_slot = 1
 			}
+
 			if = {
 				limit = {
 					original_research_slots > 2
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.25
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
 				}
 				add_tech_bonus = {
 					name = electronics_bonus
