@@ -321,7 +321,6 @@ country_event = {#fortification
     trigger = {
         tag = ROM
         has_government = communism
-        NOT = { has_global_flag = ROM_monarchy_decided }
     }
 
     mean_time_to_happen = {
