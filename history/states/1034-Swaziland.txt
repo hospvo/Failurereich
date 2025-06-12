@@ -1,0 +1,18 @@
+state={
+	id=1034
+	name="STATE_1034"
+	history={
+
+		owner = SAF
+		add_core_of = SAF
+
+	}
+
+	provinces={
+		7900 
+	}
+
+	manpower=20000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

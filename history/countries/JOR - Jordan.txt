@@ -3,14 +3,33 @@
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	gwtank = 1
+}
+
+IF = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = { gwtank = 1 }
 }
 
 set_convoys = 5
 
+# TODO_GoE - Add DLC checks
+set_cosmetic_tag = JOR_emirate
+
 1939.1.1 = {
 
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -40,7 +59,6 @@ set_convoys = 5
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 
@@ -52,6 +70,9 @@ set_convoys = 5
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
+	}
+	complete_special_project = {
+		project = sp:sp_air_radar
 	}
 }
 
@@ -69,10 +90,12 @@ set_popularities = {
 	neutrality = 50
 }
 
+recruit_character = JOR_abdullah_bin_al_hussein
+
 create_country_leader = {
 	name = "Hashim Kheir"
 	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_2.dds"
+	picture = GFX_portrait_Hashim_Kheir
 	ideology = conservatism
 	traits = {
 		#
@@ -82,18 +105,8 @@ create_country_leader = {
 create_country_leader = {
 	name = "Saeed Ahmadi"
 	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_fascism1.dds"
+	picture = GFX_portrait_Saeed_Ahmadi
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Abdullah bin al-Hussein"
-	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_land_3.dds"
-	ideology = despotism
 	traits = {
 		#
 	}
@@ -102,7 +115,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Fu'ad Nassar"
 	desc = ""
-	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_navy_2.dds"
+	picture = GFX_portrait_Fuad_Nassar
 	ideology = leninism
 	traits = {
 		#

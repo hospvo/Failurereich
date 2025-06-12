@@ -44,9 +44,21 @@ state = {
 				arms_factory = 3
 				# From "The Four Year Plan"
 				industrial_complex = 2
+				#Westwall Forts
+				3530 = {
+					bunker = 2
+				}
+				6542 = {
+					bunker = 2
+				}
+				6712 = {
+					bunker = 2
+				}
+				11640 = {
+					bunker = 2
+				}
 			}
 		}
-
 	}
 
 	provinces = {

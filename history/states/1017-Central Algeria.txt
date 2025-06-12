@@ -1,0 +1,21 @@
+state={
+	id=1017
+	name="STATE_1017"
+
+	history={
+		owner = AFR
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 0
+
+			}
+
+	}
+
+	provinces={
+		2049 12711 12842 
+	}
+	manpower=210100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}
