@@ -542,6 +542,11 @@ focus = {
 			long_name = "French People's Council"
 			name = "FPC"
 		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		create_faction = "The Commune"
 		add_ideas = { AFR_revolutionary_legacy }
 	}
 }
