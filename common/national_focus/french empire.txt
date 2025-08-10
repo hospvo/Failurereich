@@ -678,9 +678,8 @@ focus = {
 		prerequisite = {
 			focus = AFR_democracy
 		}
-		mutually_exclusive = {
-			focus = AFR_tunisian_kingdom
-		}
+		mutually_exclusive = { focus = AFR_tunisian_autonomy }
+		mutually_exclusive = { focus = AFR_democratic_republic }
 		x = 20
 		y = 1
 		cost = 10
@@ -985,11 +984,11 @@ focus = {
 	focus = {
 		id = AFR_doctrine_effort_2
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = AFR_doctrine_effort }
+		prerequisite = { focus = AFR_rote_doctrine }
 		text = "Improve Land doctrine"
 		x = 30
 		y = 3
-		relative_position_id = AFR_doctrine_effort
+		relative_position_id = AFR_rote_doctrine
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
