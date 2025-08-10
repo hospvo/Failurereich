@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_SOV_facism_influence.dds"
 	}
 	SpriteType = { 
+		name = "GFX_Wreath_Communist"
+		texturefile = "gfx/interface/goals/Wreath_Communist.png"
+	}
+	SpriteType = { 
 		name = "GFX_FRA_constitution"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_constitution.png"
 	}
@@ -575,7 +579,10 @@ spriteTypes = {
 	name = "GFX_goal_generic_dangerous_deal"
 	texturefile = "gfx/interface/goals/goal_generic_dangerous_deal.dds"			
 	}		
-	
+	SpriteType = {
+	name = "GFX_focus_SOV_collectivisation"
+	texturefile = "gfx/interface/goals/focus_SOV_collectivisation.dds"			
+	}
 	SpriteType = {
 	name = "GFX_goal_generic_military_sphere"
 	texturefile = "gfx/interface/goals/goal_generic_military_sphere.dds"			

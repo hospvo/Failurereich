@@ -518,7 +518,7 @@ focus = {
 #########################
     focus = {
 	id = AFR_red_africa
-	icon = Wreath_Communist
+	icon = GFX_Wreath_Communist
 	text = "Proclaim the French Commune"
 	mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 
@@ -577,7 +577,7 @@ focus = {
 		TUR = { has_government = communism }
 	}
 	completion_reward = {
-	    TUR = { country_event = { days = 1 id = AFR_union_with_ottomans.1 days = 1 } 
+	    TUR = { country_event = { days = 1 id = AFR_union_with_ottomans.1 } 
 		}
 	}
 }
@@ -591,8 +591,10 @@ focus = {
 	y = 2
 	cost = 10
 	completion_reward = {
-		GER = { add_opinion_modifier = { target = AFR modifier = AFR_revolutionary_aid= 20 } }
-		add_ideas = { AFR_german_solidarity }
+		GER = { add_opinion_modifier = { target = AFR modifier = AFR_revolutionary_aid = 20 } }
+		add_ideas = { 
+		     AFR_german_solidarity 
+		}
 	}
 }
 
@@ -649,7 +651,7 @@ focus = {
 		add_manpower = 75000
 		army_experience = 10
 		create_unit = {
-			division_name = "International Brigade"
+			division_name = AFR_INF_01
 			template = "Infantry Division"
 			size = 1
 			start_experience_factor = 0.3

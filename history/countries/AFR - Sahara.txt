@@ -12,10 +12,10 @@ set_technology = {
 set_convoys = 10
 
 set_popularities = {
-        democratic = 5
-        communism = 0
+        democratic = 22
+        communism = 3
         neutrality = 0
-        reactionary = 95
+        reactionary = 75
 
 }
 
@@ -70,6 +70,17 @@ set_politics = {
 				picture = "gfx/leaders/AFR/AFR_leon_blum.png"
 				expire = "1965.1.1"
 				ideology = dem_soc
+				traits = {
+			
+				}
+			}
+			
+			create_country_leader = {
+				name = "Maurice Thorez"
+				desc = ""
+				picture = "gfx/leaders/AFR/Portrait_AFR_maurice_thorez.png"
+				expire = "1965.1.1"
+				ideology = stalinism
 				traits = {
 			
 				}

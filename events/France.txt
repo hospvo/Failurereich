@@ -166,6 +166,7 @@ country_event = {
 	}
 }
 #######france commune########
+
 country_event = {
     id = AFR_union_with_ottomans.1
     title = afr_union_with_ottomans.1.t
@@ -173,6 +174,7 @@ country_event = {
     picture = GFX_report_event_generic_diplomacy
 
     is_triggered_only = yes
+	original_tag = TUR
 
     option = {
         name = afr_union_with_ottomans.1.a
