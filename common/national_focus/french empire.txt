@@ -522,6 +522,155 @@ focus_tree = {
 			AFR = { set_cosmetic_tag = West_africa }
 		}
 	}
+	
+#########################
+#### Commune #####
+#########################
+
+		focus = {
+		id = AFR_red_africa
+		icon = GFX_focus_SOV_soviet_politics
+		text = "Proclaim the French Commune"
+		mutually_exclusive = { focus = AFR_absolute_monarchy }
+		mutually_exclusive = { focus = AFR_constitutional_monarchy }
+		mutually_exclusive = { focus = AFR_democracy }
+		x = 14
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_politics = { ruling_party = communism }
+			add_popularity = { ideology = communism popularity = 0.4 }
+			set_party_name = {
+				ideology = communism
+				long_name = "French People's Council"
+				name = "FPC"
+			}
+			add_ideas = { AFR_revolutionary_legacy }
+		}
+	}
+
+	focus = {
+		id = AFR_workers_councils
+		icon = GFX_focus_SOV_collectivisation
+		text = "Establish Workers' Councils"
+		prerequisite = { focus = AFR_red_africa }
+		x = 13
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = { AFR_soviet_councils }
+		}
+	}
+
+	focus = {
+		id = AFR_support_german_revolution
+		icon = GFX_focus_SOV_support_communist_coup
+		text = "Solidarity with the German Commune"
+		prerequisite = { focus = AFR_workers_councils }
+		x = 15
+		y = 1
+		cost = 10
+		completion_reward = {
+			GER = { add_opinion_modifier = { target = AFR modifier = AFR_revolutionary_aid } }
+			add_ideas = { AFR_german_solidarity }
+		}
+	}
+
+	focus = {
+		id = AFR_union_with_ottomans
+		icon = GFX_focus_SOV_influence_balkans
+		text = "Propose Union to the Communist Ottomans"
+		prerequisite = { focus = AFR_support_german_revolution }
+		x = 15
+		y = 2
+		cost = 10
+		available = {
+			OTT = { has_government = communism }
+			OTT = { is_faction_leader = yes }
+		}
+		completion_reward = {
+			OTT = { country_event = { id = afr_union_with_ottomans.1 days = 1 } }
+		}
+	}
+
+	focus = {
+		id = AFR_aid_hungarian_comrades
+		icon = GFX_focus_generic_volunteer_corps
+		text = "Aid to the Hungarian Comrades"
+		prerequisite = { focus = AFR_support_german_revolution }
+		x = 13
+		y = 2
+		cost = 10
+		completion_reward = {
+			HUN = { add_opinion_modifier = { target = AFR modifier = AFR_comrade_aid } }
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = AFR_infiltrate_petanist_state
+		icon = GFX_goal_generic_spy
+		text = "Infiltrate the Pétainist State"
+		prerequisite = { focus = AFR_aid_hungarian_comrades }
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = { AFR_fifth_column }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = AFR_reclaim_metropole
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		text = "Reclaim the Metropole"
+		prerequisite = { focus = AFR_infiltrate_petanist_state focus = AFR_union_with_ottomans }
+		x = 14
+		y = 3
+		cost = 10
+		completion_reward = {
+			create_wargoal = { target = FRA type = annex_everything }
+		}
+	}
+
+	focus = {
+		id = AFR_international_brigades
+		icon = GFX_focus_generic_volunteer_corps
+		text = "Raise International Brigades"
+		prerequisite = { focus = AFR_reclaim_metropole }
+		x = 16
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_manpower = 75000
+			army_experience = 10
+			create_unit = {
+				division_name = "International Brigade"
+				template = "Infantry Division"
+				size = 1
+				start_experience_factor = 0.3
+				force_equipment = yes
+			}
+		}
+	}
+
+	focus = {
+		id = AFR_international_revolution
+		icon = GFX_focus_SOV_influence_balkans
+		text = "Spread the FailureReich Revolution"
+		prerequisite = { focus = AFR_reclaim_metropole }
+		x = 14
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_ideas = { AFR_revolutionary_export }
+			create_faction = "Pan-Communist Front"
+		}
+	}
 
 #########################
 #### GENERAL REGIME #####
