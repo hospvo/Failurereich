@@ -165,6 +165,31 @@ country_event = {
 		HOL = { add_state_claim = 6 }
 	}
 }
+#######france commune########
+
+country_event = {
+    id = AFR_union_with_ottomans.1
+    title = afr_union_with_ottomans.1.t
+    desc = afr_union_with_ottomans.1.d
+    picture = GFX_report_event_generic_diplomacy
+
+    is_triggered_only = yes
+	original_tag = TUR
+
+    option = {
+        name = afr_union_with_ottomans.1.a
+        ai_chance = { factor = 75 }
+        AFR = { add_to_faction = TUR }
+        AFR = { add_opinion_modifier = { target = TUR modifier = joined_faction_good value = 50 } }
+        TUR = { add_opinion_modifier = { target = AFR modifier = joined_faction_good value = 50 } }
+    }
+
+    option = {
+        name = afr_union_with_ottomans.1.b
+        ai_chance = { factor = 25 }
+        AFR = { add_opinion_modifier = { target = TUR modifier = refused_faction_invite value = -40 } }
+    }
+}
 
 ### fall ###
 
@@ -215,7 +240,7 @@ country_event = {
 	}
 	
 	option = {
-	    name= "No surrender!(not recommend)"
+	    name= "Ils ne passeront pas!(not recommend)"
 	}	
 }
 

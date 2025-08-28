@@ -184,7 +184,22 @@ ideas = {
 				army_core_defence_factor = 0.05
 			}
 		}
-
+		
+		ROM_constitutional_monarchy = {
+		
+		    picture = generic_war_preparation
+			
+            allowed = {
+                original_tag = ROM
+            }
+    
+            removal_cost = -1
+    
+            modifier = {
+               stability_factor = 0.10
+               communism_drift = 0.02
+            }
+        }
 
 		ROM_agrarian_reform = {
 
