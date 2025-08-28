@@ -1,0 +1,12 @@
+
+state={
+	id=986
+	name="STATE_986"
+	provinces={
+		1129 2002 2076 3989 7106 10729 12708 12868 
+	}
+	manpower=16959758
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
