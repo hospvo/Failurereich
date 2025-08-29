@@ -1,10 +1,10 @@
 
 state={
-	id=986
-	name="STATE_986" #
-	manpower = 16959758 
+	id=985
+	name="STATE_985" #
+	manpower = 109808 
 	
-	state_category = town
+	state_category = rural
 	
 	resources={
 
@@ -13,18 +13,19 @@ state={
 	history={
 		owner = RAJ
 		add_core_of = RAJ
-		add_core_of = KHL 
+		add_core_of = SKK
 		buildings = {
 			infrastructure = 1
 		}
+
 		victory_points = {
-			10729 3
+			4435 1 # Gangtok
 		}
 
 	}
 
 	provinces={
-		1129 2002 2076 3989 7106 10729 12708 12868 
+		4435
 	}
 
 	local_supplies=0.0 

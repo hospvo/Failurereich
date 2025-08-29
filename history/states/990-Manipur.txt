@@ -1,26 +1,22 @@
 state={
-	id=988
-	name="STATE_988"
+	id=990
+	name="STATE_990"
 	provinces={
-		5075 5105 8013 8044  
+		1525 1553 12322  
 	}
 	state_category = rural
-	manpower = 512000
+	manpower = 445606
 	history={
 		owner = RAJ
-		add_core_of = RAJ
-		add_core_of = PAK
-		add_core_of = BLC
+		add_core_of = MPU
 		buildings = {
 			infrastructure = 1
 		}
 
 		victory_points = {
-			5105 3 # Quetta
+			1553 5
 		}
-
 	}
-
 	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	local_supplies=1.000
 }

@@ -1,11 +1,29 @@
+
 state={
 	id=1001
 	name="STATE_1001"
-	provinces={
-		4943 5098 9816 12773 
+	manpower = 390139
+	
+	state_category = rural
+
+	history={
+		owner = PER
+		victory_points = {
+			4943 5
+		}
+		victory_points = {
+			5098 3
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PER
+		add_core_of = KUR
 	}
-	manpower=390139
-	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
+
+	provinces={
+		4943 9816 5098 12773
+	}
+
+	local_supplies=0.0 
 }
