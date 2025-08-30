@@ -17,6 +17,7 @@ ANH = "countries/Anhui.txt"
 
 OTT = "countries/Konya.txt"
 TRK = "countries/Candar.txt" 
+MSQ = "countries/Mashriq.txt"
 
 #### Temp tags ####
 

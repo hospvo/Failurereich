@@ -1,4 +1,6 @@
-capital = 2
+﻿capital = 2 # Rome
+
+ETH_set_up_lon_arms_resolution_effect = yes 
 
 if = {
 	limit = {
@@ -19,12 +21,56 @@ starting_train_buffer = 1.5
 
 set_research_slots = 4
 set_stability = 0.6
-set_war_support = 0.7
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	set_war_support = 0.65 # Was 0.7, but now get +5% from the Collosseum
+	ELSE = {
+		set_war_support = 0.8
+	}
+}
+
 add_ideas = {
+	vittorio_emanuele
 	vittoria_mutilata
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+}
+
+# RESISTANCE / COMPLIANCE
+
+550 = { #ERITREA
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+559 = { #SOMALILAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+844 = { #JUBALAND
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+
+every_owned_state = { #LIBYAN STATES
+	limit = {
+		is_core_of = LBA
+		NOT = { state = 273 } #Don't add resistance in the middle of the impassable desert thanks
+	}
+	start_resistance = yes
+	set_compliance = 35
+	set_resistance = 0
+	set_garrison_strength = 1.0
 }
 
 
@@ -42,6 +88,11 @@ set_variable = { ITA_missiolinis_min_cd_between_missions = 30 } #WARNING: IF THI
 
 set_country_flag = { flag = ITA_missiolinis_level_flag value = 1 } #Basic level - Default missions
 
+#DECISIONS values
+#ETH_hold_the_north_time initialized in ETH scope inside the ETH history file
+set_variable = { ITA_missiolinis_conquer_ethiopia_days = 170 }
+set_variable = { ITA_missiolinis_pacify_ethiopia_days = 720 }
+set_variable = { ITA_missiolinis_default_days = 350 }
 
 set_variable = { ITA_missiolinis_number_of_civs_goal = 4 } #Used by Strengthen Heavy Industry Missiolini
 set_variable = { ITA_missiolinis_fielded_manpower_goal = 1000000 } # (1kk) Used by Strengthen the Army Missiolini
@@ -69,7 +120,6 @@ if = {
 ################ BOP ##################
 #######################################
 
-#set_variable = { ITA_cores_lost_for_modifiers = 0 } #TODO_Manu: This will be killed once there is code support for has_bop_modifier or something like that
 set_variable = { ITA_bop_take_over_ministry_cost = 50 }
 set_variable = { ITA_bop_resign_ministry_cost = 15 }
 set_variable = { ITA_bop_liturgical_reforms_cd = 365 }
@@ -87,6 +137,14 @@ set_variable = { ITA_export_midget_submarines_days = 90 }
 ################
 ### BBA vars ###
 ################
+
+# ETHIOPIAN STATES ARRAY
+every_state = {
+	limit = {
+		is_initial_ethiopian_state = yes
+	}
+	add_to_array = { ROOT.ITA_initial_ethiopian_states = THIS }
+}
 
 #INDUSTRIALIZATION
 set_variable = { ITA_new_industrialization_program_factories_required = 100 }
@@ -162,7 +220,7 @@ set_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0 }
 set_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0 }
 
 add_dynamic_modifier = { modifier = ITA_military_industry_dynamic_modifier }
-add_ideas = ITA_hidden_research_penalties_ns #TODO_Manu: Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier. Delete when code support is in
+add_ideas = ITA_hidden_research_penalties_ns # Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier.
 
 
 #REGIO ESERCITO
@@ -206,6 +264,7 @@ set_variable = { ITA_re_max_command_power_mult = 0 }
 set_variable = { ITA_re_supply_consumption_factor = 0 }
 set_variable = { ITA_re_acclimatization_hot_climate_gain_factor = 0 }
 set_variable = { ITA_re_heat_attrition_factor = 0 }
+set_variable = { ITA_re_sp_land_land_cruiser_speed_factor = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regio_esercito_dynamic_modifier }
 
@@ -226,6 +285,8 @@ set_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0 }
 set_variable = { ITA_ra_air_range_factor = 0 }
 set_variable = { ITA_ra_air_superiority_efficiency = 0 }
 set_variable = { ITA_ra_air_intercept_efficiency = 0 }
+set_variable = { ITA_ra_sp_air_intercontinental_bomber_speed_factor = 0 }
+set_variable = { ITA_ra_sp_air_mothership_aircraft_speed_factor = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
 
@@ -254,6 +315,7 @@ set_variable = { ITA_rm_sub_retreat_speed = 0 }
 set_variable = { ITA_rm_decryption_factor = 0 }
 set_variable = { ITA_rm_navy_intel_factor = 0 }
 set_variable = { ITA_rm_naval_invasion_prep_speed = 0 }
+set_variable = { ITA_rm_sp_naval_ice_carrier_speed_factor = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regia_marina_dynamic_modifier }
 
@@ -277,7 +339,16 @@ set_variable = { ITA_ra_ground_attack_factor = 0 } #Airforce
 set_variable = { ITA_ra_air_cas_present_factor = 0 } #Airforce
 set_variable = { ITA_ra_air_mission_efficiency = 0 } #Airforce
 set_variable = { ITA_ra_air_attack = 0 } #Airforce
-set_variable = { ITA_ra_air_interception = 0 } #Airforce
+
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.3
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.5
+}
 
 # Starting tech
 set_technology = {
@@ -286,6 +357,7 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
+	tech_trucks = 1
 	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
@@ -382,6 +454,8 @@ if = {
 			iw_medium_airframe = 1
 			basic_small_airframe = 1
 			basic_medium_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
 		}
 	else = {
 		set_air_oob = "ITA_1936_air_legacy"
@@ -390,6 +464,7 @@ if = {
 			early_bomber = 1
 			naval_bomber1 = 1
 			CAS1 = 1
+			early_transport_plane = 1
 		}
 	}
 }
@@ -401,6 +476,20 @@ if = {
 	add_ideas = MTG_naval_treaty_cheating
 }
 
+# DIPLOMACY / WAR 36
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+
+	declare_war_on = {
+		target = ETH
+		type = annex_everything
+	}
+	give_guarantee = ALB
+}
+
+
 set_convoys = 200
 
 set_politics = {
@@ -410,19 +499,18 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	reactionary = 2
-	fascism = 91
-	communism = 7
-	neutrality = 0
+	democratic = 1
+	fascism = 79
+	communism = 1
+	reactionary = 19
 }
 
 recruit_character = ITA_benito_mussolini
-recruit_character = ITA_rodolfo_graziani
-recruit_character = ITA_julius_evola
 recruit_character = ITA_grand_council
 recruit_character = ITA_vittorio_emanuele_iii
 recruit_character = ITA_ferruccio_parri
 recruit_character = ITA_palmiro_togliatti
+recruit_character = ITA_rodolfo_graziani
 recruit_character = ITA_pietro_badoglio
 recruit_character = ITA_emilio_de_bono
 recruit_character = ITA_ugo_cavallero
@@ -534,12 +622,18 @@ recruit_character = ITA_abba_jofir_doppleganger
 recruit_character = ITA_hailu_tekle_haymanot_doppleganger
 recruit_character = ITA_seyoum_mengesha_doppleganger
 
+recruit_character = ITA_robert_longhi
+recruit_character = ITA_mario_castoldi
+recruit_character = ITA_giovanni_giorgi
+recruit_character = ITA_filippo_bonfiglietti
+recruit_character = ITA_curio_bernardis
+
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####
 ########################################
 
-### IF NOT BBA, trigger the first Missiolini from here #TODO_Manu: PLEASE CHECK IF THIS ACTUALLY WORKS (character has just been recruited)
+### IF NOT BBA, trigger the first Missiolini from here
 if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }
@@ -548,7 +642,7 @@ if = {
 }
 
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.11 days = 185 random_days = 5 } } # JUN 36 - Conquer Ethiopia  - DEC 36 - (170 days)
-#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #TODO_Manu: This is now triggered after war with MTTH
+#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #MM: This is now triggered after war with MTTH
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.31 days = 370 random_days = 5 } } # JAN 37 - Industrialization - DEC 37 - (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.41 days = 735 random_days = 5 } } # JAN 38 - Increase Army - DEC 38 (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.00 days = 1105 random_days = 5 } } # JAN 39 - Random mission dispatcher (350 days) - This event auto-triggers itself every 6 months
@@ -663,6 +757,18 @@ if = {
 		icon = "GFX_ITA_early_bomber_old_medium"
 	}
 	create_equipment_variant = {
+		name = "S.72" # Savoia-Marchetti S.72, used by CHI
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			engine_type_slot = engine_1_3x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		obsolete = yes
+		icon = "GFX_ITA_early_bomber_medium"
+	}
+	create_equipment_variant = {
 		name = "SM.81" #
 		type = medium_plane_airframe_1
 		modules = {
@@ -753,7 +859,7 @@ if = {
 		variant_name = "Fiat 3000B"
 	}
 
-	create_equipment_variant = {
+	create_equipment_variant = {  #Note: There is a copy of this variant in Finnish National Focus file (FIN_bring_foreign_armor_experts). Any changes here should also be applied there
 		name = "L3/35"
 		type = light_tank_chassis_1
 		parent_version = 0

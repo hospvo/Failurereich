@@ -11,7 +11,8 @@ state = {
 
 	history = {
 
-		owner = IRQ
+		owner = MSQ
+		add_core_of = MSQ
 		add_core_of = IRQ
 		add_claim_by = KUR
 
