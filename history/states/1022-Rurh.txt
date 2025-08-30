@@ -11,8 +11,15 @@ state={
 		add_core_of = RHI
 		add_core_of = PRE
 
-		victory_points = { 
-			11435 1 # Bitburg
+		victory_points = {
+			6469 10 # Essen
+		}
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 2
 		}
 	}
 

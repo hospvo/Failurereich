@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = RAJ
+		owner = SKK
 		add_core_of = RAJ
 		add_core_of = SKK
 		buildings = {
