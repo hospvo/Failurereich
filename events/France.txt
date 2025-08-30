@@ -228,9 +228,6 @@ country_event = {
 		HOL = { set_state_owner = 29 }
 		LOM = { set_state_owner = 735 }
 		LOM = { set_state_owner = 851 }
-		GER = { set_state_owner = 976 }
-		GER = { set_state_owner = 1004 }
-		GER = { set_state_owner = 1005 }
 		AFR = { set_state_owner = 1 }
 		GER = { puppet = FRA }
 

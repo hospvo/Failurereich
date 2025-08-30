@@ -396,9 +396,6 @@ country_event = {
 		YUG = { set_state_owner = 163 }
 		YUG = { set_state_owner = 109 }
 
-		BEL = { set_state_owner = 1004 }
-		BEL = { set_state_owner = 1005 }
-
 
 		WGR = {
 			annex_country = {
@@ -412,8 +409,6 @@ country_event = {
 	   			 target = FRA
 	   			 transfer_troops = yes
 		      }
-		      set_state_owner = 975
-		      set_state_owner = 976
 		      set_state_owner = 851
 		}
 
