@@ -70,14 +70,14 @@ recruit_character = ASY_benjamin_arsanis
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = reactionary 
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
 	fascism = 0
-	neutrality = 50
+	reactionary = 50
 	democratic = 30
 	communism = 20
 }

@@ -7,7 +7,7 @@ state = {
 
 	history = {
 
-		owner = HSH
+		owner = JSH
 		add_core_of = IRQ
 
 		victory_points = {
