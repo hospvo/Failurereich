@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = RAJ
+		owner = PAK
 		buildings = {
 		}
 		add_core_of = NWF
