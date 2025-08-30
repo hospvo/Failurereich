@@ -1,0 +1,30 @@
+
+state={
+	id=1042
+	name="STATE_1043"
+
+	history={
+		owner = LOM
+		victory_points = {
+			9752 1 
+		}
+		buildings = {
+			infrastructure = 2
+			6973 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = ITA
+
+	}
+
+	provinces={
+		3773 3976 6790 6973 9752 
+	}
+	manpower=1120240
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

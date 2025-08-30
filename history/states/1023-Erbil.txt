@@ -1,0 +1,22 @@
+
+state={
+	id=1023
+	name="STATE_1023"
+
+	history={
+		owner = KUR
+		add_core_of = KUR
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		3916 5014 6826 10804 10811 
+	}
+	manpower=296000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

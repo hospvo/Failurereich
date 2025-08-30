@@ -1,0 +1,24 @@
+state={
+	id=1026
+	name="STATE_1026"
+	provinces={
+		868 1658 1738 6887 7684 7999 9792 10535 12627 
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = USA
+		victory_points = {
+			1658 5 
+		}
+
+	}
+	manpower=269500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

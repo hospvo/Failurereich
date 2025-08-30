@@ -1,0 +1,22 @@
+
+state={
+	id=1032
+	name="STATE_1032"
+
+	history={
+		owner = JSH
+		add_core_of = JSH
+		add_core_of = JSH
+		victory_points = {
+			4603 1 
+		}
+
+	}
+
+	provinces={
+		1544 4440 4562 4603 
+	}
+	manpower=26000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

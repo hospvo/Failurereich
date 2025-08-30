@@ -1,0 +1,23 @@
+state={
+	id=1047
+	name="STATE_1048"
+	history={
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11562 1 
+		}
+
+	}
+	provinces={
+		11562 
+	}
+	manpower=159000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

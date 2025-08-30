@@ -1,0 +1,19 @@
+
+state={
+	id=1046
+	name="STATE_1047"
+	history={
+		owner = AFR
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		1958 8088 10731
+	}
+	manpower=210100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

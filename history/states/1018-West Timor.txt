@@ -1,0 +1,18 @@
+state={
+	id=1018
+	name="STATE_1018"
+	provinces={
+		1339 1355 4358 
+	}
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	state_category = pastoral
+
+	manpower=19542
+	buildings_max_level_factor=1.000
+}

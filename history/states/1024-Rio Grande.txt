@@ -1,0 +1,21 @@
+state={
+	id=1024
+	name="STATE_1024"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = USA
+
+	}
+	provinces={
+		1972 5044 10645 10914 12552 
+	}
+	manpower=112000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

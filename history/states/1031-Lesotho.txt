@@ -1,0 +1,19 @@
+
+state={
+	id=1031
+	name="STATE_1031"
+
+	history={
+
+		owner = SAF
+		add_core_of = SAF
+
+	}
+
+	provinces={
+		4556 
+	}
+	manpower=20000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,29 @@
+state={
+	id=1029
+	name="STATE_1029"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 2
+
+		}
+		add_core_of = USA
+
+		victory_points = {
+			11654 3 
+		}
+
+	}
+
+	provinces={
+		734 3733 6707 9664 11654 11680 
+	}
+	manpower=590000
+	buildings_max_level_factor=1.000
+	state_category=city
+}
