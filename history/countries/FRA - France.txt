@@ -58,29 +58,6 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = SYR
-		autonomous_state = autonomy_colony
-		freedom_level = 0.5
-	}
-	set_autonomy = {
-		target = LEB
-		autonomous_state = autonomy_colony
-		freedom_level = 0.5
-	}
-	else = {
-		puppet = SYR
-		puppet = LEB
-	}
-}
-
 set_research_slots = 3
 IF = {
 	limit = {
@@ -410,35 +387,46 @@ if = {
 
 set_convoys = 300
 
+create_faction = "Pacte d'Acier"
+add_to_faction = FRA
+add_to_faction = ENG
+add_to_faction = ITA
+
+give_guarantee = POL
 
 set_politics = {
-	ruling_party = fascism 
+	ruling_party = reactionary 
 	last_election = "1932.5.1"
-	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
+
 set_popularities = {
-	democratic = 0
-	fascism = 95
-	neutrality = 5
-	communism = 2
+	democratic = 20
+	reactionary = 30
+	fascism = 30
+	left = 20
 }
 
-add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
-	limited_conscription
-	FRA_full_employment
-	FRA_political_violence
-	FRA_inefficient_economy_2
-}
-
-give_guarantee = CZE
-give_guarantee = YUG
 give_guarantee = ROM
 
+add_ideas = {
+	FRA_military_junta_1
+	FRA_military_constitution
+
+	#laws
+	limited_exports
+	limited_conscription
+}
+
 recruit_character = FRA_philippe_petain
+recruit_character = FRA_francois_de_la_rocque
+recruit_character = FRA_jacques_doriot
+recruit_character = FRA_marcel_bucard
+recruit_character = FRA_rene_binet
+recruit_character = FRA_marcel_deat
+recruit_character = FRA_michel_clemenceau
+recruit_character = FRA_regency
+
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval
 recruit_character = FRA_edouard_daladier
