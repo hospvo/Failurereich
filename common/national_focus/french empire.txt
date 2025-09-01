@@ -576,6 +576,12 @@ focus = {
 	available = {
 		TUR = { has_government = communism }
 	}
+	OR = {
+       NOT = { is_in_faction = yes }
+       AND = { is_faction_leader = yes }
+    }
+
+     bypass = { NOT = { TUR = { exists = yes } } }
 	completion_reward = {
 	    TUR = { country_event = { days = 1 id = AFR_union_with_ottomans.1 } 
 		}
