@@ -27,7 +27,7 @@ ideas = {
 		}
 	
 		AFR_german_solidarity = {
-			icon = GFX_idea_generic_international_brigades
+			icon = GFX_idea_german_france_military_alliance
 			allowed = { tag = AFR }
 			removal_cost = -1
 			ai_will_do = { factor = 1 }

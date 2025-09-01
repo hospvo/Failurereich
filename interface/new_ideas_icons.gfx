@@ -93,4 +93,8 @@ spriteTypes = {
 	name = "GFX_idea_two_nation"
 	texturefile = "gfx/interface/ideas/USA/GFX_two_nation.png"
 	}
+    spriteType = {
+        name = "GFX_idea_german_france_military_alliance"
+        texturefile = "gfx/interface/ideas/german_france_military_alliance.dds"
+    }
 }
