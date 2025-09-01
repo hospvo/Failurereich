@@ -80,9 +80,9 @@ create_country_leader = {
 }
 
 set_popularities = {
-	democratic = 33
-	neutrality = 33
-	communism = 34
+	democratic = 10
+	neutrality = 20
+	communism = 70
 }
 
 set_cosmetic_tag = HUN_puppet

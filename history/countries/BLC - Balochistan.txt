@@ -39,15 +39,15 @@ if = {
 }
 
 set_politics = {
-	ruling_party = reactionary 
+	ruling_party = communism
 	last_election = "1934.2.11"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 30
-	communism = 10
-	reactionary = 60
+	democratic = 0
+	communism = 70
+	reactionary = 30
 	fascism = 0
 }
 

@@ -135,13 +135,16 @@ recruit_character = SLO_anton_pulanick
 }
 
 set_politics = {
-	ruling_party = fascism
-	last_election = "1933.3.5"
+	ruling_party = communism
+	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
+
 set_popularities = {
-	democratic = 5
-	fascism = 90
-	communism = 5
+	democratic = 10
+	neutrality = 20
+	communism = 70
 }
+
+set_cosmetic_tag = HUN_puppet

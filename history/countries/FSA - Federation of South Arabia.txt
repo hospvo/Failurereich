@@ -8,7 +8,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = reactionary
 	last_election = "1934.2.11"
 	election_frequency = 48
 	elections_allowed = yes
@@ -16,7 +16,7 @@ set_politics = {
 set_popularities = {
 	democratic = 30
 	communism = 5
-	neutrality = 60
+	reactionary = 60
 	fascism = 5
 }
 

@@ -11,7 +11,7 @@ state = {
 
 	history = {
 
-		owner = OMA
+		owner = IMO
 		add_core_of = IMO
 		#add_core_of = OMA
 

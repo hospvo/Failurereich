@@ -7,7 +7,7 @@ state = {
 	
 	history = {
 		
-		owner = KUW
+		owner = UAE
 		add_core_of = KUW
 		victory_points = {
 			8085 1 # Kuwait City
