@@ -817,6 +817,47 @@ add_ideas = {
 activate_mission = GER_mefo_bills_mission
 
 # Character Recruitment
+
+
+
+create_country_leader = {
+	name = "Rosa Luxemburg"
+	desc = "POLITICS_LUX_DESC"
+	picture = "gfx/leaders/GER/Portrait_Germany_Rosa_Luxemburg.dds"
+	expire = "1956.1.1"
+	ideology = leninism
+	traits = {
+		assassination_survivor
+		stalins_puppet
+		political_prisoner
+	}
+}
+
+create_country_leader = {
+	name = "Rosa Luxemburg"
+	desc = "POLITICS_LUX_DESC"
+	picture = "gfx/leaders/GER/Portrait_Germany_Rosa_Luxemburg.dds"
+	expire = "1956.1.1"
+	ideology = socialism
+	traits = {
+		assassination_survivor
+		political_prisoner
+	}
+}
+
+create_country_leader = {
+	name = "Ernst Thälmann"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "gfx/leaders/GER/GER_ernst_thalmann.png"
+	expire = "1956.1.1"
+	ideology = stalinism
+	traits = {
+		assassination_survivor
+		stalins_puppet
+		political_prisoner
+	}
+}
+
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer
 recruit_character = GER_adolf_hitler
