@@ -343,7 +343,6 @@ country_event = {
 	        white_peace = USA
 		DES = { set_state_owner = 377 }
 		DES = { set_state_owner = 379 }
-		DES = { set_state_owner = 982 }
 		
 			diplomatic_relation = {
     				country = USA
@@ -371,7 +370,6 @@ country_event = {
 
 		NWG  = { transfer_state = 358 }
 		NWG  = { transfer_state = 357 }
-		NWG  = { transfer_state = 984 }
 
 		NWG  = {	
 
@@ -620,8 +618,8 @@ country_event = {
 		name = "Those liberal idiots betray us!"
 
 		CAL = { transfer_state = 378 }
-		CAL = { transfer_state = 982 }
-		CAL = { transfer_state = 983 }
+		CAL = { transfer_state = 1027 }
+		CAL = { transfer_state = 1028 }
 
 		CAL = {	
 			set_politics = {

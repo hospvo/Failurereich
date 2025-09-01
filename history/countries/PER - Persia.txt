@@ -223,123 +223,6 @@ IF = {
 }
 
 
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-	IF = {
-		limit = {
-			has_dlc = "Graveyard of Empires"
-		}
-
-		complete_national_focus = PER_the_pahlavi_imperium
-		complete_national_focus = PER_stand_with_giants
-		complete_national_focus = PER_forced_secularization
-		complete_national_focus = PER_modernizing_iran
-		complete_national_focus = PER_restructure_army
-		complete_national_focus = PER_expand_imperial_guard
-		complete_national_focus = PER_persian_german_trade
-		complete_national_focus = PER_increase_military_funding
-		complete_national_focus = PER_rapid_industrialization
-		complete_national_focus = PER_tehran_power_plant
-		complete_national_focus = PER_increase_education_funding
-		complete_national_focus = PER_adult_literacy
-		complete_national_focus = PER_develop_cities
-		complete_national_focus = PER_expand_military_facilities
-		complete_national_focus = PER_foreign_retraining
-		complete_national_focus = PER_trial_fifty_three
-		complete_national_focus = PER_open_abadan
-		complete_national_focus = PER_military_high_schools
-
-		diplomatic_relation = {
-			country = TUR
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		diplomatic_relation = {
-			country = IRQ
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		diplomatic_relation = {
-			country = AFG
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
-
-		ELSE = {
-			#generic focuses
-			complete_national_focus = army_effort
-			complete_national_focus = equipment_effort
-			complete_national_focus = motorization_effort
-			complete_national_focus = aviation_effort
-			complete_national_focus = naval_effort
-			complete_national_focus = flexible_navy
-			complete_national_focus = industrial_effort
-			complete_national_focus = construction_effort
-			complete_national_focus = production_effort
-		}
-	}
-	
-	oob = "PER_1939"
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "PER_1936_air_bba" #intentionally using 36 oob (No significant airforce expansion)
-		else = {
-			set_air_oob = "PER_1936_air_legacy"
-		}
-	}
-	set_technology = {
-		tech_support = 1
-		tech_recon = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		gw_artillery = 1
-		interwar_antiair = 1
-		interwar_artillery = 1
-
-		#doctrines
-		air_superiority = 1
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-	complete_special_project = {
-		project = sp:sp_air_radar
-	}
-	if = {
-		limit = {
-			NOT = { has_dlc = "No Step Back" }
-		}
-		set_technology = {
-			gwtank = 1
-		}
-	}
-}
-
 set_convoys = 10
 
 set_politics = {
@@ -354,4 +237,5 @@ set_popularities = {
 	communism = 89
 	reactionary = 5
 }
+
 puppet = BLC

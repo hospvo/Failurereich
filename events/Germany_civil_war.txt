@@ -89,7 +89,7 @@ country_event = {
 	}
 	
 	option = { 
-		name = "Schiesse !"
+		name = "Gottverdamnt !"
 
 	        declare_war_on = {
 		                target = HAN

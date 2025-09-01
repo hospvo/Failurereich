@@ -11,7 +11,7 @@ state = {
 	}
 
 	history = {
-		owner = NOR
+		owner = SWE
 		add_core_of = NOR
 		add_core_of = SMI
 		
