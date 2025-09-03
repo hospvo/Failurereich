@@ -13,7 +13,8 @@ country_event = {
 		tag = BAY
 		country_exists = AUS
 		country_exists = GER
-		AUS = { has_government = fascism }
+		NOT = { country_exists = WUR }
+		BAY = { has_government = fascism }
         }
 	
 	mean_time_to_happen = {

@@ -27,15 +27,15 @@ HAN_kommissariat = {
 					    transfer_troops = yes
 				}
 			}
-			HAN = {
-				puppet = RKB
-				transfer_state = 8
-			}
 			RKB = {
 				set_cosmetic_tag = BEL_volkskommissariat 
 				transfer_state = 6
 				transfer_state = 34
 				transfer_state = 29
+			}
+			HAN = {
+				puppet = RKB
+				transfer_state = 8
 			}
 		}	
 	}
@@ -66,14 +66,14 @@ HAN_kommissariat = {
 					    transfer_troops = yes
 				}
 			}
-			HAN = {
-				puppet = RKN 
-			}
 			RKN = {
 				set_cosmetic_tag = HOL_volkskommissariat 
 				transfer_state = 35
 				transfer_state = 7
 				transfer_state = 36
+			}
+			HAN = {
+				puppet = RKN 
 			}
 		}	
 	}
@@ -131,10 +131,6 @@ HAN_kommissariat = {
 					    transfer_troops = yes
 				}
 			}
-			HAN = {
-				puppet = RKG 
-				transfer_state = 977
-			}
 			RKG = {
 				set_cosmetic_tag = SCA_volkskommissariat 
 				transfer_state = 37
@@ -169,6 +165,10 @@ HAN_kommissariat = {
 				transfer_state = 918
 				transfer_state = 919
 				transfer_state = 925
+			}
+			HAN = {
+				puppet = RKG 
+				transfer_state = 977
 			}
 		}	
 	}
@@ -282,7 +282,7 @@ HAN_kommissariat = {
 					    transfer_troops = yes
 				}
 			}
-			RKU = {
+			RKO = {
 				set_cosmetic_tag = BLR_volkskommissariat 
 				transfer_state = 809
 				transfer_state = 810

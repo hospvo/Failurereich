@@ -22,10 +22,10 @@ BAY_kommissariat = {
 				}
 		complete_effect = {
 			BAY = {
-				puppet = BEL
+				puppet = RKB 
 				transfer_state = 8
 			}
-			BEL = {
+			RKB = {
 				set_cosmetic_tag = BEL_RK
 				transfer_state = 6
 				transfer_state = 34
@@ -58,7 +58,7 @@ BAY_kommissariat = {
 				puppet = HOL
 				transfer_state = 1006
 			}
-			HOL = {
+			RKN = {
 				set_cosmetic_tag = HOL_RK
 				transfer_state = 35
 				transfer_state = 7
@@ -96,11 +96,8 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			BAY = {
-				puppet = NOR
-				transfer_state = 968
-			}
-			NOR = {
+			
+			RKG = {
 				set_cosmetic_tag = NOR_RK
 				transfer_state = 37
 				transfer_state = 110
@@ -133,6 +130,10 @@ BAY_kommissariat = {
 				transfer_state = 917
 				transfer_state = 918
 				transfer_state = 919
+			}
+			BAY = {
+				puppet = RKG 
+				transfer_state = 968
 			}
 		}	
 	}
@@ -170,7 +171,7 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			UKR = {
+			RKU = {
 				set_cosmetic_tag = UKR_RK
 				transfer_state = 93
 				transfer_state = 196
@@ -191,7 +192,7 @@ BAY_kommissariat = {
 				transfer_state = 193
 			}
 			BAY = {
-				puppet = UKR
+				puppet = RKU
 			}
 		}	
 	}
@@ -234,7 +235,7 @@ BAY_kommissariat = {
 				factor = 100
 				}
 		complete_effect = {
-			BLR = {
+			RKO = {
 				set_cosmetic_tag = LAT_RK
 				transfer_state = 809
 				transfer_state = 810
@@ -260,7 +261,7 @@ BAY_kommissariat = {
 				transfer_state = 194
 			}
 			BAY = {
-				puppet = BLR
+				puppet = RKO
 			}
 		}	
 	}

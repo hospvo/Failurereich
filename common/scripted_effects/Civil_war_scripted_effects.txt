@@ -299,10 +299,10 @@ GER_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 63 state = 85 state = 763 state = 188 state = 5 state = 62  state = 807
+					state = 55 state = 56 state = 57 state = 59 state = 843
 				}
 			}
-			PRE = { add_state_core = PREV }
+			HAN = { add_state_core = PREV }
 		}
 		every_owned_state = {
 			limit = {
@@ -315,23 +315,24 @@ GER_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 55 state = 56 state = 57 state = 59 state = 843
+					state = 63 state = 85 state = 763 state = 188 state = 5 state = 62  state = 807
 				}
 			}
-			HAN = { add_state_core = PREV }
+			PRE = { add_state_core = PREV }
 		}
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 42 state = 51 state = 50
+					state = 42 state = 51 state = 50 state = 978
 				}
 			}
 			WUR = { add_state_core = PREV }
 		}
-		release = PRE
+		
+		release = WUR
 		release = BAY
 		release = HAN
-		release = WUR
+		release = PRE
 
 		transfer_units_fraction = {
 			target = HAN
@@ -373,7 +374,6 @@ GER_setup_civil_war = {
 		set_major = yes
 	}
 }
-
 
 ######
 
