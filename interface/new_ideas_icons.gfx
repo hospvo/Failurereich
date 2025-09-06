@@ -95,6 +95,11 @@ spriteTypes = {
 	}
     spriteType = {
         name = "GFX_idea_german_france_military_alliance"
-        texturefile = "gfx/interface/ideas/german_france_military_alliance.dds"
+        texturefile = "gfx/interface/ideas/AFR/german_france_military_alliance.dds"
+    }
+	spriteTypes = {
+    spriteType = {
+        name = "GFX_idea_AFR_catholic_support"
+        texturefile = "gfx/interface/ideas/AFR/AFR_catholic_support.dds"
     }
 }

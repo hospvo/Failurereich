@@ -168,31 +168,27 @@ country_event = {
 #######france commune########
 
 country_event = {
-id = afr_union_with_ottomans.1
-title = afr_union_with_ottomans.1.t
-desc = afr_union_with_ottomans.1.d
-picture = GFX_report_event_generic_diplomacy
+    id = afr_union_with_ottomans.1
+    title = afr_union_with_ottomans.1.t
+    desc = afr_union_with_ottomans.1.d
+    picture = GFX_report_event_generic_diplomacy
 
+    is_triggered_only = yes
 
-is_triggered_only = yes
+    option = {
+        name = afr_union_with_ottomans.1.a
+        ai_chance = { factor = 75 }
+        TUR = { add_to_faction = AFR }
+        AFR = { add_opinion_modifier = { target = TUR modifier = joined_faction_good value = 50 } }
+        TUR = { add_opinion_modifier = { target = AFR modifier = joined_faction_good value = 50 } }
+    }	
 
-
-option = {
-name = afr_union_with_ottomans.1.a
-ai_chance = { factor = 75 }
-# Invite/attach TUR to AFR's faction from AFR scope
-TUR = { add_to_faction = AFR }
-AFR = { add_opinion_modifier = { target = TUR modifier = joined_faction_good value = 50 } }
-TUR = { add_opinion_modifier = { target = AFR modifier = joined_faction_good value = 50 } }
-}
-
-
-option = {
-name = afr_union_with_ottomans.1.b
-ai_chance = { factor = 25 }
-AFR = { add_opinion_modifier = { target = TUR modifier = refused_faction_invite value = -40 } }
-TUR = { add_opinion_modifier = { target = AFR modifier = refused_faction_invite value = -40 } }
-}
+    option = {
+       name = afr_union_with_ottomans.1.b
+       ai_chance = { factor = 25 }
+       AFR = { add_opinion_modifier = { target = TUR modifier = refused_faction_invite value = -40 } }
+       TUR = { add_opinion_modifier = { target = AFR modifier = refused_faction_invite value = -40 } }
+    }
 }
 
 ### fall ###

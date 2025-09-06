@@ -25,6 +25,25 @@ ideas = {
 				experience_gain_army_factor = 0.15
 			}
 		}
+		
+		AFR_catholic_support = {
+        picture = GFX_idea_AFR_catholic_support
+		
+            allowed = { }
+			
+            removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+            modifier = {
+                stability_factor = 0.05
+                weekly_manpower = 200
+                political_power_factor = 0.05
+            }
+        }
+
 	
 		AFR_german_solidarity = {
 			icon = GFX_idea_german_france_military_alliance
