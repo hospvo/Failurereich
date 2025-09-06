@@ -101,12 +101,10 @@
   AFR_appeal_to_the_catholic_church_desc: "Exiled in North Africa, our regime must seek legitimacy wherever it can be found. By presenting ourselves as defenders of the faith against communism and decadence, we may rally the clergy and faithful alike to our cause. With the Church’s blessing, our rule will appear ordained and our return to France inevitable."
   AFR_catholic_support: "Catholic Support"
   AFR_catholic_support_desc: "From the pulpits of Algiers to the Vatican itself, the Church has declared its sympathy with our cause. By portraying ourselves as defenders of Christendom against communism and godless revolution, we have gained the blessing of the clergy. Sermons encourage loyalty, young men enlist with renewed fervor, and the faithful see our regime as a divinely sanctioned guardian of France."
-  AFR_church_question: "The Question of the Church"
-  AFR_church_question_desc: "Napoleon has wielded the royal prerogative to dissolve parliaments and reforge France in his own image so the choice is: shall we embrace the authority of the Catholic Church to sanctify our rule, or shall we reaffirm the secular principles of the Republic? The decision will shape the legitimacy of our state and the nature of our eventual return to the Hexagone."
-  AFR_decision_appeal_church: "Appeal to the Catholic Church"
-  AFR_decision_appeal_church_desc: "By turning to the Church, we seek divine sanction for our authority. Sermons will bless our banners, the faithful will flock to our cause, and the Vatican’s approval may silence doubts about our claim to rule."
-  AFR_decision_enshrine_laicite: "Enshrine Laïcité"
-  AFR_decision_enshrine_laicite_desc: "France must not bow to clerical authority. By reaffirming laïcité, we honor the spirit of the Revolution and the Republic. The path may alienate the faithful, but it will anchor our state in modern, secular principles."
+  fra.100.title: "The Question of the Church"
+  fra.100_desc: "Napoleon has wielded the royal prerogative to dissolve parliaments and reforge France in his own image so the choice is: shall we embrace the authority of the Catholic Church to sanctify our rule, or shall we reaffirm the secular principles of the Republic? The decision will shape the legitimacy of our state and the nature of our eventual return to the Hexagone."
+  fra.100.a: "Appeal to the Catholic Church"
+  fra.100.b: "Enshrine Laïcité"
 
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"

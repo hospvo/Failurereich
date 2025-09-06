@@ -40,6 +40,7 @@ focus_tree = {
 			add_manpower = 200000
 			add_ideas = { AFR_bonaparte_cult }
 			country_event = { id = exiled.1 days = 1 }
+			country_event = { id = fra.100 days = 1 }
 		}
 	}
 
