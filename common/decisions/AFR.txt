@@ -1,0 +1,37 @@
+decision_category = {
+    id = AFR_church_question
+    icon = GFX_decision_generic_political_reform
+    allowed = {
+        original_tag = AFR
+        has_completed_focus = AFR_absolute_monarchy
+    }
+    visible = {
+        original_tag = AFR
+    }
+
+    decision = {
+        id = AFR_decision_appeal_church
+        icon = GFX_decision_generic_propaganda
+        allowed = {
+            NOT = { has_country_flag = FRA_laicite }
+            NOT = { has_country_flag = FRA_catholic_path }
+        }
+        complete_effect = {
+            set_country_flag = FRA_catholic_path
+        }
+        cost = 10
+    }
+
+    decision = {
+        id = AFR_decision_enshrine_laicite
+        icon = GFX_decision_generic_propaganda
+        allowed = {
+            NOT = { has_country_flag = FRA_catholic_path }
+            NOT = { has_country_flag = FRA_laicite }
+        }
+        complete_effect = {
+            set_country_flag = FRA_laicite
+        }
+        cost = 10
+    }
+}
