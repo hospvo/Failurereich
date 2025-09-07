@@ -256,8 +256,8 @@ country_event = {
 		LOM = { set_state_owner = 851 }
 		AFR = { set_state_owner = 1 }
 		GER = { puppet = FRA }
-		GER = annex_country = LUX
-		LOM = annex_country = ITA
+		GER = { annex_country = { target = LUX transfer_troops = yes } }
+		LOM = { annex_country = { target = ITA transfer_troops = no } }
 
 			ENG = {
 				country_event = { days = 4 id = france.11 }
