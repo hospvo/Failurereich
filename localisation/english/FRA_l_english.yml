@@ -110,7 +110,7 @@
   FRA_goal_lux: "Annex luxembourg"
   AFR_laicite: "Laïcité"
   AFR_laicite_desc: "This government has reaffirmed the secular character of the French state, rejecting clerical interference. Though it may unsettle the faithful, the decision strengthens the authority of the state, channels energy into scientific progress, and appeals to republican sympathizers."
-  AFR_laicite: "Enshrine Laïcité"
+  AFR_enshrine_laicite: "Enshrine Laïcité"
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."
