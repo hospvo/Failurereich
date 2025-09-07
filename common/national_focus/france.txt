@@ -1723,16 +1723,28 @@ focus_tree = {
     # --- Shared branch ---
     focus = {
         id = FRA_contact_allies
-        icon = GFX_generic_allies_build_influence
+        icon = GFX_focus_generic_allies_build_influence
         prerequisite = { focus = FRA_underground_networks }
         x = 21
         y = 8
-        cost = 5
+        cost = 10
+        available = { is_subject = yes overlord = { tag = GER } }
+
         completion_reward = {
-            add_political_power = 50
-            country_event = { id = fra_allies_aid.0 }
+            add_political_power = 25
+
+            if = {
+                limit = { ENG = { exists = yes } }
+                ENG = { country_event = { id = fra_allies_aid.1 days = 1 } }
+            }
+
+            if = {
+                limit = { USA = { exists = yes } }
+                USA = { country_event = { id = fra_allies_aid.2 days = 1 } }
+            }
         }
     }
+
 
     focus = {
         id = FRA_arm_the_maquis

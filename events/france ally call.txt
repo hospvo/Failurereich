@@ -1,18 +1,6 @@
 
 add_namespace = fra_allies_aid
 
-# Dispatcher after FRA_contact_allies
-country_event = {
-    id = fra_allies_aid.0
-    is_triggered_only = yes
-    hidden = yes
-    immediate = {
-        if = { limit = { ENG = { exists = yes } } ENG = { country_event = { id = fra_allies_aid.1 } } }
-        if = { limit = { USA = { exists = yes } } USA = { country_event = { id = fra_allies_aid.2 } } }
-    }
-}
-
-# UK receives request
 country_event = {
     id = fra_allies_aid.1
     title = fra_allies_aid.1.t
@@ -71,7 +59,6 @@ country_event = {
     }
 }
 
-# USA receives request
 country_event = {
     id = fra_allies_aid.2
     title = fra_allies_aid.2.t
