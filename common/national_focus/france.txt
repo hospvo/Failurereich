@@ -1701,27 +1701,148 @@ focus_tree = {
 		}
 	}
 	
-	###war with german branch###
-	
-	focus = {
-	    id = FRA_they_not_pass
-	    icon = GFX_FRA_marceal_deat
-	    text = "Leftist Victory"
+	###AFTER DEFEATED branch###
+
+    # --- Root focus ---
+    focus = {
+        id = FRA_underground_networks
+        icon = GFX_focus_generic_resistance
         x = 22
         y = 7
         cost = 10
-        available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        ai_will_do = {
-			factor = 1
-	    }
+        available = {
+            is_subject = yes
+            overlord = { tag = GER }
+        }
         completion_reward = {
-				add_popularity = {
-				ideology = left 
-				popularity = 0.01
-			    }
-		}
+            add_political_power = 100
+            add_stability = -0.05
+        }
     }
+
+    # --- Shared branch ---
+    focus = {
+        id = FRA_contact_allies
+        icon = GFX_generic_allies_build_influence
+        prerequisite = { focus = FRA_underground_networks }
+        x = 21
+        y = 8
+        cost = 10
+        completion_reward = {
+            add_political_power = 50
+            add_ideas = FRA_foreign_support
+        }
+    }
+
+    focus = {
+        id = FRA_arm_the_maquis
+        icon = GFX_focus_generic_army_artillery2
+        prerequisite = { focus = FRA_underground_networks }
+        x = 23
+        y = 8
+        cost = 10
+        completion_reward = {
+            add_manpower = 50000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                producer = FRA
+                amount = 5000
+            }
+        }
+    }
+
+    # --- Democratic Rebellion Path ---
+    focus = {
+        id = FRA_restore_republic
+        icon = GFX_focus_generic_democracy
+        prerequisite = { focus = FRA_contact_allies }
+        x = 20
+        y = 9
+        cost = 10
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_democrat_path_chosen
+        }
+        completion_reward = {
+            add_stability = 0.1
+            add_political_power = 100
+        }
+    }
+
+    # --- Junta / Authoritarian Path ---
+    focus = {
+        id = FRA_military_revolt
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = FRA_arm_the_maquis }
+        x = 24
+        y = 9
+        cost = 10
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_junta_path_chosen
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            add_stability = -0.05
+            add_political_power = 75
+        }
+    }
+
+    # --- Monarchy Path ---
+    focus = {
+        id = FRA_restore_monarchy
+        icon = GFX_focus_generic_monarchy
+        prerequisite = { focus = FRA_contact_allies }
+        x = 19
+        y = 9
+        cost = 10
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_monarchist_path_chosen
+        }
+        completion_reward = {
+            add_stability = 0.15
+            add_political_power = 50
+        }
+    }
+
+    # --- Vanguardist Path ---
+    focus = {
+        id = FRA_vanguardist_rebellion
+        icon = GFX_focus_generic_communism # Or custom GFX if you want a “red star but not Bolshevik”
+        prerequisite = { focus = FRA_arm_the_maquis }
+        x = 25
+        y = 9
+        cost = 10
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_vanguardist_path_chosen
+        }
+        completion_reward = {
+            add_manpower = 75000
+            add_war_support = 0.15
+        }
+    }
+
+    # --- Final shared rebellion trigger ---
+    focus = {
+        id = FRA_rebel_against_germany
+        icon = GFX_focus_generic_political_pressure
+        prerequisite = {
+            focus = FRA_restore_republic
+            focus = FRA_military_revolt
+            focus = FRA_restore_monarchy
+            focus = FRA_vanguardist_rebellion
+        }
+        x = 22
+        y = 10
+        cost = 10
+        available = { is_subject = yes overlord = { tag = GER } }
+        completion_reward = {
+            country_event = { id = fra_rebellion.1 }
+        }
+    }
+
 	
 	###Leftist Branch###
 	
