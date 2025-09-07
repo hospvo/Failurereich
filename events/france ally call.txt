@@ -1,10 +1,9 @@
 
 add_namespace = fra_allies_aid
 
+# Dispatcher after FRA_contact_allies
 country_event = {
     id = fra_allies_aid.0
-	title = fra_allies_aid.0.a
-	desc  = fra_allies_aid.0.b
     is_triggered_only = yes
     hidden = yes
     immediate = {
@@ -13,6 +12,7 @@ country_event = {
     }
 }
 
+# UK receives request
 country_event = {
     id = fra_allies_aid.1
     title = fra_allies_aid.1.t
@@ -24,6 +24,7 @@ country_event = {
         name = fra_allies_aid.opt_refuse
         ai_chance = { factor = 10 }
         FRA = { add_opinion_modifier = { target = ENG modifier = refused_aid } }
+        FRA = { country_event = { id = fra_allies_resp.1 } }
     }
     option = {
         name = fra_allies_aid.opt_weapons
@@ -31,6 +32,7 @@ country_event = {
         FRA = {
             add_equipment_to_stockpile = { type = infantry_equipment producer = ENG amount = 8000 }
             add_equipment_to_stockpile = { type = support_equipment  producer = ENG amount = 400 }
+            country_event = { id = fra_allies_resp.2 }
         }
         add_political_power = -25
         FRA = { add_opinion_modifier = { target = ENG modifier = sent_weapons } }
@@ -41,13 +43,10 @@ country_event = {
         FRA = {
             add_manpower = 50000
             create_unit = {
-                division = {
-                    name = "Free French Volunteers (UK)"
-                    division_template = "Infantry Division" # must exist for FRA
-                    start_experience_factor = 0.3
-                }
+                division = { name = "Free French Volunteers (UK)" division_template = "Infantry Division" start_experience_factor = 0.3 }
                 owner = FRA
             }
+            country_event = { id = fra_allies_resp.3 }
         }
         add_political_power = -25
         FRA = { add_opinion_modifier = { target = ENG modifier = sent_volunteers } }
@@ -59,6 +58,7 @@ country_event = {
             add_equipment_to_stockpile = { type = infantry_equipment producer = ENG amount = 8000 }
             add_equipment_to_stockpile = { type = support_equipment  producer = ENG amount = 400 }
             add_manpower = 30000
+            country_event = { id = fra_allies_resp.4 }
         }
         add_political_power = -50
         FRA = { add_opinion_modifier = { target = ENG modifier = sent_both } }
@@ -67,9 +67,11 @@ country_event = {
         name = fra_allies_aid.opt_join_on_uprising
         ai_chance = { factor = 15 }
         set_country_flag = ENG_promised_join_french_uprising
-        FRA = { add_opinion_modifier = { target = ENG modifier = promised_join } }
+        FRA = { add_opinion_modifier = { target = ENG modifier = promised_join } country_event = { id = fra_allies_resp.5 } }
     }
 }
+
+# USA receives request
 country_event = {
     id = fra_allies_aid.2
     title = fra_allies_aid.2.t
@@ -81,6 +83,7 @@ country_event = {
         name = fra_allies_aid.opt_refuse
         ai_chance = { factor = 10 }
         FRA = { add_opinion_modifier = { target = USA modifier = refused_aid } }
+        FRA = { country_event = { id = fra_allies_resp.6 } }
     }
     option = {
         name = fra_allies_aid.opt_weapons
@@ -89,6 +92,7 @@ country_event = {
             add_equipment_to_stockpile = { type = infantry_equipment producer = USA amount = 10000 }
             add_equipment_to_stockpile = { type = support_equipment  producer = USA amount = 500 }
             add_equipment_to_stockpile = { type = artillery           producer = USA amount = 100 }
+            country_event = { id = fra_allies_resp.7 }
         }
         add_political_power = -25
         FRA = { add_opinion_modifier = { target = USA modifier = sent_weapons } }
@@ -99,13 +103,10 @@ country_event = {
         FRA = {
             add_manpower = 60000
             create_unit = {
-                division = {
-                    name = "Free French Volunteers (US)"
-                    division_template = "Infantry Division"
-                    start_experience_factor = 0.25
-                }
+                division = { name = "Free French Volunteers (US)" division_template = "Infantry Division" start_experience_factor = 0.25 }
                 owner = FRA
             }
+            country_event = { id = fra_allies_resp.8 }
         }
         add_political_power = -25
         FRA = { add_opinion_modifier = { target = USA modifier = sent_volunteers } }
@@ -118,6 +119,7 @@ country_event = {
             add_equipment_to_stockpile = { type = support_equipment  producer = USA amount = 500 }
             add_equipment_to_stockpile = { type = artillery           producer = USA amount = 120 }
             add_manpower = 40000
+            country_event = { id = fra_allies_resp.9 }
         }
         add_political_power = -50
         FRA = { add_opinion_modifier = { target = USA modifier = sent_both } }
@@ -126,7 +128,19 @@ country_event = {
         name = fra_allies_aid.opt_join_on_uprising
         ai_chance = { factor = 15 }
         set_country_flag = USA_promised_join_french_uprising
-        FRA = { add_opinion_modifier = { target = USA modifier = promised_join } }
+        FRA = { add_opinion_modifier = { target = USA modifier = promised_join } country_event = { id = fra_allies_resp.10 } }
     }
 }
 
+# French reaction popups
+country_event = { id = fra_allies_resp.1  title = fra_allies_resp.1.t  desc = fra_allies_resp.1.d  picture = GFX_report_event_generic_propaganda  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_stability = -0.05 add_war_support = -0.05 add_political_power = -25 set_country_flag = FRA_uk_refused } }
+country_event = { id = fra_allies_resp.2  title = fra_allies_resp.2.t  desc = fra_allies_resp.2.d  picture = GFX_report_event_generic_lendlease  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_war_support = 0.05  add_political_power = 15  set_country_flag = FRA_uk_sent_weapons } }
+country_event = { id = fra_allies_resp.3  title = fra_allies_resp.3.t  desc = fra_allies_resp.3.d  picture = GFX_report_event_generic_recruitment is_triggered_only = yes  option = { name = fra_allies_resp.ok add_war_support = 0.07  add_stability = -0.02 add_political_power = 10 set_country_flag = FRA_uk_sent_manpower } }
+country_event = { id = fra_allies_resp.4  title = fra_allies_resp.4.t  desc = fra_allies_resp.4.d  picture = GFX_report_event_generic_support     is_triggered_only = yes  option = { name = fra_allies_resp.ok add_stability = 0.02 add_war_support = 0.08 add_political_power = 20 set_country_flag = FRA_uk_sent_both } }
+country_event = { id = fra_allies_resp.5  title = fra_allies_resp.5.t  desc = fra_allies_resp.5.d  picture = GFX_report_event_generic_diplomacy  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_political_power = 10 set_country_flag = FRA_uk_pledged_join } }
+
+country_event = { id = fra_allies_resp.6  title = fra_allies_resp.6.t  desc = fra_allies_resp.6.d  picture = GFX_report_event_generic_propaganda  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_stability = -0.05 add_war_support = -0.03 add_political_power = -20 set_country_flag = FRA_us_refused } }
+country_event = { id = fra_allies_resp.7  title = fra_allies_resp.7.t  desc = fra_allies_resp.7.d  picture = GFX_report_event_generic_lendlease  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_war_support = 0.06 add_political_power = 15 set_country_flag = FRA_us_sent_weapons } }
+country_event = { id = fra_allies_resp.8  title = fra_allies_resp.8.t  desc = fra_allies_resp.8.d  picture = GFX_report_event_generic_recruitment is_triggered_only = yes  option = { name = fra_allies_resp.ok add_war_support = 0.08 add_stability = -0.02 add_political_power = 10 set_country_flag = FRA_us_sent_manpower } }
+country_event = { id = fra_allies_resp.9  title = fra_allies_resp.9.t  desc = fra_allies_resp.9.d  picture = GFX_report_event_generic_support     is_triggered_only = yes  option = { name = fra_allies_resp.ok add_stability = 0.03 add_war_support = 0.09 add_political_power = 25 set_country_flag = FRA_us_sent_both } }
+country_event = { id = fra_allies_resp.10 title = fra_allies_resp.10.t desc = fra_allies_resp.10.d picture = GFX_report_event_generic_diplomacy  is_triggered_only = yes  option = { name = fra_allies_resp.ok add_political_power = 10 set_country_flag = FRA_us_pledged_join } }
