@@ -84,8 +84,9 @@ focus_tree = {
     icon = GFX_goal_generic_political_pressure
     x = 8
     y = 1
-    cost = 10
+    cost = 5
     prerequisite = { focus = AFR_absolute_monarchy }
+	mutually_exclusive = { focus = AFR_enshrine_laicite }
     available = {
         has_government = reactionary
         NOT = { has_country_flag = FRA_laicist_path }
@@ -105,6 +106,26 @@ focus_tree = {
         }
     }
 }
+
+    focus = {
+    id = AFR_enshrine_laicite
+    icon = GFX_goal_generic_political_reform
+    x = 6
+    y = 1
+    cost = 5
+    prerequisite = { focus = AFR_absolute_monarchy }
+	mutually_exclusive = { focus = AFR_appeal_to_the_catholic_church }
+    available = {
+        has_government = reactionary
+        NOT = { has_country_flag = FRA_catholic_path }
+    }
+    completion_reward = {
+        add_stability = -0.05
+        add_political_power = 200
+		add_ideas = AFR_laicite
+    }
+}
+
 	focus = {
 		id = AFR_de_gaulle
 		icon = GFX_focus_focus_fra_third_empire
@@ -133,6 +154,7 @@ focus_tree = {
 		prerequisite = { 	
 			focus = AFR_appeal_to_the_catholic_church
 			focus = AFR_de_gaulle
+			focus = AFR_enshrine_laicite
 		}
 		x = 8
 		y = 2

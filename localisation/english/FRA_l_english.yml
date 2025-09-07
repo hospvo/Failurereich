@@ -105,7 +105,12 @@
   france.100.desc: "Napoleon has wielded the royal prerogative to dissolve parliaments and reforge France in his own image so the choice is: shall we embrace the authority of the Catholic Church to sanctify our rule, or shall we reaffirm the secular principles of the Republic? The decision will shape the legitimacy of our state and the nature of our eventual return to the Hexagone."
   france.100.a: "Appeal to the Catholic Church"
   france.100.b: "Enshrine Laïcité"
-
+  FRA_freedom_of_religion: "Freedom of religion"
+  FRA_women_election: "Women right to vote"
+  FRA_goal_lux: "Annex luxembourg"
+  AFR_laicite: "Laïcité"
+  AFR_laicite_desc: "This government has reaffirmed the secular character of the French state, rejecting clerical interference. Though it may unsettle the faithful, the decision strengthens the authority of the state, channels energy into scientific progress, and appeals to republican sympathizers."
+  AFR_laicite: "Enshrine Laïcité"
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."

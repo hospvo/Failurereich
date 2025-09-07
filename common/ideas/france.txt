@@ -43,6 +43,24 @@ ideas = {
                 political_power_factor = 0.05
             }
         }
+		
+		AFR_laicite = {
+        picture = freedom_of_religion
+		
+            allowed = { }
+			
+            removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+            modifier = {
+                stability_factor = -0.05
+                political_power_factor = 0.10
+                research_speed_factor = 0.05
+            }
+        }
 
 	
 		AFR_german_solidarity = {
