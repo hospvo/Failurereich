@@ -40,14 +40,14 @@ focus_tree = {
 			add_manpower = 200000
 			add_ideas = { AFR_bonaparte_cult }
 			country_event = { id = exiled.1 days = 1 }
-			country_event = { id = fra.100 days = 1 }
+			country_event = { id = france.100 days = 1 }
 		}
 	}
 
 	focus = {
 		id = AFR_constitutional_monarchy
 		icon = GFX_focus_focus_fra_third_empire
-		text = "A democratic Empire"
+		text = "Constitutional reform"
 		mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 
 		}

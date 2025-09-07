@@ -27,7 +27,7 @@ ideas = {
 		}
 		
 		AFR_catholic_support = {
-        picture = GFX_idea_AFR_catholic_support
+        picture = AFR_catholic_support
 		
             allowed = { }
 			

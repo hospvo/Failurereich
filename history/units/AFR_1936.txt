@@ -150,6 +150,7 @@ units = {
 		force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
+		force_equipment = yes
 
 	}
 	division= {	

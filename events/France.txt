@@ -24,9 +24,9 @@ country_event = {
 }
 
 country_event = {
-    id = fra.100
-    title = fra.100.title
-    desc = fra.100.desc
+    id = france.100
+    title = france.100.title
+    desc = france.100.desc
     picture = GFX_report_event_generic_read_write
 	
     fire_only_once = yes
@@ -34,12 +34,12 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = fra.100.a   # Appeal to the Church
+        name = france.100.a   # Appeal to the Church
         set_country_flag = FRA_catholic_path
         add_political_power = 50
     }
     option = {
-        name = fra.100.b   # Enshrine Laïcité
+        name = france.100.b   # Enshrine Laïcité
         set_country_flag = FRA_laicite
         add_political_power = 50
     }

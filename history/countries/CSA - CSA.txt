@@ -1,4 +1,4 @@
-capital = 361
+capital = 362
 
 oob = "CSA_fascist_uprising"
 
@@ -157,6 +157,7 @@ add_ideas = {
 	volunteer_only
 	free_trade
 	home_of_the_free
+	two_nation_not_indivisble
 }
 
 create_country_leader = {

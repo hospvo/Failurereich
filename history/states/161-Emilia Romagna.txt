@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = PAP
+		owner = LOM
 		victory_points = {
 			6606 5 
 		}
