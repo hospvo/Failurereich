@@ -40,7 +40,7 @@ country_event = {
     }
     option = {
         name = france.100.b   # Enshrine Laïcité
-        set_country_flag = FRA_laicite
+        set_country_flag = FRA_laicist_path
         add_political_power = 50
     }
 }
