@@ -1727,10 +1727,10 @@ focus_tree = {
         prerequisite = { focus = FRA_underground_networks }
         x = 21
         y = 8
-        cost = 10
+        cost = 5
         completion_reward = {
             add_political_power = 50
-            add_ideas = FRA_foreign_support
+            country_event = { id = fra_allies_aid.0 }
         }
     }
 
@@ -1740,7 +1740,7 @@ focus_tree = {
         prerequisite = { focus = FRA_underground_networks }
         x = 23
         y = 8
-        cost = 10
+        cost = 5
         completion_reward = {
             add_manpower = 50000
             add_equipment_to_stockpile = {
@@ -1758,7 +1758,7 @@ focus_tree = {
         prerequisite = { focus = FRA_contact_allies }
         x = 20
         y = 9
-        cost = 10
+        cost = 5
         available = {
             is_subject = yes
             has_country_flag = FRA_democrat_path_chosen
@@ -1766,9 +1766,15 @@ focus_tree = {
         completion_reward = {
             add_stability = 0.1
             add_political_power = 100
+            random_owned_controlled_state = {
+                limit = { state = 8 } # Île-de-France
+                remove_building = {
+                    type = arms_factory
+                    level = 1
+                }    
+            }
         }
     }
-
     # --- Junta / Authoritarian Path ---
     focus = {
         id = FRA_military_revolt
@@ -1776,7 +1782,7 @@ focus_tree = {
         prerequisite = { focus = FRA_arm_the_maquis }
         x = 24
         y = 9
-        cost = 10
+        cost = 5
         available = {
             is_subject = yes
             has_country_flag = FRA_junta_path_chosen
@@ -1785,8 +1791,16 @@ focus_tree = {
             add_war_support = 0.1
             add_stability = -0.05
             add_political_power = 75
+            random_owned_controlled_state = {
+                limit = { state = 28 } # Occitanie
+                remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
         }
     }
+
 
     # --- Monarchy Path ---
     focus = {
@@ -1795,7 +1809,7 @@ focus_tree = {
         prerequisite = { focus = FRA_contact_allies }
         x = 19
         y = 9
-        cost = 10
+        cost = 5
         available = {
             is_subject = yes
             has_country_flag = FRA_monarchist_path_chosen
@@ -1803,17 +1817,25 @@ focus_tree = {
         completion_reward = {
             add_stability = 0.15
             add_political_power = 50
+            random_owned_controlled_state = {
+                limit = { state = 17 } # Normandy
+                remove_building = {
+                    type = arms_factory
+                    level = 1
+                }
+            }
         }
     }
+
 
     # --- Vanguardist Path ---
     focus = {
         id = FRA_vanguardist_rebellion
-        icon = GFX_focus_generic_communism # Or custom GFX if you want a “red star but not Bolshevik”
+        icon = GFX_focus_generic_communism
         prerequisite = { focus = FRA_arm_the_maquis }
         x = 25
         y = 9
-        cost = 10
+        cost = 5
         available = {
             is_subject = yes
             has_country_flag = FRA_vanguardist_path_chosen
@@ -1821,8 +1843,16 @@ focus_tree = {
         completion_reward = {
             add_manpower = 75000
             add_war_support = 0.15
+            random_owned_controlled_state = {
+                limit = { state = 14 } # Brittany
+                remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
         }
     }
+
 
     # --- Final shared rebellion trigger ---
     focus = {

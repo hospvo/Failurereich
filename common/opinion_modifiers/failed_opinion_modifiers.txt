@@ -27,3 +27,11 @@ opinion_modifiers = {
 	}
 
 }
+
+opinion_modifiers = {
+    refused_aid = { opinion = -40 days = 720 }
+    sent_weapons = { opinion = 20 days = 720 }
+    sent_volunteers = { opinion = 15 days = 720 }
+    sent_both = { opinion = 30 days = 720 }
+    promised_join = { opinion = 10 days = 720 }
+}

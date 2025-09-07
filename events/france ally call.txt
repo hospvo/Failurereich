@@ -1,0 +1,132 @@
+
+add_namespace = fra_allies_aid
+
+country_event = {
+    id = fra_allies_aid.0
+	title = fra_allies_aid.0.a
+	desc  = fra_allies_aid.0.b
+    is_triggered_only = yes
+    hidden = yes
+    immediate = {
+        if = { limit = { ENG = { exists = yes } } ENG = { country_event = { id = fra_allies_aid.1 } } }
+        if = { limit = { USA = { exists = yes } } USA = { country_event = { id = fra_allies_aid.2 } } }
+    }
+}
+
+country_event = {
+    id = fra_allies_aid.1
+    title = fra_allies_aid.1.t
+    desc  = fra_allies_aid.1.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+
+    option = {
+        name = fra_allies_aid.opt_refuse
+        ai_chance = { factor = 10 }
+        FRA = { add_opinion_modifier = { target = ENG modifier = refused_aid } }
+    }
+    option = {
+        name = fra_allies_aid.opt_weapons
+        ai_chance = { factor = 35 }
+        FRA = {
+            add_equipment_to_stockpile = { type = infantry_equipment producer = ENG amount = 8000 }
+            add_equipment_to_stockpile = { type = support_equipment  producer = ENG amount = 400 }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = ENG modifier = sent_weapons } }
+    }
+    option = {
+        name = fra_allies_aid.opt_manpower
+        ai_chance = { factor = 20 }
+        FRA = {
+            add_manpower = 50000
+            create_unit = {
+                division = {
+                    name = "Free French Volunteers (UK)"
+                    division_template = "Infantry Division" # must exist for FRA
+                    start_experience_factor = 0.3
+                }
+                owner = FRA
+            }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = ENG modifier = sent_volunteers } }
+    }
+    option = {
+        name = fra_allies_aid.opt_both
+        ai_chance = { factor = 20 }
+        FRA = {
+            add_equipment_to_stockpile = { type = infantry_equipment producer = ENG amount = 8000 }
+            add_equipment_to_stockpile = { type = support_equipment  producer = ENG amount = 400 }
+            add_manpower = 30000
+        }
+        add_political_power = -50
+        FRA = { add_opinion_modifier = { target = ENG modifier = sent_both } }
+    }
+    option = {
+        name = fra_allies_aid.opt_join_on_uprising
+        ai_chance = { factor = 15 }
+        set_country_flag = ENG_promised_join_french_uprising
+        FRA = { add_opinion_modifier = { target = ENG modifier = promised_join } }
+    }
+}
+country_event = {
+    id = fra_allies_aid.2
+    title = fra_allies_aid.2.t
+    desc  = fra_allies_aid.2.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+
+    option = {
+        name = fra_allies_aid.opt_refuse
+        ai_chance = { factor = 10 }
+        FRA = { add_opinion_modifier = { target = USA modifier = refused_aid } }
+    }
+    option = {
+        name = fra_allies_aid.opt_weapons
+        ai_chance = { factor = 40 }
+        FRA = {
+            add_equipment_to_stockpile = { type = infantry_equipment producer = USA amount = 10000 }
+            add_equipment_to_stockpile = { type = support_equipment  producer = USA amount = 500 }
+            add_equipment_to_stockpile = { type = artillery           producer = USA amount = 100 }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = USA modifier = sent_weapons } }
+    }
+    option = {
+        name = fra_allies_aid.opt_manpower
+        ai_chance = { factor = 15 }
+        FRA = {
+            add_manpower = 60000
+            create_unit = {
+                division = {
+                    name = "Free French Volunteers (US)"
+                    division_template = "Infantry Division"
+                    start_experience_factor = 0.25
+                }
+                owner = FRA
+            }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = USA modifier = sent_volunteers } }
+    }
+    option = {
+        name = fra_allies_aid.opt_both
+        ai_chance = { factor = 20 }
+        FRA = {
+            add_equipment_to_stockpile = { type = infantry_equipment producer = USA amount = 9000 }
+            add_equipment_to_stockpile = { type = support_equipment  producer = USA amount = 500 }
+            add_equipment_to_stockpile = { type = artillery           producer = USA amount = 120 }
+            add_manpower = 40000
+        }
+        add_political_power = -50
+        FRA = { add_opinion_modifier = { target = USA modifier = sent_both } }
+    }
+    option = {
+        name = fra_allies_aid.opt_join_on_uprising
+        ai_chance = { factor = 15 }
+        set_country_flag = USA_promised_join_french_uprising
+        FRA = { add_opinion_modifier = { target = USA modifier = promised_join } }
+    }
+}
+
