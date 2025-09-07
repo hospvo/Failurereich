@@ -189,6 +189,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+		name = "GFX_FRA_rebel"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_rebel.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_lacite"
 		texturefile = "gfx/interface/goals/AFR/GFX_lacite.dds"			
 	}

@@ -1706,7 +1706,7 @@ focus_tree = {
     # --- Root focus ---
     focus = {
         id = FRA_underground_networks
-        icon = GFX_focus_generic_resistance
+        icon = GFX_FRA_rebel
         x = 22
         y = 7
         cost = 10
