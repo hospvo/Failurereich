@@ -1,0 +1,39 @@
+focus_tree = {
+	id = united_state_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 4000 y = 2500 }
+	
+	focus = {
+        id = USA_fev_experiment
+        icon = GFX_focus_atomic_research
+        x = 15
+        y = 15
+        cost = 10
+        available = {
+            date > 2077.10.23
+        }  
+
+        bypass = { }
+
+        ai_will_do = {
+            factor = 0   # AI never picks it, stays an easter egg
+        }
+
+        completion_reward = {
+                add_ideas = USA_fev_virus
+                add_political_power = 500
+                add_research_slot = 1
+                add_stability = 0.25
+                add_war_support = 0.25
+        }
+    }
+}	

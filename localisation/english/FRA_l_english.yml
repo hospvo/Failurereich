@@ -127,6 +127,7 @@
   FRA_restore_monarchy: "Old glory"
   FRA_vanguardist_rebellion: "Vanguardist Rebellion"
   FRA_rebel_against_germany: "Rebel Against [GER.GetNameDef]"
+  USA_fev_experiment: "Project FEV"
   ### EVENT ###
   france.0.title: "Referundum on [LUX.GetNameDef]"
   france.0.desc: "French parlement try to find if they can integrate [LUX.GetNameDef], this referundum will be made because Petrograd alliance collapsed."

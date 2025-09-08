@@ -40,6 +40,23 @@ ideas = {
 				conscription_factor = -0.3
 			}
 		}
+	}
+	country = {
+        USA_fev_virus = {
+            picture = GFX_idea_generic_science
+            allowed = { original_tag = USA }
+            modifier = {
+                recruitable_population_factor = 2.0
+                division_attack_factor = 0.50
+                division_defense_factor = 0.50
+                research_speed_factor = 0.30
+                stability_factor = 0.20
+                war_support_factor = 0.20
+                planning_speed = 0.50
+                army_org = 20
+                breakthrough_factor = 0.40
+            }
+        }
 	}	
 		country = {
 		great_depression = {
