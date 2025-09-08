@@ -1579,7 +1579,7 @@ ideas = {
 		
 
         AFR_napoleon_cult_spirit = {
-            icon = cult_napoleon
+            picture = AFR_cult_napoleon
             allowed = { original_tag = AFR }
             modifier = {
                 stability_factor = -0.10

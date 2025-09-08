@@ -11,7 +11,7 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_cult_napoleon"
+		name = "GFX_idea_AFR_cult_napoleon"
 		texturefile = "gfx/interface/ideas/AFR/AFR_cult_napoleon.dds"
 	}
 	
