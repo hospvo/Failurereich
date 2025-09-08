@@ -25,13 +25,17 @@ opinion_modifiers = {
 	alliance_collaborator = {
 		value = 20
 	}
+	
+	refused_aid = {
+		value = -40
+	}
+	
+	sent_weapons = {
+		value = 20
+	}
+	
+	sent_volunteers = {
+		value = 15
+	}
 
-}
-
-opinion_modifiers = {
-    refused_aid = { opinion = -40 days = 720 }
-    sent_weapons = { opinion = 20 days = 720 }
-    sent_volunteers = { opinion = 15 days = 720 }
-    sent_both = { opinion = 30 days = 720 }
-    promised_join = { opinion = 10 days = 720 }
 }

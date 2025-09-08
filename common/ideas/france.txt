@@ -1576,6 +1576,21 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+		
+
+        AFR_napoleon_cult_spirit = {
+            icon = cult_napoleon
+            allowed = { original_tag = AFR }
+            modifier = {
+                stability_factor = -0.10
+                war_support_factor = 0.20
+                political_power_factor = 0.05
+                attack_bonus_against = 0.03
+                compliance_growth_on_our_occupied_states = 0.03
+                resistance_target_on_our_occupied_states = 0.05
+            }
+        }
+
 
 		FRA_communism_banned = {
 			picture = anti_soviet_pact

@@ -2695,7 +2695,6 @@
  AST_central_bureau_idea_desc:0 "A joint intelligence taskforce established and coordinated with the USA, which aims to counter the efforts of our enemies in the pacific theater."
  SWE_historical_trade_with_Germany_dummy_instant_desc: "(§YSweden§!) Target country trade cost: §G-20%§!)\n(§YSweden§!) Trade Opinion modifier: §G+50§!)\n§YOur domestic steel is of low grade and need high quality steel mixed in to be fully effective. Importing small amounts of foreign steel will drastically increase the resource output of our domestic steel production§!\n"
  ROM_national_christian_party_in_power:0 "National Christian Party"
- 
  CAN_unified_communist_party:0 "The People, United"
  CAN_unified_communist_party_desc:0 "Old rifts are mended; relationships repaired. Yet our tolerance in service of a shared destiny is looked upon with suspicion by those who pay only lip service to the cause, driven by that basest of motivations: the pursuit of power."
  CAN_true_revolution:0 "True Revolution"
@@ -2717,3 +2716,5 @@
  two_nation_not_indivisible: "Two nation not indivisible"
  USA_fev_virus: "FEV Virus"
  USA_fev_virus_desc: "Our soldiers are no longer merely human. They are products of the Forced Evolutionary Virus, towering and relentless. America has transcended the limits of mankind."
+ AFR_napoleon_cult_spirit: "Imperial Cult of Napoleon"
+ AFR_napoleon_cult_spirit_desc: "The Emperor has declared himself more than a ruler—he is the living heir of Rome and Charlemagne, chosen by destiny. Portraits, statues, and catechisms of loyalty flood schools and churches alike. The cult elevates Napoleon beyond mortal politics, binding the state, army, and people together in his image, but at the cost of crushing individuality and sparking underground dissent."

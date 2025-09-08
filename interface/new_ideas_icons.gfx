@@ -11,6 +11,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_cult_napoleon"
+		texturefile = "gfx/interface/ideas/AFR/AFR_cult_napoleon.dds"
+	}
+	
+	spriteType = {
 	name = "GFX_idea_Bohemia_economy_giants"
 	texturefile = "gfx/interface/ideas/CZE/CZE_Bohemia_economy_giants.png"
 	}

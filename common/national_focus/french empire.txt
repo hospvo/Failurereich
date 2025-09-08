@@ -38,7 +38,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 200000
-			add_ideas = { AFR_bonaparte_cult }
+			add_ideas = { AFR_napoleon_cult_spirit }
 			country_event = { id = exiled.1 days = 1 }
 			country_event = { id = france.100 days = 1 }
 		}
@@ -46,7 +46,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_constitutional_monarchy
-		icon = GFX_focus_focus_fra_third_empire
+		icon = GFX_democrat_empire
 		text = "Constitutional reform"
 		mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 
@@ -435,7 +435,7 @@ focus_tree = {
 
 	focus = {
 		id = AFR_democracy
-		icon = GFX_focus_fra_french_union
+		icon = GFX_oppose_emperor
 		text = "Reetablish the Republic"
 		mutually_exclusive = { 	
 			focus = AFR_absolute_monarchy 

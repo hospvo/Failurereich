@@ -1740,7 +1740,7 @@ focus_tree = {
 
             if = {
                 limit = { USA = { exists = yes } }
-                USA = { country_event = { id = fra_allies_aid.2 days = 1 } }
+                USA = { country_event = { id = fra_allies_aid.1 days = 1 } }
             }
         }
     }
