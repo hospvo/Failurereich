@@ -1723,7 +1723,7 @@ focus_tree = {
     # --- Shared branch ---
     focus = {
         id = FRA_contact_allies
-        icon = GFX_focus_generic_allies_build_influence
+        icon = GFX_FRA_ask_for_help
         prerequisite = { focus = FRA_underground_networks }
         x = 21
         y = 8

@@ -282,6 +282,10 @@ spriteTypes = {
 		name = "GFX_FRA_petainism"
 		texturefile = "gfx/interface/goals/FRA/GFX_FRA_petainism.png"			
 	}
+	SpriteType = {
+		name = "GFX_FRA_ask_for_help"
+		texturefile = "gfx/interface/goals/FRA/GFX_FRA_ask_for_help.dds"			
+	}
 	
 	#### Britain
 	SpriteType = {
