@@ -17,11 +17,10 @@ state={
 			12051 3 
 		}
 		buildings = {
-			infrastructure = 4
-			7081 = {
-				naval_base = 1
-			}
-		}
+            industrial_complex = 4   # civilian
+            arms_factory = 2         # military
+            infrastructure = 3
+        }
 	}
 
 	provinces={
