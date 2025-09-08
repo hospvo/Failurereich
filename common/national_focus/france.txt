@@ -1895,6 +1895,7 @@ focus_tree = {
 	    prerequisite = {
 	           focus = FRA_hold_election
 	    }
+		mutually_exclusive = { focus = FRA_right_win }
         x = 33
         y = 2
         cost = 10
@@ -2419,66 +2420,75 @@ focus_tree = {
 			 
         }
     }
-#### RIGHT-WING ELECTION BRANCH ####
+#### RIGHT-WING DEMOCRATIC ELECTION BRANCH ####
 
 focus = {
     id = FRA_right_win
     icon = GFX_goal_generic_political_right
     text = "Rightist Victory"
     prerequisite = { focus = FRA_hold_election }
-    mutually_exclusive = { focus = FRA_left_win }   # lock out the left path
+    mutually_exclusive = { focus = FRA_left_win }
     x = 43
     y = 2
     cost = 10
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
+
     completion_reward = {
-        set_politics = { ruling_party = reactionary elections_allowed = yes }
-        set_party_name = { ideology = reactionary long_name = "Parti National" name = "PN" }
-        add_popularity = { ideology = reactionary popularity = 0.10 }
-        add_popularity = { ideology = democratic popularity = 0.05 }
+        set_politics = { ruling_party = democratic elections_allowed = yes }
+        set_party_name = { ideology = democratic long_name = "Alliance Républicaine-M" name = "AR" }
+        add_popularity = { ideology = democratic popularity = 0.12 }
+        add_popularity = { ideology = reactionary popularity = 0.05 }
         remove_ideas = FRA_military_junta_1
         remove_ideas = FRA_military_constitution
         add_stability = 0.05
+        create_country_leader = {
+            name = "André Tardieu"
+            desc = "POLITICS_ANDRE_TARDIEU_DESC"
+            picture = GFX_portrait_fra_tardieu
+            expire = "1965.1.1"
+            ideology = democratic
+            traits = { conservative_reformer defender_of_democracy }
+        }
     }
 }
 
-# Social & order strand
+# --- Social Strand ---
 focus = {
     id = FRA_national_morality
     icon = GFX_focus_generic_propaganda
-    text = "National Morality Campaign"
+    text = "Civic Renewal Campaign"
     prerequisite = { focus = FRA_right_win }
-    x = 44
+    x = 43
     y = 3
     cost = 10
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
+    available = { has_government = democratic }
     completion_reward = { add_stability = 0.05 add_political_power = 25 }
 }
 
 focus = {
     id = FRA_concordat
     icon = GFX_focus_mex_restore_the_army_of_christ
-    text = "Concordat with the Church"
+    text = "Church–State Understanding"
     prerequisite = { focus = FRA_national_morality }
-    x = 44
+    x = 43
     y = 4
     cost = 9
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
-    completion_reward = { add_stability = 0.05 add_war_support = 0.05 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.03 add_war_support = 0.02 }
 }
 
 focus = {
     id = FRA_press_law
     icon = GFX_freedom_of_speech
-    text = "Law on the Press"
+    text = "Balanced Press Law"
     prerequisite = { focus = FRA_concordat }
     x = 43
     y = 5
@@ -2486,14 +2496,14 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
+    available = { has_government = democratic }
     completion_reward = { add_political_power = 75 add_stability = 0.02 }
 }
 
 focus = {
     id = FRA_public_order_act
     icon = GFX_focus_generic_military_police
-    text = "Public Order Act"
+    text = "Community Security Reform"
     prerequisite = { focus = FRA_press_law }
     x = 43
     y = 6
@@ -2501,17 +2511,17 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_WAR_SUPPORT }
     ai_will_do = { factor = 1 }
-    available = { has_government = reactionary is_puppet = no }
-    completion_reward = { add_war_support = 0.05 army_experience = 5 }
+    available = { has_government = democratic is_puppet = no }
+    completion_reward = { add_war_support = 0.03 army_experience = 3 }
 }
 
-# Economy/industry strand
+# --- Economy Strand ---
 focus = {
     id = FRA_business_charters
     icon = GFX_focus_ITA_generic_fascist_workers
     text = "National Business Charters"
     prerequisite = { focus = FRA_right_win }
-    x = 42
+    x = 41
     y = 3
     cost = 10
     available_if_capitulated = yes
@@ -2523,16 +2533,16 @@ focus = {
 focus = {
     id = FRA_break_general_strike
     icon = GFX_focus_generic_strike_at_democracy1
-    text = "Break the General Strike"
+    text = "Resolve the General Strike"
     prerequisite = { focus = FRA_business_charters }
-    x = 42
+    x = 41
     y = 4
     cost = 9
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
-    completion_reward = { add_manpower = 50000 add_war_support = 0.03 }
+    available = { has_government = democratic }
+    completion_reward = { add_manpower = 40000 add_stability = 0.02 }
 }
 
 focus = {
@@ -2540,7 +2550,7 @@ focus = {
     icon = GFX_focus_GRE_reevaluating_the_drachma
     text = "Industrial Tax Relief"
     prerequisite = { focus = FRA_business_charters }
-    x = 41
+    x = 40
     y = 4
     cost = 9
     available_if_capitulated = yes
@@ -2554,7 +2564,7 @@ focus = {
     icon = GFX_goal_generic_construction
     text = "State–Industry Partnerships"
     prerequisite = { focus = FRA_tax_relief_industry focus = FRA_break_general_strike }
-    x = 41
+    x = 40
     y = 5
     cost = 9
     available_if_capitulated = yes
@@ -2568,142 +2578,12 @@ focus = {
     }
 }
 
-# Constitution/governance strand (right variant of your leftist constitution path)
-focus = {
-    id = FRA_write_con_right
-    icon = GFX_FRA_constitution
-    text = "Draft the Conservative Constitution"
-    prerequisite = { focus = FRA_national_morality }
-    x = 45
-    y = 5
-    cost = 9
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
-    completion_reward = { add_political_power = 50 }
-}
-
-focus = {
-    id = FRA_senate_empowered
-    icon = GFX_par_ex
-    text = "Empower the Senate"
-    prerequisite = { focus = FRA_write_con_right }
-    x = 45
-    y = 6
-    cost = 7
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
-    completion_reward = { add_stability = 0.03 add_political_power = 50 }
-}
-
-focus = {
-    id = FRA_strengthen_presidency
-    icon = GFX_focus_generic_forceful_treaty
-    text = "Strengthen the Presidency"
-    prerequisite = { focus = FRA_senate_empowered }
-    x = 46
-    y = 7
-    cost = 7
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    completion_reward = { add_stability = 0.02 add_war_support = 0.03 add_political_power = 75 }
-}
-
-focus = {
-    id = FRA_emergency_powers
-    icon = GFX_goal_generic_political_pressure
-    text = "Emergency Powers Clause"
-    prerequisite = { focus = FRA_strengthen_presidency }
-    x = 46
-    y = 8
-    cost = 7
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    available = { has_government = reactionary }
-    completion_reward = { add_stability = 0.02 add_war_support = 0.05 add_political_power = 50 }
-}
-
-# Foreign policy / security strand (mirrors your left remilitarize + invites)
-focus = {
-    id = FRA_remilitarize_conference
-    icon = GFX_FRA_remiliterize_moselland
-    text = "Remilitarize by Conference"
-    prerequisite = { focus = FRA_right_win }
-    x = 43
-    y = 4
-    cost = 9
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_ANNEXATION }
-    ai_will_do = { factor = 1 }
-    bypass = {
-        28 = { is_demilitarized_zone = no }
-        914 = { is_demilitarized_zone = no }
-    }
-    available = { has_government = reactionary }
-    completion_reward = {
-        add_political_power = 10
-        GER = { country_event = { days = 1 id = germany.25 } }
-    }
-}
-
-focus = {
-    id = FRA_invite_britain
-    icon = GFX_focus_generic_allies_build_influence
-    text = "Invite Britain"
-    prerequisite = { focus = FRA_remilitarize_conference }
-    x = 42
-    y = 5
-    cost = 9
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    bypass = { NOT = { country_exists = ENG } }
-    available = { is_puppet = no }
-    completion_reward = { ENG = { country_event = { days = 1 id = denmark.1 } } }
-}
-
-focus = {
-    id = FRA_invite_italy
-    icon = GFX_goal_support_fascism
-    text = "Invite Italy"
-    prerequisite = { focus = FRA_remilitarize_conference }
-    x = 44
-    y = 5
-    cost = 9
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    bypass = { NOT = { country_exists = ITA } }
-    available = { is_puppet = no }
-    completion_reward = { ITA = { country_event = { days = 1 id = denmark.1 } } }
-}
-
-focus = {
-    id = FRA_anti_communist_pact
-    icon = GFX_goal_support_fascism
-    text = "Anti-Communist Pact"
-    prerequisite = { focus = FRA_invite_britain focus = FRA_invite_italy }
-    x = 43
-    y = 6
-    cost = 9
-    available_if_capitulated = yes
-    search_filters = { FOCUS_FILTER_POLITICAL }
-    ai_will_do = { factor = 1 }
-    completion_reward = { add_opinion_modifier = { target = GER modifier = francist_collaborator } add_war_support = 0.03 }
-}
-
-# Economy capstone pair
 focus = {
     id = FRA_private_industry_boost
     icon = GFX_goal_generic_construct_civilian
     text = "Private Industry Boost"
-    prerequisite = { focus = FRA_industrial_partnerships focus = FRA_senate_empowered }
-    x = 41
+    prerequisite = { focus = FRA_industrial_partnerships }
+    x = 40
     y = 6
     cost = 9
     available_if_capitulated = yes
@@ -2723,22 +2603,21 @@ focus = {
     icon = GFX_goal_generic_military_sphere
     text = "Industrial Mobilization"
     prerequisite = { focus = FRA_private_industry_boost }
-    x = 41
+    x = 40
     y = 7
     cost = 9
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_WAR_SUPPORT }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_war_support = 0.05 }
+    completion_reward = { add_war_support = 0.04 }
 }
 
-# Luxembourg/Pétain flavor like your left ends
 focus = {
     id = FRA_fate_luxembourg_right
     icon = GFX_goal_support_fascism
     text = "Deal with Luxembourg"
     prerequisite = { focus = FRA_private_industry_boost }
-    x = 42
+    x = 41
     y = 7
     cost = 9
     available_if_capitulated = yes
@@ -2748,18 +2627,141 @@ focus = {
     completion_reward = { LUX = { country_event = { days = 1 id = luxemborg.1 } } }
 }
 
+# --- Governance Strand ---
+focus = {
+    id = FRA_write_con_right
+    icon = GFX_FRA_constitution
+    text = "Draft a Conservative Constitution"
+    prerequisite = { focus = FRA_national_morality }
+    x = 45
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_senate_empowered
+    icon = GFX_par_ex
+    text = "Empower the Senate"
+    prerequisite = { focus = FRA_write_con_right }
+    x = 45
+    y = 5
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.03 add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_strengthen_presidency
+    icon = GFX_focus_generic_forceful_treaty
+    text = "Strengthen the Presidency"
+    prerequisite = { focus = FRA_senate_empowered }
+    x = 45
+    y = 6
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_stability = 0.02 add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_emergency_powers
+    icon = GFX_goal_generic_political_pressure
+    text = "Crisis Management Clause"
+    prerequisite = { focus = FRA_strengthen_presidency }
+    x = 45
+    y = 7
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.01 add_war_support = 0.02 add_political_power = 25 }
+}
+
 focus = {
     id = FRA_pardon_petain
     icon = GFX_fate_petain
     text = "Pardon Pétain"
     prerequisite = { focus = FRA_strengthen_presidency }
-    x = 46
-    y = 9
+    x = 45
+    y = 8
     cost = 9
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     completion_reward = { add_stability = 0.02 add_political_power = 50 }
+}
+
+# --- Foreign Policy Strand ---
+focus = {
+    id = FRA_remilitarize_conference
+    icon = GFX_FRA_remiliterize_moselland
+    text = "Remilitarize by Conference"
+    prerequisite = { focus = FRA_right_win }
+    x = 47
+    y = 3
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_ANNEXATION }
+    ai_will_do = { factor = 1 }
+    bypass = { 28 = { is_demilitarized_zone = no } 914 = { is_demilitarized_zone = no } }
+    available = { has_government = democratic }
+    completion_reward = { GER = { country_event = { days = 1 id = germany.25 } } add_political_power = 10 }
+}
+
+focus = {
+    id = FRA_invite_britain
+    icon = GFX_focus_generic_allies_build_influence
+    text = "Invite Britain"
+    prerequisite = { focus = FRA_remilitarize_conference }
+    x = 47
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    bypass = { NOT = { country_exists = ENG } }
+    available = { is_puppet = no }
+    completion_reward = { ENG = { country_event = { days = 1 id = denmark.1 } } }
+}
+
+focus = {
+    id = FRA_invite_italy
+    icon = GFX_goal_support_fascism
+    text = "Invite Italy"
+    prerequisite = { focus = FRA_remilitarize_conference }
+    x = 48
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    bypass = { NOT = { country_exists = ITA } }
+    available = { is_puppet = no }
+    completion_reward = { ITA = { country_event = { days = 1 id = denmark.1 } } }
+}
+
+focus = {
+    id = FRA_anti_communist_pact
+    icon = GFX_goal_support_fascism
+    text = "Anti-Communist Pact"
+    prerequisite = { focus = FRA_invite_britain focus = FRA_invite_italy }
+    x = 47
+    y = 5
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_war_support = 0.02 add_political_power = 25 }
 }
 
 }	
